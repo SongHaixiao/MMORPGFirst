@@ -1,0 +1,9 @@
+E:\Github\MmorpgStudy\Src\Lib\Protocol\bin\Debug\Protocol.dll
+E:\Github\MmorpgStudy\Src\Lib\Protocol\bin\Debug\Protocol.pdb
+E:\Github\MmorpgStudy\Src\Lib\Protocol\bin\Debug\protobuf-net.dll
+E:\Github\MmorpgStudy\Src\Lib\Protocol\bin\Debug\protobuf-net.xml
+E:\Github\MmorpgStudy\Src\Lib\Protocol\obj\Debug\Protocol.csproj.AssemblyReference.cache
+E:\Github\MmorpgStudy\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CoreCompileInputs.cache
+E:\Github\MmorpgStudy\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CopyComplete
+E:\Github\MmorpgStudy\Src\Lib\Protocol\obj\Debug\Protocol.dll
+E:\Github\MmorpgStudy\Src\Lib\Protocol\obj\Debug\Protocol.pdb
