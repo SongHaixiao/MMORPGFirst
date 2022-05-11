@@ -12,17 +12,9 @@ namespace GameServer
     using System;
     using System.Collections.Generic;
     
-    public partial class TPlayer
+    public partial class TCharItem
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TPlayer()
-        {
-            this.Characters = new HashSet<TCharacter>();
-        }
-    
-        public int ID { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TCharacter> Characters { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }
