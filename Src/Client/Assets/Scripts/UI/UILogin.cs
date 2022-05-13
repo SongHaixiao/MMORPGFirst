@@ -60,7 +60,7 @@ public class UILogin : MonoBehaviour
                 + message, " Tip ", MessageBoxType.Information);
 
             // loading character selection scene
-            SceneManager.Instance.LoadScene("CharacterSelection");
+            SceneManager.Instance.LoadScene("CharacterScene");
         }
         else
         {

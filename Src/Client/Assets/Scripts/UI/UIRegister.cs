@@ -68,6 +68,7 @@ public class UIRegister : MonoBehaviour
     // register event's operation in UI Layer
     void OnRegister(Result result, string msg)
     {
-        MessageBox.Show(string.Format("Result : {0} ! {1} ", result, msg));
+        // MessageBox.Show(string.Format("Result : {0} ! {1} ", result, msg));
+        Debug.LogFormat("Result : {0} ! {1} ", result, msg);
     }
 }

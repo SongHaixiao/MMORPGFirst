@@ -15,7 +15,7 @@ namespace Models
             get { return userInfo; }
         }
 
-
+        
         public void SetupUserInfo(SkillBridge.Message.NUserInfo info)
         {
             this.userInfo = info;
