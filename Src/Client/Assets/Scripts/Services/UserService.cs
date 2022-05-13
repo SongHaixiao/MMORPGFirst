@@ -24,6 +24,7 @@ namespace Services
          */
         public UnityEngine.Events.UnityAction<Result, string> OnRegister; // register event
         public UnityEngine.Events.UnityAction<Result, string> OnLogin; // login event
+        public UnityEngine.Events.UnityAction<Result, string> OnCharacterCreate; // character create event
 
         NetMessage pendingMessage = null;
         bool connected = false;
@@ -37,6 +38,7 @@ namespace Services
             NetClient.Instance.OnDisconnect += OnGameServerDisconnect;
             MessageDistributer.Instance.Subscribe<UserRegisterResponse>(this.OnUserRegister);
             MessageDistributer.Instance.Subscribe<UserLoginResponse>(this.OnUserLogin);
+            MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
 
         }
 
@@ -45,9 +47,11 @@ namespace Services
             // remove listener for added in UserService
             MessageDistributer.Instance.Unsubscribe<UserRegisterResponse>(this.OnUserRegister);
             MessageDistributer.Instance.Unsubscribe<UserLoginResponse>(this.OnUserLogin);
+            MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             NetClient.Instance.OnConnect -= OnGameServerConnect;
             NetClient.Instance.OnDisconnect -= OnGameServerDisconnect;
         }
+
 
         public void Init()
         {
@@ -202,6 +206,65 @@ namespace Services
             {
                 this.OnLogin(response.Result, response.Errormsg);
             }
+        }
+
+        // client send character creation request information to server
+        public void SendCharacterCreate(string charName, CharacterClass cls)
+        {
+            Debug.LogFormat("SendCharacterCreate : charName : {0} class : {1}", charName, cls);
+
+            // create character create net message
+            // and fill its information
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.createChar = new UserCreateCharacterRequest();
+            message.Request.createChar.Name = charName;
+            message.Request.createChar.Class = cls;
+
+            // network is connected, send register net messagee
+            if (this.connected && NetClient.Instance.Connected)
+            {
+                this.pendingMessage = null;
+                NetClient.Instance.SendMessage(message);
+            }
+
+            // network is disconnected, try to connect to server
+            else
+            {
+                this.pendingMessage = message;
+                this.ConnectToServer();
+            }
+        }
+
+        // client accept the character create response information from server
+        private void OnUserCreateCharacter(object sender, UserCreateCharacterResponse response)
+        {
+            Debug.LogFormat("OnUserCreateCharacter : {0} [{1}]", response.Result, response.Errormsg);
+
+            // the response result is success
+            if(response.Result == Result.Success)
+            {
+                // firsly clear player's characters existed,then add character from server
+                Models.User.Instance.Info.Player.Characters.Clear();
+                Models.User.Instance.Info.Player.Characters.AddRange(response.Characters);
+            }
+
+            // character create event is existed
+            if (this.OnCharacterCreate != null) 
+            {
+                //  informate ui layer （UICharacterSelect.cs) to do character create operation
+                this.OnCharacterCreate(response.Result, response.Errormsg);
+            }
+        }
+
+        // client send enter game request information to server
+        public void SendGameEnter(int characterIdx)
+        {
+            Debug.LogFormat("UserGameEnterRequest : characterId:{0}", characterIdx);
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.gameEnter = new UserGameEnterRequest();
+            NetClient.Instance.SendMessage(message);
         }
     }
 }
