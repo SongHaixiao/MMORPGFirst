@@ -1,0 +1,59 @@
+{
+  "1": {
+    "TID": 1,
+    "Name": "Warrior",
+    "Type": "Normal",
+    "Class": "WARRIOR",
+    "Resource": "Character/Warrior",
+    "Description": "This job is a warrior !",
+    "InitLevel": 1,
+    "Speed": 300
+  },
+  "2": {
+    "TID": 2,
+    "Name": "Mage",
+    "Type": "Normal",
+    "Class": "WIZARD",
+    "Resource": "Character/Wizard",
+    "Description": "This job is a mage !",
+    "InitLevel": 1,
+    "Speed": 300
+  },
+  "3": {
+    "TID": 3,
+    "Name": "Archer",
+    "Type": "Normal",
+    "Class": "ARCHER",
+    "Resource": "Character/Archer",
+    "Description": "This job is an archer !",
+    "InitLevel": 1,
+    "Speed": 300
+  },
+  "1001": {
+    "TID": 1001,
+    "Name": "恶鬼",
+    "Type": "Normal",
+    "Class": "WARRIOR",
+    "Resource": "Monster/M1001",
+    "InitLevel": 1,
+    "Speed": 300
+  },
+  "1002": {
+    "TID": 1002,
+    "Name": "-",
+    "Type": "Normal",
+    "Class": "WIZARD",
+    "Resource": "Monster/M1002",
+    "InitLevel": 1,
+    "Speed": 300
+  },
+  "1003": {
+    "TID": 1003,
+    "Name": "-",
+    "Type": "Normal",
+    "Class": "ARCHER",
+    "Resource": "Monster/M1003",
+    "InitLevel": 1,
+    "Speed": 300
+  }
+}
