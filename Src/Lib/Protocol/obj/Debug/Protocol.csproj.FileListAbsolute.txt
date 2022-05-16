@@ -25,3 +25,12 @@ E:\Github\P5\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CoreCompileI
 E:\Github\P5\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CopyComplete
 E:\Github\P5\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.dll
 E:\Github\P5\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.pdb
+E:\Github\P6\MMORPGFirst\Src\Lib\Protocol\bin\Debug\Protocol.dll
+E:\Github\P6\MMORPGFirst\Src\Lib\Protocol\bin\Debug\Protocol.pdb
+E:\Github\P6\MMORPGFirst\Src\Lib\Protocol\bin\Debug\protobuf-net.dll
+E:\Github\P6\MMORPGFirst\Src\Lib\Protocol\bin\Debug\protobuf-net.xml
+E:\Github\P6\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.AssemblyReference.cache
+E:\Github\P6\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CoreCompileInputs.cache
+E:\Github\P6\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CopyComplete
+E:\Github\P6\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.dll
+E:\Github\P6\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.pdb

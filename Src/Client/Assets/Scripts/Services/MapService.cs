@@ -17,13 +17,16 @@ namespace Services
         {
             MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
             MessageDistributer.Instance.Subscribe<MapCharacterLeaveResponse>(this.OnMapCharacterLeave);
+            MessageDistributer.Instance.Subscribe<MapEntitySyncResponse>(this.OnMapEntitySync);
 
         }
+
 
         public void Dispose()
         {
             MessageDistributer.Instance.Unsubscribe<MapCharacterEnterResponse>(this.OnMapCharacterEnter);
             MessageDistributer.Instance.Unsubscribe<MapCharacterLeaveResponse>(this.OnMapCharacterLeave);
+            MessageDistributer.Instance.Unsubscribe<MapEntitySyncResponse>(this.OnMapEntitySync);
         }
 
         public void Init()
@@ -92,6 +95,42 @@ namespace Services
             // map resource is not exited.
             else
                 Debug.LogErrorFormat("EnterMap: Map {0} not existed", mapId);
+        }
+
+        // send map entity sync request to server
+        internal void SendMapEntitySync(EntityEvent entityEvent, NEntity entity)
+        {
+            Debug.LogFormat("MapEntityUpdateRequest : ID : {0} Pos : {1} DIR : {2} SPD : {3}", entity.Id, entity.Position.String(), entity.Direction.String(), entity.Speed);
+
+            // create sync map entity request net message
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.mapEntitySync = new MapEntitySyncRequest();
+            message.Request.mapEntitySync.entitySync = new NEntitySync()
+            {
+                // fill infor for sync map entity request net message
+                Id = entity.Id,
+                Event = entityEvent,
+                Entity = entity
+            };
+
+            // send sync map eneity request net message to server
+            NetClient.Instance.SendMessage(message);
+        }
+
+        // sync map entity evetn
+        private void OnMapEntitySync(object sender, MapEntitySyncResponse response)
+        {
+            //System.Text.StringBuilder sb = new System.Text.StringBuilder();
+            //sb.AppendFormat("MapEntityUpdateResponse : Entities : {0}", response.entitySyncs.Count);
+            //sb.AppendLine();
+            foreach(var entity in response.entitySyncs)
+            {
+                EnityManager.Instance.OnEntitySync(entity);
+                //sb.AppendFormat("   [{0}] event : {1} enttiy : {2}", entity.Id, entity.Event, entity.Entity.String());
+                //sb.AppendLine();
+            }
+            //Debug.Log(sb.ToString());
         }
     }
 }

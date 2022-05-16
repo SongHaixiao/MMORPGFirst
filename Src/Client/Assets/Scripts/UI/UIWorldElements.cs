@@ -30,7 +30,7 @@ public class UIWorldElements : MonoBehaviour
     void UpdateAvatar()
     {
         // this ui is User inforamtion
-        this.avatarName.text = string.Format("{0}{1}", User.Instance.CurrentCharacter.Name, User.Instance.CurrentCharacter.Id);
+        this.avatarName.text = string.Format("{0}", User.Instance.CurrentCharacter.Name);
         this.avatarLevle.text = User.Instance.CurrentCharacter.Level.ToString();
     }
 

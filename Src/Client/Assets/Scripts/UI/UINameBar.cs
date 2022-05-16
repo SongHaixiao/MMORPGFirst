@@ -8,7 +8,7 @@ public class UINameBar : MonoBehaviour
 {
 
     // open components
-    public Text avatarName;
+    public Text NameNameBar;
     public Character character;
 
 
@@ -41,9 +41,9 @@ public class UINameBar : MonoBehaviour
             string name = this.character.Name + " Level." + this.character.Info.Level;
 
             // load character name to avatar name
-            if(name != this.avatarName.text)
+            if(name != this.NameNameBar.text)
             {
-                this.avatarName.text = name;
+                this.NameNameBar.text = name;
             }
         }
     }

@@ -62014,7 +62014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 386ee8138bba4e940943849d48b061bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarName: {fileID: 1159431132}
+  NameNameBar: {fileID: 385208842}
 --- !u!1 &1879345704
 GameObject:
   m_ObjectHideFlags: 0
@@ -62058,6 +62058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c635be0209fa5488b5b0f96ce1700f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  global: 1
 --- !u!1001 &1885045750
 PrefabInstance:
   m_ObjectHideFlags: 0
