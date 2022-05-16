@@ -11,6 +11,7 @@ public class UICharInfo : MonoBehaviour {
     public Text charClass;
     public Text charName;
     public Image highLight;
+    public Scrollbar scrollbar;
 
     // set high light attribute
     public bool Selected
@@ -29,7 +30,7 @@ public class UICharInfo : MonoBehaviour {
             this.charClass.text = this.info.Class.ToString();
             this.charName.text = this.info.Name;
         }
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {

@@ -94,6 +94,9 @@ public class GameObjectManager : MonoBehaviour
                     pc.enabled = false;
                 }
             }
+
+            // 因为角色信息框 UINameBar 需要合角色一起创建，所以将 UINameBar 的创建添加到角色对象管理器中
+            UIWorldElementManager.Instance.AddCharacterNameBar(go.transform, character);
     
         }
     }

@@ -75,7 +75,9 @@ public class UICharacterSelect : MonoBehaviour
             // send character creation info to logic layer
             UserService.Instance.SendCharacterCreate(this.charName.text, this.charClass);
 
-            InitCharacterSelect(true);
+            PanelCreation.SetActive(false);
+            PanelSelection.SetActive(true);
+
         }
     }
 	

@@ -57,10 +57,12 @@ public class EntityController : MonoBehaviour
         if (entity != null)
             Debug.LogFormat("{0} OnDestroy :ID:{1} POS:{2} DIR:{3} SPD:{4} ", this.name, entity.entityId, entity.position, entity.direction, entity.speed);
 
-        //if(UIWorldElementManager.Instance!=null)
-        //{
-        //    UIWorldElementManager.Instance.RemoveCharacterNameBar(this.transform);
-        //}
+        // 因为所有游戏对象实体的操作都在 EntityConroller.cs 中进行，
+        // 所以在实体控制器中的 OnDestroy（）中将 UINameBar 一起随之角色实体删除
+        if (UIWorldElementManager.Instance != null)
+        {
+            UIWorldElementManager.Instance.RemoveCharacterNameBar(this.transform);
+        }
     }
 
     // Update is called once per frame

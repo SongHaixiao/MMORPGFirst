@@ -2582,6 +2582,7 @@ MonoBehaviour:
   charClass: {fileID: 1787152217}
   charName: {fileID: 1147022285}
   highLight: {fileID: 1963502009}
+  scrollbar: {fileID: 457696283}
 --- !u!1 &946061103
 GameObject:
   m_ObjectHideFlags: 0
