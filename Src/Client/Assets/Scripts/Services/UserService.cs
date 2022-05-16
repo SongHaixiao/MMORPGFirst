@@ -43,7 +43,6 @@ namespace Services
             MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnGameEnter);
             MessageDistributer.Instance.Subscribe<UserGameLeaveResponse>(this.OnGameLeave);
-            //MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
         }
 
         public void Dispose()
@@ -53,7 +52,6 @@ namespace Services
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnGameEnter);
             MessageDistributer.Instance.Unsubscribe<UserGameLeaveResponse>(this.OnGameLeave);
-            //MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
 
             NetClient.Instance.OnConnect -= OnGameServerConnect;
             NetClient.Instance.OnDisconnect -= OnGameServerDisconnect;
@@ -299,21 +297,6 @@ namespace Services
 
             }
         }
-
-        // client accept the character enter map response information from server
-        //private void OnCharacterEnter(object sender, MapCharacterEnterResponse message)
-        //{
-        //    Debug.LogFormat("OnMapCharacterEnter : {0} ", message.mapId);
-
-        //    // get character entering map's data from serevr
-        //    NCharacterInfo info = message.Characters[0];
-
-        //    // store info to CurrentCharacter in User
-        //    User.Instance.CurrentCharacter = info;
-
-        //    // loading map where character will enter to
-        //    SceneManager.Instance.LoadScene(DataManager.Instance.Maps[message.mapId].Resource);
-        //}
 
         // client send character game leave request information to server
         public void SendGameLeave()

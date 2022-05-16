@@ -1,0 +1,42 @@
+﻿using Entities;
+using SkillBridge.Message;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Managers
+{
+    interface IEntityNotify
+    {
+        void onEntityRemoved();
+    }
+
+    class EnityManager : Singleton<EnityManager>
+    {
+        Dictionary<int, Entity> entities = new Dictionary<int, Entity>();
+        Dictionary<int, IEntityNotify> notifiers = new Dictionary<int, IEntityNotify>();
+
+        public void RegiserEntityChangeNotity(int entityId, IEntityNotify notify)
+        {
+            this.notifiers[entityId] = notify; 
+        }
+
+        public void AddEntity(Entity entity)
+        {
+            entities[entity.entityId] = entity;
+        }
+
+        public void RemoveEntity(NEntity entity)
+        {
+            this.entities.Remove(entity.Id);
+            if(notifiers.ContainsKey(entity.Id))
+            {
+                notifiers[entity.Id].onEntityRemoved();
+                notifiers.Remove(entity.Id);
+            }
+        }
+
+    }
+}

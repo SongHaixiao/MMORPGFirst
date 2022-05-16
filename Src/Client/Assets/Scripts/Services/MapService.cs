@@ -58,9 +58,18 @@ namespace Services
             }
         }
 
+        // character leave map method
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
-            
+            Debug.LogFormat("OnMapCahracterLeave : CharID : {0}", response.characterId);
+
+            // leaving chracter is others, remove others chracter
+            if (response.characterId != User.Instance.CurrentCharacter.Id)
+                CharacterManager.Instance.RemoveCharacter(response.characterId);
+
+            // leaving chracter is player self, clear all characters in the map
+            else
+                CharacterManager.Instance.Clear();
         }
 
         // enter map 

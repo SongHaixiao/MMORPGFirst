@@ -1,11 +1,9 @@
-﻿using Services;
-using SkillBridge.Message;
-using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Services;
+using SkillBridge.Message;
 
 public class UIRegister : MonoBehaviour
 {
@@ -17,7 +15,7 @@ public class UIRegister : MonoBehaviour
     public InputField PasswordConfirm;
     public Button ButtonRegister;
 
-    // Start is called before the first frame update
+    public GameObject LoginPanel;
     void Start()
     {
         // accpet register event in logic layer
@@ -66,9 +64,20 @@ public class UIRegister : MonoBehaviour
     }
 
     // register event's operation in UI Layer
-    void OnRegister(Result result, string msg)
+    void OnRegister(Result result, string message)
     {
-        // MessageBox.Show(string.Format("Result : {0} ! {1} ", result, msg));
-        Debug.LogFormat("Result : {0} ! {1} ", result, msg);
+        if (result == Result.Success)
+        {
+            //登录成功，进入角色选择
+            MessageBox.Show("Register is successed !", "Tip", MessageBoxType.Information).OnYes = this.CloseRegister;
+        }
+        else
+            MessageBox.Show(message, "Error !", MessageBoxType.Error);
+    }
+
+    void CloseRegister()
+    {
+        this.gameObject.SetActive(false);
+        LoginPanel.SetActive(true);
     }
 }

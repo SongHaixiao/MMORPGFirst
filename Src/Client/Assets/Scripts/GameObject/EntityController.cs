@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Entities;
+using Managers;
 
-
-public class EntityController : MonoBehaviour
+public class EntityController : MonoBehaviour,IEntityNotify
 {
     /* Function:
      *  1.  接收服务器数据，通过接收到的数据来进行逻辑控制除了玩家本身角色实体外的其他角色实体；
@@ -34,6 +34,7 @@ public class EntityController : MonoBehaviour
     void Start () {
         if (entity != null)
         {
+            EnityManager.Instance.RegiserEntityChangeNotity(entity.entityId, this);
             this.UpdateTransform();
         }
 
@@ -97,5 +98,12 @@ public class EntityController : MonoBehaviour
                 anim.SetTrigger("Jump");
                 break;
         }
+    }
+
+    public void onEntityRemoved()
+    {
+        if (UIWorldElementManager.Instance != null)
+            UIWorldElementManager.Instance.RemoveCharacterNameBar(this.transform);
+        Destroy(this.gameObject);
     }
 }

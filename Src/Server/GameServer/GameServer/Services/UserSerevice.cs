@@ -139,11 +139,11 @@ namespace GameServer.Services
                 MapPosZ = 820,
             };
 
-            // 2. add character data table into DB
-            DBService.Instance.Entities.Characters.Add(character);
-            // 3. update session
+            // afeter character is creted, get character data from db
+            character = DBService.Instance.Entities.Characters.Add(character);
+
+            // save creaed character data into session and DB
             sender.Session.User.Player.Characters.Add(character);
-            // 4. save DB
             DBService.Instance.Entities.SaveChanges();
 
             // create character create response net message
@@ -152,6 +152,17 @@ namespace GameServer.Services
             message.Response.createChar = new UserCreateCharacterResponse();
             message.Response.createChar.Result = Result.Success;
             message.Response.createChar.Errormsg = "None";
+
+            // add every character in session to new message
+            foreach(var c in sender.Session.User.Player.Characters)
+            {
+                NCharacterInfo info = new NCharacterInfo();
+                info.Id = c.ID;
+                info.Name = c.Name;
+                info.Class = (CharacterClass)c.Class;
+                info.Tid = c.TID;
+                message.Response.createChar.Characters.Add(info);
+            }
 
             // send character create response to clinet
             byte[] data = PackageHandler.PackMessage(message);
@@ -184,8 +195,29 @@ namespace GameServer.Services
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender, character);
         }
 
+        // processs character leave game request from client,
+        // then send response to client 
         void OnGameLeave(NetConnection<NetSession> sender, UserGameLeaveRequest request)
         {
+            // get the character from session from client
+            Character character = sender.Session.Character;
+
+            Log.InfoFormat("UserGameLeaveRequest : characterID : {0} : {1} Map : {2}", character.Id, character.Info.Name, character.Info.mapId);
+
+            // remove character via character manager
+            CharacterManager.Instance.RemoveCharacter(character.Id);
+            MapManager.Instance[character.Info.mapId].CharacterLeave(character.Info);
+
+            // create character leave game response message to client
+            NetMessage message = new NetMessage();
+            message.Response = new NetMessageResponse();
+            message.Response.gameLeave = new UserGameLeaveResponse();
+            message.Response.gameLeave.Result = Result.Success;
+            message.Response.gameLeave.Errormsg = "None";
+
+            // send character leave game response message to client
+            byte[] data = PackageHandler.PackMessage(message);
+            sender.SendData(data,0,data.Length);
            
         }
     }

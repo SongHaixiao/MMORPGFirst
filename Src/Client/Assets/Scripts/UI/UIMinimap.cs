@@ -50,6 +50,8 @@ public class UIMinimap : MonoBehaviour
         // update character postion and arrow direction
         // in minimap per frame
 
+        if (this.BoudingBoxMiniMap == null || this.PlayerTransform == null) return;
+
         // get real width & height
         float realWidth = this.BoudingBoxMiniMap.bounds.size.x;
         float realHeight = this.BoudingBoxMiniMap.bounds.size.z;

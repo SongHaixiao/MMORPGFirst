@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Models;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,6 +25,11 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 
     private void LateUpdate()
     {
+        if(player == null)
+        {
+            player = User.Instance.CurrentCharacterObject;
+        }
+
         // 如果玩家角色不为空 null，则将玩家位置赋值给相机位置，即使相机跟随玩家
         if (player == null)
            return;

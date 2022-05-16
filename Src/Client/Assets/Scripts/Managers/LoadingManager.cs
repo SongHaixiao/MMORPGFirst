@@ -40,7 +40,8 @@ public class LoadingManager : MonoBehaviour
 
         UIGameTip.SetActive(false);            // close gale tips ui
 
-        yield return DataManager.Instance.LoadData();
+        // yield return DataManager.Instance.LoadData();
+        StartCoroutine(DataManager.Instance.LoadData());
 
         //Init basic services
         MapService.Instance.Init();

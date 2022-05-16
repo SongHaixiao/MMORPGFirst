@@ -18,6 +18,7 @@ namespace Managers
 
         // unity event fro character enter game
         public UnityAction<Character> OnCharacterEnter;
+        public UnityAction<Character> OnCharacterLeave;
 
         public CharacterManager()
         {
@@ -44,8 +45,8 @@ namespace Managers
             Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", cha.Id, cha.Name, cha.mapId, cha.Entity.String());
             Character character = new Character(cha);
             this.Characters[cha.Id] = character;
-
-            if(this.OnCharacterEnter!=null)
+            EnityManager.Instance.AddEntity(character);
+            if (this.OnCharacterEnter!=null)
             {
                 this.OnCharacterEnter(character);
             }
@@ -57,6 +58,16 @@ namespace Managers
         {
             Debug.LogFormat("RemoveCharacter:{0}", characterId);
             this.Characters.Remove(characterId);
+            if(this.Characters.ContainsKey(characterId))
+            {
+                EnityManager.Instance.RemoveEntity(this.Characters[characterId].Info.Entity);
+                if (this.OnCharacterLeave != null)
+                {
+                    this.OnCharacterLeave(this.Characters[characterId]);
+                }
+                this.Characters.Remove(characterId);
+
+            }
 
         }
     }

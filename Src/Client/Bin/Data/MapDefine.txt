@@ -1,0 +1,38 @@
+{
+  "1": {
+    "ID": 1,
+    "Name": "MainCity",
+    "Type": "Normal",
+    "SubType": "Normal",
+    "PKMode": false,
+    "Resource": "MainCity",
+    "Minimap": "buluzheng"
+  },
+  "2": {
+    "ID": 2,
+    "Name": "MonsterMap01",
+    "Type": "Normal",
+    "SubType": "Normal",
+    "PKMode": false,
+    "Resource": "Map01",
+    "Minimap": "luorisenl"
+  },
+  "3": {
+    "ID": 3,
+    "Name": "MonsterMap02",
+    "Type": "Normal",
+    "SubType": "Normal",
+    "PKMode": false,
+    "Resource": "Map02",
+    "Minimap": "luorisenl"
+  },
+  "4": {
+    "ID": 4,
+    "Name": "Mission01",
+    "Type": "Normal",
+    "SubType": "Normal",
+    "PKMode": false,
+    "Resource": "Map03",
+    "Minimap": "luoriyuhui"
+  }
+}
