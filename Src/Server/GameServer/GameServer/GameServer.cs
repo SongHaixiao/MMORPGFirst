@@ -11,22 +11,30 @@ using System.Threading;
 
 using Network;
 using GameServer.Services;
+using GameServer.Managers;
 
 namespace GameServer
 {
     class GameServer
     {
-        Thread thread;
+
+        NetService network; // net service
+        Thread thread;  
         bool running = false;
-        NetService network;
 
         public bool Init()
         {
-            network = new NetService();
-            network.Init(8000);
-            //DBService.Instance.Init();
-            //var a = DBService.Instance.Entities.Characters.Where(s => s.TID == 1);
-            //Console.WriteLine("{0}",a.FirstOrDefault<TCharacter>().Name);
+            // network initialization
+            int Port = Properties.Settings.Default.ServerPort; // get network port
+            network = new NetService(); // create net service
+            network.Init(Port);         // initialization network port
+
+            // start services
+            DBService.Instance.Init();
+            DataManager.Instance.Load();
+            UserService.Instance.Init();
+            MapService.Instance.Init();
+
             thread = new Thread(new ThreadStart(this.Update));
             return true;
         }
