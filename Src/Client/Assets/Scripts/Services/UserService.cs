@@ -43,7 +43,7 @@ namespace Services
             MessageDistributer.Instance.Subscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Subscribe<UserGameEnterResponse>(this.OnGameEnter);
             MessageDistributer.Instance.Subscribe<UserGameLeaveResponse>(this.OnGameLeave);
-            MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+            //MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
         }
 
         public void Dispose()
@@ -53,7 +53,7 @@ namespace Services
             MessageDistributer.Instance.Unsubscribe<UserCreateCharacterResponse>(this.OnUserCreateCharacter);
             MessageDistributer.Instance.Unsubscribe<UserGameEnterResponse>(this.OnGameEnter);
             MessageDistributer.Instance.Unsubscribe<UserGameLeaveResponse>(this.OnGameLeave);
-            MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
+            //MessageDistributer.Instance.Subscribe<MapCharacterEnterResponse>(this.OnCharacterEnter);
 
             NetClient.Instance.OnConnect -= OnGameServerConnect;
             NetClient.Instance.OnDisconnect -= OnGameServerDisconnect;
@@ -113,11 +113,25 @@ namespace Services
         {
             if (this.pendingMessage != null)
             {
-                if (this.pendingMessage.Request.userRegister!=null)
+                if (this.pendingMessage.Request.userLogin!=null)
+                {
+                    if (this.OnLogin != null)
+                    {
+                        this.OnLogin(Result.Failed, string.Format("Server is Disconnected！\n RESULT:{0} ERROR:{1}", result, reason));
+                    }
+                }
+                else if(this.pendingMessage.Request.userRegister!=null)
                 {
                     if (this.OnRegister != null)
                     {
-                        this.OnRegister(Result.Failed, string.Format("服务器断开！\n RESULT:{0} ERROR:{1}", result, reason));
+                        this.OnRegister(Result.Failed, string.Format("Server is Disconnected！\n RESULT:{0} ERROR:{1}", result, reason));
+                    }
+                }
+                else
+                {
+                    if (this.OnCharacterCreate != null)
+                    {
+                        this.OnCharacterCreate(Result.Failed, string.Format("Server is Disconnected！\n RESULT:{0} ERROR:{1}", result, reason));
                     }
                 }
                 return true;
@@ -244,9 +258,9 @@ namespace Services
         }
 
         // client accept the character create response information from server
-        private void OnUserCreateCharacter(object sender, UserCreateCharacterResponse response)
+        void OnUserCreateCharacter(object sender, UserCreateCharacterResponse response)
         {
-            Debug.LogFormat("OnUserCreateCharacter : {0} [{1}]", response.Result, response.Errormsg);
+            Debug.LogFormat("OnUserCreateCharacter:{0} [{1}]", response.Result, response.Errormsg);
 
             // the response result is success
             if(response.Result == Result.Success)
@@ -286,20 +300,20 @@ namespace Services
             }
         }
 
-        // // client accept the character enter map response information from server
-        private void OnCharacterEnter(object sender, MapCharacterEnterResponse message)
-        {
-            Debug.LogFormat("OnMapCharacterEnter : {0} ", message.mapId);
+        // client accept the character enter map response information from server
+        //private void OnCharacterEnter(object sender, MapCharacterEnterResponse message)
+        //{
+        //    Debug.LogFormat("OnMapCharacterEnter : {0} ", message.mapId);
 
-            // get character entering map's data from serevr
-            NCharacterInfo info = message.Characters[0];
-            
-            // store info to CurrentCharacter in User
-            User.Instance.CurrentCharacter = info;
+        //    // get character entering map's data from serevr
+        //    NCharacterInfo info = message.Characters[0];
 
-            // loading map where character will enter to
-            SceneManager.Instance.LoadScene(DataManager.Instance.Maps[message.mapId].Resource);
-        }
+        //    // store info to CurrentCharacter in User
+        //    User.Instance.CurrentCharacter = info;
+
+        //    // loading map where character will enter to
+        //    SceneManager.Instance.LoadScene(DataManager.Instance.Maps[message.mapId].Resource);
+        //}
 
         // client send character game leave request information to server
         public void SendGameLeave()

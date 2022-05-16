@@ -5,6 +5,7 @@ using UnityEngine;
 using Common.Data;
 using SkillBridge.Message;
 using Models;
+using Managers;
 
 namespace Services
 {
@@ -68,7 +69,14 @@ namespace Services
             // map resource is existed, load this map
             if (DataManager.Instance.Maps.ContainsKey(mapId))
             {
+                // get map data from db
                 MapDefine map = DataManager.Instance.Maps[mapId];
+
+                // geive map data to current map data in user,
+                // when enter map character
+                User.Instance.CurrentMapData = map;
+
+                // load map resource
                 SceneManager.Instance.LoadScene(map.Resource);
             }
 

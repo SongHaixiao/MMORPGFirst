@@ -5,13 +5,15 @@ using UnityEngine;
 
 public class UIWorldElementManager : MonoSingleton<UIWorldElementManager> 
 {
-    // open component
+    // open components
     public GameObject UINameBar;
+    public GameObject UIMiniMap;
 
-    private Dictionary<Transform, GameObject> elements = new Dictionary<Transform, GameObject>();
+    // dicionary to manager world element ui
+    private Dictionary<Transform, GameObject> ElementsNameBar = new Dictionary<Transform, GameObject>();
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -28,7 +30,9 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
         goNameBar.GetComponent<UIWorldElement>().owner = owner;        // set goNameBar's UIWorldElement component  owner
         goNameBar.GetComponent<UINameBar>().character = character;     // set goNameBar's UINameBar component character object
         goNameBar.SetActive(true);                                     // active goNameBar
-        this.elements[owner] = goNameBar;                              // add instanced goNameBar into elements
+        this.ElementsNameBar[owner] = goNameBar;                       // add instanced goNameBar into elements
+
+        this.UIMiniMap.GetComponent<UIMinimap>().PlayerTransform = owner; // add UINameBar for character object when it is created
     }
 
     // remove UINameBar from character object when it is dead
@@ -36,10 +40,10 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
     {
 
         // if UINameBar of owner exieted in elemnts
-        if (this.elements.ContainsKey(owner))
+        if (this.ElementsNameBar.ContainsKey(owner))
         {
-            Destroy(this.elements[owner]);  // destroy UINameBar from owner
-            this.elements.Remove(owner);    // remove UINameBar from owner
+            Destroy(this.ElementsNameBar[owner]);  // destroy UINameBar from owner
+            this.ElementsNameBar.Remove(owner);    // remove UINameBar from owner
         }
     }
 }

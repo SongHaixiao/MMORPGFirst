@@ -5,6 +5,8 @@ using UnityEngine;
 using Entities;
 using Services;
 using SkillBridge.Message;
+using Models;
+using Managers;
 
 public class GameObjectManager : MonoBehaviour
 {
@@ -82,6 +84,7 @@ public class GameObjectManager : MonoBehaviour
                 // P1 : 如果是玩家使用的角色，则将 PlayerInputController 控制器启动，并将 MainPlayerCamera 实例化;
                 if (character.Info.Id == Models.User.Instance.CurrentCharacter.Id)
                 {
+                    User.Instance.CurrentCharacterObject = go;
                     MainPlayerCamera.Instance.player = go;
                     pc.enabled = true;
                     pc.character = character;
@@ -97,7 +100,6 @@ public class GameObjectManager : MonoBehaviour
 
             // 因为角色信息框 UINameBar 需要合角色一起创建，所以将 UINameBar 的创建添加到角色对象管理器中
             UIWorldElementManager.Instance.AddCharacterNameBar(go.transform, character);
-    
         }
     }
 }

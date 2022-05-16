@@ -10,7 +10,7 @@ using UnityEngine.Events;
 using Entities;
 using SkillBridge.Message;
 
-namespace Services
+namespace Managers
 {
     class CharacterManager : Singleton<CharacterManager>, IDisposable
     {
@@ -45,9 +45,9 @@ namespace Services
             Character character = new Character(cha);
             this.Characters[cha.Id] = character;
 
-            if(OnCharacterEnter!=null)
+            if(this.OnCharacterEnter!=null)
             {
-                OnCharacterEnter(character);
+                this.OnCharacterEnter(character);
             }
         }
 

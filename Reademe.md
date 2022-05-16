@@ -1,17 +1,17 @@
 - Time : 2022-05-16
 
-- Mission Completed : P4 - Enter Game
-
-    1. basic operations √
+- Mition : P5 - Minimap
     
-    2. character controller √
+    1. UI √
 
-    3. character inforation ui √
+    2. Update character position in realtime. √
 
-- Todo : P5 - Minimap
-    
-    1. UI
+- To Do : P6 - Synchronization
 
-    2. Update character position in realtime.
+    1. Part 1
+
+    2. Part 2
+
+    3. Part 3
 
 - Note ： Change the connection for Server and DB
