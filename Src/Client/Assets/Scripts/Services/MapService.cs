@@ -43,7 +43,7 @@ namespace Services
             foreach (var cha in response.Characters)
             {
                 // current character change map
-                if (User.Instance.CurrentCharacter.Id == cha.Id)
+                if (User.Instance.CurrentCharacter == null ||User.Instance.CurrentCharacter.Id == cha.Id)
                 {
                     User.Instance.CurrentCharacter = cha;
                 }

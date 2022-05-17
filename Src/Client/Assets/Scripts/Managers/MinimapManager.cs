@@ -7,6 +7,17 @@ namespace Managers
 {
     class MinimapManager : Singleton<MinimapManager>
     {
+        public Transform PlyaerTransform
+        {
+            get
+            {
+                if (User.Instance.CurrentCharacterObject == null)
+                    return null;
+
+                return User.Instance.CurrentCharacterObject.transform;
+            }
+        }
+
         // loading mini map resources
         public Sprite LoadCurrentMinimap()
         {

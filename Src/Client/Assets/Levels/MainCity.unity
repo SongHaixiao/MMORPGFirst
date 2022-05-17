@@ -35752,7 +35752,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   global: 1
   UINameBar: {fileID: 1879077761}
-  UIMiniMap: {fileID: 201993138}
 --- !u!1 &1069011415
 GameObject:
   m_ObjectHideFlags: 0

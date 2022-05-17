@@ -57,7 +57,6 @@ namespace Managers
         public void RemoveCharacter(int characterId)
         {
             Debug.LogFormat("RemoveCharacter:{0}", characterId);
-            this.Characters.Remove(characterId);
             if(this.Characters.ContainsKey(characterId))
             {
                 EnityManager.Instance.RemoveEntity(this.Characters[characterId].Info.Entity);
@@ -66,7 +65,6 @@ namespace Managers
                     this.OnCharacterLeave(this.Characters[characterId]);
                 }
                 this.Characters.Remove(characterId);
-
             }
 
         }

@@ -6,6 +6,6 @@
 
     2. Part 2 √
 
-    3. Part 3
+    3. Part 3 √
 
 - Note ： Change the connection for Server and DB

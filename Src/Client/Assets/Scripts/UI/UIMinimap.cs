@@ -14,7 +14,7 @@ public class UIMinimap : MonoBehaviour
     public Collider BoudingBoxMiniMap;
 
     // define private varaibles
-    public Transform PlayerTransform;
+    private Transform PlayerTransform;
 
     // Start is called before the first frame update
     void Start()
@@ -39,9 +39,6 @@ public class UIMinimap : MonoBehaviour
 
         // set local postion as origin potin
         this.ImageMiniMap.transform.localPosition = Vector3.zero;
-
-        // get transform position data of current character
-        //this.ownerTransform = User.Instance.CurrentCharacterObject.transform;
     }
 
     // Update is called once per frame
@@ -49,6 +46,12 @@ public class UIMinimap : MonoBehaviour
     {
         // update character postion and arrow direction
         // in minimap per frame
+
+        if(this.PlayerTransform == null)
+        {
+            // get transform position data of current character
+            this.PlayerTransform = MinimapManager.Instance.PlyaerTransform;
+        }
 
         if (this.BoudingBoxMiniMap == null || this.PlayerTransform == null) return;
 

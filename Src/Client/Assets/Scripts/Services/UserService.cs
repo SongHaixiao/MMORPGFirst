@@ -317,6 +317,7 @@ namespace Services
         {
             // change current map id when character leave
             MapService.Instance.CurrentMapId = 0;
+            User.Instance.CurrentCharacter = null;
             Debug.LogFormat("OnGameLeave:{0} [{1}]", response.Result, response.Errormsg);
         }
     }

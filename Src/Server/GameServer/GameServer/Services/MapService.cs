@@ -29,12 +29,12 @@ namespace GameServer.Services
         private void OnMapEntitySync(NetConnection<NetSession> sender, MapEntitySyncRequest request)
         {
             Character character = sender.Session.Character;
-            Log.InfoFormat("OnMapEntitySync : chracterID : {0} : {1} Entity.Id : {2} Event : {3} Enttiy : {4}",
-                            character.Id, character.Info.Name, request.entitySync.Id, request.entitySync.Event, request.entitySync.Entity.String());
+            Log.InfoFormat("OnMapEntitySync: characterID:{0}:{1} Entity.Id:{2} Evt:{3} Entity:{4}", character.Id, character.Info.Name, request.entitySync.Id, request.entitySync.Event, request.entitySync.Entity.String());
+
             MapManager.Instance[character.Info.mapId].UpdateEntity(request.entitySync);
         }
 
-        internal void SendEnttiyUpdate(NetConnection<NetSession> conn, NEntitySync entity)
+        public void SendEntityUpdate(NetConnection<NetSession> conn, NEntitySync entity)
         {
             NetMessage message = new NetMessage();
             message.Response = new NetMessageResponse();

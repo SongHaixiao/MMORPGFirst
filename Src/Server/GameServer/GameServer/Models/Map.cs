@@ -90,12 +90,9 @@ namespace GameServer.Models
         /// Character Leave Game
         /// </summary>
         /// <param name="character"></param>
-        internal void CharacterLeave(NCharacterInfo character)
+        internal void CharacterLeave(Character character)
         {
             Log.InfoFormat("CharacterEnter: Map:{0} characterId:{1}", this.Define.ID, character.Id);
-
-            // remove character from dictionary
-            this.MapCharacters.Remove(character.Id);
 
             // send player character leave game information to otehrs online
             foreach(var kv in this.MapCharacters)
@@ -103,6 +100,9 @@ namespace GameServer.Models
                 // tell others you are leaving
                 this.SendCharacterLeaveMap(kv.Value.connection, character);
             }
+
+            // remove character from dictionary
+            this.MapCharacters.Remove(character.Id);
         }
 
 
@@ -124,7 +124,7 @@ namespace GameServer.Models
         }
 
         // send character leav map response message to client
-        void SendCharacterLeaveMap(NetConnection<NetSession> conn, NCharacterInfo character)
+        void SendCharacterLeaveMap(NetConnection<NetSession> conn, Character character)
         {
             // create character leave map response net message
             NetMessage message = new NetMessage();
@@ -151,7 +151,7 @@ namespace GameServer.Models
                 }
                 else
                 {
-                    MapService.Instance.SendEnttiyUpdate(kv.Value.connection, entity);
+                    MapService.Instance.SendEntityUpdate(kv.Value.connection, entity);
                 }
             }
         }

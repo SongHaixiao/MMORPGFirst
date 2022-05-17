@@ -7,20 +7,10 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
 {
     // open components
     public GameObject UINameBar;
-    public GameObject UIMiniMap;
+    //public GameObject UIMiniMap;
 
     // dicionary to manager world element ui
     private Dictionary<Transform, GameObject> ElementsNameBar = new Dictionary<Transform, GameObject>();
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     // add UINameBar for character object when it is created
     public void AddCharacterNameBar(Transform owner, Character character) 
@@ -32,7 +22,7 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
         goNameBar.SetActive(true);                                     // active goNameBar
         this.ElementsNameBar[owner] = goNameBar;                       // add instanced goNameBar into elements
 
-        this.UIMiniMap.GetComponent<UIMinimap>().PlayerTransform = owner; // add UINameBar for character object when it is created
+        //this.UIMiniMap.GetComponent<UIMinimap>().PlayerTransform = owner; // add UINameBar for character object when it is created
     }
 
     // remove UINameBar from character object when it is dead
