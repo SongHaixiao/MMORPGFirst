@@ -8,7 +8,7 @@ public class LoadingManager : MonoBehaviour
     /* Function :  Manage game's starting */
 
     // open components to unity editor
-    public GameObject UIGameTip;
+    //public GameObject UIGameTip;
     public GameObject UILoading;
     public GameObject UILogin;
 
@@ -30,15 +30,15 @@ public class LoadingManager : MonoBehaviour
          * -> Loading Process Number ->  UI Login ->*/
 
         // UI loading
-        UIGameTip.SetActive(true);     // active game tips ui
+        //UIGameTip.SetActive(true);     // active game tips ui
         UILoading.SetActive(false); // close laoding ui
         UILogin.SetActive(false);   // close login ui
-        yield return new WaitForSeconds(2f); // wait 2 s
+        //yield return new WaitForSeconds(2f); // wait 2 s
 
         UILoading.SetActive(true);          //  active loading ui
         yield return new WaitForSeconds(1f); // wait 2s
 
-        UIGameTip.SetActive(false);            // close gale tips ui
+        //UIGameTip.SetActive(false);            // close gale tips ui
 
         // yield return DataManager.Instance.LoadData();
         StartCoroutine(DataManager.Instance.LoadData());
