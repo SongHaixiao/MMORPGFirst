@@ -132,5 +132,21 @@ namespace Services
             }
             //Debug.Log(sb.ToString());
         }
+
+        // send smap teleporter request message to server
+        public void SendMapTeleport(int teleporterId)
+        {
+            Debug.LogFormat("MapTeleportRequest : teleporterID : {0}", teleporterId);
+
+            // create teleporter request message
+            NetMessage message = new NetMessage();
+            message.Request = new NetMessageRequest();
+            message.Request.mapTeleport = new MapTeleportRequest();
+            message.Request.mapTeleport.teleporterId = teleporterId;
+
+            // send requst message to server
+            NetClient.Instance.SendMessage(message);
+        }
+
     }
 }

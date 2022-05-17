@@ -17,6 +17,7 @@ namespace GameServer.Services
         public MapService()
         {
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapEntitySyncRequest>(this.OnMapEntitySync);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<MapTeleportRequest>(this.OnMapTeleport);
         }
 
         public void Init()
@@ -25,7 +26,7 @@ namespace GameServer.Services
             MapManager.Instance.Init();
         }
 
-
+        // map entity sync
         private void OnMapEntitySync(NetConnection<NetSession> sender, MapEntitySyncRequest request)
         {
             Character character = sender.Session.Character;
@@ -34,6 +35,7 @@ namespace GameServer.Services
             MapManager.Instance[character.Info.mapId].UpdateEntity(request.entitySync);
         }
 
+        // send entity update response to client
         public void SendEntityUpdate(NetConnection<NetSession> conn, NEntitySync entity)
         {
             NetMessage message = new NetMessage();
@@ -45,5 +47,47 @@ namespace GameServer.Services
             byte[] data = PackageHandler.PackMessage(message);
             conn.SendData(data, 0, data.Length);
         }
+
+        // map teleporter
+        private void OnMapTeleport(NetConnection<NetSession> sender, MapTeleportRequest request)
+        {
+            // get character object
+            Character character = sender.Session.Character;
+            
+            Log.InfoFormat("OnMapTeleport : characterID : {0} : {1} TeleporterId : {2}", character.Id, character.Data, request.teleporterId);
+
+
+            // teleporter going to is not exited, error
+            if(!DataManager.Instance.Teleporters.ContainsKey(request.teleporterId))
+            {
+                Log.WarningFormat("Souce TeleporterID : [{0}] not existed !", request.teleporterId);
+                return;
+            }
+
+            // get the teleporter data from db
+            TeleporterDefine source = DataManager.Instance.Teleporters[request.teleporterId];
+
+            // LinkTo is unava or is not exited in db, error
+            if(source.LinkTo == 0 || !DataManager.Instance.Teleporters.ContainsKey(source.LinkTo))
+            {
+                Log.WarningFormat("Source TeleporterID [{0}] LinkTo ID [{1}] not exited !", request.teleporterId, source.LinkTo);
+                return;
+            }
+
+            // teleporter is available
+            // get target teleporter from db
+            TeleporterDefine target = DataManager.Instance.Teleporters[source.LinkTo];
+
+            // character leave current map
+            MapManager.Instance[source.MapID].CharacterLeave(character);
+
+            // set character staring position and direction before getting in target teleporter
+            character.Position = target.Position;
+            character.Direction = target.Direction;
+
+            // load target map
+            MapManager.Instance[target.MapID].CharacterEnter(sender, character);
+        }
+
     }
 }

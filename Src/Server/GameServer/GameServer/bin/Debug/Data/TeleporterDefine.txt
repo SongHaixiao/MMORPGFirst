@@ -1,46 +1,122 @@
 {
   "1": {
     "ID": 1,
-    "Name": "主城->野外",
+    "Name": "MainCity->Map01",
+    "MapID": 1,
     "LinkTo": 6,
-    "MapID": 1
+    "Descript": null,
+    "Position": {
+      "X": 730,
+      "Y": 2590,
+      "Z": 1146
+    },
+    "Direction": {
+      "X": 0,
+      "Y": 100,
+      "Z": 0
+    }
   },
   "2": {
     "ID": 2,
-    "Name": "主城->副本",
+    "Name": "MainCity->Map03",
+    "MapID": 1,
     "LinkTo": 8,
-    "MapID": 1
+    "Descript": null,
+    "Position": {
+      "X": 7225,
+      "Y": 2590,
+      "Z": 1146
+    },
+    "Direction": {
+      "X": 0,
+      "Y": 100,
+      "Z": 0
+    }
   },
   "3": {
     "ID": 3,
-    "Name": "主城传入点1",
-    "MapID": 1
+    "Name": "MainCityIn1",
+    "MapID": 1,
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": 1558,
+      "Y": 2543,
+      "Z": 807
+    },
+    "Direction": {
+      "X": 100,
+      "Y": 0,
+      "Z": -5
+    }
   },
   "4": {
     "ID": 4,
-    "Name": "出城传入点2",
-    "MapID": 1
+    "Name": "MainCityIn2",
+    "MapID": 1,
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": 6515,
+      "Y": 2591,
+      "Z": 807
+    },
+    "Direction": {
+      "X": -100,
+      "Y": -4,
+      "Z": 0
+    }
   },
   "5": {
     "ID": 5,
-    "Name": "野外->主城",
+    "Name": "Map01->MainCity",
+    "MapID": 2,
     "LinkTo": 3,
-    "MapID": 2
+    "Descript": null,
+    "Position": {
+      "X": 2333,
+      "Y": 3952,
+      "Z": 438
+    },
+    "Direction": {
+      "X": 0,
+      "Y": 100,
+      "Z": 0
+    }
   },
   "6": {
     "ID": 6,
-    "Name": "野外传入点",
-    "MapID": 2
+    "Name": "Map01In",
+    "MapID": 2,
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": 3202,
+      "Y": 3968,
+      "Z": 48
+    },
+    "Direction": {
+      "X": 100,
+      "Y": 0,
+      "Z": -5
+    }
   },
   "7": {
     "ID": 7,
-    "Name": "副本->主城",
+    "Name": "Map03->MainCity",
+    "MapID": 4,
     "LinkTo": 4,
-    "MapID": 4
+    "Descript": null,
+    "Position": null,
+    "Direction": null
   },
   "8": {
     "ID": 8,
-    "Name": "副本传入点",
-    "MapID": 4
+    "Name": "Map03In",
+    "MapID": 4,
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": null,
+    "Direction": null
   }
 }

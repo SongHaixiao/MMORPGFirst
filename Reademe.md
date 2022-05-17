@@ -2,7 +2,7 @@
 
 - To Do : P7 - Teleporter begin
 
-    1. UI
+    1. UI √
 
     2. Link to Map01
 
