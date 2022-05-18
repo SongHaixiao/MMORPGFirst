@@ -1519,3 +1519,26 @@
 2022-05-18 15:45:04,059 [14] [WARN ] [GameServer] :Client[] DataReceived Len:44
 2022-05-18 15:45:04,060 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(5905,2629,804),dir:(-99,12,0),spd:0
 2022-05-18 15:45:04,455 [14] [WARN ] [GameServer] :Client[] Disconnected
+2022-05-18 16:01:35,369 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 16:01:35,477 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 16:01:35,633 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 16:01:35,635 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 16:01:35,636 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 16:01:35,636 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 16:01:35,637 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 16:01:35,646 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:35,646 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:35,646 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:35,646 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:35,655 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:35,657 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:37,142 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:39,649 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:39,708 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 16:01:51,096 [3] [WARN ] [GameServer] :Client[127.0.0.1:50091]] Connected
+2022-05-18 16:01:51,154 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 16:01:51,255 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 16:01:53,203 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 16:01:53,206 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 16:01:53,211 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 16:04:39,615 [14] [WARN ] [GameServer] :Client[] Disconnected
