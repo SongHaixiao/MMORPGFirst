@@ -53,6 +53,7 @@ public class LoadingManager : MonoBehaviour
         {
             i += Random.Range(0.1f, 1.5f);
             ProcessBar.value = i;
+            ProcessNumber.text = i.ToString();
             yield return new WaitForEndOfFrame();
         }
 

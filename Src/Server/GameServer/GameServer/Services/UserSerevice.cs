@@ -207,9 +207,8 @@ namespace GameServer.Services
 
             Log.InfoFormat("UserGameLeaveRequest : characterID : {0} : {1} Map : {2}", character.Id, character.Info.Name, character.Info.mapId);
 
-            // remove character via character manager
-            CharacterManager.Instance.RemoveCharacter(character.Id);
-            MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+            // remove character
+            CharacterLeave(character);
 
             // create character leave game response message to client
             NetMessage message = new NetMessage();
@@ -220,8 +219,18 @@ namespace GameServer.Services
 
             // send character leave game response message to client
             byte[] data = PackageHandler.PackMessage(message);
-            sender.SendData(data,0,data.Length);
-           
+            sender.SendData(data, 0, data.Length);
+
+        }
+
+        // remove  Chracter 
+        public void CharacterLeave(Character character)
+        {
+            // remove Character from CharacterManager
+            CharacterManager.Instance.RemoveCharacter(character.Id);
+
+            // remove Character from MapManager
+            MapManager.Instance[character.Info.mapId].CharacterLeave(character);
         }
     }
 }

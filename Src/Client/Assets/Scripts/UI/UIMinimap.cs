@@ -19,26 +19,34 @@ public class UIMinimap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // tell MinimapManager this map's Mini Map
+        MinimapManager.Instance.MiniMap = this;
+
         // initialize mini map
-        this.InitMiniMap();
+        this.UpdateMiniMap();
     }
 
     // method for initializing mini map
-    void InitMiniMap()
+    public void UpdateMiniMap()
     {
         // loade current map's name to minimap
         this.NameMiniMap.text = User.Instance.CurrentMapData.Name;
 
-        // if mini map is not override,
         // load mini map resouce to override mini map
-        if (this.ImageMiniMap.overrideSprite == null)
-            this.ImageMiniMap.overrideSprite = MinimapManager.Instance.LoadCurrentMinimap();
+        this.ImageMiniMap.overrideSprite = MinimapManager.Instance.LoadCurrentMinimap();
 
         // set mini map as native size
         this.ImageMiniMap.SetNativeSize();
 
         // set local postion as origin potin
         this.ImageMiniMap.transform.localPosition = Vector3.zero;
+
+        // get tthe bouding box of minimap from MiniMapManager
+        this.BoudingBoxMiniMap = MinimapManager.Instance.BoudingBoxMiniMap;
+
+        // clear PlayerTransform in order to execute the PlayerTransfrom 
+        // in Update() method
+        this.PlayerTransform = null;
     }
 
     // Update is called once per frame
