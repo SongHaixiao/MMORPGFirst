@@ -1,27 +1,27 @@
 {
   "1": {
     "ID": 1,
-    "Name": "MainCity->Map01",
+    "Name": "MainCity->Map01In",
     "LinkTo": 6,
     "MapID": 1,
     "Description": "Main City Left Out"
   },
   "2": {
     "ID": 2,
-    "Name": "MainCity->Map03",
+    "Name": "MainCity->Map03In",
     "LinkTo": 8,
     "MapID": 1,
     "Description": "MainCity Right Out"
   },
   "3": {
     "ID": 3,
-    "Name": "MainCityIn1",
+    "Name": "MainCityInFromMap01",
     "MapID": 1,
     "Description": "Main City Left In"
   },
   "4": {
     "ID": 4,
-    "Name": "MainCityIn2",
+    "Name": "MainCityInFromMap03",
     "MapID": 1,
     "Description": "Main City Right In"
   },
@@ -34,20 +34,20 @@
   },
   "6": {
     "ID": 6,
-    "Name": "Map01In",
+    "Name": "Map01InFromMainCity",
     "MapID": 2,
     "Description": "Map01 In"
   },
   "7": {
     "ID": 7,
-    "Name": "Map03->MainCity",
+    "Name": "Map03->MainCityIn",
     "LinkTo": 4,
     "MapID": 4,
     "Description": "Map03 Out"
   },
   "8": {
     "ID": 8,
-    "Name": "Map03In",
+    "Name": "Map03InFromMainCity",
     "MapID": 4,
     "Description": "Map03 In"
   }

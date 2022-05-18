@@ -25,11 +25,38 @@ public class TeleporterObject : MonoBehaviour
     
     }
 
+   
+
+    // extension unity editor
+#if UNITY_EDITOR
+
+    // draw mesh in setting format
+    private void OnDrawGizmos()
+    {
+        // set mesh as green color
+        Gizmos.color = Color.green;
+        if(this.mesh != null)
+        {
+            // draw mesh outline
+            //Gizmos.DrawWireMesh(this.mesh, this.transform.position + Vector3.up * this.transform.localScale.y * .5f,
+            //                        this.transform.rotation, this.transform.localScale);
+
+            Gizmos.DrawWireMesh(this.mesh, this.transform.position,
+                                   this.transform.rotation, this.transform.localScale);
+        }
+
+        // add a arrow in mesh to tell the direction of this object
+        UnityEditor.Handles.color = Color.red;
+        UnityEditor.Handles.ArrowHandleCap(0, this.transform.position, this.transform.rotation, 1f, EventType.Repaint);
+    }
+#endif
+
+
     // Trigger Event
     // when character touch teleporters, then this method will be triggered
     private void OnTriggerEnter(Collider other)
     {
-        Debug.LogErrorFormat("Teleporter is triggered!");
+        Debug.LogFormat("Teleporter is triggered!");
 
         // get the player input controller component
         PlayerInputController pc = other.GetComponent<PlayerInputController>();
@@ -62,28 +89,4 @@ public class TeleporterObject : MonoBehaviour
             }
         }
     }
-
-    // extension unity editor
-#if UNITY_EDITOR
-
-    // draw mesh in setting format
-    private void OnDrawGizmos()
-    {
-        // set mesh as green color
-        Gizmos.color = Color.green;
-        if(this.mesh != null)
-        {
-            // draw mesh outline
-            //Gizmos.DrawWireMesh(this.mesh, this.transform.position + Vector3.up * this.transform.localScale.y * .5f,
-            //                        this.transform.rotation, this.transform.localScale);
-
-            Gizmos.DrawWireMesh(this.mesh, this.transform.position,
-                                   this.transform.rotation, this.transform.localScale);
-        }
-
-        // add a arrow in mesh to tell the direction of this object
-        UnityEditor.Handles.color = Color.red;
-        UnityEditor.Handles.ArrowHandleCap(0, this.transform.position, this.transform.rotation, 1f, EventType.Repaint);
-    }
-#endif
 }
