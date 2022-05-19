@@ -1,4 +1,5 @@
-﻿using Services;
+﻿using Managers;
+using Services;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,6 +47,7 @@ public class LoadingManager : MonoBehaviour
         //Init basic services
         MapService.Instance.Init();
         UserService.Instance.Init();
+        TestManager.Instance.Init();
 
 
         // simulate the loading process number
