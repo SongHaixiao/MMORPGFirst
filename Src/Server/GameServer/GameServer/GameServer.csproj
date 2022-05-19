@@ -134,7 +134,7 @@
     <Compile Include="TCharacter.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="TCharItem.cs">
+    <Compile Include="TCharacterItem.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="TPlayer.cs">
