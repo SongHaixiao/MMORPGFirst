@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/20/2022 04:45:52
--- Generated from EDMX file: C:\Users\10066\OneDrive\桌面\我的文档\Project\P10 Begin\MMORPGFirst\Src\Server\GameServer\GameServer\Entities.edmx
+-- Date Created: 05/21/2022 03:52:25
+-- Generated from EDMX file: C:\Users\10066\OneDrive\桌面\我的文档\Project\P10 P2\MMORPGFirst\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -83,7 +83,7 @@ CREATE TABLE [dbo].[CharacterItems] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [ItemID] int  NOT NULL,
     [ItemCount] int  NOT NULL,
-    [TCharacterID] int  NOT NULL
+    [CharacterID] int  NOT NULL
 );
 GO
 
@@ -149,10 +149,10 @@ ON [dbo].[Characters]
     ([Player_ID]);
 GO
 
--- Creating foreign key on [TCharacterID] in table 'CharacterItems'
+-- Creating foreign key on [CharacterID] in table 'CharacterItems'
 ALTER TABLE [dbo].[CharacterItems]
 ADD CONSTRAINT [FK_CharacterItem]
-    FOREIGN KEY ([TCharacterID])
+    FOREIGN KEY ([CharacterID])
     REFERENCES [dbo].[Characters]
         ([ID])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -161,7 +161,7 @@ GO
 -- Creating non-clustered index for FOREIGN KEY 'FK_CharacterItem'
 CREATE INDEX [IX_FK_CharacterItem]
 ON [dbo].[CharacterItems]
-    ([TCharacterID]);
+    ([CharacterID]);
 GO
 
 -- --------------------------------------------------

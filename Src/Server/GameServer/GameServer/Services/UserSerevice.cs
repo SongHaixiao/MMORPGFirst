@@ -189,6 +189,44 @@ namespace GameServer.Services
             message.Response.gameEnter.Result = Result.Success;
             message.Response.gameEnter.Errormsg = "None";
 
+            // enter game successed, send character information
+            // add charter infomation ( including Tool info)
+            // to game enter response message
+            message.Response.gameEnter.Character = character.Info;
+
+            /* Tool System test */
+
+            // test tool item id
+            int itemId = 2;
+            
+            // check tool tiem id is exited in character
+            bool hasItem = character.ItemManger.HasItem(itemId);
+
+            Log.InfoFormat("HasItem : [{0}] [{1}]", itemId, hasItem);
+            
+            // test mehod
+
+            // itemId exited in character
+            if(hasItem)
+            {
+                // remove one itemId from character
+                character.ItemManger.RemoveItem(itemId, 1);
+            }
+
+            // itemId didn't exited in character
+            else
+            {
+                // add two itemId to character
+                character.ItemManger.AddItem(itemId, 5);
+            }
+
+            // check item whther is altered
+            // get item Id from character and print its info log
+            Models.Item item = character.ItemManger.GetItem(itemId);
+            Log.InfoFormat("Item : [{0}] [{1}]", itemId, item);
+
+
+
             // send enter game response to clinet
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);

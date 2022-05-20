@@ -66,7 +66,7 @@
     <Property Name="ItemID" Type="Int32" Nullable="false" />
     <Property Name="ItemCount" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Owner" Relationship="ExtremeWorldModel.CharacterItem" FromRole="TCharacterItem" ToRole="TCharacter" />
-    <Property Name="TCharacterID" Type="Int32" Nullable="false" />
+    <Property Name="CharacterID" Type="Int32" Nullable="false" />
   </EntityType>
   <Association Name="CharacterItem">
     <End Type="ExtremeWorldModel.TCharacter" Role="TCharacter" Multiplicity="1" />
@@ -76,7 +76,7 @@
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="TCharacterItem">
-        <PropertyRef Name="TCharacterID" />
+        <PropertyRef Name="CharacterID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

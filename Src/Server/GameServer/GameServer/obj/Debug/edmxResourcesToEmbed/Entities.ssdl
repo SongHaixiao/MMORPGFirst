@@ -55,7 +55,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ItemID" Type="int" Nullable="false" />
     <Property Name="ItemCount" Type="int" Nullable="false" />
-    <Property Name="TCharacterID" Type="int" Nullable="false" />
+    <Property Name="CharacterID" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="UserPlayer">
     <End Role="User" Type="ExtremeWorldModel.Store.Users" Multiplicity="*" />
@@ -89,7 +89,7 @@
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="TCharacterItem">
-        <PropertyRef Name="TCharacterID" />
+        <PropertyRef Name="CharacterID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
