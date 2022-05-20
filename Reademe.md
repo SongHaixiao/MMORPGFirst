@@ -1,27 +1,28 @@
 - Time : 2022-05-21
 
-- To Do : P10 - Tool System Ended √
+- To Do : P11 - Bag System Begin
+ 
+    1. P1 : Item UI
 
-    1. Data Structure Setting √
+        1.1 UI
 
-        1.1 Protocol √
+        1.2 UI Scripts
+
+    2. Data Structure Setting 
+
+        2.1 Protocol 
     
-        1.2 Data Tables √
+        2.2 Data Tables 
 
-        1.2 Generated Database based on model in Server √
+        2.3 Generated Database based on model in Server 3
 
-    2. Tool Item Controlling √
+    3. P3 : Bag UI
 
-        2.1 ItemManager.cs √
+        3.1 UI
 
-            - Client √
+        3.2 UI Scripts
 
-            - Server √
-
-        2.2 Item.cs √
-
-            - Client √
-
-            - Server √
+    4. Bag Function Scripts
+        
 
 - Note ： Change the connection for Server and DB
