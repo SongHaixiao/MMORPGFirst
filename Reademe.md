@@ -4,9 +4,9 @@
  
     1. P1 :  UI
 
-        1.1 Bag UI
+        1.1 Bag UI 
         
-        1.2 Item UI
+        1.2 Item UI √
 
     2. Data Structure Setting √
 
