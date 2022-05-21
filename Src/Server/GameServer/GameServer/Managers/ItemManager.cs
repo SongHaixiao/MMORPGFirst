@@ -115,7 +115,7 @@ namespace GameServer.Managers
             Log.InfoFormat("Character [{0}] Add Item : [{1}] addCount : [{2}]", this.Owner.Data.ID, item, count);
             
             // save the db change
-            DBService.Instance.Save();
+            //DBService.Instance.Save();
             return true;
         }
 
@@ -142,7 +142,7 @@ namespace GameServer.Managers
             Log.InfoFormat("Character [{0}] Remove Item : [{1}] removeCount : [{2}]", this.Owner.Data.ID, item, count);
             
             // save db
-            DBService.Instance.Save();
+            //DBService.Instance.Save();
             return true;
         }
 

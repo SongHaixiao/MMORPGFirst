@@ -61,4 +61,10 @@ public class UIMain : MonoSingleton<UIMain>
     {
         MessageBox.Show("Click the dialog box : " + result, " Response Result ", MessageBoxType.Information);
     }
+
+    // click ui button show UIBag
+    public void OnClickBag()
+    {
+        UIManager.Instance.Show<UIBag>();
+    }
 }

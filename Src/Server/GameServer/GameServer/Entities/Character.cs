@@ -39,6 +39,11 @@ namespace GameServer.Entities
             // add item to Character
             this.ItemManger = new ItemManager(this);
             this.ItemManger.GetItemInfos(this.Info.Items);
+
+            // add bag to Character
+            this.Info.Bag = new NBagInfo();
+            this.Info.Bag.Unlocked = this.Data.Bag.Unlocked;
+            this.Info.Bag.Items = this.Data.Bag.Items;
         }
     }
 }

@@ -19,6 +19,8 @@ public class UIMinimap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.LogWarning("UIMiniMap Start " + this.GetInstanceID());
+
         // tell MinimapManager this map's Mini Map
         MinimapManager.Instance.MiniMap = this;
 

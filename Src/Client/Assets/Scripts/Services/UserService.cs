@@ -296,10 +296,11 @@ namespace Services
             // game enter successed
             if(response.Result == Result.Success)
             {
-               // character is not null, add items to character
+               // character is not null, add items and bag to character
                if(response.Character != null)
                 {
                     ItemManger.Instance.Init(response.Character.Items);
+                    BagManager.Instance.Init(response.Character.Bag);
                 }
             }
         }

@@ -141,6 +141,13 @@ namespace GameServer.Services
                 MapPosZ = 820,
             };
 
+            // add bag data table to character
+            var bag = new TCharacterBag();
+            bag.Owner = character;
+            bag.Items = new byte[0];
+            bag.Unlocked = 20;
+            character.Bag = DBService.Instance.Entities.CharacterBag.Add(bag);
+
             // afeter character is creted, get character data from db
             character = DBService.Instance.Entities.Characters.Add(character);
 
@@ -210,14 +217,17 @@ namespace GameServer.Services
             if(hasItem)
             {
                 // remove one itemId from character
-                character.ItemManger.RemoveItem(itemId, 1);
+                //character.ItemManger.RemoveItem(itemId, 1);
             }
 
             // itemId didn't exited in character
             else
             {
-                // add two itemId to character
-                character.ItemManger.AddItem(itemId, 5);
+                // test items to bagg id, count
+                character.ItemManger.AddItem(1, 200);
+                character.ItemManger.AddItem(2, 100);
+                character.ItemManger.AddItem(3, 30);
+                character.ItemManger.AddItem(4, 120);
             }
 
             // check item whther is altered

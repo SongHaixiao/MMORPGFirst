@@ -21,8 +21,10 @@ public class UIManager : Singleton<UIManager>
     // add ui resources in constructor
     public UIManager() 
     {
-        // ad UI Element Prefab via UITest Preafb in Assets/Resources/UI
+        // ad UI Element Prefab in Assets/Resources/UI
+
         this.UIResources.Add(typeof(UITest), new UIElement() { Resources = "UI/UITest", Cache = true });
+        this.UIResources.Add(typeof(UIBag), new UIElement() { Resources = "UI/UIBag", Cache = true });
 
     }
 
