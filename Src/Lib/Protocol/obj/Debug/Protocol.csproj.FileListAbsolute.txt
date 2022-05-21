@@ -52,3 +52,12 @@ C:\Users\10066\OneDrive\桌面\我的文档\Project\P10 Begin\MMORPGFirst\Src\Li
 C:\Users\10066\OneDrive\桌面\我的文档\Project\P10 Begin\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CopyComplete
 C:\Users\10066\OneDrive\桌面\我的文档\Project\P10 Begin\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.dll
 C:\Users\10066\OneDrive\桌面\我的文档\Project\P10 Begin\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.pdb
+E:\Github\P10 Begin\MMORPGFirst\Src\Lib\Protocol\bin\Debug\Protocol.dll
+E:\Github\P10 Begin\MMORPGFirst\Src\Lib\Protocol\bin\Debug\Protocol.pdb
+E:\Github\P10 Begin\MMORPGFirst\Src\Lib\Protocol\bin\Debug\protobuf-net.dll
+E:\Github\P10 Begin\MMORPGFirst\Src\Lib\Protocol\bin\Debug\protobuf-net.xml
+E:\Github\P10 Begin\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.AssemblyReference.cache
+E:\Github\P10 Begin\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CoreCompileInputs.cache
+E:\Github\P10 Begin\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CopyComplete
+E:\Github\P10 Begin\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.dll
+E:\Github\P10 Begin\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.pdb

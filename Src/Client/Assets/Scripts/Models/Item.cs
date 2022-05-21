@@ -1,4 +1,5 @@
-﻿using SkillBridge.Message;
+﻿using Common.Data;
+using SkillBridge.Message;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ namespace Models
         // dfien item attributes
         public int Id;
         public int Count;
+        public ItemDefine Define;
+        
 
         // constructor
         // Note : client use the ItemInfo from network protoc
@@ -20,6 +23,7 @@ namespace Models
         {
             this.Id = item.Id;
             this.Count = item.Count;
+            this.Define = DataManager.Instance.Items[item.Id];
         }
 
         // print imte information

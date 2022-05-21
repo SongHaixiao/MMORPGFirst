@@ -3979,7 +3979,7 @@ MonoBehaviour:
   Password: {fileID: 1048047062}
   PasswordConfirm: {fileID: 652071816}
   ButtonRegister: {fileID: 1348613715}
-  LoginPanel: {fileID: 0}
+  LoginPanel: {fileID: 2037322570}
 --- !u!1 &1784359175
 GameObject:
   m_ObjectHideFlags: 0

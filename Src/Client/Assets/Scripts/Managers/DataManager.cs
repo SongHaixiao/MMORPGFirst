@@ -17,6 +17,7 @@ public class DataManager : Singleton<DataManager>
     public Dictionary<int, CharacterDefine> Characters = null;
     public Dictionary<int, TeleporterDefine> Teleporters = null;
     public Dictionary<int, NpcDefine> NPCs = null;
+    public Dictionary<int, ItemDefine> Items = null;
     public Dictionary<int, Dictionary<int, SpawnPointDefine>> SpawnPoints = null;
 
 
@@ -39,6 +40,9 @@ public class DataManager : Singleton<DataManager>
 
         json = File.ReadAllText(this.DataPath + "NpcDefine.txt");
         this.NPCs = JsonConvert.DeserializeObject<Dictionary<int, NpcDefine>>(json);
+
+        json = File.ReadAllText(this.DataPath + "ItemDefine.txt");
+        this.Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
     }
 
 
@@ -61,6 +65,11 @@ public class DataManager : Singleton<DataManager>
 
         json = File.ReadAllText(this.DataPath + "NpcDefine.txt");
         this.NPCs = JsonConvert.DeserializeObject<Dictionary<int, NpcDefine>>(json);
+
+        yield return null;
+
+        json = File.ReadAllText(this.DataPath + "ItemDefine.txt");
+        this.Items = JsonConvert.DeserializeObject<Dictionary<int, ItemDefine>>(json);
 
         yield return null;
 

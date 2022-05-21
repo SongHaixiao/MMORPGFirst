@@ -33,7 +33,7 @@ namespace GameServer.Managers
         // item using, default number is 1
         public bool UseItem(int itemId, int count = 1)
         {
-            Log.InfoFormat("[{0}] UserItem [{1} : {2}]", this.Owner.Data.ID, itemId, count);
+            Log.InfoFormat("Character [{0}] UserItem [{1} : {2}]", this.Owner.Data.ID, itemId, count);
 
             Item item = null;
 
@@ -77,7 +77,7 @@ namespace GameServer.Managers
         {
             Item item = null;
             this.Items.TryGetValue(itemId, out item);
-            Log.InfoFormat("[{0}] Get Item [{1} : {2}]", this.Owner.Data.ID, itemId, item);
+            Log.InfoFormat("Character [{0}] Get Item [{1} : {2}]", this.Owner.Data.ID, itemId, item);
             return item;
         }
 
@@ -112,7 +112,7 @@ namespace GameServer.Managers
                 this.Items.Add(itemId, item);
             }
 
-            Log.InfoFormat("[{0}] Add Item : [{1}] addCount : [{2}]", this.Owner.Data.ID, item, count);
+            Log.InfoFormat("Character [{0}] Add Item : [{1}] addCount : [{2}]", this.Owner.Data.ID, item, count);
             
             // save the db change
             DBService.Instance.Save();
@@ -139,7 +139,7 @@ namespace GameServer.Managers
             // rremove item
             item.Remove(count);
 
-            Log.InfoFormat("[{0}] Remove Item : [{1}] removeCount : [{2}]", this.Owner.Data.ID, item, count);
+            Log.InfoFormat("Character [{0}] Remove Item : [{1}] removeCount : [{2}]", this.Owner.Data.ID, item, count);
             
             // save db
             DBService.Instance.Save();
