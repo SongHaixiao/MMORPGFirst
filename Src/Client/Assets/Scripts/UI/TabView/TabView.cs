@@ -49,12 +49,13 @@ public class TabView : MonoBehaviour
                 tabButtons[i].Select(i == index);
 
                 // active this bag page
-                if (i < tabPages.Length - 1)
-                    tabPages[i].SetActive(i == index);
+                tabPages[i].SetActive(i == index);
             }
-
-            //if (OnTabSelect != null)
-            //    OnTabSelect(index);
         }
+    }
+
+    void Update()
+    {
+        
     }
 }

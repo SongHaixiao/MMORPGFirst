@@ -5,7 +5,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIIconItem : MonoBehaviour
+public class UIBagItem : MonoBehaviour
 {
     /* Function : UI of tool item icon */
 

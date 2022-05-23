@@ -1,10 +1,10 @@
 - Time : 2022-05-22
 
-- To Do : P11 - Bag System Begin
+- To Do : P11 - Bag System Completed √
  
-    1. P1 :  UI
+    1. P1 :  UI √
 
-        1.1 Bag UI 
+        1.1 Bag UI √
         
         1.2 Item UI √
 

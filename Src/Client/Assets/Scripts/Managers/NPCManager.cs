@@ -76,7 +76,7 @@ namespace Managers
         // task interactive operation
         private bool DoTaskInteractive(NpcDefine npc)
         {
-            MessageBox.Show("Click NPC : " + npc.Name, " dialog.");
+            MessageBox.Show("Click NPC : " + npc.Name, " Dialog");
             return true;
         }
 

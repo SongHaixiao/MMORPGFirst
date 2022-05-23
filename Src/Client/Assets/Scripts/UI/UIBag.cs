@@ -4,6 +4,7 @@ using Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,7 +25,16 @@ public class UIBag : UIWindow
             slots = new List<Image>();
             for(int page = 0; page < pages.Length; page++)
             {
-                slots.AddRange(this.pages[page].GetComponentsInChildren<Image>(true));
+               List<Image> imgs = new List<Image>();
+               imgs.AddRange(this.pages[page].GetComponentsInChildren<Image>(true));
+
+               foreach(var img in imgs)
+                {
+                    if(img.CompareTag("BagItem"))
+                    {
+                        slots.Add(img);
+                    }
+                }
             }
         }
 
@@ -39,9 +49,11 @@ public class UIBag : UIWindow
             if (item.ItemId > 0) 
             {
                 GameObject go = Instantiate(bagItem, slots[i].transform);
-                var ui = go.GetComponent<UIIconItem>();
+                var ui = go.GetComponent<UIBagItem>();
                 var def = ItemManger.Instance.Items[item.ItemId].Define;
                 ui.SetMainIcon(def.Icon, item.Count.ToString());
+                ui.gameObject.SetActive(true);
+                
             }
         }
 
@@ -58,4 +70,8 @@ public class UIBag : UIWindow
         this.moeny.text = User.Instance.CurrentCharacter.Id.ToString();
     }
 
+    public void OnReset()
+    {
+        BagManager.Instance.Reset();
+    }
 }

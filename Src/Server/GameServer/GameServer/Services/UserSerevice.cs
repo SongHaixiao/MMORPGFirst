@@ -235,7 +235,8 @@ namespace GameServer.Services
             Models.Item item = character.ItemManger.GetItem(itemId);
             Log.InfoFormat("Item : [{0}] [{1}]", itemId, item);
 
-
+            // Save items in DB
+            DBService.Instance.Save();
 
             // send enter game response to clinet
             byte[] data = PackageHandler.PackMessage(message);
