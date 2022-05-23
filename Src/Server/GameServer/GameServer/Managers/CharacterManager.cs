@@ -52,9 +52,12 @@ namespace GameServer.Managers
         // delete Character Object from Characters Dictionary
         public void RemoveCharacter(int characterId)
         {
+            //if(this.Characters.ContainsKey(characterId))
+            //{
             var cha = this.Characters[characterId];
             EntityManager.Instance.RemoveEntity(cha.Data.MapID, cha);
             this.Characters.Remove(characterId);
+            //}
         }
     }
 }

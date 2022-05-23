@@ -166,3 +166,14 @@ C:\Users\10066\OneDrive\桌面\我的文档\Project\P11 begin\MMORPGFirst\Src\Li
 C:\Users\10066\OneDrive\桌面\我的文档\Project\P11 begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.csproj.CopyComplete
 C:\Users\10066\OneDrive\桌面\我的文档\Project\P11 begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.dll
 C:\Users\10066\OneDrive\桌面\我的文档\Project\P11 begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.pdb
+E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.dll
+E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.pdb
+E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\Common.dll
+E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\Common.pdb
+E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\Protocol.dll
+E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\Protocol.pdb
+E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\log4net.xml
+E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\protobuf-net.xml
+E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.csproj.CopyComplete

@@ -136,9 +136,10 @@ namespace GameServer.Services
                 Class = (int)request.Class,
                 TID = (int)request.Class,
                 MapID = 1,
-                MapPosX = 5000,
-                MapPosY = 4000,
-                MapPosZ = 820,
+                MapPosX = 5000, // start position x
+                MapPosY = 4000, // start position y
+                MapPosZ = 820,  // start position z
+                Gold = 100000, //  start money
             };
 
             // add bag data table to character
@@ -146,6 +147,7 @@ namespace GameServer.Services
             bag.Owner = character;
             bag.Items = new byte[0];
             bag.Unlocked = 20;
+            //TCharacterItem it = new TCharacterItem();
             character.Bag = DBService.Instance.Entities.CharacterBag.Add(bag);
 
             // afeter character is creted, get character data from db

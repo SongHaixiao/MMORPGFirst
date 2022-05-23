@@ -112,24 +112,25 @@ namespace GameServer.Managers
                 this.Items.Add(itemId, item);
             }
 
+            // set item status
+            this.Owner.StatusManger.AddItemChange(itemId, count, StatusAction.Add);
+
             Log.InfoFormat("Character [{0}] Add Item : [{1}] addCount : [{2}]", this.Owner.Data.ID, item, count);
             
-            // save the db change
-            //DBService.Instance.Save();
             return true;
         }
 
         // remove item
-        public bool RemoveItem(int ItemId, int count)
+        public bool RemoveItem(int itemId, int count)
         {
             // item is not existed in Itmes manager
-            if(!this.Items.ContainsKey(ItemId))
+            if(!this.Items.ContainsKey(itemId))
             {
                 return false;
             }
 
             // get the item form item manger
-            Item item = this.Items[ItemId];
+            Item item = this.Items[itemId];
 
             // item db count less than local,
             // error, return false
@@ -139,10 +140,11 @@ namespace GameServer.Managers
             // rremove item
             item.Remove(count);
 
+            // set item status
+            this.Owner.StatusManger.AddItemChange(itemId, count, StatusAction.Delete);
+
             Log.InfoFormat("Character [{0}] Remove Item : [{1}] removeCount : [{2}]", this.Owner.Data.ID, item, count);
             
-            // save db
-            //DBService.Instance.Save();
             return true;
         }
 

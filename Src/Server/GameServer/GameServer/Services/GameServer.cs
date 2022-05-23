@@ -32,9 +32,10 @@ namespace GameServer
             // start services
             DBService.Instance.Init();
             DataManager.Instance.Load();
-            UserService.Instance.Init();
             MapService.Instance.Init();
-
+            UserService.Instance.Init();
+            ItemService.Instance.Init();
+            
             thread = new Thread(new ThreadStart(this.Update));
             return true;
         }
