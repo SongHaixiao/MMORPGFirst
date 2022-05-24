@@ -174,6 +174,4 @@ E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\Common.dll
 E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\Common.pdb
 E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\Protocol.dll
 E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\Protocol.pdb
-E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\log4net.xml
-E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\bin\Debug\protobuf-net.xml
 E:\Github\P12 Begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.csproj.CopyComplete

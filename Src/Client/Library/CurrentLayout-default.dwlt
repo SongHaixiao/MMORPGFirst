@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 382
     height: 582
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 333, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 129
+  controlID: 133
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 166
+  controlID: 170
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -513,20 +513,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/UI
+    - Assets/Scripts/UI
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Resources/UI
+  - Assets/Scripts/UI
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\Github\P12 Begin\MMORPGFirst\Src\Client
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 126}
-    m_SelectedIDs: 2a470000
-    m_LastClickedID: 18218
-    m_ExpandedIDs: 0000000098410000b84400000a4700002a470000324e00008250000022520000ba520000c65700009c5d000000ca9a3b
+    scrollPos: {x: 0, y: 260}
+    m_SelectedIDs: d24d0000
+    m_LastClickedID: 19922
+    m_ExpandedIDs: 00000000c43e0000f04100007c4b00007a4f00001250000026550000025b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -554,7 +554,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000098410000b8440000324e000022520000ba520000c65700009c5d0000
+    m_ExpandedIDs: 00000000c43e0000f04100007c4b00007a4f00001250000026550000025b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -581,22 +581,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 82ae0000244900005c4500004c4b000038500000705200007a4a00005a490000be430000424a0000b05900000ab70000e0480000ba5200008c540000fa63000048650000cc3f00004e540000e2400000f43f0000ce950000d695000000000000448700005e410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: UIBagItem
-      m_OriginalName: UIBagItem
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 16730
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 7}
     m_CreateAssetUtility:
@@ -606,7 +606,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 47}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 231
@@ -679,7 +679,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 406af9ff7688f9ff428df9ff5ed0f9ff42d5f9ffc8d7f9ff5adbf9ff54dff9ff3ef4f9ff8c17fafffa3cfaffc241faffe64afaff6461faffe669fafff069fafffa69fafffe69faff306afaff826afaff8e6afaff1686faffe4ebfaff8493fbff0a96fbff9c99fbff969dfbff80b2fbffd2e7fbff5616fcff144afcff1e4afcff284afcff2c4afcff584afcff5e4afcffb04afcffbc4afcffaa60fcff7465fcfff87bfcff8e7ffcff987ffcffa27ffcffa67ffcffd87ffcff2a80fcff3680fcff2496fcfff29afcff329efcff389efcff429efcff4c9efcff509efcff829efcffd49efcffe09efcffd6b7fcffa6defcffb0defcffbadefcffbedefcfff0defcff0adffcff42dffcff4edffcff0ef6fcff18f6fcff22f6fcff26f6fcff58f6fcff72f6fcffaaf6fcffb6f6fcffa40cfdff0e19fdff1819fdff2219fdff2619fdff5819fdffaa19fdffb619fdffee1afdfffa1afdff1c38fdffc257fdffb877fdffb887fdffcea0fdffa2a5fdffe8bafdff6abdfdfff8c0fdffeec4fdffd2d9fdffeceefdff6ef1fdfffcf4fdfff2f8fdffd60dfeffc025feff3a2cfeff4438fefff65cfeff6073feff82c2feff66c3feff98c3feffeac3fefff6c3feffbaddfeff7ce2feff40e7feff54e7feff70e7feffa6eafeffb6eafeffbaeafeff56ebfeff6aebfeff7eebfeff7a01ffff903effff3644ffff4644ffff4a44ffffdc49fffff649fffffa49ffff004affff044affff5e5bffffb095ffff54b1ffff90b8ffff4ee4ffffc4e4ffffcce4ffffe0e4ffffeae4fffff4e4fffffae4ffff00e5ffff04e5ffff0ee5ffff16e5ffff2ae5ffff94faffff30fbfffff4ffffff10d701006ee201008ef80100ec030200fa9e020050aa0200dc100300321c0300
+      m_ExpandedIDs: ead6ffffa2d7ffffbed7ffffc8d7ffffd2d7ffffd6d7ffff08d8ffff5ad8ffff66d8ffff3cf5ffff60fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
