@@ -14,6 +14,7 @@ public class UIShopItem : MonoBehaviour, ISelectHandler
     public Text price;
     public Text count;
     public Image background;
+    public Image shopItemBackground;
     public Sprite normalBg;
     public Sprite selectedBg;
 
@@ -26,6 +27,7 @@ public class UIShopItem : MonoBehaviour, ISelectHandler
         {
             selected = value;
             this.background.overrideSprite = selected ? selectedBg : normalBg;
+            this.shopItemBackground.overrideSprite = selected ? selectedBg : normalBg;
         }
     }
 
@@ -56,6 +58,8 @@ public class UIShopItem : MonoBehaviour, ISelectHandler
 
     public void OnSelect(BaseEventData eventData)
     {
+        Debug.LogFormat("Shop Item is Selected !");
+
         this.Selected = true;
         this.shop.SelectShopItem(this);
     }

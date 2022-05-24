@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 4091300806006154}
   - component: {fileID: 95344477693413480}
   - component: {fileID: 616551140}
+  - component: {fileID: 636715106}
   m_Layer: 0
   m_Name: TaskNPC
   m_TagString: Untagged
@@ -282,6 +283,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NpcID: 4
+--- !u!65 &636715106
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314351071975014}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0654106, y: 1.99053, z: 1}
+  m_Center: {x: 0.032705307, y: 1.0223169, z: 0}
 --- !u!1 &1320030863016542
 GameObject:
   m_ObjectHideFlags: 0

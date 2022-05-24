@@ -48,8 +48,8 @@ public class LoadingManager : MonoBehaviour
         MapService.Instance.Init();
         UserService.Instance.Init();
         TestManager.Instance.Init();
+        StatusService.Instance.Init();
         ShopManager.Instance.Init();
-
 
         // simulate the loading process number
         for (float i = 0; i < 100;)

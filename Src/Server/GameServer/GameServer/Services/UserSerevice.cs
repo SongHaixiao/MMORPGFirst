@@ -147,8 +147,25 @@ namespace GameServer.Services
             bag.Owner = character;
             bag.Items = new byte[0];
             bag.Unlocked = 20;
-            //TCharacterItem it = new TCharacterItem();
+
+            TCharacterItem it = new TCharacterItem();
             character.Bag = DBService.Instance.Entities.CharacterBag.Add(bag);
+
+
+            character.Items.Add(new TCharacterItem()
+            {
+                Owner = character,
+                ItemID = 1,
+                ItemCount = 20,
+            });
+
+            character.Items.Add(new TCharacterItem()
+            {
+                Owner = character,
+                ItemID = 2,
+                ItemCount = 20,
+
+            });
 
             // afeter character is creted, get character data from db
             character = DBService.Instance.Entities.Characters.Add(character);
@@ -206,7 +223,7 @@ namespace GameServer.Services
             /* Tool System test */
 
             // test tool item id
-            int itemId = 2;
+            int itemId = 1;
             
             // check tool tiem id is exited in character
             bool hasItem = character.ItemManger.HasItem(itemId);
@@ -226,15 +243,14 @@ namespace GameServer.Services
             else
             {
                 // test items to bagg id, count
-                character.ItemManger.AddItem(1, 200);
-                character.ItemManger.AddItem(2, 100);
-                character.ItemManger.AddItem(3, 30);
-                character.ItemManger.AddItem(4, 120);
+                character.ItemManger.AddItem(1, 20);
+                character.ItemManger.AddItem(2, 10);
             }
 
             // check item whther is altered
             // get item Id from character and print its info log
             Models.Item item = character.ItemManger.GetItem(itemId);
+           
             Log.InfoFormat("Item : [{0}] [{1}]", itemId, item);
 
             // Save items in DB

@@ -16,8 +16,8 @@ namespace Managers
         private bool OnNpcInvokeShop(NpcDefine npc)
         {
             Debug.LogFormat("TestManager.OnNpcInvokeShop:Npc:[{0}:{1}] Type : {2} Func : {3}", npc.ID, npc.Name, npc.Type, npc.Function);
-            UITest test = UIManager.Instance.Show<UITest>();
-            test.SetTitle(npc.Name);
+            //UITest test = UIManager.Instance.Show<UITest>();
+            //test.SetTitle(npc.Name);
             return true;
         }
 

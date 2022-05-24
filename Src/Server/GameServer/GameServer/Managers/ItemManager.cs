@@ -77,7 +77,7 @@ namespace GameServer.Managers
         {
             Item item = null;
             this.Items.TryGetValue(itemId, out item);
-            Log.InfoFormat("Character [{0}] Get Item [{1} : {2}]", this.Owner.Data.ID, itemId, item);
+            Log.InfoFormat("Character [{0}], Get Item : [{1}]", this.Owner.Data.ID, item);
             return item;
         }
 

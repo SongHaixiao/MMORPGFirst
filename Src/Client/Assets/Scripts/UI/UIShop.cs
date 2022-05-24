@@ -63,7 +63,7 @@ public class UIShop : UIWindow
 
         if (!ShopManager.Instance.BuyItem(this.shop.ID, this.selectedItem.ShopItemID))
         {
-
+            Debug.LogFormat("But Item Error !");
         }
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Services
 {
-    public class ItemService : Singleton<ItemService>,IDisposable
+    class ItemService : Singleton<ItemService>,IDisposable
     {
         public ItemService()
         {
@@ -22,7 +22,7 @@ namespace Services
 
         public void SendBuyItem(int shopId, int shopItemId)
         {
-            Debug.Log("SendBuyItem");
+            Debug.Log("SendBuyItem!");
 
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();

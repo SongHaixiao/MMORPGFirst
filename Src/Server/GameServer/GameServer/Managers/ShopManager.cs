@@ -21,7 +21,7 @@ namespace GameServer.Managers
             ShopItemDefine shopItem;
             if (DataManager.Instance.ShopItems[shopId].TryGetValue(shopItemId, out shopItem))
             {
-                Log.InfoFormat("BuyItem : Character : {0}, Item : {1}, Count : {2}, Price : {3}", sender.Session.Character.Id, shopItem.ItemID, shopItem.Count);
+                Log.InfoFormat("BuyItem : Character : {0}, Item : {1} Count : {2} Price : {3}", sender.Session.Character.Id, shopItem.ItemID, shopItem.Count,shopItem.Price);
                 if(sender.Session.Character.Gold >= shopItem.Price)
                 {
                     sender.Session.Character.ItemManger.AddItem(shopItem.ItemID, shopItem.Count);
