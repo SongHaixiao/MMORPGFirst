@@ -1,18 +1,18 @@
 - Time : 2022-05-25
 
-- To Do : P13 Equipment System -> To Begin
+- To Do : P13 Equipment System -> To Do : Setp03 : UI
  
-    1. Step01 ：Data Structure 
+    1. Step01 ：Data Structure √
 
-        1.1 Data Tables 
+        1.1 Data Tables √
 
-        1.2 Network message protocol 
+        1.2 Network message protocol √
 
-        1.3 Update datas in DB 
+        1.3 Update datas in DB √
 
         1.4 Client & Server add data reading in Data Manager. √
 
-    2. Step02 ： Scripts 
+    2. Step02 ： Scripts √
 
     3. Setp03 ：UI -> To Do 
 

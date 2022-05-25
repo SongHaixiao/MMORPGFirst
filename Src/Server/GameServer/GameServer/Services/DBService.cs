@@ -24,9 +24,12 @@ namespace GameServer.Services
 
         // asynchronous saving
         // improve properties position
-        public void Save()
+        public void Save(bool async = false)
         {
-            entities.SaveChangesAsync();
+            if (async)
+                entities.SaveChangesAsync();
+            else
+                entities.SaveChanges();
         }
     }
 }

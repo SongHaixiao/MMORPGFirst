@@ -25,6 +25,8 @@ namespace GameServer.Entities
             base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ),new Core.Vector3Int(100,0,0))
         {
             // loading character information while loading game
+
+            // initialization character
             this.Data = cha;
             this.Info = new NCharacterInfo();
             this.Info.Type = type;
@@ -38,14 +40,17 @@ namespace GameServer.Entities
             this.Info.Entity = this.EntityData;
             this.Define = DataManager.Instance.Characters[this.Info.Tid];
 
-            // add item to Character
+            // initialization item
             this.ItemManger = new ItemManager(this);
             this.ItemManger.GetItemInfos(this.Info.Items);
 
-            // add bag to Character
+            // initialization bag and add items to bag
             this.Info.Bag = new NBagInfo();
             this.Info.Bag.Unlocked = this.Data.Bag.Unlocked;
             this.Info.Bag.Items = this.Data.Bag.Items;
+
+            // initialization equipments
+            this.Info.Equips = this.Data.Equips;
 
             this.StatusManger = new StatusManger(this);
         }

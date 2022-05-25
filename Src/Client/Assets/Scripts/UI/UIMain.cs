@@ -67,4 +67,10 @@ public class UIMain : MonoSingleton<UIMain>
     {
         UIManager.Instance.Show<UIBag>();
     }
+
+    // clicl equip button show character euqipment ui
+    public void OnClickCharEquip()
+    {
+        UIManager.Instance.Show<UICharEquip>();
+    }
 }

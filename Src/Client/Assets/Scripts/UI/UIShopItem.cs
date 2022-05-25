@@ -12,6 +12,8 @@ public class UIShopItem : MonoBehaviour, ISelectHandler
     public Image icon;
     public Text title;
     public Text price;
+    public Text limitClass;
+
     public Text count;
     public Image background;
     public Image shopItemBackground;
@@ -51,8 +53,9 @@ public class UIShopItem : MonoBehaviour, ISelectHandler
         this.item = DataManager.Instance.Items[this.ShopItem.ItemID];
 
         this.title.text = this.item.Name;
-        this.count.text = ShopItem.Count.ToString();
+        this.count.text = "x" + ShopItem.Count.ToString();
         this.price.text = ShopItem.Price.ToString();
+        this.limitClass.text = this.item.LimitClass.ToString();
         this.icon.overrideSprite = Resloader.Load<Sprite>(item.Icon);
     }
 

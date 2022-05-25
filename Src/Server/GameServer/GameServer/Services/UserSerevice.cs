@@ -140,6 +140,7 @@ namespace GameServer.Services
                 MapPosY = 4000, // start position y
                 MapPosZ = 820,  // start position z
                 Gold = 100000, //  start money
+                Equips = new byte[20]
             };
 
             // add bag data table to character
@@ -147,11 +148,12 @@ namespace GameServer.Services
             bag.Owner = character;
             bag.Items = new byte[0];
             bag.Unlocked = 20;
-
-            TCharacterItem it = new TCharacterItem();
             character.Bag = DBService.Instance.Entities.CharacterBag.Add(bag);
 
+            // afeter character is creted, get character data from db
+            character = DBService.Instance.Entities.Characters.Add(character);
 
+            // add begining items after character is created
             character.Items.Add(new TCharacterItem()
             {
                 Owner = character,
@@ -166,9 +168,6 @@ namespace GameServer.Services
                 ItemCount = 20,
 
             });
-
-            // afeter character is creted, get character data from db
-            character = DBService.Instance.Entities.Characters.Add(character);
 
             // save creaed character data into session and DB
             sender.Session.User.Player.Characters.Add(character);
@@ -219,42 +218,6 @@ namespace GameServer.Services
             // add charter infomation ( including Tool info)
             // to game enter response message
             message.Response.gameEnter.Character = character.Info;
-
-            /* Tool System test */
-
-            // test tool item id
-            int itemId = 1;
-            
-            // check tool tiem id is exited in character
-            bool hasItem = character.ItemManger.HasItem(itemId);
-
-            Log.InfoFormat("HasItem : [{0}] [{1}]", itemId, hasItem);
-            
-            // test mehod
-
-            // itemId exited in character
-            if(hasItem)
-            {
-                // remove one itemId from character
-                //character.ItemManger.RemoveItem(itemId, 1);
-            }
-
-            // itemId didn't exited in character
-            else
-            {
-                // test items to bagg id, count
-                character.ItemManger.AddItem(1, 20);
-                character.ItemManger.AddItem(2, 10);
-            }
-
-            // check item whther is altered
-            // get item Id from character and print its info log
-            Models.Item item = character.ItemManger.GetItem(itemId);
-           
-            Log.InfoFormat("Item : [{0}] [{1}]", itemId, item);
-
-            // Save items in DB
-            DBService.Instance.Save();
 
             // send enter game response to clinet
             byte[] data = PackageHandler.PackMessage(message);

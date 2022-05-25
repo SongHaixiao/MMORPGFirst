@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\Managers\CharacterManager.cs" />
     <Compile Include="Assets\Scripts\Managers\DataManager.cs" />
     <Compile Include="Assets\Scripts\Managers\EnityManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\EquipManager.cs" />
     <Compile Include="Assets\Scripts\Managers\GameObjectManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ItemManger.cs" />
     <Compile Include="Assets\Scripts\Managers\LoadingManager.cs" />
@@ -96,9 +97,11 @@
     <Compile Include="Assets\Scripts\UI\TabView\TabView.cs" />
     <Compile Include="Assets\Scripts\UI\UIBag.cs" />
     <Compile Include="Assets\Scripts\UI\UIBagItem.cs" />
+    <Compile Include="Assets\Scripts\UI\UICharEquip.cs" />
     <Compile Include="Assets\Scripts\UI\UICharInfo.cs" />
     <Compile Include="Assets\Scripts\UI\UICharacterSelect.cs" />
     <Compile Include="Assets\Scripts\UI\UICharacterView.cs" />
+    <Compile Include="Assets\Scripts\UI\UIEquipItem.cs" />
     <Compile Include="Assets\Scripts\UI\UILogin.cs" />
     <Compile Include="Assets\Scripts\UI\UIMain.cs" />
     <Compile Include="Assets\Scripts\UI\UIMessageBox.cs" />

@@ -25,13 +25,29 @@ public class UIShop : UIWindow
 
     IEnumerator InitItems()
     {
+        int count = 0;
+        int page = 0;
+
         foreach(var kv in DataManager.Instance.ShopItems[shop.ID])
         {
             if(kv.Value.Status > 0)
             {
-                GameObject go = Instantiate(shopItem, itemRoot[0]);
+                // add items to shop
+
+                GameObject go = Instantiate(shopItem, itemRoot[page]);
                 UIShopItem ui = go.GetComponent<UIShopItem>();
                 ui.SetShopItem(kv.Key, kv.Value, this);
+
+                // pagination function for shop
+
+                count++;
+
+                if(count >= 10)
+                {
+                    count = 0;
+                    page++;
+                    itemRoot[page].gameObject.SetActive(true);
+                }
             }
         }
 

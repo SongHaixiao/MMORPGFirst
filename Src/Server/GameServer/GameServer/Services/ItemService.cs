@@ -16,6 +16,7 @@ namespace GameServer.Services
         public ItemService()
         {
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<ItemBuyRequest>(this.OnItemBuy);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<ItemEquipRequest>(this.OnItemEquip);
         }
 
         public void Init()
@@ -26,11 +27,22 @@ namespace GameServer.Services
         void OnItemBuy(NetConnection<NetSession> sender, ItemBuyRequest request)
         {
             Character character = sender.Session.Character;
-            Log.InfoFormat("OnItemBuy : Character : [0], Shop : [1], ShopItem : [2]", character.Id, request.shopId, request.shopItemId);
+            Log.InfoFormat("OnItemBuy : Character : [{0}], Shop : [{1}], ShopItem : [{2}]", character.Id, request.shopId, request.shopItemId);
             var result = ShopManager.Instance.BuyItem(sender, request.shopId, request.shopItemId);
             sender.Session.Response.itemBuy = new ItemBuyResponse();
             sender.Session.Response.itemBuy.Result = result;
             sender.SendResponse();
         }
+
+        void OnItemEquip(NetConnection<NetSession> sender, ItemEquipRequest request)
+        {
+            Character character = sender.Session.Character;
+            Log.InfoFormat("OnItemBuy : Character : [{0}], Slot : [{1}], Item : [{2}], Equiped : [{3}]", character.Id, request.Slot, request.itemId, request.isEquip);
+            var result = EquipManager.Instance.EquipItem(sender, request.Slot, request.itemId, request.isEquip);
+            sender.Session.Response.itemEquip = new ItemEquipResponse();
+            sender.Session.Response.itemEquip.Result = result;
+            sender.SendResponse();
+        }
+
     }
 }

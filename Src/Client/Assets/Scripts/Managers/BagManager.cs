@@ -114,10 +114,12 @@ namespace Managers
             {
                 for (int i = 0; i < Items.Length; i++)
                 {
+                    
                     if (this.Items[i].ItemId == 0) 
                     {
                         this.Items[i].ItemId = (ushort)itemId;
                         this.Items[i].Count = addCount;
+                        break;
                     }
                 }
             }

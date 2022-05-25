@@ -1,6 +1,7 @@
 json-excel\json-excel json Tables\ Data\
 
 @copy Data\CharacterDefine.txt ..\Client\Data\
+@copy Data\EquipDefine.txt ..\Client\Data\
 @copy Data\ItemDefine.txt ..\Client\Data\
 @copy Data\LevelUpDefine.txt ..\Client\Data\
 @copy Data\MapDefine.txt ..\Client\Data\
