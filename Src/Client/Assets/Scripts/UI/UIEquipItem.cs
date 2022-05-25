@@ -64,7 +64,6 @@ public class UIEquipItem : MonoBehaviour,IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("--------------------");
         if(this.isEquiped)
         {
             UnEquip();

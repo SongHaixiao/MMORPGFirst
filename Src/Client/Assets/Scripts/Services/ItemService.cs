@@ -59,6 +59,7 @@ namespace Services
             message.Request = new NetMessageRequest();
             message.Request.itemEquip = new ItemEquipRequest();
             message.Request.itemEquip.Slot = (int)equip.EquipInfo.Slot;
+            message.Request.itemEquip.itemId = equip.Id;
             message.Request.itemEquip.isEquip = isEquip;
 
             NetClient.Instance.SendMessage(message);
@@ -71,22 +72,22 @@ namespace Services
 
             if (message.Result == Result.Success)
             {
-                Debug.Log("On Equip Item Sucess !");
 
                 if (pendingEquip != null)
                 {
-                    Debug.Log("pendingEquip != null !");
-
                     if (this.isEquip)
+                    {
                         EquipManager.Instance.OnEuqipItem(pendingEquip);
+                    }
+  
                     else
+                    {
                         EquipManager.Instance.OnUnEquipItem(pendingEquip.EquipInfo.Slot);
-
+                    }
+                     
                     pendingEquip = null;
                 }
             }
-
-            Debug.Log("On Equip Item Ended !");
         }
     }
 }

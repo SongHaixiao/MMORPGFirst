@@ -1,6 +1,6 @@
 - Time : 2022-05-25
 
-- To Do : P13 Equipment System -> To Do : Setp03 : UI
+- To Do : P13 Equipment System -> To Do : Completed √ _(:з」∠)_
  
     1. Step01 ：Data Structure √
 
@@ -16,6 +16,6 @@
 
     3. Setp03 ：UI -> To Do 
 
-    4. Step04 : 修 bug 
+    4. Step04 : Fix bug  √
 
 - Note ： Change the connection for Server and DB

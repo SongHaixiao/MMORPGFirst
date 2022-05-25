@@ -23,9 +23,7 @@ public class UICharEquip : UIWindow
     // Start is called before the first frame update
     void Start()
     {
-       
         RefreshUI();
-        InitEquipeItems();
         EquipManager.Instance.OnEquipChanged += RefreshUI;
     }
 
@@ -39,6 +37,7 @@ public class UICharEquip : UIWindow
         ClearAllEquipList();
         InitAllEquipItems();
         ClearEquipedList();
+        InitEquipeItems();
         InitEquipedItems();
         this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
     }
