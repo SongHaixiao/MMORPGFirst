@@ -55,7 +55,8 @@ public class UIShopItem : MonoBehaviour, ISelectHandler
         this.title.text = this.item.Name;
         this.count.text = "x" + ShopItem.Count.ToString();
         this.price.text = ShopItem.Price.ToString();
-        this.limitClass.text = this.item.LimitClass.ToString();
+        if (this.item.LimitClass.ToString() != "None") 
+            this.limitClass.text = this.item.LimitClass.ToString();
         this.icon.overrideSprite = Resloader.Load<Sprite>(item.Icon);
     }
 

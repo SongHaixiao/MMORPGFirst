@@ -67,10 +67,16 @@ namespace Services
 
         private void OnItemEquip(object sender, ItemEquipResponse message)
         {
-            if(message.Result == Result.Success)
+            Debug.Log("On Equip Item !");
+
+            if (message.Result == Result.Success)
             {
-                if(pendingEquip != null)
+                Debug.Log("On Equip Item Sucess !");
+
+                if (pendingEquip != null)
                 {
+                    Debug.Log("pendingEquip != null !");
+
                     if (this.isEquip)
                         EquipManager.Instance.OnEuqipItem(pendingEquip);
                     else
@@ -79,6 +85,8 @@ namespace Services
                     pendingEquip = null;
                 }
             }
+
+            Debug.Log("On Equip Item Ended !");
         }
     }
 }

@@ -40,6 +40,12 @@ public class UIEquipItem : MonoBehaviour,IPointerClickHandler
         
     }
 
+        // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
     bool isEquiped = false;
 
     public void SetEquipItem(int idx, Item item, UICharEquip owner, bool equiped)
@@ -50,7 +56,7 @@ public class UIEquipItem : MonoBehaviour,IPointerClickHandler
         this.isEquiped = equiped;
 
         if (this.title != null) this.title.text = this.item.Define.Name;
-        if (this.level != null) this.level.text = item.Define.Level.ToString();
+        if (this.level != null) this.level.text = "Lv. " + item.Define.Level.ToString();
         if (this.limitClass != null) this.limitClass.text = item.Define.LimitClass.ToString();
         if (this.limitCategory != null) this.limitCategory.text = item.Define.Category;
         if (this.icon != null) this.icon.overrideSprite = Resloader.Load<Sprite>(this.item.Define.Icon);
@@ -58,6 +64,7 @@ public class UIEquipItem : MonoBehaviour,IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("--------------------");
         if(this.isEquiped)
         {
             UnEquip();
@@ -76,13 +83,13 @@ public class UIEquipItem : MonoBehaviour,IPointerClickHandler
 
     private void DoEquip()
     {
-        var msg = MessageBox.Show(string.Format("Wear equipment [{0}] ?", this.item.Define.Name), "Confirm", MessageBoxType.Confirm);
+        var msg = MessageBox.Show(string.Format("Wear equipment {0} ?", this.item.Define.Name), "Confirm", MessageBoxType.Confirm);
         msg.OnYes = () =>
         {
             var oldEquip = EquipManager.Instance.GetEquip(item.EquipInfo.Slot);
             if (oldEquip != null)
             {
-                var newmsg = MessageBox.Show(String.Format("Instead equipment [{0}] ?", oldEquip.Define.Name), "Confirm", MessageBoxType.Confirm);
+                var newmsg = MessageBox.Show(String.Format("Instead equipment {0} ?", oldEquip.Define.Name), "Confirm", MessageBoxType.Confirm);
                 newmsg.OnYes = () =>
                 {
                     this.owner.DoEquip(this.item);
@@ -95,16 +102,12 @@ public class UIEquipItem : MonoBehaviour,IPointerClickHandler
 
     private void UnEquip()
     {
-        var msg = MessageBox.Show(String.Format("Take off equipment [{0}] ?", this.item.Define.Name), "Confirm", MessageBoxType.Confirm);
+        var msg = MessageBox.Show(String.Format("Take off equipment {0} ?", this.item.Define.Name), "Confirm", MessageBoxType.Confirm);
         msg.OnYes = () =>
         {
             this.owner.UnEquip(this.item);
         };
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

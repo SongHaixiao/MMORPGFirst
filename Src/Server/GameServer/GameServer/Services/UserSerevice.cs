@@ -169,6 +169,13 @@ namespace GameServer.Services
 
             });
 
+            character.Items.Add(new TCharacterItem()
+            {
+                Owner = character,
+                ItemID = 1001,
+                ItemCount = 1,
+            });
+
             // save creaed character data into session and DB
             sender.Session.User.Player.Characters.Add(character);
             DBService.Instance.Entities.SaveChanges();

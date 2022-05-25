@@ -23,7 +23,9 @@ public class UICharEquip : UIWindow
     // Start is called before the first frame update
     void Start()
     {
+       
         RefreshUI();
+        InitEquipeItems();
         EquipManager.Instance.OnEquipChanged += RefreshUI;
     }
 
@@ -65,6 +67,7 @@ public class UICharEquip : UIWindow
     {
         foreach(var item in itemListRoot.GetComponentsInChildren<UIEquipItem>())
         {
+
             Destroy(item.gameObject);
         }
     }
