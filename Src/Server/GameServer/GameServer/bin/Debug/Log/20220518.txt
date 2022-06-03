@@ -1,0 +1,1544 @@
+
+2022-05-18 13:31:35,595 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 13:31:35,729 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 13:31:35,903 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 13:31:35,905 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 13:31:35,905 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 13:31:35,906 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 13:31:35,906 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 13:31:35,965 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:31:35,965 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:31:35,966 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:31:35,968 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:31:35,968 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:31:35,969 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:31:36,688 [13] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:31:37,756 [14] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:31:37,774 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 13:33:04,301 [5] [WARN ] [GameServer] :Client[127.0.0.1:54763]] Connected
+2022-05-18 13:33:04,357 [5] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 13:33:04,465 [7] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 13:33:10,915 [15] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 13:33:10,916 [8] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 13:33:10,989 [8] [ERROR] [GameServer] :Message handler exception:System.InvalidOperationException: The connection was not closed. The connection's current state is connecting.
+   at System.Data.ProviderBase.DbConnectionClosedConnecting.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.EntityClient.EntityConnection.Open(), The underlying provider failed on Open., EntityFramework,    at System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   at System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at GameServer.Services.UserService.OnLogin(NetConnection`1 sender, UserLoginRequest request) in E:\Github\P7 Begin\MMORPGFirst\Src\Server\GameServer\GameServer\Services\UserSerevice.cs:line 44
+   at Network.MessageDistributer`1.RaiseEvent[Tm](T sender, Tm msg) in E:\Github\P7 Begin\MMORPGFirst\Src\Lib\Common\Network\MessageDistributer.cs:line 105
+2022-05-18 13:33:25,078 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 13:33:25,277 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 13:33:25,446 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 13:33:25,448 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 13:33:25,448 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 13:33:25,448 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 13:33:25,449 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 13:33:25,463 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:33:25,467 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:33:25,467 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:33:25,476 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:33:25,482 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:33:25,482 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:33:26,962 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:33:27,965 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:33:28,024 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 13:33:40,117 [3] [WARN ] [GameServer] :Client[127.0.0.1:54780]] Connected
+2022-05-18 13:33:40,172 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 13:33:40,274 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 13:35:42,038 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 13:35:42,145 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 13:35:42,373 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 13:35:42,375 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 13:35:42,375 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 13:35:42,375 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 13:35:42,376 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 13:35:42,416 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:35:42,416 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:35:42,416 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:35:42,416 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:35:42,416 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:35:42,417 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:35:43,415 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:35:44,414 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:35:44,456 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 13:35:56,065 [3] [WARN ] [GameServer] :Client[127.0.0.1:54984]] Connected
+2022-05-18 13:35:56,120 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 13:35:56,227 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 13:35:58,368 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 13:35:58,371 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 13:35:58,375 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 13:35:59,112 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:35:59,116 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-05-18 13:35:59,577 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:35:59,578 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5140,4000,820),dir:(98,-20,0),spd:300
+2022-05-18 13:35:59,672 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:35:59,673 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5170,3994,820),dir:(93,-38,0),spd:300
+2022-05-18 13:35:59,774 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:35:59,775 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5200,3982,820),dir:(83,-56,0),spd:300
+2022-05-18 13:35:59,855 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:35:59,855 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5220,3967,820),dir:(72,-70,0),spd:300
+2022-05-18 13:35:59,939 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:35:59,940 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5240,3947,820),dir:(58,-81,0),spd:300
+2022-05-18 13:36:00,040 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:00,040 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5258,3923,820),dir:(40,-91,0),spd:300
+2022-05-18 13:36:00,158 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:00,159 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5272,3888,820),dir:(23,-97,0),spd:300
+2022-05-18 13:36:02,330 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:02,331 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5402,3238,820),dir:(40,-92,0),spd:300
+2022-05-18 13:36:03,220 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:03,222 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5529,3019,820),dir:(40,-92,0),spd:300
+2022-05-18 13:36:03,248 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:03,249 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5533,3009,820),dir:(56,-83,0),spd:300
+2022-05-18 13:36:03,378 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:03,379 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5557,2977,820),dir:(71,-71,0),spd:300
+2022-05-18 13:36:03,717 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:03,718 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5599,2933,820),dir:(71,-71,0),spd:300
+2022-05-18 13:36:03,867 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:03,868 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5599,2933,820),dir:(71,-71,0),spd:300
+2022-05-18 13:36:03,896 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:03,897 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5607,2925,820),dir:(83,-56,0),spd:300
+2022-05-18 13:36:04,034 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:04,035 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5599,2933,820),dir:(83,-56,0),spd:300
+2022-05-18 13:36:04,050 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:04,051 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5603,2930,820),dir:(92,-40,0),spd:300
+2022-05-18 13:36:04,204 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:04,204 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5599,2933,820),dir:(92,-40,0),spd:300
+2022-05-18 13:36:04,367 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:04,367 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5599,2933,820),dir:(92,-40,0),spd:300
+2022-05-18 13:36:04,535 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:04,536 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5599,2933,820),dir:(92,-40,0),spd:300
+2022-05-18 13:36:04,566 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:04,566 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5609,2929,820),dir:(81,-58,0),spd:300
+2022-05-18 13:36:04,666 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:04,667 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5633,2911,820),dir:(68,-74,0),spd:300
+2022-05-18 13:36:04,719 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:04,720 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5600,2933,820),dir:(68,-74,0),spd:300
+2022-05-18 13:36:04,761 [14] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:36:04,761 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(5606,2925,820),dir:(54,-84,0),spd:0
+2022-05-18 13:36:04,770 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:36:04,771 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5606,2925,820),dir:(54,-84,0),spd:-300
+2022-05-18 13:36:04,786 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:36:04,788 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(5603,2929,820),dir:(54,-84,0),spd:-300
+2022-05-18 13:36:04,833 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:36:04,834 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5594,2941,820),dir:(38,-92,0),spd:-300
+2022-05-18 13:36:04,932 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:36:04,932 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5582,2971,820),dir:(18,-98,0),spd:-300
+2022-05-18 13:36:05,033 [14] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:36:05,034 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5576,3001,820),dir:(-2,-100,0),spd:-300
+2022-05-18 13:36:05,118 [14] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:36:05,119 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5576,3026,820),dir:(-20,-98,0),spd:-300
+2022-05-18 13:36:05,232 [14] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:36:05,233 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5583,3061,820),dir:(-38,-93,0),spd:-300
+2022-05-18 13:36:05,623 [14] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:36:05,623 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5605,3130,819),dir:(-38,-93,0),spd:-300
+2022-05-18 13:36:05,794 [14] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:36:05,795 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5604,3133,819),dir:(-38,-93,0),spd:-300
+2022-05-18 13:36:05,958 [14] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:36:05,959 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5604,3136,819),dir:(-38,-93,0),spd:-300
+2022-05-18 13:36:06,124 [14] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:36:06,125 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5604,3139,819),dir:(-38,-93,0),spd:-300
+2022-05-18 13:36:06,294 [14] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:36:06,295 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5604,3142,819),dir:(-38,-93,0),spd:-300
+2022-05-18 13:36:06,456 [14] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:36:06,456 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5604,3145,819),dir:(-38,-93,0),spd:-300
+2022-05-18 13:36:06,623 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:36:06,624 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(5624,3195,819),dir:(-38,-93,0),spd:0
+2022-05-18 13:36:06,634 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:36:06,635 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5604,3147,820),dir:(-38,-93,0),spd:0
+2022-05-18 13:36:07,373 [14] [WARN ] [GameServer] :Client[] DataReceived Len:56
+2022-05-18 13:36:07,374 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(5604,3147,820),dir:(-38,-93,0),spd:300
+2022-05-18 13:36:07,907 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:36:07,908 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5540,2987,820),dir:(-20,-98,0),spd:300
+2022-05-18 13:36:08,057 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:36:08,057 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5531,2942,820),dir:(-2,-100,0),spd:300
+2022-05-18 13:36:08,155 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:08,156 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5531,2912,820),dir:(18,-98,0),spd:300
+2022-05-18 13:36:08,257 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:08,258 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5537,2882,820),dir:(38,-93,0),spd:300
+2022-05-18 13:36:08,356 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:08,357 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5549,2852,820),dir:(56,-83,0),spd:300
+2022-05-18 13:36:08,440 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:08,441 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5564,2832,820),dir:(70,-72,0),spd:300
+2022-05-18 13:36:08,526 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:08,527 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5584,2812,820),dir:(81,-58,0),spd:300
+2022-05-18 13:36:08,623 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:08,624 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5608,2794,820),dir:(92,-40,0),spd:300
+2022-05-18 13:36:08,740 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:08,740 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5643,2780,820),dir:(98,-21,0),spd:300
+2022-05-18 13:36:10,760 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:10,761 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6248,2659,820),dir:(100,-3,0),spd:300
+2022-05-18 13:36:13,785 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:36:13,785 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7153,2659,820),dir:(99,15,0),spd:300
+2022-05-18 13:36:14,135 [14] [WARN ] [GameServer] :Client[] DataReceived Len:35
+2022-05-18 13:36:14,136 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7258,2680,820),dir:(99,15,0),spd:0
+2022-05-18 13:36:15,456 [13] [WARN ] [GameServer] :Client[] DataReceived Len:38
+2022-05-18 13:36:15,456 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(7258,2680,820),dir:(99,15,0),spd:300
+2022-05-18 13:36:16,727 [13] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:36:16,727 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7618,2710,820),dir:(99,15,0),spd:300
+2022-05-18 13:36:16,906 [13] [WARN ] [GameServer] :Client[] DataReceived Len:35
+2022-05-18 13:36:16,907 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7673,2721,820),dir:(99,15,0),spd:0
+2022-05-18 13:36:17,258 [13] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 13:36:17,259 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7673,2721,820),dir:(99,15,0),spd:-300
+2022-05-18 13:36:18,076 [13] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:36:18,077 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7428,2672,820),dir:(100,-4,0),spd:-300
+2022-05-18 13:36:18,176 [13] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:36:18,177 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7398,2672,820),dir:(97,-22,0),spd:-300
+2022-05-18 13:36:18,277 [13] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:36:18,278 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7368,2678,820),dir:(91,-41,0),spd:-300
+2022-05-18 13:36:18,440 [13] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:36:18,441 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7318,2698,820),dir:(82,-57,0),spd:-300
+2022-05-18 13:36:18,545 [13] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:36:18,546 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7294,2716,820),dir:(82,-57,0),spd:0
+2022-05-18 13:36:19,226 [13] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:36:19,226 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7294,2716,820),dir:(71,-71,0),spd:0
+2022-05-18 13:36:19,356 [13] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:36:19,356 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7294,2716,820),dir:(55,-83,0),spd:0
+2022-05-18 13:36:19,464 [13] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:36:19,465 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7294,2716,820),dir:(38,-92,0),spd:0
+2022-05-18 13:36:46,873 [13] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:36:46,873 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7294,2716,820),dir:(38,-92,0),spd:-300
+2022-05-18 13:36:47,307 [13] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:36:47,308 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7242,2846,820),dir:(20,-98,0),spd:-300
+2022-05-18 13:36:47,444 [13] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:36:47,445 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7234,2886,820),dir:(2,-100,0),spd:-300
+2022-05-18 13:36:47,476 [13] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:36:47,477 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7234,2896,820),dir:(2,-100,0),spd:0
+2022-05-18 13:36:47,539 [13] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:36:47,539 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7234,2896,820),dir:(-18,-98,0),spd:0
+2022-05-18 13:36:47,647 [13] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:36:47,648 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7234,2896,820),dir:(-38,-92,0),spd:0
+2022-05-18 13:36:47,734 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 13:36:47,735 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7234,2896,820),dir:(-38,-92,0),spd:-300
+2022-05-18 13:36:47,762 [13] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:36:47,762 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7239,2905,820),dir:(-57,-83,0),spd:-300
+2022-05-18 13:36:47,818 [13] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:36:47,819 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7248,2917,820),dir:(-57,-83,0),spd:0
+2022-05-18 13:36:47,840 [13] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:36:47,841 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7232,2865,820),dir:(-72,-69,0),spd:0
+2022-05-18 13:36:47,861 [13] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:36:47,862 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7232,2865,820),dir:(-72,-69,0),spd:0
+2022-05-18 13:36:47,923 [13] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:36:47,924 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7232,2865,820),dir:(-83,-55,0),spd:0
+2022-05-18 13:36:47,998 [13] [WARN ] [GameServer] :Client[] DataReceived Len:56
+2022-05-18 13:36:47,999 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(7232,2865,820),dir:(-83,-55,0),spd:300
+2022-05-18 13:36:48,033 [13] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:36:48,034 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7224,2859,820),dir:(-93,-37,0),spd:300
+2022-05-18 13:36:48,114 [13] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:36:48,114 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7199,2849,820),dir:(-98,-20,0),spd:300
+2022-05-18 13:36:48,212 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:48,213 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7169,2843,820),dir:(-100,1,0),spd:300
+2022-05-18 13:36:48,314 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:48,315 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7139,2843,820),dir:(-98,21,0),spd:300
+2022-05-18 13:36:48,394 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:48,395 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7114,2848,820),dir:(-92,38,0),spd:300
+2022-05-18 13:36:48,500 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:48,501 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7084,2860,820),dir:(-83,56,0),spd:300
+2022-05-18 13:36:48,614 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:48,615 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7056,2881,820),dir:(-71,71,0),spd:300
+2022-05-18 13:36:48,683 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:48,684 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7079,2859,820),dir:(-71,71,0),spd:300
+2022-05-18 13:36:48,847 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:36:48,848 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7075,2863,820),dir:(-71,71,0),spd:300
+2022-05-18 13:36:48,894 [16] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:36:48,895 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7063,2875,820),dir:(-71,71,0),spd:0
+2022-05-18 13:36:49,331 [16] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:36:49,332 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7063,2875,820),dir:(-82,57,0),spd:0
+2022-05-18 13:36:49,428 [16] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:36:49,429 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7063,2875,820),dir:(-92,39,0),spd:0
+2022-05-18 13:36:49,512 [16] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:36:49,513 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7063,2875,820),dir:(-98,22,0),spd:0
+2022-05-18 13:36:49,608 [16] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:36:49,609 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7063,2875,820),dir:(-100,1,0),spd:0
+2022-05-18 13:36:49,724 [16] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:36:49,725 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7063,2875,820),dir:(-98,-19,0),spd:0
+2022-05-18 13:36:49,818 [16] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:36:49,819 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7063,2875,820),dir:(-93,-36,0),spd:0
+2022-05-18 13:36:50,178 [16] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:36:50,178 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7063,2875,820),dir:(-85,-52,0),spd:0
+2022-05-18 13:36:50,363 [16] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:36:50,364 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7063,2875,820),dir:(-75,-66,0),spd:0
+2022-05-18 13:36:50,497 [16] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:36:50,497 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7063,2875,820),dir:(-62,-78,0),spd:0
+2022-05-18 13:37:07,198 [16] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 13:37:07,198 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7063,2875,820),dir:(-62,-78,0),spd:-300
+2022-05-18 13:37:07,378 [16] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:37:07,379 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7085,2865,820),dir:(-62,-78,0),spd:-300
+2022-05-18 13:37:07,559 [16] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:37:07,560 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7085,2865,820),dir:(-62,-78,0),spd:-300
+2022-05-18 13:37:07,746 [16] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:37:07,747 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7088,2869,820),dir:(-62,-78,0),spd:-300
+2022-05-18 13:37:07,923 [16] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:37:07,924 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7085,2865,820),dir:(-62,-78,0),spd:-300
+2022-05-18 13:37:08,110 [16] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:37:08,111 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7118,2909,820),dir:(-62,-78,0),spd:0
+2022-05-18 13:37:08,132 [16] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:08,133 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7082,2861,820),dir:(-76,-65,0),spd:300
+2022-05-18 13:37:08,154 [16] [WARN ] [GameServer] :Client[] DataReceived Len:56
+2022-05-18 13:37:08,155 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(7078,2858,820),dir:(-76,-65,0),spd:300
+2022-05-18 13:37:08,177 [16] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:08,178 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7074,2855,820),dir:(-76,-65,0),spd:300
+2022-05-18 13:37:08,236 [16] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:08,238 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7058,2843,820),dir:(-88,-48,0),spd:300
+2022-05-18 13:37:08,329 [16] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:08,330 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7034,2831,820),dir:(-96,-29,0),spd:300
+2022-05-18 13:37:08,436 [16] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:08,437 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7004,2825,820),dir:(-100,-8,0),spd:300
+2022-05-18 13:37:08,532 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:08,533 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6974,2825,820),dir:(-99,12,0),spd:300
+2022-05-18 13:37:08,617 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:08,618 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6949,2830,820),dir:(-96,30,0),spd:300
+2022-05-18 13:37:08,724 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:08,725 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6919,2842,820),dir:(-88,48,0),spd:300
+2022-05-18 13:37:08,867 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:08,868 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6883,2860,820),dir:(-77,63,0),spd:300
+2022-05-18 13:37:09,110 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:09,110 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6861,2859,820),dir:(-77,63,0),spd:300
+2022-05-18 13:37:09,291 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:09,293 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6861,2859,820),dir:(-77,63,0),spd:300
+2022-05-18 13:37:09,480 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:09,481 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6861,2859,820),dir:(-77,63,0),spd:300
+2022-05-18 13:37:09,669 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:09,670 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6857,2862,820),dir:(-77,63,0),spd:300
+2022-05-18 13:37:09,734 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:09,735 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6841,2874,820),dir:(-88,48,0),spd:300
+2022-05-18 13:37:09,822 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:09,823 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6821,2884,820),dir:(-95,32,0),spd:300
+2022-05-18 13:37:09,873 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:09,874 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6849,2863,819),dir:(-95,32,0),spd:300
+2022-05-18 13:37:09,916 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:09,917 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6839,2867,819),dir:(-99,15,0),spd:300
+2022-05-18 13:37:09,992 [17] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:09,993 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6814,2872,819),dir:(-100,-3,0),spd:300
+2022-05-18 13:37:10,105 [17] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:10,105 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6779,2872,819),dir:(-98,-22,0),spd:300
+2022-05-18 13:37:10,557 [17] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:10,557 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6644,2845,819),dir:(-92,-39,0),spd:300
+2022-05-18 13:37:10,728 [17] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:10,729 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6594,2825,819),dir:(-83,-55,0),spd:300
+2022-05-18 13:37:11,074 [17] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:11,075 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6510,2762,819),dir:(-71,-70,0),spd:300
+2022-05-18 13:37:11,190 [17] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:11,191 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6482,2734,819),dir:(-57,-82,0),spd:300
+2022-05-18 13:37:11,268 [17] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:11,269 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6467,2714,819),dir:(-42,-91,0),spd:300
+2022-05-18 13:37:11,353 [17] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:11,354 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6457,2689,819),dir:(-25,-97,0),spd:300
+2022-05-18 13:37:11,454 [17] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:37:11,455 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6451,2659,819),dir:(-5,-100,0),spd:300
+2022-05-18 13:37:11,474 [17] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:37:11,475 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6451,2654,819),dir:(-5,-100,0),spd:0
+2022-05-18 13:37:11,545 [17] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:37:11,545 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6451,2654,819),dir:(13,-99,0),spd:0
+2022-05-18 13:37:11,642 [17] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:37:11,643 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6451,2654,819),dir:(33,-94,0),spd:0
+2022-05-18 13:37:11,744 [17] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:37:11,745 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6451,2654,819),dir:(52,-85,0),spd:0
+2022-05-18 13:37:11,840 [17] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:37:11,841 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6451,2654,819),dir:(69,-73,0),spd:0
+2022-05-18 13:37:11,948 [17] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:37:11,948 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6451,2654,819),dir:(82,-57,0),spd:0
+2022-05-18 13:37:12,026 [17] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:37:12,027 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6451,2654,819),dir:(91,-42,0),spd:300
+2022-05-18 13:37:12,044 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:12,045 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6456,2652,819),dir:(91,-42,0),spd:300
+2022-05-18 13:37:12,109 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:12,111 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6476,2644,819),dir:(97,-25,0),spd:300
+2022-05-18 13:37:12,212 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:12,212 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6506,2638,819),dir:(100,-6,0),spd:300
+2022-05-18 13:37:12,344 [17] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:37:12,345 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6546,2638,819),dir:(99,12,0),spd:300
+2022-05-18 13:37:12,831 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:12,832 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6691,2667,819),dir:(100,-7,0),spd:300
+2022-05-18 13:37:12,923 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:12,924 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6721,2667,819),dir:(97,-26,0),spd:300
+2022-05-18 13:37:13,061 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:13,062 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6761,2659,819),dir:(90,-44,0),spd:300
+2022-05-18 13:37:13,478 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:13,479 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6886,2609,819),dir:(96,-28,0),spd:300
+2022-05-18 13:37:13,593 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:13,594 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6921,2602,819),dir:(100,-10,0),spd:300
+2022-05-18 13:37:14,611 [17] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:14,611 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7226,2541,819),dir:(100,-10,0),spd:0
+2022-05-18 13:37:14,630 [17] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:37:14,630 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7226,2541,819),dir:(100,-10,0),spd:-300
+2022-05-18 13:37:15,279 [17] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:15,280 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7031,2580,819),dir:(100,-10,0),spd:0
+2022-05-18 13:37:22,715 [17] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:37:22,716 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7031,2580,819),dir:(100,-10,0),spd:-300
+2022-05-18 13:37:23,341 [17] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:23,342 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6846,2617,819),dir:(100,-10,0),spd:0
+2022-05-18 13:37:23,359 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:23,360 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6888,2578,820),dir:(100,-10,0),spd:300
+2022-05-18 13:37:23,378 [17] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:37:23,379 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6893,2577,820),dir:(100,-10,0),spd:300
+2022-05-18 13:37:24,649 [17] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:24,649 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7273,2501,820),dir:(100,-10,0),spd:0
+2022-05-18 13:37:24,669 [17] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:37:24,669 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7273,2501,820),dir:(100,-10,0),spd:-300
+2022-05-18 13:37:26,217 [18] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:26,218 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6813,2593,820),dir:(100,-10,0),spd:0
+2022-05-18 13:37:26,238 [18] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:37:26,238 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6818,2592,820),dir:(100,-10,0),spd:300
+2022-05-18 13:37:27,744 [18] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:27,744 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7304,2537,820),dir:(100,-10,0),spd:300
+2022-05-18 13:37:27,813 [18] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:27,814 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7324,2533,820),dir:(100,-10,0),spd:0
+2022-05-18 13:37:27,831 [18] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:37:27,832 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7324,2533,820),dir:(100,-10,0),spd:-300
+2022-05-18 13:37:29,213 [18] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:29,214 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6909,2616,820),dir:(100,-10,0),spd:0
+2022-05-18 13:37:29,233 [18] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:37:29,233 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6909,2616,820),dir:(100,-10,0),spd:300
+2022-05-18 13:37:30,404 [18] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:30,405 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7259,2546,820),dir:(100,-10,0),spd:0
+2022-05-18 13:37:30,424 [18] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:37:30,424 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7254,2547,820),dir:(100,-10,0),spd:-300
+2022-05-18 13:37:31,345 [18] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:37:31,346 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7014,2566,820),dir:(100,-10,0),spd:-300
+2022-05-18 13:37:32,075 [18] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:32,076 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6794,2610,820),dir:(100,-10,0),spd:0
+2022-05-18 13:37:32,210 [18] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:37:32,211 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6794,2610,820),dir:(100,-10,0),spd:300
+2022-05-18 13:37:32,719 [18] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:32,720 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6949,2579,820),dir:(100,-10,0),spd:0
+2022-05-18 13:37:42,568 [18] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:37:42,568 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6949,2579,820),dir:(100,-10,0),spd:300
+2022-05-18 13:37:43,770 [18] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:43,771 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7309,2507,820),dir:(100,-10,0),spd:0
+2022-05-18 13:37:43,876 [18] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:37:43,877 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7309,2507,820),dir:(100,-10,0),spd:-300
+2022-05-18 13:37:44,887 [18] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:44,887 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7004,2568,820),dir:(100,-10,0),spd:0
+2022-05-18 13:37:48,703 [18] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:37:48,704 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(7004,2568,820),dir:(100,-10,0),spd:300
+2022-05-18 13:37:49,626 [18] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:37:49,627 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7329,2534,820),dir:(100,-10,0),spd:300
+2022-05-18 13:37:49,798 [18] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:49,799 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7379,2524,820),dir:(100,-10,0),spd:0
+2022-05-18 13:37:49,816 [18] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:37:49,817 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7379,2524,820),dir:(100,-10,0),spd:-300
+2022-05-18 13:37:51,464 [18] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:37:51,465 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6905,2577,820),dir:(100,-10,0),spd:-300
+2022-05-18 13:37:52,233 [18] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:37:52,234 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6675,2623,820),dir:(100,-10,0),spd:0
+2022-05-18 13:37:53,927 [18] [WARN ] [GameServer] :Client[] Disconnected
+2022-05-18 13:41:10,016 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 13:41:10,178 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 13:41:10,353 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 13:41:10,355 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 13:41:10,355 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 13:41:10,356 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 13:41:10,358 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 13:41:10,508 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:41:10,508 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:41:10,508 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:41:10,509 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:41:10,552 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:41:10,553 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:41:11,865 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:41:12,881 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:41:12,983 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 13:41:37,979 [3] [WARN ] [GameServer] :Client[127.0.0.1:55139]] Connected
+2022-05-18 13:41:38,036 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 13:41:38,136 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 13:41:39,890 [13] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 13:41:39,893 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 13:41:39,899 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 13:41:40,383 [13] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:41:40,387 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-05-18 13:41:40,750 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:40,751 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5115,4000,820),dir:(98,-19,0),spd:300
+2022-05-18 13:41:40,853 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:40,853 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5145,3994,820),dir:(93,-37,0),spd:300
+2022-05-18 13:41:40,940 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:40,941 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5170,3984,820),dir:(85,-53,0),spd:300
+2022-05-18 13:41:41,034 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:41,035 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5194,3966,820),dir:(72,-69,0),spd:300
+2022-05-18 13:41:41,116 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:41,117 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5214,3951,820),dir:(59,-81,0),spd:300
+2022-05-18 13:41:41,219 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:41,220 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5232,3927,820),dir:(41,-91,0),spd:300
+2022-05-18 13:41:41,352 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:41,352 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5248,3887,820),dir:(24,-97,0),spd:300
+2022-05-18 13:41:44,484 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:44,485 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5476,2982,820),dir:(24,-97,0),spd:300
+2022-05-18 13:41:44,748 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:44,749 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5492,2902,820),dir:(42,-91,0),spd:300
+2022-05-18 13:41:44,825 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:44,825 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5502,2877,820),dir:(57,-82,0),spd:300
+2022-05-18 13:41:44,912 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:44,912 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5517,2857,820),dir:(71,-71,0),spd:300
+2022-05-18 13:41:45,012 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:45,013 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5541,2833,820),dir:(82,-57,0),spd:300
+2022-05-18 13:41:45,258 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:45,259 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5601,2788,820),dir:(91,-42,0),spd:300
+2022-05-18 13:41:45,458 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:45,458 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5661,2764,820),dir:(97,-24,0),spd:300
+2022-05-18 13:41:47,582 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:47,582 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6296,2637,820),dir:(100,-5,0),spd:300
+2022-05-18 13:41:48,570 [13] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:41:48,571 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6591,2637,820),dir:(99,13,0),spd:300
+2022-05-18 13:41:49,142 [13] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:41:49,143 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6739,2626,820),dir:(99,13,0),spd:300
+2022-05-18 13:41:50,437 [13] [WARN ] [GameServer] :Client[] DataReceived Len:35
+2022-05-18 13:41:50,437 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7129,2704,820),dir:(99,13,0),spd:0
+2022-05-18 13:41:51,929 [13] [WARN ] [GameServer] :Client[] DataReceived Len:38
+2022-05-18 13:41:51,930 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(7129,2704,820),dir:(99,13,0),spd:300
+2022-05-18 13:41:52,362 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:52,363 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7259,2730,820),dir:(100,-7,0),spd:300
+2022-05-18 13:41:52,456 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:52,457 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7289,2730,820),dir:(97,-26,0),spd:300
+2022-05-18 13:41:52,559 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:52,560 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7319,2724,820),dir:(90,-44,0),spd:300
+2022-05-18 13:41:52,696 [13] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:41:52,697 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7359,2708,820),dir:(81,-59,0),spd:300
+2022-05-18 13:41:52,775 [13] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:41:52,776 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7379,2693,820),dir:(81,-59,0),spd:0
+2022-05-18 13:41:53,566 [13] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:41:53,567 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7379,2693,820),dir:(81,-59,0),spd:-300
+2022-05-18 13:41:54,085 [13] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:41:54,086 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7255,2786,820),dir:(91,-42,0),spd:-300
+2022-05-18 13:41:54,599 [13] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:41:54,600 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7100,2848,820),dir:(97,-25,0),spd:-300
+2022-05-18 13:41:54,717 [13] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:41:54,718 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7065,2855,820),dir:(100,-5,0),spd:-300
+2022-05-18 13:41:54,795 [13] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:41:54,795 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7040,2855,820),dir:(99,13,0),spd:-300
+2022-05-18 13:41:54,900 [13] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:41:54,900 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7010,2849,820),dir:(94,33,0),spd:-300
+2022-05-18 13:41:54,995 [13] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:41:54,996 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6980,2837,820),dir:(85,52,0),spd:-300
+2022-05-18 13:41:55,101 [15] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:41:55,102 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6956,2819,820),dir:(73,69,0),spd:-300
+2022-05-18 13:41:55,196 [15] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:41:55,196 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6932,2801,820),dir:(57,82,0),spd:-300
+2022-05-18 13:41:55,329 [15] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:41:55,329 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6908,2769,820),dir:(41,91,0),spd:-300
+2022-05-18 13:41:56,183 [15] [WARN ] [GameServer] :Client[] DataReceived Len:35
+2022-05-18 13:41:56,184 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6806,2514,820),dir:(41,91,0),spd:0
+2022-05-18 13:41:56,868 [15] [WARN ] [GameServer] :Client[] DataReceived Len:33
+2022-05-18 13:41:56,869 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6806,2514,820),dir:(58,82,0),spd:0
+2022-05-18 13:41:56,966 [15] [WARN ] [GameServer] :Client[] DataReceived Len:33
+2022-05-18 13:41:56,966 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6806,2514,820),dir:(73,68,0),spd:0
+2022-05-18 13:41:57,053 [15] [WARN ] [GameServer] :Client[] DataReceived Len:33
+2022-05-18 13:41:57,054 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6806,2514,820),dir:(84,54,0),spd:0
+2022-05-18 13:41:57,154 [15] [WARN ] [GameServer] :Client[] DataReceived Len:33
+2022-05-18 13:41:57,155 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6806,2514,820),dir:(93,36,0),spd:0
+2022-05-18 13:41:57,244 [15] [WARN ] [GameServer] :Client[] DataReceived Len:33
+2022-05-18 13:41:57,245 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6806,2514,820),dir:(98,19,0),spd:0
+2022-05-18 13:41:57,352 [15] [WARN ] [GameServer] :Client[] DataReceived Len:33
+2022-05-18 13:41:57,353 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6806,2514,820),dir:(100,1,0),spd:0
+2022-05-18 13:41:57,447 [15] [WARN ] [GameServer] :Client[] DataReceived Len:38
+2022-05-18 13:41:57,448 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6806,2514,820),dir:(100,1,0),spd:300
+2022-05-18 13:41:58,159 [15] [WARN ] [GameServer] :Client[] DataReceived Len:35
+2022-05-18 13:41:58,160 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7021,2514,820),dir:(100,1,0),spd:0
+2022-05-18 13:42:47,389 [15] [WARN ] [GameServer] :Client[] Disconnected
+2022-05-18 13:43:31,216 [16] [WARN ] [GameServer] :Client[127.0.0.1:55175]] Connected
+2022-05-18 13:43:31,272 [16] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 13:43:31,273 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 13:43:32,722 [18] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 13:43:32,723 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 13:43:32,724 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:2
+2022-05-18 13:43:33,331 [17] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:43:33,332 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:MoveFwd Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-05-18 13:43:33,552 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:33,552 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5070,4000,820),dir:(98,-18,0),spd:300
+2022-05-18 13:43:33,655 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:33,656 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5100,3994,820),dir:(93,-36,0),spd:300
+2022-05-18 13:43:33,753 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:33,753 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5130,3982,820),dir:(84,-55,0),spd:300
+2022-05-18 13:43:33,860 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:33,860 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5154,3964,820),dir:(71,-71,0),spd:300
+2022-05-18 13:43:33,947 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:33,947 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5178,3940,820),dir:(55,-84,0),spd:300
+2022-05-18 13:43:34,090 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:34,091 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5202,3908,820),dir:(38,-92,0),spd:300
+2022-05-18 13:43:35,980 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:35,981 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5416,3392,820),dir:(38,-92,0),spd:300
+2022-05-18 13:43:37,674 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:37,674 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5604,2934,820),dir:(38,-92,0),spd:300
+2022-05-18 13:43:37,857 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:37,858 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5603,2929,819),dir:(38,-92,0),spd:300
+2022-05-18 13:43:37,976 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:37,977 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5617,2894,819),dir:(54,-84,0),spd:300
+2022-05-18 13:43:38,023 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:38,023 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5603,2927,819),dir:(54,-84,0),spd:300
+2022-05-18 13:43:38,073 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:38,074 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5612,2915,819),dir:(70,-72,0),spd:300
+2022-05-18 13:43:38,197 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:38,198 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5603,2927,820),dir:(70,-72,0),spd:300
+2022-05-18 13:43:38,345 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:38,346 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5604,2927,820),dir:(70,-72,0),spd:300
+2022-05-18 13:43:38,493 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:38,494 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5604,2927,820),dir:(70,-72,0),spd:300
+2022-05-18 13:43:38,518 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:38,518 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5608,2923,820),dir:(56,-83,0),spd:300
+2022-05-18 13:43:38,609 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:38,610 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5626,2899,820),dir:(38,-93,0),spd:300
+2022-05-18 13:43:38,677 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:38,677 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5604,2922,819),dir:(38,-93,0),spd:300
+2022-05-18 13:43:38,701 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:38,702 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5606,2917,819),dir:(21,-98,0),spd:300
+2022-05-18 13:43:38,803 [17] [WARN ] [GameServer] :Client[] DataReceived Len:43
+2022-05-18 13:43:38,804 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5612,2887,819),dir:(0,-100,0),spd:300
+2022-05-18 13:43:38,915 [17] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:43:38,916 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5612,2852,819),dir:(-18,-98,0),spd:300
+2022-05-18 13:43:39,143 [17] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:43:39,144 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:Idle Entity:(2:pos:(5598,2782,819),dir:(-18,-98,0),spd:0
+2022-05-18 13:43:39,168 [17] [WARN ] [GameServer] :Client[] DataReceived Len:56
+2022-05-18 13:43:39,168 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:MoveFwd Entity:(2:pos:(5598,2782,819),dir:(-18,-98,0),spd:300
+2022-05-18 13:43:39,559 [17] [WARN ] [GameServer] :Client[] DataReceived Len:43
+2022-05-18 13:43:39,560 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5574,2662,819),dir:(0,-100,0),spd:300
+2022-05-18 13:43:39,667 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:39,667 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5574,2632,819),dir:(20,-98,0),spd:300
+2022-05-18 13:43:39,735 [17] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:43:39,736 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:Idle Entity:(2:pos:(5578,2612,819),dir:(20,-98,0),spd:0
+2022-05-18 13:43:39,757 [17] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:43:39,758 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5578,2612,819),dir:(37,-93,0),spd:0
+2022-05-18 13:43:39,851 [17] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:43:39,852 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5578,2612,819),dir:(55,-83,0),spd:0
+2022-05-18 13:43:39,929 [17] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:43:39,930 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5578,2612,819),dir:(69,-72,0),spd:0
+2022-05-18 13:43:40,040 [17] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:43:40,040 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5578,2612,819),dir:(82,-57,0),spd:0
+2022-05-18 13:43:40,086 [17] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:43:40,086 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:MoveFwd Entity:(2:pos:(5578,2612,819),dir:(82,-57,0),spd:300
+2022-05-18 13:43:40,133 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:40,134 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5590,2603,819),dir:(91,-41,0),spd:300
+2022-05-18 13:43:40,413 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:40,414 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5675,2569,819),dir:(97,-24,0),spd:300
+2022-05-18 13:43:40,586 [17] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:40,586 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5725,2559,819),dir:(100,-6,0),spd:300
+2022-05-18 13:43:40,679 [17] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:43:40,680 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5755,2559,819),dir:(99,13,0),spd:300
+2022-05-18 13:43:40,798 [17] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:43:40,799 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(5790,2566,819),dir:(95,32,0),spd:300
+2022-05-18 13:43:42,733 [16] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:43:42,733 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(6370,2798,819),dir:(99,15,0),spd:300
+2022-05-18 13:43:42,923 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:42,924 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(6425,2809,819),dir:(100,-2,0),spd:300
+2022-05-18 13:43:44,371 [16] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:43:44,372 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:Idle Entity:(2:pos:(6860,2809,819),dir:(100,-2,0),spd:0
+2022-05-18 13:43:44,393 [16] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:43:44,393 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(6817,2777,820),dir:(100,-2,0),spd:0
+2022-05-18 13:43:44,580 [16] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:43:44,581 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:MoveFwd Entity:(2:pos:(6817,2777,820),dir:(100,-2,0),spd:300
+2022-05-18 13:43:44,603 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:44,604 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(6827,2777,820),dir:(98,-20,0),spd:300
+2022-05-18 13:43:44,793 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:44,793 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(6882,2766,820),dir:(93,-37,0),spd:300
+2022-05-18 13:43:45,424 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:45,424 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(7072,2690,820),dir:(98,-18,0),spd:300
+2022-05-18 13:43:45,527 [16] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:43:45,528 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:None Entity:(2:pos:(7102,2684,820),dir:(100,-1,0),spd:300
+2022-05-18 13:43:45,938 [16] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:43:45,938 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:2:A Entity.Id:2 Evt:Idle Entity:(2:pos:(7227,2684,820),dir:(100,-1,0),spd:0
+2022-05-18 13:43:48,951 [17] [WARN ] [GameServer] :Client[] Disconnected
+2022-05-18 13:53:21,978 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 13:53:22,097 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 13:53:22,368 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 13:53:22,370 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 13:53:22,371 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 13:53:22,371 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 13:53:22,372 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 13:53:22,376 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:53:22,377 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:53:22,384 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:53:22,386 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:53:22,417 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:53:22,418 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:53:24,381 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:53:25,382 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 13:53:25,426 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 13:53:29,746 [3] [WARN ] [GameServer] :Client[127.0.0.1:55486]] Connected
+2022-05-18 13:53:29,807 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 13:53:29,913 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 13:53:31,763 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 13:53:31,765 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 13:53:31,771 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 13:53:32,182 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:53:32,187 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-05-18 13:53:32,572 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:32,573 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5120,4000,820),dir:(98,-19,0),spd:300
+2022-05-18 13:53:32,673 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:32,674 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5150,3994,820),dir:(93,-38,0),spd:300
+2022-05-18 13:53:32,771 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:32,772 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5180,3982,820),dir:(83,-56,0),spd:300
+2022-05-18 13:53:32,857 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:32,858 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5200,3967,820),dir:(72,-70,0),spd:300
+2022-05-18 13:53:32,953 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:32,954 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5224,3943,820),dir:(56,-83,0),spd:300
+2022-05-18 13:53:33,057 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:33,058 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5242,3919,820),dir:(38,-92,0),spd:300
+2022-05-18 13:53:33,207 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:33,208 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5260,3874,820),dir:(20,-98,0),spd:300
+2022-05-18 13:53:36,161 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:36,162 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5437,2989,820),dir:(37,-93,0),spd:300
+2022-05-18 13:53:36,644 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:36,645 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5495,2844,820),dir:(54,-84,0),spd:300
+2022-05-18 13:53:36,744 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:36,745 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5513,2820,820),dir:(68,-73,0),spd:300
+2022-05-18 13:53:36,846 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:36,847 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5531,2796,820),dir:(82,-57,0),spd:300
+2022-05-18 13:53:36,945 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:36,946 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5555,2778,820),dir:(92,-39,0),spd:300
+2022-05-18 13:53:37,050 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:37,051 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5585,2766,820),dir:(98,-19,0),spd:300
+2022-05-18 13:53:37,144 [14] [WARN ] [GameServer] :Client[] DataReceived Len:34
+2022-05-18 13:53:37,145 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5615,2760,820),dir:(100,0,0),spd:300
+2022-05-18 13:53:37,315 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:53:37,315 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5665,2760,820),dir:(98,18,0),spd:300
+2022-05-18 13:53:38,084 [14] [WARN ] [GameServer] :Client[] DataReceived Len:34
+2022-05-18 13:53:38,085 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5895,2806,820),dir:(100,0,0),spd:300
+2022-05-18 13:53:39,117 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:39,118 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6205,2806,820),dir:(98,-18,0),spd:300
+2022-05-18 13:53:40,203 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:40,204 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6530,2741,820),dir:(94,-35,0),spd:300
+2022-05-18 13:53:40,657 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:40,658 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6641,2731,820),dir:(94,-35,0),spd:300
+2022-05-18 13:53:42,861 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:42,861 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7263,2500,820),dir:(94,-35,0),spd:300
+2022-05-18 13:53:43,175 [14] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:53:43,176 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7358,2462,820),dir:(94,-35,0),spd:0
+2022-05-18 13:53:43,233 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:53:43,234 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7358,2462,820),dir:(94,-35,0),spd:-300
+2022-05-18 13:53:44,178 [14] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:53:44,178 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7073,2576,820),dir:(94,-35,0),spd:0
+2022-05-18 13:53:45,381 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:53:45,382 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7073,2576,820),dir:(94,-35,0),spd:-300
+2022-05-18 13:53:46,033 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:46,034 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6921,2627,820),dir:(94,-35,0),spd:-300
+2022-05-18 13:53:46,585 [16] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:53:46,586 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6756,2693,820),dir:(94,-35,0),spd:0
+2022-05-18 13:53:46,599 [16] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:53:46,600 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6756,2693,820),dir:(94,-35,0),spd:300
+2022-05-18 13:53:48,977 [14] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:53:48,977 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7466,2409,820),dir:(94,-35,0),spd:0
+2022-05-18 13:53:49,157 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:53:49,158 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7466,2409,820),dir:(94,-35,0),spd:-300
+2022-05-18 13:53:49,955 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:49,956 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7226,2505,820),dir:(85,-52,0),spd:-300
+2022-05-18 13:53:50,189 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:50,190 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7170,2547,820),dir:(74,-67,0),spd:-300
+2022-05-18 13:53:50,323 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:50,324 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7138,2571,820),dir:(60,-80,0),spd:-300
+2022-05-18 13:53:50,423 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:50,424 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7120,2595,820),dir:(42,-91,0),spd:-300
+2022-05-18 13:53:50,523 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:50,524 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7108,2625,820),dir:(23,-97,0),spd:-300
+2022-05-18 13:53:50,607 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:50,608 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7103,2650,820),dir:(5,-100,0),spd:-300
+2022-05-18 13:53:50,705 [14] [WARN ] [GameServer] :Client[] DataReceived Len:62
+2022-05-18 13:53:50,706 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7103,2680,820),dir:(-15,-99,0),spd:-300
+2022-05-18 13:53:50,808 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:50,809 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7109,2710,820),dir:(-15,-99,0),spd:0
+2022-05-18 13:53:50,824 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:53:50,824 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2710,820),dir:(-33,-94,0),spd:0
+2022-05-18 13:53:51,075 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:53:51,076 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2710,820),dir:(-16,-99,0),spd:0
+2022-05-18 13:53:51,209 [14] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:53:51,210 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2710,820),dir:(2,-100,0),spd:0
+2022-05-18 13:53:51,874 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:53:51,876 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2710,820),dir:(-18,-98,0),spd:0
+2022-05-18 13:53:51,975 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:53:51,976 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2710,820),dir:(-37,-93,0),spd:0
+2022-05-18 13:53:52,061 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:53:52,062 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2710,820),dir:(-53,-85,0),spd:0
+2022-05-18 13:53:52,163 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:53:52,164 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2710,820),dir:(-69,-72,0),spd:0
+2022-05-18 13:53:52,495 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:53:52,496 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2710,820),dir:(-55,-84,0),spd:0
+2022-05-18 13:53:52,595 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:53:52,596 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2710,820),dir:(-36,-93,0),spd:0
+2022-05-18 13:53:52,695 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:53:52,695 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2710,820),dir:(-16,-99,0),spd:0
+2022-05-18 13:53:52,795 [14] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:53:52,795 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2710,820),dir:(5,-100,0),spd:0
+2022-05-18 13:53:52,849 [14] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:53:52,850 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(7109,2710,820),dir:(5,-100,0),spd:300
+2022-05-18 13:53:52,894 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:52,895 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7109,2695,820),dir:(25,-97,0),spd:300
+2022-05-18 13:53:53,027 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:53,027 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7117,2655,820),dir:(42,-91,0),spd:300
+2022-05-18 13:53:54,217 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:54,218 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7257,2354,820),dir:(42,-91,0),spd:300
+2022-05-18 13:53:54,386 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:54,386 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7257,2354,820),dir:(42,-91,0),spd:300
+2022-05-18 13:53:54,552 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:54,553 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7257,2354,820),dir:(42,-91,0),spd:300
+2022-05-18 13:53:54,717 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:54,718 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7257,2354,820),dir:(42,-91,0),spd:300
+2022-05-18 13:53:54,887 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:54,888 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7257,2354,820),dir:(42,-91,0),spd:300
+2022-05-18 13:53:55,053 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:55,054 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7257,2354,820),dir:(42,-91,0),spd:300
+2022-05-18 13:53:55,220 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:55,221 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7257,2354,820),dir:(42,-91,0),spd:300
+2022-05-18 13:53:55,367 [14] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:53:55,367 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7275,2309,820),dir:(42,-91,0),spd:0
+2022-05-18 13:53:55,438 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 13:53:55,439 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7275,2309,820),dir:(42,-91,0),spd:-300
+2022-05-18 13:53:55,447 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:55,448 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7253,2364,820),dir:(42,-91,0),spd:-300
+2022-05-18 13:53:56,556 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:56,557 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7123,2644,820),dir:(42,-91,0),spd:-300
+2022-05-18 13:53:56,652 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:56,653 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7111,2674,820),dir:(23,-97,0),spd:-300
+2022-05-18 13:53:56,751 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:56,752 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7105,2704,820),dir:(3,-100,0),spd:-300
+2022-05-18 13:53:56,805 [14] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:53:56,805 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7105,2719,820),dir:(3,-100,0),spd:0
+2022-05-18 13:53:56,833 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:53:56,834 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7105,2719,820),dir:(-15,-99,0),spd:0
+2022-05-18 13:53:56,926 [14] [WARN ] [GameServer] :Client[] DataReceived Len:56
+2022-05-18 13:53:56,927 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(7105,2719,820),dir:(-15,-99,0),spd:300
+2022-05-18 13:53:56,938 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:56,938 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7104,2714,820),dir:(-35,-94,0),spd:300
+2022-05-18 13:53:57,039 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:57,040 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7092,2684,820),dir:(-54,-84,0),spd:300
+2022-05-18 13:53:57,137 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:57,138 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7074,2660,820),dir:(-70,-71,0),spd:300
+2022-05-18 13:53:57,240 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:57,241 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7050,2636,820),dir:(-83,-55,0),spd:300
+2022-05-18 13:53:57,340 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:57,340 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7026,2618,820),dir:(-93,-37,0),spd:300
+2022-05-18 13:53:57,424 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:57,425 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7001,2608,820),dir:(-98,-20,0),spd:300
+2022-05-18 13:53:57,520 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:57,521 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6971,2602,820),dir:(-100,-1,0),spd:300
+2022-05-18 13:53:57,675 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:57,676 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6926,2602,820),dir:(-99,17,0),spd:300
+2022-05-18 13:53:58,058 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:58,059 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6811,2625,820),dir:(-100,-2,0),spd:300
+2022-05-18 13:53:58,156 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:58,156 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6781,2625,820),dir:(-98,-22,0),spd:300
+2022-05-18 13:53:58,241 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:58,242 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6756,2620,820),dir:(-92,-39,0),spd:300
+2022-05-18 13:53:58,357 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:58,358 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6721,2606,820),dir:(-83,-56,0),spd:300
+2022-05-18 13:53:58,654 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:58,655 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6649,2552,820),dir:(-92,-38,0),spd:300
+2022-05-18 13:53:58,759 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:58,760 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6619,2540,820),dir:(-98,-20,0),spd:300
+2022-05-18 13:53:58,840 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:58,841 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6594,2535,820),dir:(-100,-3,0),spd:300
+2022-05-18 13:53:58,964 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:53:58,965 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6559,2535,820),dir:(-99,15,0),spd:300
+2022-05-18 13:53:59,208 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:59,209 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6484,2550,820),dir:(-100,-3,0),spd:300
+2022-05-18 13:53:59,309 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:59,309 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6454,2550,820),dir:(-98,-22,0),spd:300
+2022-05-18 13:53:59,409 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:59,410 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6424,2544,820),dir:(-91,-41,0),spd:300
+2022-05-18 13:53:59,512 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:59,513 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6394,2532,820),dir:(-81,-59,0),spd:300
+2022-05-18 13:53:59,645 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 13:53:59,646 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6362,2508,820),dir:(-69,-72,0),spd:300
+2022-05-18 13:53:59,840 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 13:53:59,841 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6326,2460,820),dir:(-69,-72,0),spd:0
+2022-05-18 13:54:02,430 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:54:02,431 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6326,2460,820),dir:(-54,-84,0),spd:0
+2022-05-18 13:54:02,551 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:54:02,552 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6326,2460,820),dir:(-37,-93,0),spd:0
+2022-05-18 13:54:02,632 [14] [WARN ] [GameServer] :Client[] DataReceived Len:51
+2022-05-18 13:54:02,633 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6326,2460,820),dir:(-20,-98,0),spd:0
+2022-05-18 13:54:02,729 [14] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:54:02,729 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6326,2460,820),dir:(1,-100,0),spd:0
+2022-05-18 13:54:02,832 [14] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:54:02,832 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6326,2460,820),dir:(21,-98,0),spd:0
+2022-05-18 13:54:02,917 [14] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:54:02,918 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6326,2460,820),dir:(38,-92,0),spd:0
+2022-05-18 13:54:03,014 [14] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:54:03,015 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6326,2460,820),dir:(57,-83,0),spd:0
+2022-05-18 13:54:03,124 [14] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:54:03,125 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6326,2460,820),dir:(72,-69,0),spd:0
+2022-05-18 13:54:03,219 [14] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:54:03,220 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6326,2460,820),dir:(83,-55,0),spd:300
+2022-05-18 13:54:03,230 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:54:03,230 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6330,2457,820),dir:(83,-55,0),spd:300
+2022-05-18 13:54:03,833 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:54:03,834 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6474,2349,820),dir:(92,-39,0),spd:300
+2022-05-18 13:54:04,018 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:54:04,019 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6529,2327,820),dir:(98,-22,0),spd:300
+2022-05-18 13:54:04,113 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 13:54:04,115 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6506,2339,820),dir:(98,-22,0),spd:300
+2022-05-18 13:54:04,128 [14] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 13:54:04,129 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6511,2338,820),dir:(100,-3,0),spd:0
+2022-05-18 13:54:04,137 [14] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:54:04,138 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6511,2338,820),dir:(100,-3,0),spd:0
+2022-05-18 13:54:04,201 [14] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 13:54:04,202 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6511,2338,820),dir:(100,-3,0),spd:300
+2022-05-18 13:54:04,216 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:54:04,216 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6516,2338,820),dir:(98,18,0),spd:300
+2022-05-18 13:54:04,318 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:54:04,319 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6546,2344,820),dir:(93,36,0),spd:300
+2022-05-18 13:54:04,482 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:54:04,483 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6596,2364,820),dir:(85,52,0),spd:300
+2022-05-18 13:54:05,519 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:54:05,520 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6844,2550,820),dir:(93,37,0),spd:300
+2022-05-18 13:54:05,876 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 13:54:05,877 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6912,2558,820),dir:(93,37,0),spd:300
+2022-05-18 13:54:06,436 [14] [WARN ] [GameServer] :Client[] DataReceived Len:35
+2022-05-18 13:54:06,437 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7082,2626,820),dir:(93,37,0),spd:0
+2022-05-18 13:54:07,745 [14] [WARN ] [GameServer] :Client[] DataReceived Len:38
+2022-05-18 13:54:07,745 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(7082,2626,820),dir:(93,37,0),spd:300
+2022-05-18 13:54:08,142 [14] [WARN ] [GameServer] :Client[] DataReceived Len:35
+2022-05-18 13:54:08,142 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7202,2674,820),dir:(93,37,0),spd:0
+2022-05-18 13:54:09,929 [14] [WARN ] [GameServer] :Client[] DataReceived Len:33
+2022-05-18 13:54:09,930 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7202,2674,820),dir:(98,20,0),spd:0
+2022-05-18 13:54:10,093 [14] [WARN ] [GameServer] :Client[] DataReceived Len:33
+2022-05-18 13:54:10,094 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7202,2674,820),dir:(100,1,0),spd:0
+2022-05-18 13:54:10,246 [14] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:54:10,247 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7202,2674,820),dir:(99,-17,0),spd:0
+2022-05-18 13:54:11,048 [14] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-05-18 13:54:11,049 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7202,2674,820),dir:(94,-35,0),spd:0
+2022-05-18 13:54:17,294 [14] [WARN ] [GameServer] :Client[] Disconnected
+2022-05-18 15:21:17,568 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 15:21:17,670 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 15:21:17,871 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 15:21:17,873 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 15:21:17,873 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 15:21:17,873 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 15:21:17,874 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 15:21:17,919 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:21:17,919 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:21:17,919 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:21:17,919 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:21:17,919 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:21:17,923 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:21:18,888 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:21:19,891 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:21:19,950 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 15:21:35,660 [3] [WARN ] [GameServer] :Client[127.0.0.1:55946]] Connected
+2022-05-18 15:21:35,716 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 15:21:35,818 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 15:21:37,750 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 15:21:37,753 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 15:21:37,758 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 15:21:38,387 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 15:21:38,391 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-05-18 15:21:38,611 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:38,612 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5070,4000,820),dir:(98,-17,0),spd:300
+2022-05-18 15:21:38,710 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:38,711 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5100,3994,820),dir:(94,-35,0),spd:300
+2022-05-18 15:21:38,792 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:38,793 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5125,3984,820),dir:(86,-51,0),spd:300
+2022-05-18 15:21:38,894 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:38,895 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5149,3966,820),dir:(74,-68,0),spd:300
+2022-05-18 15:21:38,993 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:38,994 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5173,3948,820),dir:(58,-81,0),spd:300
+2022-05-18 15:21:39,095 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:39,096 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5191,3924,820),dir:(43,-90,0),spd:300
+2022-05-18 15:21:40,650 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:40,651 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5394,3507,820),dir:(43,-90,0),spd:300
+2022-05-18 15:21:40,783 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:40,784 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5410,3467,820),dir:(27,-96,0),spd:300
+2022-05-18 15:21:42,753 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:42,754 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5571,2903,820),dir:(27,-96,0),spd:300
+2022-05-18 15:21:43,000 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:43,000 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5586,2828,820),dir:(45,-89,0),spd:300
+2022-05-18 15:21:43,081 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:43,081 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5596,2808,820),dir:(60,-80,0),spd:300
+2022-05-18 15:21:43,181 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:43,182 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5614,2784,820),dir:(75,-66,0),spd:300
+2022-05-18 15:21:43,268 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:43,269 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5634,2769,820),dir:(86,-52,0),spd:300
+2022-05-18 15:21:43,351 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:43,351 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5654,2754,820),dir:(93,-36,0),spd:300
+2022-05-18 15:21:43,449 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:43,449 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5684,2742,820),dir:(98,-17,0),spd:300
+2022-05-18 15:21:43,617 [3] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 15:21:43,617 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5734,2732,820),dir:(100,1,0),spd:300
+2022-05-18 15:21:46,288 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:21:46,289 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6534,2732,820),dir:(99,-17,0),spd:300
+2022-05-18 15:21:49,077 [3] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 15:21:49,078 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7369,2565,820),dir:(99,-17,0),spd:0
+2022-05-18 15:21:49,335 [3] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:21:49,335 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(7369,2565,820),dir:(99,-17,0),spd:-300
+2022-05-18 15:21:50,599 [3] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 15:21:50,599 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6989,2641,820),dir:(99,-17,0),spd:0
+2022-05-18 15:22:19,623 [3] [WARN ] [GameServer] :Client[] DataReceived Len:47
+2022-05-18 15:22:19,624 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6989,2641,820),dir:(99,-17,0),spd:300
+2022-05-18 15:22:19,687 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:22:19,687 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7009,2637,820),dir:(94,-34,0),spd:300
+2022-05-18 15:22:19,851 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:22:19,851 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7059,2617,820),dir:(86,-51,0),spd:300
+2022-05-18 15:22:19,951 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:22:19,951 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7083,2599,820),dir:(74,-67,0),spd:300
+2022-05-18 15:22:20,033 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:22:20,034 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7103,2584,820),dir:(61,-79,0),spd:300
+2022-05-18 15:22:20,135 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:22:20,136 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7121,2560,820),dir:(44,-90,0),spd:300
+2022-05-18 15:22:20,293 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:22:20,294 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7139,2515,820),dir:(26,-96,0),spd:300
+2022-05-18 15:22:20,452 [3] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 15:22:20,453 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(7149,2465,820),dir:(26,-96,0),spd:0
+2022-05-18 15:23:15,734 [3] [WARN ] [GameServer] :Client[] Disconnected
+2022-05-18 15:24:56,605 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 15:24:56,727 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 15:24:56,877 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 15:24:56,880 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 15:24:56,880 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 15:24:56,881 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 15:24:56,881 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 15:24:56,885 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:24:56,885 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:24:56,913 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:24:56,913 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:24:56,913 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:24:56,913 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:24:57,898 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:24:58,404 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:24:58,485 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 15:25:12,495 [3] [WARN ] [GameServer] :Client[127.0.0.1:56003]] Connected
+2022-05-18 15:25:12,551 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 15:25:12,653 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 15:25:14,609 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 15:25:14,612 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 15:25:14,618 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 15:25:15,129 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 15:25:15,133 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-05-18 15:25:15,340 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:15,341 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5065,4000,820),dir:(98,-20,0),spd:300
+2022-05-18 15:25:15,436 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:15,437 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5095,3994,820),dir:(92,-38,0),spd:300
+2022-05-18 15:25:15,540 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:15,541 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5125,3982,820),dir:(83,-56,0),spd:300
+2022-05-18 15:25:15,626 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:15,626 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5145,3967,820),dir:(72,-70,0),spd:300
+2022-05-18 15:25:15,705 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:15,705 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5165,3947,820),dir:(58,-81,0),spd:300
+2022-05-18 15:25:15,805 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:15,805 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5183,3923,820),dir:(41,-91,0),spd:300
+2022-05-18 15:25:15,956 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:15,957 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5201,3878,820),dir:(23,-97,0),spd:300
+2022-05-18 15:25:18,745 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:18,746 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5368,3043,820),dir:(41,-91,0),spd:300
+2022-05-18 15:25:18,944 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:18,945 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5392,2983,820),dir:(57,-82,0),spd:300
+2022-05-18 15:25:19,330 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:19,330 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5461,2891,820),dir:(71,-70,0),spd:300
+2022-05-18 15:25:19,429 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:19,430 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5485,2867,820),dir:(83,-56,0),spd:300
+2022-05-18 15:25:19,529 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:19,529 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5509,2849,820),dir:(93,-38,0),spd:300
+2022-05-18 15:25:19,647 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:25:19,648 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5544,2835,820),dir:(98,-19,0),spd:300
+2022-05-18 15:25:32,992 [3] [WARN ] [GameServer] :Client[] Disconnected
+2022-05-18 15:26:22,101 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 15:26:22,295 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 15:26:22,470 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 15:26:22,472 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 15:26:22,472 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 15:26:22,472 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 15:26:22,473 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 15:26:22,537 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:26:22,538 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:26:22,538 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:26:22,538 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:26:22,539 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:26:22,544 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:26:23,490 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:26:24,477 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:26:24,550 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 15:26:32,149 [3] [WARN ] [GameServer] :Client[127.0.0.1:56051]] Connected
+2022-05-18 15:26:32,204 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 15:26:32,310 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 15:26:34,317 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 15:26:34,320 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 15:26:34,325 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 15:26:34,765 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 15:26:34,770 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-05-18 15:26:35,089 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:35,090 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5100,4000,820),dir:(98,-20,0),spd:300
+2022-05-18 15:26:35,189 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:35,190 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5130,3994,820),dir:(92,-38,0),spd:300
+2022-05-18 15:26:35,288 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:35,289 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5160,3982,820),dir:(83,-56,0),spd:300
+2022-05-18 15:26:35,373 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:35,374 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5180,3967,820),dir:(71,-70,0),spd:300
+2022-05-18 15:26:35,472 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:35,473 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5204,3943,820),dir:(56,-83,0),spd:300
+2022-05-18 15:26:35,591 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:35,592 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5225,3915,820),dir:(40,-92,0),spd:300
+2022-05-18 15:26:36,741 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:36,742 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5363,3570,820),dir:(23,-97,0),spd:300
+2022-05-18 15:26:38,750 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:38,751 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5501,3017,820),dir:(23,-97,0),spd:300
+2022-05-18 15:26:39,096 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:39,097 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5522,2912,820),dir:(41,-91,0),spd:300
+2022-05-18 15:26:39,196 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:39,197 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5534,2882,820),dir:(58,-81,0),spd:300
+2022-05-18 15:26:39,294 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:39,295 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5552,2858,820),dir:(74,-68,0),spd:300
+2022-05-18 15:26:39,380 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:39,381 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5572,2843,820),dir:(84,-54,0),spd:300
+2022-05-18 15:26:39,480 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:39,481 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5596,2825,820),dir:(93,-37,0),spd:300
+2022-05-18 15:26:39,663 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:39,664 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5651,2803,820),dir:(98,-20,0),spd:300
+2022-05-18 15:26:41,556 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:41,556 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6164,2705,820),dir:(98,-20,0),spd:300
+2022-05-18 15:26:41,723 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:41,724 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6164,2704,821),dir:(98,-20,0),spd:300
+2022-05-18 15:26:41,888 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:41,888 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6164,2704,821),dir:(98,-20,0),spd:300
+2022-05-18 15:26:42,057 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:42,058 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6164,2704,821),dir:(98,-20,0),spd:300
+2022-05-18 15:26:42,223 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:42,224 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6165,2704,821),dir:(98,-20,0),spd:300
+2022-05-18 15:26:42,283 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:42,284 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6185,2700,821),dir:(93,-38,0),spd:300
+2022-05-18 15:26:42,387 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:42,388 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6215,2688,821),dir:(84,-55,0),spd:300
+2022-05-18 15:26:42,403 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:42,404 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6170,2700,822),dir:(84,-55,0),spd:300
+2022-05-18 15:26:42,484 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:42,485 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6190,2685,822),dir:(71,-71,0),spd:300
+2022-05-18 15:26:42,586 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:42,588 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6214,2661,822),dir:(56,-83,0),spd:300
+2022-05-18 15:26:42,753 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:42,754 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6244,2621,822),dir:(40,-91,0),spd:300
+2022-05-18 15:26:43,102 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:43,103 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6286,2516,822),dir:(57,-82,0),spd:300
+2022-05-18 15:26:43,202 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:43,203 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6304,2492,822),dir:(72,-69,0),spd:300
+2022-05-18 15:26:43,304 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:43,305 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6328,2474,822),dir:(85,-53,0),spd:300
+2022-05-18 15:26:43,388 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:43,389 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6348,2459,822),dir:(93,-37,0),spd:300
+2022-05-18 15:26:43,490 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:43,491 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6378,2447,822),dir:(99,-17,0),spd:300
+2022-05-18 15:26:43,541 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:26:43,542 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6359,2464,853),dir:(99,-17,0),spd:300
+2022-05-18 15:26:43,589 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 15:26:43,590 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6374,2461,853),dir:(100,3,0),spd:300
+2022-05-18 15:26:43,723 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 15:26:43,723 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6414,2461,853),dir:(98,21,0),spd:300
+2022-05-18 15:26:45,945 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 15:26:45,946 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(7079,2594,853),dir:(100,3,0),spd:300
+2022-05-18 15:27:29,755 [14] [WARN ] [GameServer] :Client[] Disconnected
+2022-05-18 15:30:26,246 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 15:30:26,391 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 15:30:26,613 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 15:30:26,615 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 15:30:26,615 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 15:30:26,616 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 15:30:26,616 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 15:30:26,797 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:30:26,797 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:30:26,800 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:30:26,801 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:30:26,801 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:30:26,801 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:30:28,625 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:30:29,634 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:30:29,708 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 15:30:32,905 [3] [WARN ] [GameServer] :Client[127.0.0.1:63130]] Connected
+2022-05-18 15:30:32,960 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 15:30:33,061 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 15:30:34,983 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 15:30:34,985 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 15:30:34,990 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 15:30:35,425 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 15:30:35,430 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-05-18 15:30:35,632 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:35,633 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5065,4000,820),dir:(98,-19,0),spd:300
+2022-05-18 15:30:35,731 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:35,731 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5095,3994,820),dir:(93,-36,0),spd:300
+2022-05-18 15:30:35,813 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:35,814 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5120,3984,820),dir:(85,-52,0),spd:300
+2022-05-18 15:30:35,919 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:35,919 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5144,3966,820),dir:(73,-69,0),spd:300
+2022-05-18 15:30:36,012 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:36,013 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5168,3948,820),dir:(57,-82,0),spd:300
+2022-05-18 15:30:36,117 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:36,117 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5186,3924,820),dir:(39,-92,0),spd:300
+2022-05-18 15:30:36,249 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:36,250 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5202,3884,820),dir:(21,-98,0),spd:300
+2022-05-18 15:30:38,921 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:38,922 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5362,3084,820),dir:(38,-92,0),spd:300
+2022-05-18 15:30:39,036 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:39,036 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5376,3049,820),dir:(55,-84,0),spd:300
+2022-05-18 15:30:39,141 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:39,142 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5394,3025,820),dir:(70,-71,0),spd:300
+2022-05-18 15:30:39,287 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:39,288 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5430,2989,820),dir:(82,-57,0),spd:300
+2022-05-18 15:30:40,145 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:40,146 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5613,2884,819),dir:(82,-57,0),spd:300
+2022-05-18 15:30:41,941 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:41,941 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6045,2560,819),dir:(91,-41,0),spd:300
+2022-05-18 15:30:42,059 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:42,060 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6080,2546,819),dir:(98,-21,0),spd:300
+2022-05-18 15:30:42,158 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:42,158 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6110,2540,819),dir:(100,-1,0),spd:300
+2022-05-18 15:30:42,260 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 15:30:42,261 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6140,2540,819),dir:(98,18,0),spd:300
+2022-05-18 15:30:43,981 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:43,982 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6655,2643,819),dir:(100,-1,0),spd:300
+2022-05-18 15:30:45,099 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:30:45,100 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6990,2643,819),dir:(98,-19,0),spd:300
+2022-05-18 15:30:45,600 [14] [WARN ] [GameServer] :Client[] DataReceived Len:10
+2022-05-18 15:30:45,602 [9] [INFO ] [GameServer] :OnMapTeleport : characterID : 1 : System.Data.Entity.DynamicProxies.TCharacter_29305D9B8C771FE69D27D2DC78E470854EC421142454E0B7F58780371AC6853F TeleporterId : 1
+2022-05-18 15:30:45,604 [9] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 15:30:45,605 [9] [INFO ] [GameServer] :CharacterEnter: Map:2 characterId:1
+2022-05-18 15:30:46,193 [14] [WARN ] [GameServer] :Client[] DataReceived Len:43
+2022-05-18 15:30:46,193 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(3242,3968,48),dir:(100,0,-5),spd:0
+2022-05-18 15:30:47,195 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:30:47,196 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(3242,3968,48),dir:(100,0,-5),spd:300
+2022-05-18 15:30:47,539 [14] [WARN ] [GameServer] :Client[] DataReceived Len:43
+2022-05-18 15:30:47,540 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(3347,3968,48),dir:(100,0,-5),spd:0
+2022-05-18 15:30:48,142 [14] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:30:48,143 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3347,3968,48),dir:(98,-19,-5),spd:0
+2022-05-18 15:30:48,247 [14] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:30:48,248 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3347,3968,48),dir:(93,-37,-5),spd:0
+2022-05-18 15:30:48,338 [14] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:30:48,339 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3347,3968,48),dir:(84,-54,-5),spd:0
+2022-05-18 15:30:48,488 [14] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:30:48,488 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3347,3968,48),dir:(73,-68,-5),spd:0
+2022-05-18 15:30:49,191 [14] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:30:49,192 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3347,3968,48),dir:(59,-80,-5),spd:0
+2022-05-18 15:30:54,424 [16] [WARN ] [GameServer] :Client[] Disconnected
+2022-05-18 15:39:17,214 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 15:39:17,324 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 15:39:17,531 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 15:39:17,533 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 15:39:17,534 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 15:39:17,534 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 15:39:17,535 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 15:39:17,603 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:39:17,604 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:39:17,605 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:39:17,606 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:39:17,607 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:39:17,607 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:39:19,551 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:39:20,543 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:39:20,631 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 15:39:30,766 [3] [WARN ] [GameServer] :Client[127.0.0.1:63008]] Connected
+2022-05-18 15:39:30,821 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 15:39:30,929 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 15:39:32,670 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 15:39:32,672 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 15:39:32,677 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 15:39:33,195 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 15:39:33,200 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-05-18 15:39:33,326 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:33,326 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5040,4000,820),dir:(98,-19,0),spd:300
+2022-05-18 15:39:33,425 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:33,426 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5070,3994,820),dir:(93,-38,0),spd:300
+2022-05-18 15:39:33,528 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:33,529 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5100,3982,820),dir:(83,-56,0),spd:300
+2022-05-18 15:39:33,609 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:33,610 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5120,3967,820),dir:(72,-69,0),spd:300
+2022-05-18 15:39:33,698 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:33,699 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5140,3952,820),dir:(59,-81,0),spd:300
+2022-05-18 15:39:33,789 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:33,790 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5155,3932,820),dir:(44,-90,0),spd:300
+2022-05-18 15:39:33,894 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:33,895 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5169,3897,820),dir:(26,-97,0),spd:300
+2022-05-18 15:39:36,167 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:36,168 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5305,3217,820),dir:(43,-90,0),spd:300
+2022-05-18 15:39:36,238 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:36,239 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5357,3221,820),dir:(43,-90,0),spd:300
+2022-05-18 15:39:36,836 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:36,837 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5429,3041,820),dir:(59,-81,0),spd:300
+2022-05-18 15:39:37,617 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:37,618 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5570,2853,820),dir:(72,-69,0),spd:300
+2022-05-18 15:39:37,768 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:37,769 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5606,2826,820),dir:(84,-55,0),spd:300
+2022-05-18 15:39:37,868 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:37,869 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5630,2808,820),dir:(92,-39,0),spd:300
+2022-05-18 15:39:38,684 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:38,685 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5875,2710,820),dir:(97,-22,0),spd:300
+2022-05-18 15:39:40,271 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:39:40,272 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6350,2615,820),dir:(100,-4,0),spd:300
+2022-05-18 15:39:42,897 [14] [WARN ] [GameServer] :Client[] DataReceived Len:10
+2022-05-18 15:39:42,899 [5] [INFO ] [GameServer] :OnMapTeleport : characterID : 1 : System.Data.Entity.DynamicProxies.TCharacter_29305D9B8C771FE69D27D2DC78E470854EC421142454E0B7F58780371AC6853F TeleporterId : 1
+2022-05-18 15:39:42,900 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 15:39:42,901 [5] [INFO ] [GameServer] :CharacterEnter: Map:2 characterId:1
+2022-05-18 15:39:43,548 [14] [WARN ] [GameServer] :Client[] DataReceived Len:43
+2022-05-18 15:39:43,549 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(3298,3968,38),dir:(100,0,-5),spd:0
+2022-05-18 15:39:44,163 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:39:44,164 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(3298,3968,38),dir:(100,0,-5),spd:300
+2022-05-18 15:39:44,390 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:44,391 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3368,3968,38),dir:(98,-19,-5),spd:300
+2022-05-18 15:39:44,492 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:44,493 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3398,3962,38),dir:(93,-37,-5),spd:300
+2022-05-18 15:39:44,594 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:44,595 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3428,3950,38),dir:(83,-55,-5),spd:300
+2022-05-18 15:39:44,710 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:44,710 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3456,3929,38),dir:(71,-70,-5),spd:300
+2022-05-18 15:39:45,190 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:45,191 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3572,3813,38),dir:(83,-55,-5),spd:300
+2022-05-18 15:39:45,298 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:45,299 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3596,3795,38),dir:(93,-37,-4),spd:300
+2022-05-18 15:39:45,396 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:45,397 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3626,3783,38),dir:(98,-17,-4),spd:300
+2022-05-18 15:39:45,474 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:39:45,475 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3651,3778,38),dir:(100,1,-4),spd:300
+2022-05-18 15:39:45,582 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:39:45,582 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3681,3778,38),dir:(98,21,-4),spd:300
+2022-05-18 15:39:45,659 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:39:45,660 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3706,3783,38),dir:(92,38,-4),spd:300
+2022-05-18 15:39:45,762 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:39:45,762 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3736,3795,38),dir:(82,56,-4),spd:300
+2022-05-18 15:39:45,841 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:39:45,842 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3756,3810,38),dir:(71,70,-4),spd:300
+2022-05-18 15:39:45,942 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:39:45,942 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3780,3834,38),dir:(55,83,-4),spd:300
+2022-05-18 15:39:46,043 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:39:46,044 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3798,3858,38),dir:(37,93,-4),spd:300
+2022-05-18 15:39:46,127 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:39:46,127 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3808,3883,38),dir:(20,98,-4),spd:300
+2022-05-18 15:39:46,230 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:46,230 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3814,3913,38),dir:(-1,100,-4),spd:300
+2022-05-18 15:39:46,333 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:46,333 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3814,3943,38),dir:(-21,98,-4),spd:300
+2022-05-18 15:39:46,412 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:46,413 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3809,3968,38),dir:(-38,92,-4),spd:300
+2022-05-18 15:39:46,512 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:46,513 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3797,3998,38),dir:(-56,82,-3),spd:300
+2022-05-18 15:39:46,597 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:46,598 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3782,4018,38),dir:(-70,71,-3),spd:300
+2022-05-18 15:39:46,696 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 15:39:46,697 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(3758,4042,38),dir:(-83,55,-3),spd:0
+2022-05-18 15:39:46,710 [14] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:39:46,710 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3758,4042,38),dir:(-83,55,-3),spd:0
+2022-05-18 15:39:46,797 [14] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:39:46,797 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3758,4042,38),dir:(-93,37,-3),spd:0
+2022-05-18 15:39:46,881 [14] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:39:46,882 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3758,4042,38),dir:(-98,20,-3),spd:0
+2022-05-18 15:39:46,895 [14] [WARN ] [GameServer] :Client[] DataReceived Len:57
+2022-05-18 15:39:46,895 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(3758,4042,38),dir:(-98,20,-3),spd:300
+2022-05-18 15:39:46,979 [14] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:46,979 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3733,4047,38),dir:(-100,-1,-3),spd:300
+2022-05-18 15:39:47,096 [14] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:47,097 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3698,4047,38),dir:(-98,-19,-3),spd:300
+2022-05-18 15:39:47,728 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:47,728 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3560,4031,20),dir:(-98,-19,-3),spd:300
+2022-05-18 15:39:47,895 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:47,896 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3560,4031,20),dir:(-98,-19,-3),spd:300
+2022-05-18 15:39:48,053 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:48,054 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3560,4030,20),dir:(-98,-19,-3),spd:300
+2022-05-18 15:39:48,219 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:48,220 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3560,4030,20),dir:(-98,-19,-3),spd:300
+2022-05-18 15:39:48,231 [13] [WARN ] [GameServer] :Client[] DataReceived Len:63
+2022-05-18 15:39:48,232 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(3555,4029,20),dir:(-98,-19,-3),spd:0
+2022-05-18 15:39:48,483 [13] [WARN ] [GameServer] :Client[] DataReceived Len:61
+2022-05-18 15:39:48,484 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3555,4029,20),dir:(-100,-1,-3),spd:0
+2022-05-18 15:39:48,581 [13] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:39:48,582 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3555,4029,20),dir:(-98,19,-3),spd:0
+2022-05-18 15:39:48,666 [13] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:39:48,666 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3555,4029,20),dir:(-93,36,-3),spd:0
+2022-05-18 15:39:48,783 [13] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:39:48,783 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3555,4029,20),dir:(-85,52,-3),spd:0
+2022-05-18 15:39:49,270 [13] [WARN ] [GameServer] :Client[] DataReceived Len:57
+2022-05-18 15:39:49,271 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(3555,4029,20),dir:(-85,52,-3),spd:300
+2022-05-18 15:39:49,441 [13] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:49,441 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3559,4031,20),dir:(-85,52,-3),spd:300
+2022-05-18 15:39:49,620 [13] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:49,621 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3559,4031,20),dir:(-85,52,-3),spd:300
+2022-05-18 15:39:49,733 [13] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:49,733 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3531,4052,20),dir:(-94,34,-3),spd:300
+2022-05-18 15:39:49,787 [13] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:49,788 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3560,4032,20),dir:(-94,34,-3),spd:300
+2022-05-18 15:39:49,816 [13] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:39:49,816 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3550,4036,20),dir:(-98,17,-3),spd:300
+2022-05-18 15:39:49,915 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:49,916 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3520,4042,20),dir:(-100,-4,-3),spd:300
+2022-05-18 15:39:49,961 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:49,962 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3560,4032,20),dir:(-100,-4,-3),spd:300
+2022-05-18 15:39:50,020 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:50,020 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3540,4032,20),dir:(-97,-24,-3),spd:300
+2022-05-18 15:39:50,122 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:50,123 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3560,4032,20),dir:(-97,-24,-3),spd:300
+2022-05-18 15:39:50,134 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:50,136 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3555,4031,20),dir:(-91,-42,-3),spd:300
+2022-05-18 15:39:50,289 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:50,289 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3560,4031,20),dir:(-91,-42,-3),spd:300
+2022-05-18 15:39:50,334 [13] [WARN ] [GameServer] :Client[] DataReceived Len:63
+2022-05-18 15:39:50,335 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(3545,4025,20),dir:(-91,-42,-3),spd:0
+2022-05-18 15:39:51,079 [13] [WARN ] [GameServer] :Client[] DataReceived Len:66
+2022-05-18 15:39:51,079 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(3545,4025,20),dir:(-91,-42,-3),spd:300
+2022-05-18 15:39:51,189 [13] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:39:51,189 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3560,4031,20),dir:(-91,-42,-3),spd:300
+2022-05-18 15:39:51,356 [13] [WARN ] [GameServer] :Client[] DataReceived Len:63
+2022-05-18 15:39:51,357 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(3510,4011,20),dir:(-91,-42,-3),spd:0
+2022-05-18 15:39:51,369 [13] [WARN ] [GameServer] :Client[] DataReceived Len:61
+2022-05-18 15:39:51,370 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3560,4031,20),dir:(-91,-42,-3),spd:0
+2022-05-18 15:40:20,502 [13] [WARN ] [GameServer] :Client[] Disconnected
+2022-05-18 15:44:27,180 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 15:44:27,290 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 15:44:27,480 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 15:44:27,482 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 15:44:27,482 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 15:44:27,482 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 15:44:27,483 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 15:44:27,494 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:44:27,495 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:44:27,495 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:44:27,497 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:44:27,530 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:44:27,530 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:44:29,001 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:44:29,988 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 15:44:30,047 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 15:44:39,991 [3] [WARN ] [GameServer] :Client[127.0.0.1:63121]] Connected
+2022-05-18 15:44:40,047 [3] [WARN ] [GameServer] :Client[] DataReceived Len:21
+2022-05-18 15:44:40,152 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:11
+2022-05-18 15:44:43,431 [14] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 15:44:43,431 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 15:44:44,888 [3] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 15:44:44,890 [6] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 15:44:44,896 [6] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 15:44:45,490 [3] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-05-18 15:44:45,494 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-05-18 15:44:45,799 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:45,800 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5095,4000,820),dir:(98,-18,0),spd:300
+2022-05-18 15:44:45,902 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:45,903 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5125,3994,820),dir:(93,-36,0),spd:300
+2022-05-18 15:44:46,002 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:46,003 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5155,3982,820),dir:(84,-54,0),spd:300
+2022-05-18 15:44:46,084 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:46,085 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5175,3967,820),dir:(73,-68,0),spd:300
+2022-05-18 15:44:46,192 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:46,193 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5199,3949,820),dir:(58,-82,0),spd:300
+2022-05-18 15:44:46,284 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:46,285 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5217,3925,820),dir:(41,-91,0),spd:300
+2022-05-18 15:44:46,438 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:46,439 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5235,3880,820),dir:(24,-97,0),spd:300
+2022-05-18 15:44:49,580 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:49,581 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5463,2971,820),dir:(24,-97,0),spd:300
+2022-05-18 15:44:49,692 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:49,692 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5470,2936,820),dir:(41,-91,0),spd:300
+2022-05-18 15:44:49,790 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:49,791 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5482,2906,820),dir:(58,-81,0),spd:300
+2022-05-18 15:44:49,907 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:49,907 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5503,2878,820),dir:(72,-70,0),spd:300
+2022-05-18 15:44:50,094 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:50,095 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5547,2834,820),dir:(83,-55,0),spd:300
+2022-05-18 15:44:50,213 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:50,213 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5575,2813,820),dir:(93,-38,0),spd:300
+2022-05-18 15:44:50,326 [3] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:50,327 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5610,2799,820),dir:(98,-20,0),spd:300
+2022-05-18 15:44:53,998 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:54,000 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6710,2579,820),dir:(100,-1,0),spd:300
+2022-05-18 15:44:55,602 [14] [WARN ] [GameServer] :Client[] DataReceived Len:10
+2022-05-18 15:44:55,604 [6] [INFO ] [GameServer] :OnMapTeleport : characterID : 1 : System.Data.Entity.DynamicProxies.TCharacter_29305D9B8C771FE69D27D2DC78E470854EC421142454E0B7F58780371AC6853F TeleporterId : 1
+2022-05-18 15:44:55,606 [6] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 15:44:55,608 [6] [INFO ] [GameServer] :CharacterEnter: Map:2 characterId:1
+2022-05-18 15:44:56,243 [14] [WARN ] [GameServer] :Client[] DataReceived Len:43
+2022-05-18 15:44:56,244 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(3298,3968,38),dir:(100,0,-5),spd:0
+2022-05-18 15:44:56,508 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:44:56,508 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(3298,3968,38),dir:(100,0,-5),spd:300
+2022-05-18 15:44:57,024 [14] [WARN ] [GameServer] :Client[] DataReceived Len:46
+2022-05-18 15:44:57,024 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3453,3968,38),dir:(98,19,-5),spd:300
+2022-05-18 15:44:57,072 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:44:57,073 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(3468,3971,38),dir:(98,19,-5),spd:0
+2022-05-18 15:44:57,118 [14] [WARN ] [GameServer] :Client[] DataReceived Len:43
+2022-05-18 15:44:57,119 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3468,3971,38),dir:(93,37,-5),spd:0
+2022-05-18 15:44:57,138 [14] [WARN ] [GameServer] :Client[] DataReceived Len:56
+2022-05-18 15:44:57,140 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveBack Entity:(1:pos:(3468,3971,38),dir:(93,37,-5),spd:-300
+2022-05-18 15:44:57,202 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 15:44:57,203 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3448,3963,38),dir:(85,53,-5),spd:-300
+2022-05-18 15:44:57,304 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 15:44:57,305 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3424,3945,38),dir:(72,69,-5),spd:-300
+2022-05-18 15:44:57,388 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 15:44:57,388 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3404,3930,38),dir:(59,81,-5),spd:-300
+2022-05-18 15:44:57,487 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 15:44:57,488 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3386,3906,38),dir:(41,91,-4),spd:-300
+2022-05-18 15:44:57,573 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 15:44:57,574 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3376,3881,38),dir:(24,97,-4),spd:-300
+2022-05-18 15:44:57,672 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 15:44:57,673 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3370,3851,38),dir:(4,100,-4),spd:-300
+2022-05-18 15:44:57,757 [14] [WARN ] [GameServer] :Client[] DataReceived Len:63
+2022-05-18 15:44:57,757 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3370,3826,38),dir:(-14,99,-4),spd:-300
+2022-05-18 15:44:57,857 [14] [WARN ] [GameServer] :Client[] DataReceived Len:63
+2022-05-18 15:44:57,858 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3376,3796,38),dir:(-34,94,-4),spd:-300
+2022-05-18 15:44:57,936 [14] [WARN ] [GameServer] :Client[] DataReceived Len:63
+2022-05-18 15:44:57,936 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3386,3771,38),dir:(-50,87,-4),spd:-300
+2022-05-18 15:44:57,988 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 15:44:57,988 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(3395,3759,38),dir:(-50,87,-4),spd:0
+2022-05-18 15:44:58,024 [14] [WARN ] [GameServer] :Client[] DataReceived Len:52
+2022-05-18 15:44:58,025 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3395,3759,38),dir:(-64,77,-4),spd:0
+2022-05-18 15:44:58,090 [14] [WARN ] [GameServer] :Client[] DataReceived Len:57
+2022-05-18 15:44:58,090 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(3395,3759,38),dir:(-64,77,-4),spd:300
+2022-05-18 15:44:58,108 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:44:58,108 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3392,3763,38),dir:(-76,64,-4),spd:300
+2022-05-18 15:44:58,206 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:44:58,206 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3368,3781,38),dir:(-87,49,-4),spd:300
+2022-05-18 15:44:58,384 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:44:58,385 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3328,3801,38),dir:(-94,33,-4),spd:300
+2022-05-18 15:44:58,538 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:44:58,538 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3278,3821,38),dir:(-99,14,-4),spd:300
+2022-05-18 15:44:58,639 [14] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:44:58,640 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3248,3827,38),dir:(-100,-4,-4),spd:300
+2022-05-18 15:44:58,789 [14] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:44:58,790 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3203,3827,38),dir:(-98,-22,-4),spd:300
+2022-05-18 15:44:59,276 [14] [WARN ] [GameServer] :Client[] DataReceived Len:64
+2022-05-18 15:44:59,277 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3058,3798,38),dir:(-100,-4,-4),spd:300
+2022-05-18 15:44:59,376 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:44:59,377 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(3028,3798,38),dir:(-99,15,-4),spd:300
+2022-05-18 15:44:59,523 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:44:59,524 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(2983,3807,38),dir:(-94,33,-3),spd:300
+2022-05-18 15:45:00,407 [14] [WARN ] [GameServer] :Client[] DataReceived Len:55
+2022-05-18 15:45:00,408 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(2718,3913,38),dir:(-99,16,-3),spd:300
+2022-05-18 15:45:01,278 [14] [WARN ] [GameServer] :Client[] DataReceived Len:10
+2022-05-18 15:45:01,279 [11] [INFO ] [GameServer] :OnMapTeleport : characterID : 1 : System.Data.Entity.DynamicProxies.TCharacter_29305D9B8C771FE69D27D2DC78E470854EC421142454E0B7F58780371AC6853F TeleporterId : 5
+2022-05-18 15:45:01,280 [11] [INFO ] [GameServer] :CharacterEnter: Map:2 characterId:1
+2022-05-18 15:45:01,281 [11] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 15:45:01,590 [14] [WARN ] [GameServer] :Client[] DataReceived Len:53
+2022-05-18 15:45:01,590 [12] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(6475,2591,804),dir:(-100,-4,0),spd:0
+2022-05-18 15:45:02,158 [14] [WARN ] [GameServer] :Client[] DataReceived Len:56
+2022-05-18 15:45:02,159 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(6475,2591,804),dir:(-100,-4,0),spd:300
+2022-05-18 15:45:02,435 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:45:02,436 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6390,2591,804),dir:(-99,14,0),spd:300
+2022-05-18 15:45:02,884 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 15:45:02,885 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6255,2618,804),dir:(-100,-4,0),spd:300
+2022-05-18 15:45:02,987 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 15:45:02,987 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6225,2618,804),dir:(-97,-23,0),spd:300
+2022-05-18 15:45:03,385 [14] [WARN ] [GameServer] :Client[] DataReceived Len:54
+2022-05-18 15:45:03,386 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6105,2594,804),dir:(-100,-6,0),spd:300
+2022-05-18 15:45:03,480 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-05-18 15:45:03,481 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(6080,2594,804),dir:(-99,12,0),spd:300
+2022-05-18 15:45:04,059 [14] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-05-18 15:45:04,060 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(5905,2629,804),dir:(-99,12,0),spd:0
+2022-05-18 15:45:04,455 [14] [WARN ] [GameServer] :Client[] Disconnected
+2022-05-18 16:01:35,369 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-18 16:01:35,477 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-18 16:01:35,633 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-18 16:01:35,635 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-18 16:01:35,636 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-18 16:01:35,636 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-18 16:01:35,637 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-18 16:01:35,646 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:35,646 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:35,646 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:35,646 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:35,655 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:35,657 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:37,142 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:39,649 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-18 16:01:39,708 [1] [WARN ] [GameServer] :NetService Started
+2022-05-18 16:01:51,096 [3] [WARN ] [GameServer] :Client[127.0.0.1:50091]] Connected
+2022-05-18 16:01:51,154 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-18 16:01:51,255 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-18 16:01:53,203 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-18 16:01:53,206 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-18 16:01:53,211 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-18 16:04:39,615 [14] [WARN ] [GameServer] :Client[] Disconnected

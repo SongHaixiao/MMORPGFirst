@@ -1,0 +1,17 @@
+
+2022-05-22 01:06:49,760 [1] [INFO ] [GameServer] ：Game Server Init
+2022-05-22 01:06:49,967 [1] [INFO ] [GameServer] ：DataManager > DataManager()
+2022-05-22 01:06:50,139 [1] [INFO ] [GameServer] ：MapManager.Init > Map:1:MainCity
+2022-05-22 01:06:50,142 [1] [INFO ] [GameServer] ：MapManager.Init > Map:2:MonsterMap01
+2022-05-22 01:06:50,142 [1] [INFO ] [GameServer] ：MapManager.Init > Map:3:MonsterMap02
+2022-05-22 01:06:50,142 [1] [INFO ] [GameServer] ：MapManager.Init > Map:4:Mission01
+2022-05-22 01:06:50,144 [1] [WARN ] [GameServer] ：Starting Listener...
+2022-05-22 01:06:50,169 [8] [WARN ] [GameServer] ：MessageDistribute thread start
+2022-05-22 01:06:50,169 [20] [WARN ] [GameServer] ：MessageDistribute thread start
+2022-05-22 01:06:50,170 [18] [WARN ] [GameServer] ：MessageDistribute thread start
+2022-05-22 01:06:50,169 [21] [WARN ] [GameServer] ：MessageDistribute thread start
+2022-05-22 01:06:50,211 [10] [WARN ] [GameServer] ：MessageDistribute thread start
+2022-05-22 01:06:50,211 [7] [WARN ] [GameServer] ：MessageDistribute thread start
+2022-05-22 01:06:50,211 [13] [WARN ] [GameServer] ：MessageDistribute thread start
+2022-05-22 01:06:50,211 [17] [WARN ] [GameServer] ：MessageDistribute thread start
+2022-05-22 01:06:50,252 [1] [WARN ] [GameServer] ：NetService Started

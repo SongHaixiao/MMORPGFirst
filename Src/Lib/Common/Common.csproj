@@ -53,9 +53,15 @@
   <ItemGroup>
     <Compile Include="BufferUtility.cs" />
     <Compile Include="Data\CharacterDefine.cs" />
+    <Compile Include="Data\EquipDefine.cs" />
+    <Compile Include="Data\ItemDefine.cs" />
+    <Compile Include="Data\QuestDefine.cs" />
+    <Compile Include="Data\ShopDefine.cs" />
+    <Compile Include="Data\ShopItemDefine.cs" />
     <Compile Include="Data\SpawnRuleDefine.cs" />
     <Compile Include="Data\SpawnPointDefine.cs" />
     <Compile Include="Data\SpawnType.cs" />
+    <Compile Include="Data\NpcDefine.cs" />
     <Compile Include="Data\TeleporterDefine.cs" />
     <Compile Include="Data\MapDefine.cs" />
     <Compile Include="MessageExtend.cs" />
@@ -75,6 +81,20 @@
       <Project>{ecf59eee-d33e-41ee-b2f8-b59bcdba856f}</Project>
       <Name>Protocol</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Common.dll" />
+    <Content Include="bin\Debug\Common.pdb" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\log4net.xml" />
+    <Content Include="bin\Debug\protobuf-net.dll" />
+    <Content Include="bin\Debug\protobuf-net.xml" />
+    <Content Include="bin\Debug\Protocol.dll" />
+    <Content Include="bin\Debug\Protocol.pdb" />
+    <Content Include="bin\Debug\UnityEngine.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

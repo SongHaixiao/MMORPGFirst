@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 09/07/2018 00:02:53
--- Generated from EDMX file: D:\Projects\ExtremeWorld\project-z\Src\Server\GameServer\GameServer\Entities.edmx
+-- Date Created: 05/31/2022 08:07:06
+-- Generated from EDMX file: E:\Github\MMORPGFirst\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [ExtremeWorld];
+USE [Test];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -23,6 +23,15 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_PlayerCharacter]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Characters] DROP CONSTRAINT [FK_PlayerCharacter];
 GO
+IF OBJECT_ID(N'[dbo].[FK_CharacterItem]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[CharacterItems] DROP CONSTRAINT [FK_CharacterItem];
+GO
+IF OBJECT_ID(N'[dbo].[FK_CharacterBag1]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Characters] DROP CONSTRAINT [FK_CharacterBag1];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TCharacterTCharacterQuest]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[CharacterQuests] DROP CONSTRAINT [FK_TCharacterTCharacterQuest];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -36,6 +45,15 @@ IF OBJECT_ID(N'[dbo].[Players]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Characters]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Characters];
+GO
+IF OBJECT_ID(N'[dbo].[CharacterItems]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CharacterItems];
+GO
+IF OBJECT_ID(N'[dbo].[CharacterBag]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CharacterBag];
+GO
+IF OBJECT_ID(N'[dbo].[CharacterQuests]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CharacterQuests];
 GO
 
 -- --------------------------------------------------
@@ -68,7 +86,39 @@ CREATE TABLE [dbo].[Characters] (
     [MapPosX] int  NOT NULL,
     [MapPosY] int  NOT NULL,
     [MapPosZ] int  NOT NULL,
-    [Player_ID] int  NOT NULL
+    [Gold] bigint  NOT NULL,
+    [Equips] binary(28)  NOT NULL,
+    [Player_ID] int  NOT NULL,
+    [Bag_Id] int  NOT NULL
+);
+GO
+
+-- Creating table 'CharacterItems'
+CREATE TABLE [dbo].[CharacterItems] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [ItemID] int  NOT NULL,
+    [ItemCount] int  NOT NULL,
+    [CharacterID] int  NOT NULL
+);
+GO
+
+-- Creating table 'CharacterBag'
+CREATE TABLE [dbo].[CharacterBag] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Items] varbinary(max)  NOT NULL,
+    [Unlocked] int  NOT NULL
+);
+GO
+
+-- Creating table 'CharacterQuests'
+CREATE TABLE [dbo].[CharacterQuests] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [TCharacterID] int  NOT NULL,
+    [QuestID] int  NOT NULL,
+    [Target1] int  NOT NULL,
+    [Target2] int  NOT NULL,
+    [Target3] int  NOT NULL,
+    [Status] int  NOT NULL
 );
 GO
 
@@ -92,6 +142,24 @@ GO
 ALTER TABLE [dbo].[Characters]
 ADD CONSTRAINT [PK_Characters]
     PRIMARY KEY CLUSTERED ([ID] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'CharacterItems'
+ALTER TABLE [dbo].[CharacterItems]
+ADD CONSTRAINT [PK_CharacterItems]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'CharacterBag'
+ALTER TABLE [dbo].[CharacterBag]
+ADD CONSTRAINT [PK_CharacterBag]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'CharacterQuests'
+ALTER TABLE [dbo].[CharacterQuests]
+ADD CONSTRAINT [PK_CharacterQuests]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
 -- --------------------------------------------------
@@ -126,6 +194,51 @@ GO
 CREATE INDEX [IX_FK_PlayerCharacter]
 ON [dbo].[Characters]
     ([Player_ID]);
+GO
+
+-- Creating foreign key on [CharacterID] in table 'CharacterItems'
+ALTER TABLE [dbo].[CharacterItems]
+ADD CONSTRAINT [FK_CharacterItem]
+    FOREIGN KEY ([CharacterID])
+    REFERENCES [dbo].[Characters]
+        ([ID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CharacterItem'
+CREATE INDEX [IX_FK_CharacterItem]
+ON [dbo].[CharacterItems]
+    ([CharacterID]);
+GO
+
+-- Creating foreign key on [Bag_Id] in table 'Characters'
+ALTER TABLE [dbo].[Characters]
+ADD CONSTRAINT [FK_CharacterBag1]
+    FOREIGN KEY ([Bag_Id])
+    REFERENCES [dbo].[CharacterBag]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CharacterBag1'
+CREATE INDEX [IX_FK_CharacterBag1]
+ON [dbo].[Characters]
+    ([Bag_Id]);
+GO
+
+-- Creating foreign key on [TCharacterID] in table 'CharacterQuests'
+ALTER TABLE [dbo].[CharacterQuests]
+ADD CONSTRAINT [FK_TCharacterTCharacterQuest]
+    FOREIGN KEY ([TCharacterID])
+    REFERENCES [dbo].[Characters]
+        ([ID])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_TCharacterTCharacterQuest'
+CREATE INDEX [IX_FK_TCharacterTCharacterQuest]
+ON [dbo].[CharacterQuests]
+    ([TCharacterID]);
 GO
 
 -- --------------------------------------------------

@@ -1,0 +1,25 @@
+
+2022-05-27 10:01:52,134 [1] [INFO ] [GameServer] :Game Server Init
+2022-05-27 10:01:52,474 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-05-27 10:01:52,763 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-05-27 10:01:52,782 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-05-27 10:01:52,785 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-05-27 10:01:52,799 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-05-27 10:01:52,812 [1] [WARN ] [GameServer] :Starting Listener...
+2022-05-27 10:01:52,825 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-27 10:01:52,825 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-27 10:01:52,874 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-27 10:01:53,179 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-27 10:01:53,179 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-27 10:01:53,197 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-27 10:01:59,340 [13] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-27 10:02:03,335 [14] [WARN ] [GameServer] :MessageDistribute thread start
+2022-05-27 10:02:03,347 [1] [WARN ] [GameServer] :NetService Started
+2022-05-27 10:02:03,645 [12] [WARN ] [GameServer] :Client[127.0.0.1:57676]] Connected
+2022-05-27 10:02:03,713 [12] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-05-27 10:02:03,831 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-05-27 10:02:06,159 [12] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-05-27 10:02:06,161 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-05-27 10:02:06,237 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-27 10:02:09,969 [11] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-05-27 10:02:09,970 [11] [WARN ] [GameServer] :Client[] Disconnected

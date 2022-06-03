@@ -1,0 +1,31 @@
+{
+  "1": {
+    "ID": 1,
+    "Name": "Task NPC",
+    "Description": "Task NPC",
+    "Type": "Task"
+  },
+  "2": {
+    "ID": 2,
+    "Name": "Tool Shopper",
+    "Description": "Tool NPC",
+    "Type": "Functional",
+    "Function": "InvokeShop",
+    "Param": 1
+  },
+  "3": {
+    "ID": 3,
+    "Name": "Instance NPC",
+    "Description": "Instance NPC",
+    "Type": "Functional",
+    "Function": "InvokeInsrance"
+  },
+  "4": {
+    "ID": 4,
+    "Name": "Equipment Shopper",
+    "Description": "Equipment NPC",
+    "Type": "Functional",
+    "Function": "InvokeShop",
+    "Param": 2
+  }
+}

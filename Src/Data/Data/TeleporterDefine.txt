@@ -1,46 +1,54 @@
 {
   "1": {
     "ID": 1,
-    "Name": "主城->野外",
+    "Name": "MainCity->Map01In",
     "LinkTo": 6,
-    "MapID": 1
+    "MapID": 1,
+    "Description": "Main City Left Out"
   },
   "2": {
     "ID": 2,
-    "Name": "主城->副本",
+    "Name": "MainCity->Map03In",
     "LinkTo": 8,
-    "MapID": 1
+    "MapID": 1,
+    "Description": "MainCity Right Out"
   },
   "3": {
     "ID": 3,
-    "Name": "主城传入点1",
-    "MapID": 1
+    "Name": "MainCityInFromMap01",
+    "MapID": 1,
+    "Description": "Main City Left In"
   },
   "4": {
     "ID": 4,
-    "Name": "出城传入点2",
-    "MapID": 1
+    "Name": "MainCityInFromMap03",
+    "MapID": 1,
+    "Description": "Main City Right In"
   },
   "5": {
     "ID": 5,
-    "Name": "野外->主城",
+    "Name": "Map01->MainCity",
     "LinkTo": 3,
-    "MapID": 2
+    "MapID": 2,
+    "Description": "Map01 Out"
   },
   "6": {
     "ID": 6,
-    "Name": "野外传入点",
-    "MapID": 2
+    "Name": "Map01InFromMainCity",
+    "MapID": 2,
+    "Description": "Map01 In"
   },
   "7": {
     "ID": 7,
-    "Name": "副本->主城",
+    "Name": "Map03->MainCityIn",
     "LinkTo": 4,
-    "MapID": 4
+    "MapID": 4,
+    "Description": "Map03 Out"
   },
   "8": {
     "ID": 8,
-    "Name": "副本传入点",
-    "MapID": 4
+    "Name": "Map03InFromMainCity",
+    "MapID": 4,
+    "Description": "Map03 In"
   }
 }
