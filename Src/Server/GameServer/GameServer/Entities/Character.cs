@@ -1,4 +1,5 @@
-﻿using Common.Data;
+﻿using Common;
+using Common.Data;
 using GameServer.Core;
 using GameServer.Managers;
 using Network;
@@ -79,6 +80,8 @@ namespace GameServer.Entities
 
         public void PostProcess(NetMessageResponse message)
         {
+            Log.InfoFormat("PostProcess > Character : characterID : {0} : {1}", this.Id, this.Info.Name);
+
             if(this.StatusManger.HasStatus)
             {
                 this.StatusManger.PostProcess(message);
@@ -89,6 +92,17 @@ namespace GameServer.Entities
         public void Clear()
         {
             
+        }
+
+        public NCharacterInfo GetBasicInfo()
+        {
+            return new NCharacterInfo()
+            {
+                Id = this.Id,
+                Name = this.Info.Name,
+                Class = this.Info.Class,
+                Level = this.Info.Level
+            };
         }
     }
 }

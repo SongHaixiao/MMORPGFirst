@@ -256,13 +256,17 @@ namespace GameServer.Services
         // remove  Character
         public void CharacterLeave(Character character)
         {
+            Log.InfoFormat("CharacterLeave : characterID : {0} : {1}", character.Id, character.Info.Name);
+
             // remove Character from CharacterManager
             CharacterManager.Instance.RemoveCharacter(character.Id);
 
+            character.Clear();
+            
             // remove Character from MapManager
             MapManager.Instance[character.Info.mapId].CharacterLeave(character);
 
-            character.Clear();
+            
         }
     }
 }

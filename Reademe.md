@@ -1,10 +1,10 @@
 - Time : 2022-06-04
 
-- To Do : P16 Prepare for Sound System -> To Do : Step 02
+- To Do : P16 Prepare for Sound System -> To Do : Step 03
 
     - Step 01 : Friend System ✓
 
-    - Step 02 : Team System
+    - Step 02 : Team System ✓
 
     - Step 03 : Guild System 1
 

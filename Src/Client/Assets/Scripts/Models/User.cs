@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using SkillBridge.Message;
 
 namespace Models
 {
@@ -17,7 +18,7 @@ namespace Models
             get { return userInfo; }
         }
 
-        
+
         public void SetupUserInfo(SkillBridge.Message.NUserInfo info)
         {
             this.userInfo = info;
@@ -25,7 +26,7 @@ namespace Models
         public MapDefine CurrentMapData { get; set; }
         public SkillBridge.Message.NCharacterInfo CurrentCharacter { get; set; }
         public GameObject CurrentCharacterObject { get; set; }
-
+        
         internal void AddGold(int gold)
         {
             this.CurrentCharacter.Gold += gold;
