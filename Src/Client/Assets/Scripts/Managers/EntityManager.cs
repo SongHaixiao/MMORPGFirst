@@ -15,7 +15,7 @@ namespace Managers
         void OnEntityEvent(EntityEvent @event);
     }
 
-    class EnityManager : Singleton<EnityManager>
+    class EntityManager : Singleton<EntityManager>
     {
         Dictionary<int, Entity> entities = new Dictionary<int, Entity>();
         Dictionary<int, IEntityNotify> notifiers = new Dictionary<int, IEntityNotify>();

@@ -35,13 +35,14 @@ namespace GameServer.Models
         }
         internal MapDefine Define;
 
+        // character in map, CharacterID as Key
         Dictionary<int, MapCharacter> MapCharacters = new Dictionary<int, MapCharacter>();
 
 
         // spawn manager
         SpawnManager SpawnManager = new SpawnManager();
 
-        // monser manager
+        // monster manager
         public MonsterManager MonsterManager = new MonsterManager();
 
         internal Map(MapDefine define)
@@ -126,7 +127,7 @@ namespace GameServer.Models
         {
             if(conn.Session.Response.mapCharacterEnter == null)
             {
-                // create character enter map reposne net message,
+                // create character enter map response net message,
                 // fill values into response net message
                 conn.Session.Response.mapCharacterEnter = new MapCharacterEnterResponse();
                 conn.Session.Response.mapCharacterEnter.mapId = this.Define.ID;
@@ -136,16 +137,16 @@ namespace GameServer.Models
             conn.SendResponse();
         }
 
-        // send character leav map response message to client
+        // send character leave map response message to client
         void SendCharacterLeaveMap(NetConnection<NetSession> conn, Character character)
         {
             conn.Session.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
-            conn.Session.Response.mapCharacterLeave.characterId = character.Id;
+            conn.Session.Response.mapCharacterLeave.entityId = character.entityId;
 
             conn.SendResponse();
         }
 
-        // update entivy
+        // update entity
         internal void UpdateEntity(NEntitySync entity)
         {
             foreach(var kv in this.MapCharacters)

@@ -36,6 +36,12 @@ namespace Managers
 
         public void Clear()
         {
+            int[] keys = this.Characters.Keys.ToArray();
+            foreach (var key in keys)
+            {
+                this.RemoveCharacter(key);
+            }
+
             this.Characters.Clear();
         }
 
@@ -44,9 +50,9 @@ namespace Managers
         {
             Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", cha.Id, cha.Name, cha.mapId, cha.Entity.String());
             Character character = new Character(cha);
-            this.Characters[cha.Id] = character;
-            EnityManager.Instance.AddEntity(character);
-            if (this.OnCharacterEnter!=null)
+            this.Characters[cha.EntityId] = character;
+            EntityManager.Instance.AddEntity(character);
+            if (this.OnCharacterEnter != null)
             {
                 this.OnCharacterEnter(character);
             }
@@ -54,17 +60,17 @@ namespace Managers
 
 
         // delete character object from game
-        public void RemoveCharacter(int characterId)
+        public void RemoveCharacter(int entityId)
         {
-            Debug.LogFormat("RemoveCharacter:{0}", characterId);
-            if(this.Characters.ContainsKey(characterId))
+            Debug.LogFormat("RemoveCharacter:{0}", entityId);
+            if (this.Characters.ContainsKey(entityId))
             {
-                EnityManager.Instance.RemoveEntity(this.Characters[characterId].Info.Entity);
+                EntityManager.Instance.RemoveEntity(this.Characters[entityId].Info.Entity);
                 if (this.OnCharacterLeave != null)
                 {
-                    this.OnCharacterLeave(this.Characters[characterId]);
+                    this.OnCharacterLeave(this.Characters[entityId]);
                 }
-                this.Characters.Remove(characterId);
+                this.Characters.Remove(entityId);
             }
 
         }

@@ -43,7 +43,7 @@ namespace Services
             foreach (var cha in response.Characters)
             {
                 // current character change map
-                if (User.Instance.CurrentCharacter == null ||User.Instance.CurrentCharacter.Id == cha.Id)
+                if (User.Instance.CurrentCharacter == null || (cha.Type == CharacterType.Player && User.Instance.CurrentCharacter.Id == cha.Id))
                 {
                     User.Instance.CurrentCharacter = cha;
                 }
@@ -64,13 +64,13 @@ namespace Services
         // character leave map method
         private void OnMapCharacterLeave(object sender, MapCharacterLeaveResponse response)
         {
-            Debug.LogFormat("OnMapCahracterLeave : CharID : {0}", response.characterId);
+            Debug.LogFormat("OnMapCharacterLeave : CharID : {0}", response.entityId);
 
-            // leaving chracter is others, remove others chracter
-            if (response.characterId != User.Instance.CurrentCharacter.Id)
-                CharacterManager.Instance.RemoveCharacter(response.characterId);
+            // leaving character is others, remove others character
+            if (response.entityId != User.Instance.CurrentCharacter.EntityId)
+                CharacterManager.Instance.RemoveCharacter(response.entityId);
 
-            // leaving chracter is player self, clear all characters in the map
+            // leaving character is player self, clear all characters in the map
             else
                 CharacterManager.Instance.Clear();
         }
@@ -84,7 +84,7 @@ namespace Services
                 // get map data from db
                 MapDefine map = DataManager.Instance.Maps[mapId];
 
-                // geive map data to current map data in user,
+                // give map data to current map data in user,
                 // when enter map character
                 User.Instance.CurrentMapData = map;
 
@@ -114,11 +114,11 @@ namespace Services
                 Entity = entity
             };
 
-            // send sync map eneity request net message to server
+            // send sync map entity request net message to server
             NetClient.Instance.SendMessage(message);
         }
 
-        // sync map entity evetn
+        // sync map entity event
         private void OnMapEntitySync(object sender, MapEntitySyncResponse response)
         {
             //System.Text.StringBuilder sb = new System.Text.StringBuilder();
@@ -126,14 +126,14 @@ namespace Services
             //sb.AppendLine();
             foreach(var entity in response.entitySyncs)
             {
-                EnityManager.Instance.OnEntitySync(entity);
+                EntityManager.Instance.OnEntitySync(entity);
                 //sb.AppendFormat("   [{0}] event : {1} enttiy : {2}", entity.Id, entity.Event, entity.Entity.String());
                 //sb.AppendLine();
             }
             //Debug.Log(sb.ToString());
         }
 
-        // send smap teleporter request message to server
+        // send map teleporter request message to server
         public void SendMapTeleport(int teleporterId)
         {
             Debug.LogFormat("MapTeleportRequest : teleporterID : {0}", teleporterId);

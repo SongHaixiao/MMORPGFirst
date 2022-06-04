@@ -29,7 +29,9 @@ namespace GameServer.Managers
             EntityManager.Instance.AddEntity(this.Map.ID, monster);
             
             // add monster info to model
-            monster.Info.Id = monster.entityId;
+            monster.Id = monster.entityId;
+            monster.Info.EntityId = monster.entityId;
+            
             monster.Info.mapId = this.Map.ID;
 
             // add monster model created to Monster store dictionary

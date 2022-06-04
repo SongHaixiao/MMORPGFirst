@@ -1,8 +1,8 @@
 - Time : 2022-06-04
 
-- To Do : P16 Prepare for Sound System -> To Do : Begin
+- To Do : P16 Prepare for Sound System -> To Do : Step 02
 
-    - Step 01 : Friend System
+    - Step 01 : Friend System ✓
 
     - Step 02 : Team System
 

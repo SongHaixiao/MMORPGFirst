@@ -76,7 +76,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
 
             // No.4 : 创建游戏对象： 实例化一个 GameObject go， 并填充 GameObject go 的信息；
             GameObject go = (GameObject)Instantiate(obj, this.transform);
-            go.name = "Character_" + character.Info.Id + "_" + character.Info.Name;
+            go.name = "Character_" + character.Id + "_" + character.Name;
             Characters[character.entityId] = go;
 
             // 因为角色信息框 UINameBar 需要合角色一起创建，所以将 UINameBar 的创建添加到角色对象管理器中
@@ -89,7 +89,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
 
     private void InitGameObject(GameObject go, Character character)
     {
-        // No.5 : 设置位置：将 chracter 实体的逻辑坐标转化为游戏对象 go 的世界坐标，然后将游戏对 go 存到对应 ID 的游戏实体中；
+        // No.5 : 设置位置：将 character 实体的逻辑坐标转化为游戏对象 go 的世界坐标，然后将游戏对 go 存到对应 ID 的游戏实体中；
         go.transform.position = GameObjectTool.LogicToWorld(character.position);
         go.transform.forward = GameObjectTool.LogicToWorld(character.direction);
 
@@ -98,7 +98,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         if (ec != null)
         {
             ec.entity = character;
-            ec.isPlayer = character.IsPlayer;
+            ec.isPlayer = character.IsCurrentPlayer;
         }
 
         // No.7 : 启用 PlayerInputController 控制器组件：
@@ -106,7 +106,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         if (pc != null)
         {
             // P1 : 如果是玩家使用的角色，则将 PlayerInputController 控制器启动，并将 MainPlayerCamera 实例化;
-            if (character.Info.Id == Models.User.Instance.CurrentCharacter.Id)
+            if (character.IsCurrentPlayer)
             {
                 User.Instance.CurrentCharacterObject = go;
                 MainPlayerCamera.Instance.player = go;

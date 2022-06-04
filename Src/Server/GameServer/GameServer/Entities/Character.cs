@@ -1,6 +1,7 @@
 ﻿using Common.Data;
 using GameServer.Core;
 using GameServer.Managers;
+using Network;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
@@ -13,9 +14,8 @@ namespace GameServer.Entities
     /// <summary>
     /// Player Character Class
     /// </summary>
-    class Character : CharacterBase
+    class Character : CharacterBase, IPostResponser
     {
-       
         public TCharacter Data;
 
         public ItemManager ItemManger;
@@ -29,17 +29,19 @@ namespace GameServer.Entities
 
             // initialization character
             this.Data = cha;
+            this.Id = cha.ID;
             this.Info = new NCharacterInfo();
             this.Info.Type = type;
             this.Info.Id = cha.ID;
+            this.Info.EntityId = this.entityId;
             this.Info.Name = cha.Name;
             this.Info.Level = 10;//cha.Level;
-            this.Info.Tid = cha.TID;
+            this.Info.ConfigId = cha.TID;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
             this.Info.Gold = cha.Gold;
             this.Info.Entity = this.EntityData;
-            this.Define = DataManager.Instance.Characters[this.Info.Tid];
+            this.Define = DataManager.Instance.Characters[this.Info.ConfigId];
 
             // initialization item
             this.ItemManger = new ItemManager(this);
@@ -57,6 +59,9 @@ namespace GameServer.Entities
             this.QuestManager.GetQuestInfos(this.Info.Quests);
 
             this.StatusManger = new StatusManger(this);
+
+            // this.FriendManager = new FriendManager(this);
+            // this.FriendManager.GetFriendInfos(this.Info.Friends);
         }
 
         public long Gold
@@ -70,6 +75,20 @@ namespace GameServer.Entities
                 this.StatusManger.AddGoldChange((int)(value - this.Data.Gold));
                 this.Data.Gold = value;
             }
+        }
+
+        public void PostProcess(NetMessageResponse message)
+        {
+            if(this.StatusManger.HasStatus)
+            {
+                this.StatusManger.PostProcess(message);
+            }
+        }
+
+        // time count when character leave
+        public void Clear()
+        {
+            
         }
     }
 }

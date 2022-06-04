@@ -16,7 +16,7 @@ namespace GameServer.Services
 
         public UserService()
         {
-            // linsted the events form cleint
+            // listen the events form client
 		    MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserLoginRequest>(this.OnLogin);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserRegisterRequest>(this.OnRegister);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<UserCreateCharacterRequest>(this.OnCreateCharacter);
@@ -29,7 +29,7 @@ namespace GameServer.Services
 
         }
 		
-		// processs login request from client,
+		// process login request from client,
         // then send response to client 
         void OnLogin(NetConnection<NetSession> sender, UserLoginRequest request)
         {
@@ -79,7 +79,7 @@ namespace GameServer.Services
                     info.Name = c.Name;
                     info.Type = CharacterType.Player;
                     info.Class = (CharacterClass)c.Class;
-                    info.Tid = c.ID;
+                    info.ConfigId = c.ID;
                     sender.Session.Response.userLogin.Userinfo.Player.Characters.Add(info);
                 }
             }
@@ -88,7 +88,7 @@ namespace GameServer.Services
             sender.SendResponse();
         }
 
-        // processs register request from client,
+        // process register request from client,
         // then send response to client
         void OnRegister(NetConnection<NetSession> conn, UserRegisterRequest request)
         {
@@ -129,6 +129,7 @@ namespace GameServer.Services
                 Name = request.Name,
                 Class = (int)request.Class,
                 TID = (int)request.Class,
+                Level = 1,
                 MapID = 1,
                 MapPosX = 5000, // start position x
                 MapPosY = 4000, // start position y
@@ -183,11 +184,11 @@ namespace GameServer.Services
             foreach(var c in sender.Session.User.Player.Characters)
             {
                 NCharacterInfo info = new NCharacterInfo();
-                info.Id = 0;
+                info.Id = c.ID;
                 info.Name = c.Name;
                 info.Type = CharacterType.Player;
                 info.Class = (CharacterClass)c.Class;
-                info.Tid = c.ID;
+                info.ConfigId = c.TID;
                 sender.Session.Response.createChar.Characters.Add(info);
             }
 
@@ -195,7 +196,7 @@ namespace GameServer.Services
             sender.SendResponse();
         }
 
-        // processs enter game request from client,
+        // process enter game request from client,
         // then send response to client 
         void OnGameEnter(NetConnection<NetSession> sender, UserGameEnterRequest request)
         {
@@ -204,6 +205,9 @@ namespace GameServer.Services
             TCharacter dbchar = sender.Session.User.Player.Characters.ElementAt(request.characterIdx);
             Log.InfoFormat("UserGameEnterRequest: characterID:{0}:{1} Map:{2}", dbchar.ID, dbchar.Name, dbchar.MapID);
             Character character = CharacterManager.Instance.AddCharacter(dbchar);
+
+            // SessionManager.Instance.AddSession(character.Id, sender);
+            SessionManager.Instance.AddSession(character.Id, sender);
 
             // create enter game response net message 
             sender.Session.Response.gameEnter = new UserGameEnterResponse();
@@ -214,17 +218,18 @@ namespace GameServer.Services
             // add charter infomation ( including Tool info)
             // to game enter response message
             sender.Session.Response.gameEnter.Character = character.Info;
-
-            // send enter game response to clinet
+            // send enter game response to client
             sender.SendResponse();
 
             sender.Session.Character = character;   // after enter game, give value to Character in Session
                                                     // then, we can know we are operating which character via Session.Character
+            sender.Session.PostResponser = character;
+
             // add character into map
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender, character);
         }
 
-        // processs character leave game request from client,
+        // process character leave game request from client,
         // then send response to client 
         void OnGameLeave(NetConnection<NetSession> sender, UserGameLeaveRequest request)
         {
@@ -232,9 +237,11 @@ namespace GameServer.Services
             Character character = sender.Session.Character;
 
             Log.InfoFormat("UserGameLeaveRequest : characterID : {0} : {1} Map : {2}", character.Id, character.Info.Name, character.Info.mapId);
+            
+            SessionManager.Instance.RemoveSession(character.Id);
 
             // remove character
-            CharacterLeave(character);
+            this.CharacterLeave(character);
 
             // create character leave game response message to client
             sender.Session.Response.gameLeave = new UserGameLeaveResponse();
@@ -246,7 +253,7 @@ namespace GameServer.Services
 
         }
 
-        // remove  Chracter 
+        // remove  Character
         public void CharacterLeave(Character character)
         {
             // remove Character from CharacterManager
@@ -254,6 +261,8 @@ namespace GameServer.Services
 
             // remove Character from MapManager
             MapManager.Instance[character.Info.mapId].CharacterLeave(character);
+
+            character.Clear();
         }
     }
 }
