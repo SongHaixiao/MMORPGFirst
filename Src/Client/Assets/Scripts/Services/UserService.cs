@@ -283,7 +283,7 @@ namespace Services
         {
             Debug.LogFormat("UserGameEnterRequest::characterId :{0}", characterIdx);
 
-           // CharManager.Instance.Init();
+           CharManager.Instance.Init();
 
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
