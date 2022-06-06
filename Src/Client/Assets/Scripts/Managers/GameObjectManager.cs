@@ -99,6 +99,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
         {
             ec.entity = character;
             ec.isPlayer = character.IsCurrentPlayer;
+            ec.Ride(character.Info.Ride);
         }
 
         // No.7 : 启用 PlayerInputController 控制器组件：
@@ -108,7 +109,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
             // P1 : 如果是玩家使用的角色，则将 PlayerInputController 控制器启动，并将 MainPlayerCamera 实例化;
             if (character.IsCurrentPlayer)
             {
-                User.Instance.CurrentCharacterObject = go;
+                User.Instance.CurrentCharacterObject = pc;
                 MainPlayerCamera.Instance.player = go;
                 pc.enabled = true;
                 pc.character = character;
@@ -121,6 +122,20 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
                 pc.enabled = false;
             }
         }
+    }
+
+    public RideController LoadRide(int rideId, Transform parent)
+    {
+        var rideDefine = DataManager.Instance.Rides[rideId];
+        Object obj = Resloader.Load<Object>(rideDefine.Resource);
+        if(obj == null)
+        {
+            Debug.LogErrorFormat("Ride [{0}] Resource[{1}] not existed.", rideDefine.ID, rideDefine.Resource);
+            return null;
+        }
+        GameObject go = (GameObject)Instantiate(obj, parent);
+        go.name = "Ride_" + rideDefine.ID + "_" + rideDefine.Name;
+        return go.GetComponent<RideController>();
     }
 }
 

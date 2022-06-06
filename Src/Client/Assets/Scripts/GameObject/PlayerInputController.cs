@@ -6,7 +6,7 @@ using Entities;
 using SkillBridge.Message;
 using Services;
 
-public class PlayerInputController : MonoBehaviour 
+public class PlayerInputController : MonoBehaviour
 {
     /* Function : Control the input of player*/
 
@@ -27,9 +27,10 @@ public class PlayerInputController : MonoBehaviour
     public bool onAir = false;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         state = SkillBridge.Message.CharacterState.Idle;
-        if(this.character == null)
+        if (this.character == null)
         {
             DataManager.Instance.Load();
             NCharacterInfo cinfo = new NCharacterInfo();
@@ -56,6 +57,8 @@ public class PlayerInputController : MonoBehaviour
         if (character == null)
             return;
 
+        if (InputManager.Instance != null && InputManager.Instance.IsInputMode) return;
+
         // get vertical varaible from untiy
         float v = Input.GetAxis("Vertical");
 
@@ -66,7 +69,7 @@ public class PlayerInputController : MonoBehaviour
             if (state != SkillBridge.Message.CharacterState.Move)
             {
                 // charactter object current state is not move
-                
+
                 state = SkillBridge.Message.CharacterState.Move; // set it as move state
                 this.character.MoveForward();              //  character obejct move forward
                 this.SendEntityEvent(EntityEvent.MoveFwd); //  update character state as move forward via unity evetn
@@ -107,20 +110,20 @@ public class PlayerInputController : MonoBehaviour
         }
 
         // move horizontal
-        float h= Input.GetAxis("Horizontal");
-        if (h < -0.1 || h > 0.1) 
+        float h = Input.GetAxis("Horizontal");
+        if (h < -0.1 || h > 0.1)
         {
             // rotate setting
             this.transform.Rotate(0, h * rotateSpeed, 0);
 
             // change character direction from logical coordinate to world coordinate
             Vector3 dir = GameObjectTool.LogicToWorld(character.direction);
-            
+
             // Wheel Algorithm ( Importance )
             Quaternion rot = new Quaternion();
             rot.SetFromToRotation(dir, this.transform.forward);
-            
-            if(rot.eulerAngles.y > this.turnAngle && rot.eulerAngles.y < (360 - this.turnAngle))
+
+            if (rot.eulerAngles.y > this.turnAngle && rot.eulerAngles.y < (360 - this.turnAngle))
             {
                 character.SetDirection(GameObjectTool.WorldToLogic(this.transform.forward));
                 rb.transform.forward = this.transform.forward;
@@ -144,7 +147,7 @@ public class PlayerInputController : MonoBehaviour
         this.speed = (int)(offset.magnitude * 100f / Time.deltaTime);
         //Debug.LogFormat("LateUpdate velocity {0} : {1}", this.rb.velocity.magnitude, this.speed);
         this.lastPos = this.rb.transform.position;
-        
+
         // sycnchronizate the object's position
         if ((GameObjectTool.WorldToLogic(this.rb.transform.position) - this.character.position).magnitude > 50)
         {
@@ -158,11 +161,11 @@ public class PlayerInputController : MonoBehaviour
 
 
     // update event for entity
-    void SendEntityEvent(EntityEvent entityEvent)
+    public void SendEntityEvent(EntityEvent entityEvent, int param = 0)
     {
         if (entityController != null)
-            entityController.OnEntityEvent(entityEvent);
+            entityController.OnEntityEvent(entityEvent, param);
 
-        MapService.Instance.SendMapEntitySync(entityEvent, this.character.EntityData);
+        MapService.Instance.SendMapEntitySync(entityEvent, this.character.EntityData, param);
     }
 }

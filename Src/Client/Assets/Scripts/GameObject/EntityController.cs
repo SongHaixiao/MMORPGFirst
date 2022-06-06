@@ -5,7 +5,7 @@ using UnityEngine;
 using Entities;
 using Managers;
 
-public class EntityController : MonoBehaviour,IEntityNotify
+public class EntityController : MonoBehaviour, IEntityNotify
 {
     /* Function:
      *  1.  接收服务器数据，通过接收到的数据来进行逻辑控制除了玩家本身角色实体外的其他角色实体；
@@ -27,11 +27,15 @@ public class EntityController : MonoBehaviour,IEntityNotify
     public float speed;
     public float animSpeed = 1.5f;
     public float jumpPower = 3.0f;
-
     public bool isPlayer = false;
 
+    public RideController rideController;
+    public int currentRide = 0;
+    public Transform rideBone;
+
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         if (entity != null)
         {
             EnityManager.Instance.RegiserEntityChangeNotity(entity.entityId, this);
@@ -52,7 +56,7 @@ public class EntityController : MonoBehaviour,IEntityNotify
         this.lastPosition = this.position;
         this.lastRotation = this.rotation;
     }
-	
+
     void OnDestroy()
     {
         if (entity != null)
@@ -80,9 +84,21 @@ public class EntityController : MonoBehaviour,IEntityNotify
         }
     }
 
-    public void OnEntityEvent(EntityEvent entityEvent)
+    public void onEntityRemoved()
     {
-        switch(entityEvent)
+        if (UIWorldElementManager.Instance != null)
+            UIWorldElementManager.Instance.RemoveCharacterNameBar(this.transform);
+        Destroy(this.gameObject);
+    }
+
+    public void OnEntityChanged(Entity entity)
+    {
+        Debug.LogFormat("OnEntityChanged : ID : {0} POS:{1} DIR : {2} SPD ： {3}", entity.entityId, entity.position, entity.direction, entity.speed);
+    }
+
+    public void OnEntityEvent(EntityEvent entityEvent, int param)
+    {
+        switch (entityEvent)
         {
             case EntityEvent.Idle:
                 anim.SetBool("Move", false);
@@ -97,18 +113,43 @@ public class EntityController : MonoBehaviour,IEntityNotify
             case EntityEvent.Jump:
                 anim.SetTrigger("Jump");
                 break;
+            case entityEvent.Ride:
+                {
+                    this.Ride(param);
+                }
+                break;
+        }
+        if(this.rideController != null) this.rideController.OnEntityEvent(entityEvent, param);
+    }
+
+    public void Ride(int rideId)
+    {
+        if(currentRide == rideId) return;
+        currentRide = rideId;
+        if(rideId > 0)
+        {
+            this.rideController = GameObjectManager.Instance.LoadRide(rideId, this.transform);    
+        }
+        else
+        {
+            Destroy(this.rideController.gameObject);
+            this.rideController = null;
+        }
+
+        if(this.rideController == null)
+        {
+            this.anim.transform.localPosition = Vector3.zero;
+            this.anim.SetLayerWeight(1,0);
+        }
+        else
+        {
+            this.rideController.SetRider(this);
+            this.anim.SetLayerWeight(1,1);
         }
     }
 
-    public void onEntityRemoved()
+    public void SetRidePosition(Vector3 position)
     {
-        if (UIWorldElementManager.Instance != null)
-            UIWorldElementManager.Instance.RemoveCharacterNameBar(this.transform);
-        Destroy(this.gameObject);
-    }
-
-    public void OnEntityChanged(Entity entity)
-    {
-        Debug.LogFormat("OnEntityChanged : ID : {0} POS:{1} DIR : {2} SPD ： {3}", entity.entityId, entity.position, entity.direction, entity.speed);
+        this.anim.transform.position = position + (this.anim.transform.position - this.rideBone.position);
     }
 }

@@ -10,9 +10,9 @@ namespace Managers
 {
     interface IEntityNotify
     {
-        void onEntityRemoved();
         void OnEntityChanged(Entity entity);
-        void OnEntityEvent(EntityEvent @event);
+        void OnEntityEvent(EntityEvent eventEvent, int param);
+        void onEntityRemoved();
     }
 
     class EntityManager : Singleton<EntityManager>
@@ -22,7 +22,7 @@ namespace Managers
 
         public void RegiserEntityChangeNotity(int entityId, IEntityNotify notify)
         {
-            this.notifiers[entityId] = notify; 
+            this.notifiers[entityId] = notify;
         }
 
         public void AddEntity(Entity entity)
@@ -30,29 +30,29 @@ namespace Managers
             entities[entity.entityId] = entity;
         }
 
-        public void RemoveEntity(NEntity entity)
-        {
-            this.entities.Remove(entity.Id);
-            if(notifiers.ContainsKey(entity.Id))
-            {
-                notifiers[entity.Id].onEntityRemoved();
-                notifiers.Remove(entity.Id);
-            }
-        }
-
         internal void OnEntitySync(NEntitySync data)
         {
             Entity entity = null;
             entities.TryGetValue(data.Id, out entity);
-            if(entity != null)
+            if (entity != null)
             {
                 if (data.Entity != null)
                     entity.EntityData = data.Entity;
-                if(notifiers.ContainsKey(data.Id))
+                if (notifiers.ContainsKey(data.Id))
                 {
                     notifiers[entity.entityId].OnEntityChanged(entity);
-                    notifiers[entity.entityId].OnEntityEvent(data.Event);
+                    notifiers[entity.entityId].OnEntityEvent(data.Event, data.Param);
                 }
+            }
+        }
+
+        public void RemoveEntity(NEntity entity)
+        {
+            this.entities.Remove(entity.Id);
+            if (notifiers.ContainsKey(entity.Id))
+            {
+                notifiers[entity.Id].onEntityRemoved();
+                notifiers.Remove(entity.Id);
             }
         }
     }

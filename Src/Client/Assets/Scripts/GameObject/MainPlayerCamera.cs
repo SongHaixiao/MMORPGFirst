@@ -15,9 +15,9 @@ public class MainPlayerCamera : MonoSingleton<MainPlayerCamera>
 
     private void LateUpdate()
     {
-        if(player == null)
+        if(player == null && User.Instance.CurrentCharacterObject != null)
         {
-            player = User.Instance.CurrentCharacterObject;
+            player = User.Instance.CurrentCharacterObject.gameObject;
         }
 
         // 如果玩家角色不为空 null，则将玩家位置赋值给相机位置，即使相机跟随玩家

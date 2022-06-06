@@ -98,7 +98,7 @@ namespace Services
         }
 
         // send map entity sync request to server
-        internal void SendMapEntitySync(EntityEvent entityEvent, NEntity entity)
+        internal void SendMapEntitySync(EntityEvent entityEvent, NEntity entity, int param)
         {
             Debug.LogFormat("MapEntityUpdateRequest : ID : {0} Pos : {1} DIR : {2} SPD : {3}", entity.Id, entity.Position.String(), entity.Direction.String(), entity.Speed);
 
@@ -111,7 +111,8 @@ namespace Services
                 // fill infor for sync map entity request net message
                 Id = entity.Id,
                 Event = entityEvent,
-                Entity = entity
+                Entity = entity,
+                ParamArrayAttribute = param
             };
 
             // send sync map entity request net message to server

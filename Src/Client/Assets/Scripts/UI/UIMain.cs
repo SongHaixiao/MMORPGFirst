@@ -83,10 +83,10 @@ public class UIMain : MonoSingleton<UIMain>
 
     // }
 
-    // public void OnClickRide()
-    // {
-
-    // }
+    public void OnClickRide()
+    {
+        UIManager.Instance.Show<UIRide>();
+    }
 
     public void OnClickSetting()
     {
