@@ -31,6 +31,7 @@ public class UIManager : Singleton<UIManager>
         this.UIResources.Add(typeof(UIQuestSystem), new UIElement() { Resources = "UI/UIQuestSystem", Cache = false });
         this.UIResources.Add(typeof(UIQuestDialog), new UIElement() { Resources = "UI/UIQuestDialog", Cache = false });
         this.UIResources.Add(typeof(UIRide), new UIElement() { Resources = "UI/UIRide", Cache = false });
+        this.UIResources.Add(typeof(UISystemConfig), new UIElement() { Resources = "UI/UISystemConfig", Cache = false });
 
     }
 
@@ -46,7 +47,7 @@ public class UIManager : Singleton<UIManager>
     public T Show<T>()
     {
         // load sound ui
-        // SoundManager.Instance.PlayerSound("ui_open");
+        SoundManager.Instance.PlayerSound("SoundDefine.SFX_UI_Win_Open");
 
         // define a type
         Type type = typeof(T);
@@ -120,5 +121,10 @@ public class UIManager : Singleton<UIManager>
                 info.Instance = null;
             }
         }
+    }
+
+    public void Close<T>()
+    {
+        this.Close(typeof(T));
     }
 }

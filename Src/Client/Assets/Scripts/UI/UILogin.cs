@@ -46,6 +46,8 @@ public class UILogin : MonoBehaviour
             return ;
         }
 
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+
         // tell the logical layer login's information
         UserService.Instance.SendLogin(this.Account.text, this.Password.text);
     }
@@ -61,6 +63,7 @@ public class UILogin : MonoBehaviour
 
             // loading character selection scene
             SceneManager.Instance.LoadScene("CharacterScene");
+            SoundManager.Instance.PlaySound(SoundDefine.Music_Select);
         }
         else
         {

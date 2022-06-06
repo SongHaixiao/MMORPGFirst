@@ -50,6 +50,7 @@ public class LoadingManager : MonoBehaviour
         TestManager.Instance.Init();
         StatusService.Instance.Init();
         ShopManager.Instance.Init();
+        SoundManager.Instance.PlayMusic(SoundDefine.Music_Login);
 
         // simulate the loading process number
         for (float i = 0; i < 100;)

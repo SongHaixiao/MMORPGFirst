@@ -48,11 +48,17 @@ public class UIMessageBox : MonoBehaviour
 
         // when message type is confirm, active the NO button
         this.buttonNo.gameObject.SetActive(type == MessageBoxType.Confirm);
+
+        if(type == MessageBoxType.Error)
+            SoundManager.Instance.PlaySound(SoundDefine.SFX_Message_Error);
+        else
+            SoundManager.Instance.PlaySound(SoundDefine.SFX_Message_Info);
     }
 
     // click button yes event
     void OnClickYes()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Confirm);
         Destroy(this.gameObject);
         if (this.OnYes != null)
             this.OnYes();
@@ -61,6 +67,7 @@ public class UIMessageBox : MonoBehaviour
     // click button no event
     void OnClickNo()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Close);
         Destroy(this.gameObject);
         if (this.OnNo != null)
             this.OnNo();

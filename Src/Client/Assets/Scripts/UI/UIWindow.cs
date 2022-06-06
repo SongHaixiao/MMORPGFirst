@@ -28,6 +28,8 @@ public abstract class UIWindow : MonoBehaviour
     // method to close UI
     public void Close(WindowResult result = WindowResult.None)
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Win_Close);
+
         // send this UI type to UIManager
         UIManager.Instance.Close(this.Type);
 
@@ -51,6 +53,11 @@ public abstract class UIWindow : MonoBehaviour
     public virtual void OnYesClick()
     {
         this.Close(WindowResult.Yes);
+    }
+
+    public virtual void OnNoClick()
+    {
+        this.Close(WindowResult.No);
     }
 
     // check mouse whether is clicked

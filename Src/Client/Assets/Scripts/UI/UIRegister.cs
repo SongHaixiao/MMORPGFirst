@@ -59,6 +59,7 @@ public class UIRegister : MonoBehaviour
             return;
         }
 
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
         // inform logic layer to rigister
         UserService.Instance.SendRegister(this.Account.text, this.Password.text);
     }

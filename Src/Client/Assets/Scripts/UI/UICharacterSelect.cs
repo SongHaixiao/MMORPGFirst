@@ -71,6 +71,9 @@ public class UICharacterSelect : MonoBehaviour
 
         else
         {
+
+            SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+            
             // character name inputed is available
             // send character creation info to logic layer
             UserService.Instance.SendCharacterCreate(this.charName.text, this.charClass);
@@ -140,7 +143,7 @@ public class UICharacterSelect : MonoBehaviour
 
         // update character description contents from DB
         descs.text = DataManager.Instance.Characters[charClass].Description;
-
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
     }
 
     
@@ -177,12 +180,16 @@ public class UICharacterSelect : MonoBehaviour
             // when click character option, high light will be active
             ci.Selected = idx == i;
         }
+
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
     }
     
     // click ok button to loade Main City Scene,
     // and then start game
     public void OnClickPlay()
     {
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+        
         if (selectCharacterIdx >= 0)
         {
             UserService.Instance.SendGameEnter(selectCharacterIdx);

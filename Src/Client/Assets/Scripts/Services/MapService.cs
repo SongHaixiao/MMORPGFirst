@@ -90,6 +90,7 @@ namespace Services
 
                 // load map resource
                 SceneManager.Instance.LoadScene(map.Resource);
+                SoundManager.Instance.PlayMusic(map.Music);
             }
 
             // map resource is not exited.

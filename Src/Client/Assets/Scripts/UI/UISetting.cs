@@ -3,16 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UISetting:UIWindow
+public class UISetting : UIWindow
 {
     public void ExitToCharSelect()
     {
         SceneManager.Instance.LoadScene("CharSelect");
-        Service.UserSerivce.Instance.SendGameLeave();
+        SoundManger.Instance.PlayMusic(SoundDefine.Music_Select);
+        Services.UserServices.Instance.SendGameLeave();
+    }
+
+    public void SystemConfig()
+    {
+        UIManager.Instance.Show<UISystemConfig>();
+        this.Close();
     }
 
     public void ExitGame()
     {
-         Service.UserSerivce.Instance.SendGameLeave(true);
+        Services.UserServices.Instance.SendGameLeave(true);
     }
 }

@@ -1,6 +1,6 @@
-- Time : 2022-06-06
+- Time : 2022-06-07
 
-- To Do : P16 Prepare for Sound System -> To Do : Step 08
+- To Do : P16 Prepare for Sound System -> To Do : Completed
 
     - Step 01 : Friend System ✓
 
@@ -16,8 +16,8 @@
 
     - Step 07 : Rides System ✓
     
-    - Step 08 : Sound System 
+    - Step 08 : Sound System ✓
     
-    - Step 09 : Navigate
+    - Step 09 : Navigate ✓
  
 - Note ： Change the connection for Server and DB
