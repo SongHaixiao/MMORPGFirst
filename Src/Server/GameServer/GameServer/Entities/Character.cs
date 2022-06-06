@@ -63,6 +63,8 @@ namespace GameServer.Entities
 
             // this.FriendManager = new FriendManager(this);
             // this.FriendManager.GetFriendInfos(this.Info.Friends);
+
+            // this.Guild = GuildManager.Instance.GetGuild(this.Data.GuildId);
         }
 
         public long Gold
@@ -81,11 +83,15 @@ namespace GameServer.Entities
         public void PostProcess(NetMessageResponse message)
         {
             Log.InfoFormat("PostProcess > Character : characterID : {0} : {1}", this.Id, this.Info.Name);
-
+            
+            // Friend post process
+            // Team post process
+            // Guild post process
+            
             if(this.StatusManger.HasStatus)
             {
                 this.StatusManger.PostProcess(message);
-            }
+            }   
         }
 
         // time count when character leave

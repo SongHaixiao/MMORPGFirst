@@ -68,15 +68,40 @@ public class UIMain : MonoSingleton<UIMain>
         UIManager.Instance.Show<UIBag>();
     }
 
-    // clicl equip button show character euqipment ui
+    // click equip button show character euqipment ui
     public void OnClickCharEquip()
     {
         UIManager.Instance.Show<UICharEquip>();
     }
 
-    // clicl equip button show character euqipment ui
+    // click equip button show character euqipment ui
     public void OnClickQuest()
     {
         UIManager.Instance.Show<UIQuestSystem>();
     }
+
+    // public void OnClickGuild()
+    // {
+
+    // }
+
+    // public void OnClickRide()
+    // {
+
+    // }
+
+    // public void OnClickSetting()
+    // {
+
+    // }
+
+    // public void OnClickSkill()
+    // {
+
+    // }
+
+    // public void ShowTeamUI(bool show)
+    // {
+        
+    // }
 }

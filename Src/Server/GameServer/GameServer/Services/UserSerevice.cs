@@ -214,16 +214,18 @@ namespace GameServer.Services
             sender.Session.Response.gameEnter.Result = Result.Success;
             sender.Session.Response.gameEnter.Errormsg = "None";
 
+            // post process value setting before response sending
+            sender.Session.Character = character;   // after enter game, give value to Character in Session
+                                                    // then, we can know we are operating which character via Session.Character
+            sender.Session.PostResponser = character;
+
+
             // enter game successed, send character information
             // add charter infomation ( including Tool info)
             // to game enter response message
             sender.Session.Response.gameEnter.Character = character.Info;
             // send enter game response to client
             sender.SendResponse();
-
-            sender.Session.Character = character;   // after enter game, give value to Character in Session
-                                                    // then, we can know we are operating which character via Session.Character
-            sender.Session.PostResponser = character;
 
             // add character into map
             MapManager.Instance[dbchar.MapID].CharacterEnter(sender, character);
@@ -250,7 +252,6 @@ namespace GameServer.Services
 
             // send character leave game response message to client
             sender.SendResponse();
-
         }
 
         // remove  Character
@@ -264,9 +265,7 @@ namespace GameServer.Services
             character.Clear();
             
             // remove Character from MapManager
-            MapManager.Instance[character.Info.mapId].CharacterLeave(character);
-
-            
+            MapManager.Instance[character.Info.mapId].CharacterLeave(character);            
         }
     }
 }
