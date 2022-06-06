@@ -34,13 +34,6 @@ public class UIMain : MonoSingleton<UIMain>
         this.avatarName.text = string.Format("{0} [ID : {1} ]", User.Instance.CurrentCharacter.Name, User.Instance.CurrentCharacter.Id);
         this.avatarLevle.text = User.Instance.CurrentCharacter.Level.ToString();
     }
-
-    // click back button to go back to character selection scene
-    public void BackToCharacterSelection()
-    {
-        SceneManager.Instance.LoadScene("CharacterScene");
-        UserService.Instance.SendGameLeave();
-    }
     
     // click UITest Button method
     // to call UITest prefab
@@ -80,6 +73,11 @@ public class UIMain : MonoSingleton<UIMain>
         UIManager.Instance.Show<UIQuestSystem>();
     }
 
+    // public void OnClickFriends()
+    // {
+
+    // }
+
     // public void OnClickGuild()
     // {
 
@@ -90,10 +88,10 @@ public class UIMain : MonoSingleton<UIMain>
 
     // }
 
-    // public void OnClickSetting()
-    // {
-
-    // }
+    public void OnClickSetting()
+    {
+        UIManager.Instance.Show<UISetting>();
+    }
 
     // public void OnClickSkill()
     // {

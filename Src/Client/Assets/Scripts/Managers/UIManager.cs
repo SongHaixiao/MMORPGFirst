@@ -19,17 +19,18 @@ public class UIManager : Singleton<UIManager>
     private Dictionary<Type, UIElement> UIResources = new Dictionary<Type, UIElement>();
 
     // add ui resources in constructor
-    public UIManager() 
+    public UIManager()
     {
         // ad UI Element Prefab in Assets/Resources/UI
         // Cache = false : replacement the UI Element when reopen this UI Element for test easily
-        
-        this.UIResources.Add(typeof(UITest), new UIElement() { Resources = "UI/UITest", Cache = true });
+
+        this.UIResources.Add(typeof(UISetting), new UIElement() { Resources = "UI/UISetting", Cache = true });
         this.UIResources.Add(typeof(UIBag), new UIElement() { Resources = "UI/UIBag", Cache = false });
         this.UIResources.Add(typeof(UIShop), new UIElement() { Resources = "UI/UIShop", Cache = false });
         this.UIResources.Add(typeof(UICharEquip), new UIElement() { Resources = "UI/UICharEquip", Cache = false });
         this.UIResources.Add(typeof(UIQuestSystem), new UIElement() { Resources = "UI/UIQuestSystem", Cache = false });
         this.UIResources.Add(typeof(UIQuestDialog), new UIElement() { Resources = "UI/UIQuestDialog", Cache = false });
+
 
     }
 
@@ -51,13 +52,13 @@ public class UIManager : Singleton<UIManager>
         Type type = typeof(T);
 
         // this type is in UIResources
-        if(this.UIResources.ContainsKey(type))
+        if (this.UIResources.ContainsKey(type))
         {
             // get the UIElement from UIResources
             UIElement info = this.UIResources[type];
 
             // info UI Element Instance is unavailable
-            if(info.Instance != null)
+            if (info.Instance != null)
             {
                 // active it
                 info.Instance.SetActive(true);
@@ -70,7 +71,7 @@ public class UIManager : Singleton<UIManager>
                 UnityEngine.Object prefab = Resources.Load(info.Resources);
 
                 // prefab UI Element prefab is unavailable
-                if(prefab == null)
+                if (prefab == null)
                 {
                     // return default type
                     return default(T);
@@ -98,13 +99,13 @@ public class UIManager : Singleton<UIManager>
         // SoundManger.Instance.PlaySound("ui_open");
 
         // type UI Element is in UIResources
-        if(this.UIResources.ContainsKey(type))
+        if (this.UIResources.ContainsKey(type))
         {
             // get type UI Element in UIResources
             UIElement info = this.UIResources[type];
 
             // info UI Elemnt data is in Cache
-            if(info.Cache)
+            if (info.Cache)
             {
                 // close info UI Element
                 info.Instance.SetActive(false);

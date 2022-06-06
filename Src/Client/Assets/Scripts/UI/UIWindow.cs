@@ -14,8 +14,10 @@ public abstract class UIWindow : MonoBehaviour
 
     // get type attribute
     public virtual System.Type Type { get { return this.GetType(); } }
+
+    public GameObject Root;
     
-    // result type defien
+    // result type define
     public enum WindowResult
     {
         None = 0,
