@@ -47,7 +47,7 @@ public class UIManager : Singleton<UIManager>
     public T Show<T>()
     {
         // load sound ui
-        //SoundManager.Instance.PlayerSound("SoundDefine.SFX_UI_Win_Open");
+        SoundManager.Instance.PlayerSound("SoundDefine.SFX_UI_Win_Open");
 
         // define a type
         Type type = typeof(T);

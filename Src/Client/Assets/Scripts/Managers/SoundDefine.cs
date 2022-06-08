@@ -1,10 +1,10 @@
-using System.Text;
+﻿using System.Text;
 
 public class SoundDefine
 {
     public const string Music_Login = "bgm-login";
     public const string Music_Select = "bgm-select";
-    
+
     public const string SFX_Message_Info = "ui/sfx_msg_info";
     public const string SFX_Message_Error = "ui/sfx_msg_error";
 

@@ -111,16 +111,16 @@ namespace GameServer.Entities
             // Team post process
             // Guild post process
 
-            //if (this.StatusManger.HasStatus)
-            //{
-            //    this.StatusManger.PostProcess(message);
-            //}
+            if (this.StatusManger.HasStatus)
+            {
+                this.StatusManger.PostProcess(message);
+            }
         }
 
         // time count when character leave
         public void Clear()
         {
-
+            // Friend Manger
         }
 
         public NCharacterInfo GetBasicInfo()

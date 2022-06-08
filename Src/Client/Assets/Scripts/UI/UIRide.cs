@@ -47,9 +47,12 @@ public class UIRide : UIWindow
             if (kv.Value.Define.Type == ItemType.Ride &&
                 (kv.Value.Define.LimitClass == CharacterClass.None || kv.Value.Define.LimitClass == User.Instance.CurrentCharacter.Class))
             {
+                if (EquipManger.Instance.Contains(kv.Value))
+                    continue;
+
                 GameObject go = Instantiate(itemPrefab, this.listMain.transform);
                 UIRideItem ui = go.GetComponent<UIRideItem>();
-                //ui.SetEquipItem(kv.Value, this, false);
+                ui.SetEquipItem(kv.Value, this, false);
                 this.listMain.AddItem(ui);
             }
         }

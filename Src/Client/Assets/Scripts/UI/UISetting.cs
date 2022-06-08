@@ -7,9 +7,9 @@ public class UISetting : UIWindow
 {
     public void ExitToCharSelect()
     {
-        SceneManager.Instance.LoadScene("CharSelect");
-        //SoundManger.Instance.PlayMusic(SoundDefine.Music_Select);
-        //Services.UserServices.Instance.SendGameLeave();
+        SceneManager.Instance.LoadScene("CharacterScene");
+        SoundManger.Instance.PlayMusic(SoundDefine.Music_Select);
+        Services.UserServices.Instance.SendGameLeave();
     }
 
     public void SystemConfig()
@@ -20,6 +20,6 @@ public class UISetting : UIWindow
 
     public void ExitGame()
     {
-        //Services.UserServices.Instance.SendGameLeave(true);
+        Services.UserServices.Instance.SendGameLeave(true);
     }
 }

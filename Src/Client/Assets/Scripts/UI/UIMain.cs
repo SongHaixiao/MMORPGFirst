@@ -21,11 +21,6 @@ public class UIMain : MonoSingleton<UIMain>
         this.UpdateAvatar();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     // NO.3 update avatar ui
     void UpdateAvatar()
@@ -34,7 +29,14 @@ public class UIMain : MonoSingleton<UIMain>
         this.avatarName.text = string.Format("{0} [ID : {1} ]", User.Instance.CurrentCharacter.Name, User.Instance.CurrentCharacter.Id);
         this.avatarLevle.text = User.Instance.CurrentCharacter.Level.ToString();
     }
-    
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+
     // click UITest Button method
     // to call UITest prefab
     public void OnClickUITest()

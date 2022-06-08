@@ -516,7 +516,7 @@ message FriendListResponse
 message FriendRemoveRequest
 {
 	int32 id = 1;
-	int32 friend = 2;
+	int32 friendId = 2;
 }
 
 message FriendRemoveResponse
@@ -665,6 +665,29 @@ message GuildListResponse
 	repeated NGuildInfo guilds = 3;
 }
 
+message GuildRequest
+{
+
+}
+
+message GuildResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+	NGuildInfo guildInfo = 3;
+}
+
+message GuildLeaveRequest
+{
+
+}
+
+message GuildLeaveResponse
+{
+	RESULT result = 1;
+	string errormsg = 2;
+}
+
 // guild manager
 enum GUILD_ADMIN_COMMAND
 {
@@ -685,26 +708,6 @@ message GuildAdminResponse
 	RESULT result = 1;
 	string errormsg = 2;
 	GuildAdminRequest command = 3;
-}
-
-message GuildRequest
-{
-
-}
-
-message GuildLeaveRequest
-{
-
-}
-
-message GuildResponse
-{
-
-}
-
-message GuildLeaveResponse
-{
-
 }
 
 // Chat Protocol

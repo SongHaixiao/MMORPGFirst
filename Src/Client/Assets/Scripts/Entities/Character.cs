@@ -31,7 +31,10 @@ namespace Entities
 
         public bool IsPlayer
         {
-            get { return this.Info.Id == Models.User.Instance.CurrentCharacter.Id; }
+            get
+            {
+                return this.Info.Type == CharacterType.Player;
+            }
         }
 
         public bool IsCurrentPlayer

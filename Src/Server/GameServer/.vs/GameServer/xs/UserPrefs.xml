@@ -1,10 +1,33 @@
 ﻿<Properties StartupConfiguration="{2C54695D-AC9F-455B-846D-0E865991F681}|Default">
-  <MonoDevelop.Ide.Workbench />
-  <MonoDevelop.Ide.ItemProperties.GameServer PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.GameServer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Lib/Common/Utils/TimeUtil.cs">
+    <Files>
+      <File FileName="GameServer/Services/UserSerevice.cs" Line="260" Column="27" IsPinned="True" />
+      <File FileName="GameServer/Models/Map.cs" Line="160" Column="47" />
+      <File FileName="GameServer/Entities/Character.cs" Line="105" Column="1" />
+      <File FileName="../../Lib/Common/Data/RideDefine.cs" Line="19" Column="2" />
+      <File FileName="../../Lib/Common/Utils/TimeUtil.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="GameServer" expanded="True" selected="True">
+            <Node name="Common" expanded="True">
+              <Node name="Utils" expanded="True" />
+            </Node>
+            <Node name="Protocol" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>

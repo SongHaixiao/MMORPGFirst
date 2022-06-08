@@ -10,6 +10,6 @@ namespace Common
         public const int BagMaxItemPrePage = 30;
         // public const int GuildMaxMemberCount = 40;
         // public const int MaxChatRecoredNums = 20;
-       // public const int MaxChatRecoredTime = 600; // 10 minutes
+        // public const int MaxChatRecoredTime = 600; // 10 minutes
     }
 }

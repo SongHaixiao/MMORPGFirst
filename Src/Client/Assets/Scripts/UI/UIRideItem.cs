@@ -30,7 +30,7 @@ public class UIRideItem : ListView.ListViewItem
 
     }
 
-    public void SetRideItem(Item item, UIRideItem owner, bool equiped)
+    public void SeEquipItem(Item item, UIRideItem owner, bool equiped)
     {
         this.item = item;
         

@@ -206,8 +206,7 @@ namespace GameServer.Services
             Log.InfoFormat("UserGameEnterRequest: characterID:{0}:{1} Map:{2}", dbchar.ID, dbchar.Name, dbchar.MapID);
             Character character = CharacterManager.Instance.AddCharacter(dbchar);
 
-            // SessionManager.Instance.AddSession(character.Id, sender);
-            //SessionManager.Instance.AddSession(character.Id, sender);
+            SessionManager.Instance.AddSession(character.Id, sender);
 
             // create enter game response net message 
             sender.Session.Response.gameEnter = new UserGameEnterResponse();
@@ -224,6 +223,7 @@ namespace GameServer.Services
             // add charter infomation ( including Tool info)
             // to game enter response message
             sender.Session.Response.gameEnter.Character = character.Info;
+
             // send enter game response to client
             sender.SendResponse();
 
@@ -238,7 +238,7 @@ namespace GameServer.Services
             // get the character from session from client
             Character character = sender.Session.Character;
 
-            Log.InfoFormat("UserGameLeaveRequest : characterID : {0} : {1} Map : {2}", character.Id, character.Info.Name, character.Info.mapId);
+            Log.InfoFormat("UserGameLeaveRequest : characterID : {0} : {1} Map : {2}", character.Id, character.Info.Name, character.Info.mapId);    
         
             // remove character
             this.CharacterLeave(character);
@@ -257,7 +257,7 @@ namespace GameServer.Services
         {
             Log.InfoFormat("CharacterLeave : characterID : {0} : {1}", character.Id, character.Info.Name);
 
-            //SessionManager.Instance.RemoveSession(character.Id);
+            SessionManager.Instance.RemoveSession(character.Id);
 
             // remove Character from CharacterManager
             CharacterManager.Instance.RemoveCharacter(character.Id);
