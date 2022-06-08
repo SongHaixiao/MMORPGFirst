@@ -8,10 +8,12 @@ public class UIInputBox : MonoBehaviour
     public Text message;
     public Text tips;
     public Button buttonYes;
-    public BUtton buttonNo;
+    public Button buttonNo;
 
     public Text buttonYesTitle;
     public Text buttonNoTitle;
+
+    public InputField input;
 
     public delegate bool SubmitHandler(string inputText, out string tips);
     public event SubmitHandler OnSubmit;
@@ -38,7 +40,7 @@ public class UIInputBox : MonoBehaviour
         if (!string.IsNullOrEmpty(btnCancel)) this.buttonNoTitle.text = title;
 
         this.buttonYes.onClick.AddListener(OnClickYes);
-        this.buttonNo.OnClick.AddListener(OnClickNo);
+        this.buttonNo.onClick.AddListener(OnClickNo);
 
     }
 
@@ -52,7 +54,7 @@ public class UIInputBox : MonoBehaviour
             return;
         }
 
-        if (OnSubmit! - null)
+        if (OnSubmit != null)
         {
             string tips;
             if (!OnSubmit(this.input.text, out tips))

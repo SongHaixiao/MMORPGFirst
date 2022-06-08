@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/31/2022 08:07:06
--- Generated from EDMX file: E:\Github\MMORPGFirst\Src\Server\GameServer\GameServer\Entities.edmx
+-- Date Created: 06/07/2022 14:22:34
+-- Generated from EDMX file: E:\Github\P16\MMORPGFirst\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -88,6 +88,8 @@ CREATE TABLE [dbo].[Characters] (
     [MapPosZ] int  NOT NULL,
     [Gold] bigint  NOT NULL,
     [Equips] binary(28)  NOT NULL,
+    [Level] int  NOT NULL,
+    [Exp] bigint  NOT NULL,
     [Player_ID] int  NOT NULL,
     [Bag_Id] int  NOT NULL
 );

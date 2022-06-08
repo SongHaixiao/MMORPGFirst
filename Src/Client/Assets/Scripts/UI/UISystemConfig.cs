@@ -14,10 +14,10 @@ public class UISystemConfig : UIWindow
 
     void Start()
     {
-        this.toggleMusic.isOn = Config.MusicOn;
-        this.toggleSound.isOn = Config.SoundOn;
-        this.sliderMusic.value = Config.MusicVolume;
-        this.sliderSound.value = Config.SoundVolume;
+        //this.toggleMusic.isOn = Config.MusicOn;
+        //this.toggleSound.isOn = Config.SoundOn;
+        //this.sliderMusic.value = Config.MusicVolume;
+        //this.sliderSound.value = Config.SoundVolume;
     }
 
     public override void OnYesClick()
@@ -30,26 +30,26 @@ public class UISystemConfig : UIWindow
     public void MusicToogle(bool on)
     {
         musicOff.enabled = !on;
-        Config.MusicOn = on;
+        //Config.MusicOn = on;
         SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
     }
 
     public void SoundToogle(bool on)
     {
         soundOff.enabled = !on;
-        Config.SoundOn = on;
-        SoundManger.Instance.PlaySound(SoundDefine.SFX_UI_Click); 
+        //Config.SoundOn = on;
+        //SoundManger.Instance.PlaySound(SoundDefine.SFX_UI_Click); 
     }
 
     public void MusicVolume(float vol)
     {
-        Config.MusicVolume = (int)vol;
+        //Config.MusicVolume = (int)vol;
         PlaySound();
     }
 
     public void SoundVolume(float vol)
     {
-        Config.SoundVolume = (int)vol;
+        //Config.SoundVolume = (int)vol;
         PlaySound();
     }
 

@@ -207,7 +207,7 @@ namespace GameServer.Services
             Character character = CharacterManager.Instance.AddCharacter(dbchar);
 
             // SessionManager.Instance.AddSession(character.Id, sender);
-            SessionManager.Instance.AddSession(character.Id, sender);
+            //SessionManager.Instance.AddSession(character.Id, sender);
 
             // create enter game response net message 
             sender.Session.Response.gameEnter = new UserGameEnterResponse();
@@ -257,7 +257,7 @@ namespace GameServer.Services
         {
             Log.InfoFormat("CharacterLeave : characterID : {0} : {1}", character.Id, character.Info.Name);
 
-            SessionManager.Instance.RemoveSession(character.Id);
+            //SessionManager.Instance.RemoveSession(character.Id);
 
             // remove Character from CharacterManager
             CharacterManager.Instance.RemoveCharacter(character.Id);

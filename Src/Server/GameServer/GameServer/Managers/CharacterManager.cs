@@ -65,6 +65,7 @@ namespace GameServer.Managers
         {
             Character character = null;
             this.Characters.TryGetValue(characterId, out character);
+            return character;
         }
     }
 }

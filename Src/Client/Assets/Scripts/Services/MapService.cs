@@ -113,7 +113,7 @@ namespace Services
                 Id = entity.Id,
                 Event = entityEvent,
                 Entity = entity,
-                ParamArrayAttribute = param
+                Param= param
             };
 
             // send sync map entity request net message to server

@@ -44,7 +44,7 @@ enum ENTITY_EVENT
 	MOVE_FWD = 2;
 	MOVE_BACK = 3;
 	JUMP = 4;
-	// RIDE = 5;
+	RIDE = 5;
 }
 
 enum ITEM_TYPE
@@ -53,7 +53,7 @@ enum ITEM_TYPE
 	MATERIAL = 1;
 	TASK = 2; // task item
 	EQUIP = 3;
-	// RIDE = 4;
+	RIDE = 4;
 }
 
 enum EQUIP_SLOT
@@ -687,6 +687,26 @@ message GuildAdminResponse
 	GuildAdminRequest command = 3;
 }
 
+message GuildRequest
+{
+
+}
+
+message GuildLeaveRequest
+{
+
+}
+
+message GuildResponse
+{
+
+}
+
+message GuildLeaveResponse
+{
+
+}
+
 // Chat Protocol
 
 enum CHAT_CHANEL
@@ -717,7 +737,7 @@ message ChatRequest
 	ChatMessage message = 1;
 }
 
-member ChatResponse
+message ChatResponse
 {
 	RESULT result = 1;
 	string errormsg = 2;

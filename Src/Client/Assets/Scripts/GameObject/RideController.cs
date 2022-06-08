@@ -5,12 +5,13 @@ using UnityEngine;
 using Entities;
 using Managers;
 
-public class EntityController : MonoBehaviour, IEntityNotify
+public class RideController : MonoBehaviour // , IEntityNotify
 {
     public Transform mountPoint;
     public EntityController rider;
     public Vector3 offset;
     private Animator anim;
+    private RideController rideController;
 
     // Use this for initialization
     void Start()
@@ -20,13 +21,13 @@ public class EntityController : MonoBehaviour, IEntityNotify
 
     void Update()
     {
-        if(this.mountPint = null || this.rider == null) return;
+        if(this.mountPoint == null || this.rider == null) return;
         this.rider.SetRidePosition(this.mountPoint.position + this.mountPoint.TransformDirection(this.offset));
     }
 
     public void SetRider(EntityController rider)
     {
-        this.rideController = rider;
+        //this.rideController = rider;
     }
 
     public void OnEntityEvent(EntityEvent entityEvent, int param)

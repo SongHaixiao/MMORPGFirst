@@ -202,3 +202,12 @@ E:\Github\P14 Begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.csproj.CoreCompi
 E:\Github\P14 Begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.csproj.CopyComplete
 E:\Github\P14 Begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.dll
 E:\Github\P14 Begin\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.pdb
+E:\Github\P16\MMORPGFirst\Src\Lib\Common\bin\Debug\Common.dll
+E:\Github\P16\MMORPGFirst\Src\Lib\Common\bin\Debug\Common.pdb
+E:\Github\P16\MMORPGFirst\Src\Lib\Common\bin\Debug\Protocol.dll
+E:\Github\P16\MMORPGFirst\Src\Lib\Common\bin\Debug\Protocol.pdb
+E:\Github\P16\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+E:\Github\P16\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+E:\Github\P16\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.csproj.CopyComplete
+E:\Github\P16\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.dll
+E:\Github\P16\MMORPGFirst\Src\Lib\Common\obj\Debug\Common.pdb

@@ -38,7 +38,7 @@ public class EntityController : MonoBehaviour, IEntityNotify
     {
         if (entity != null)
         {
-            EnityManager.Instance.RegiserEntityChangeNotity(entity.entityId, this);
+            EntityManager.Instance.RegiserEntityChangeNotity(entity.entityId, this);
             this.UpdateTransform();
         }
 
@@ -113,7 +113,7 @@ public class EntityController : MonoBehaviour, IEntityNotify
             case EntityEvent.Jump:
                 anim.SetTrigger("Jump");
                 break;
-            case entityEvent.Ride:
+            case EntityEvent.Ride:
                 {
                     this.Ride(param);
                 }

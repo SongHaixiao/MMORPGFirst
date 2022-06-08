@@ -31,6 +31,8 @@
           <ScalarProperty Name="MapPosZ" ColumnName="MapPosZ" />
           <ScalarProperty Name="Gold" ColumnName="Gold" />
           <ScalarProperty Name="Equips" ColumnName="Equips" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="Exp" ColumnName="Exp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

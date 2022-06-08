@@ -49,13 +49,13 @@ public class UIRide : UIWindow
             {
                 GameObject go = Instantiate(itemPrefab, this.listMain.transform);
                 UIRideItem ui = go.GetComponent<UIRideItem>();
-                ui.SetEquipItem(kv.Value, this, false);
+                //ui.SetEquipItem(kv.Value, this, false);
                 this.listMain.AddItem(ui);
             }
         }
     }
 
-    public ClearItems()
+    public void ClearItems()
     {
         this.listMain.RemoveAll();
     }

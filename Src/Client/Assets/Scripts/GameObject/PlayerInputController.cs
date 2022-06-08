@@ -36,7 +36,7 @@ public class PlayerInputController : MonoBehaviour
             NCharacterInfo cinfo = new NCharacterInfo();
             cinfo.Id = 1;
             cinfo.Name = "Test";
-            cinfo.Tid = 1;
+            //cinfo.Tid = 1;
             cinfo.Entity = new NEntity();
             cinfo.Entity.Position = new NVector3();
             cinfo.Entity.Direction = new NVector3();
@@ -57,7 +57,7 @@ public class PlayerInputController : MonoBehaviour
         if (character == null)
             return;
 
-        if (InputManager.Instance != null && InputManager.Instance.IsInputMode) return;
+        //if (InputManager.Instance != null && InputManager.Instance.IsInputMode) return;
 
         // get vertical varaible from untiy
         float v = Input.GetAxis("Vertical");

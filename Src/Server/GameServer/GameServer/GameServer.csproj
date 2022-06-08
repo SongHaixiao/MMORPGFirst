@@ -116,6 +116,7 @@
     <Compile Include="Managers\ShopManager.cs" />
     <Compile Include="Managers\SpawnManager.cs" />
     <Compile Include="Managers\StatusManger.cs" />
+    <Compile Include="Network\IPostResponse.cs" />
     <Compile Include="Services\GameServer.cs" />
     <Compile Include="Managers\CharacterManager.cs" />
     <Compile Include="Managers\DataManager.cs" />

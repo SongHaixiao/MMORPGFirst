@@ -140,7 +140,7 @@ namespace GameServer.Models
         // send character leave map response message to client
         void SendCharacterLeaveMap(NetConnection<NetSession> conn, Character character)
         {
-            Log.InfoFormat("SendCharacterLeaveMap To {0} : {1} : Map : {2} Character : {3} : {4}", conn.Session.Character.Id, conn.Session.Character.Info.Name, this.Define.ID, character.ID, character.Info.Name);
+            Log.InfoFormat("SendCharacterLeaveMap To {0} : {1} : Map : {2} Character : {3} : {4}", conn.Session.Character.Id, conn.Session.Character.Info.Name, this.Define.ID, character.Info.Id, character.Info.Name);
             conn.Session.Response.mapCharacterLeave = new MapCharacterLeaveResponse();
             conn.Session.Response.mapCharacterLeave.entityId = character.entityId;
 
@@ -157,10 +157,10 @@ namespace GameServer.Models
                     kv.Value.character.Position = entity.Entity.Position;
                     kv.Value.character.Direction = entity.Entity.Direction;
                     kv.Value.character.Speed = entity.Entity.Speed;
-                    if(entity.Event == EntityEvent.Ride)
-                    {
-                        kv.Value.character.Ride = entity.Param;
-                    }
+                    //if(entity.Event == EntityEvent.Ride)
+                    //{
+                    //    kv.Value.character.Ride = entity.Param;
+                    //}
                 }
                 else
                 {

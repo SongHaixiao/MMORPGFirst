@@ -51,6 +51,10 @@ public partial class TCharacter
 
     public byte[] Equips { get; set; }
 
+    public int Level { get; set; }
+
+    public long Exp { get; set; }
+
 
 
     public virtual TPlayer Player { get; set; }
