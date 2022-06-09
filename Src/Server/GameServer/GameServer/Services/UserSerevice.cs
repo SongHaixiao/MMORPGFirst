@@ -134,7 +134,9 @@ namespace GameServer.Services
                 MapPosX = 5000, // start position x
                 MapPosY = 4000, // start position y
                 MapPosZ = 820,  // start position z
-                Gold = 3000, //  start money
+                Gold = 5000, //  start money
+                HP = 1000,
+                MP = 1000,
                 Equips = new byte[20]
             };
 

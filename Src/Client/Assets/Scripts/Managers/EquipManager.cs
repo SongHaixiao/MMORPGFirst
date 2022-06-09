@@ -1,4 +1,5 @@
-﻿using Managers;
+﻿using Common.Data;
+using Managers;
 using Models;
 using Services;
 using SkillBridge.Message;
@@ -99,5 +100,17 @@ public class EquipManager : Singleton<EquipManager>
             if (OnEquipChanged != null)
                 OnEquipChanged();
         }
+    }
+
+    public List<EquipDefine> GetEquipDefines()
+    {
+        List<EquipDefine> result = new List<EquipDefine>();
+        for(int i = 0; i < (int)EquipSlot.SlotMax; i++)
+        {
+            if (Equips[i] != null)
+                result.Add(Equips[i].EquipInfo);
+        }
+
+        return result;
     }
 }

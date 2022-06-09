@@ -62,7 +62,7 @@ public class UIBag : UIWindow
             slots[i].color = Color.gray;
         }
 
-        this.moeny.text = User.Instance.CurrentCharacter.Gold.ToString();
+        this.moeny.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
 
         yield return null;
     }

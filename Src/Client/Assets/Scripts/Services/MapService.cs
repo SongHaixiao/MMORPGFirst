@@ -43,9 +43,9 @@ namespace Services
             foreach (var cha in response.Characters)
             {
                 // current character change map
-                if (User.Instance.CurrentCharacter == null || (cha.Type == CharacterType.Player && User.Instance.CurrentCharacter.Id == cha.Id))
+                if (User.Instance.CurrentCharacterInfo == null || (cha.Type == CharacterType.Player && User.Instance.CurrentCharacterInfo.Id == cha.Id))
                 {
-                    User.Instance.CurrentCharacter = cha;
+                    User.Instance.CurrentCharacterInfo = cha;
                 }
 
                 // not current character, add it int character manager
@@ -67,7 +67,7 @@ namespace Services
             Debug.LogFormat("OnMapCharacterLeave : CharID : {0}", response.entityId);
 
             // leaving character is others, remove others character
-            if (response.entityId != User.Instance.CurrentCharacter.EntityId)
+            if (response.entityId != User.Instance.CurrentCharacterInfo.EntityId)
                 CharacterManager.Instance.RemoveCharacter(response.entityId);
 
             // leaving character is player self, clear all characters in the map

@@ -139,8 +139,9 @@ enum STATUS_TYPE
 {
 	MONEY = 0;
 	EXP = 1;
-	SKILL_POINT = 2;
-	ITEM = 3;
+	LEVEL = 2;
+	SKILL_POINT = 3;
+	ITEM = 4;
 }
 
 enum STATUS_SOURCE

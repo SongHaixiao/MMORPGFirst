@@ -69,11 +69,11 @@ namespace Managers
             foreach (var kv in DataManager.Instance.Quests)
             {
                 // not match class
-                if (kv.Value.LimitClass != CharacterClass.None && kv.Value.LimitClass != User.Instance.CurrentCharacter.Class)
+                if (kv.Value.LimitClass != CharacterClass.None && kv.Value.LimitClass != User.Instance.CurrentCharacterInfo.Class)
                     continue;
 
                 // not match level
-                if (kv.Value.LimitLevel > User.Instance.CurrentCharacter.Level)
+                if (kv.Value.LimitLevel > User.Instance.CurrentCharacterInfo.Level)
                     continue;
 
                 // quest existed

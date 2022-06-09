@@ -98,6 +98,10 @@ namespace Common.Battle
             this.InitSecondaryAttributes();
 
             this.InitFinalAttributes();
+
+            if (this.dynamic == null)
+                this.dynamic = new NAttributeDynamic();
+
             this.HP = dynamicAttr.Hp;
             this.MP = dynamicAttr.Mp;
         }

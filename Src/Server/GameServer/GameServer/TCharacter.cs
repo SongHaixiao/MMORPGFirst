@@ -55,6 +55,10 @@ public partial class TCharacter
 
     public long Exp { get; set; }
 
+    public int MP { get; set; }
+
+    public int HP { get; set; }
+
 
 
     public virtual TPlayer Player { get; set; }

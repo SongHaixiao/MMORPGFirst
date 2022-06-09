@@ -33,6 +33,8 @@
           <ScalarProperty Name="Equips" ColumnName="Equips" />
           <ScalarProperty Name="Level" ColumnName="Level" />
           <ScalarProperty Name="Exp" ColumnName="Exp" />
+          <ScalarProperty Name="MP" ColumnName="MP" />
+          <ScalarProperty Name="HP" ColumnName="HP" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

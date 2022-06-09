@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Common.Battle;
+using Entities;
 using Managers;
 using Models;
 using SkillBridge.Message;
@@ -26,9 +27,14 @@ public class UICharEquip : UIWindow
 
     // attribute panel
     public Text chaTitel;
-    //public Text hpValue;
-    //public Text mpValue;
-    //public Text 
+
+    public Text hp;
+    public Slider hpBar;
+
+    public Text mp;
+    public Slider mpBar;
+
+    public Text[] attrs;
 
 
     // Start is called before the first frame update
@@ -48,22 +54,21 @@ public class UICharEquip : UIWindow
         ClearAllEquipList();
         InitAllEquipItems();
         ClearEquipedList();
-        InitEquipeItems();
         InitEquipedItems();
 
-        InitAttributePanel();
+        InitAttributes();
         InitBottomPanel();
-    }
 
+    }
 
     /// <summary>
     /// Init all equips list
     /// </summary>
-    private void InitEquipeItems()
+    private void InitAllEquipItems()
     {
        foreach(var kv in ItemManger.Instance.Items)
         {
-            if(kv.Value.Define.Type == ItemType.Equip && kv.Value.Define.LimitClass == User.Instance.CurrentCharacter.Class)
+            if(kv.Value.Define.Type == ItemType.Equip && kv.Value.Define.LimitClass == User.Instance.CurrentCharacterInfo.Class)
             {
                 // equipment which is equiped will not show
                 if (EquipManager.Instance.Contains(kv.Key))
@@ -76,34 +81,25 @@ public class UICharEquip : UIWindow
         }
     }
 
-    private void ClearEquipedList()
+    private void ClearAllEquipList()
     {
-        foreach(var item in itemListRoot.GetComponentsInChildren<UIEquipItem>())
+        foreach (var item in itemListRoot.GetComponentsInChildren<UIEquipItem>())
         {
 
             Destroy(item.gameObject);
         }
     }
 
-    private void InitAllEquipItems()
+    private void ClearEquipedList()
     {
-        foreach(var item in slots)
+        foreach (var item in slots)
         {
             if (item.childCount > 0)
-            {
                 Destroy(item.GetChild(0).gameObject);
-            }
         }
     }
 
-    private void ClearAllEquipList()
-    {
-        foreach(var item in slots)
-        {
-            if (item.childCount > 0)
-                Destroy(item.GetChild(0).gameObject);
-        }
-    }
+
 
     /// <summary>
     /// init equipments which is equiped
@@ -135,10 +131,11 @@ public class UICharEquip : UIWindow
     }
 
     // init character attributes
-    void InitAttributePanel()
+    void InitAttributes()
     {
-        var character = User.Instance.CurrentCharacter;
-        if(character == null)
+        var character = User.Instance.CurrentCharacterInfo;
+
+        if (character == null)
         {
             Debug.LogError("Loading character attributes error ! Character is not existed ! ");
             return;
@@ -146,12 +143,39 @@ public class UICharEquip : UIWindow
 
         string name = character.Name.ToString();
         string level = "Lv. " + character.Level.ToString();
-        this.chaTitel.text = name + "   "  +  level;
+        this.chaTitel.text = name + "   " + level;
+
+
+        var attributes = User.Instance.CurrentCharacter.Attributes;
+
+        if (attributes == null)
+        {
+            Debug.LogError("Loading character attributes error ! Attributes is not existed ! ");
+            return;
+        }
+
+        this.hp.text = string.Format("{0} / {1}", attributes.MP, attributes.MaxHP);
+        this.mp.text = String.Format("{0} / {1}", attributes.MP, attributes.MaxMP);
+        this.hpBar.maxValue = attributes.MaxHP;
+        this.hpBar.value = attributes.HP;
+        this.mpBar.maxValue = attributes.MaxMP;
+        this.mpBar.value = attributes.MP;
+
+        for(int i = (int)AttributeType.STR; i < (int)AttributeType.MAX;i++)
+        {
+            if (i == (int)AttributeType.CRI)
+                this.attrs[i - 2].text = string.Format("{0:f2}%", attributes.Final.Data[i] * 100);
+            else
+                this.attrs[i - 2].text = ((int)attributes.Final.Data[i]).ToString();
+        }
+
+
+
     }
 
     // init money dat in bottom panel
     void InitBottomPanel()
     {
-        this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
+        this.money.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
     }
 }
