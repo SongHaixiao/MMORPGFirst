@@ -1,13 +1,13 @@
 - Time : 2022-06-09
 
-- To Do : P17 Sound System -> To Do : fix bug
-    
-    - Step01 : Code check complete √
-    
-    - Step02 : UI  √
-    
-    - Step03 : Sound System begin √
+- To Do : P18 Battle System -> To Do : begin
 
-    - Step04 ： Bug -> can't control sound config
+    - Step01 ： Bug -> can't control sound config
+
+    - Step02 ： protocol & data
+
+    - Step03 : codes
+
+    - Step04 : effects
     
 - Note ： Change the connection for Server and DB
