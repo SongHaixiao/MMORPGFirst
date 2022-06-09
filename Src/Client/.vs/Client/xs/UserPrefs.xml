@@ -1,41 +1,38 @@
 ﻿<Properties StartupConfiguration="{12F44184-A422-5F27-22E6-507969043F15}|">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Services/MapService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Battle/Skill.cs">
     <Files>
-      <File FileName="Assets/Scripts/Managers/UIManager.cs" Line="50" Column="29" />
-      <File FileName="Assets/Scripts/Models/User.cs" Line="29" Column="74" />
-      <File FileName="Assets/Scripts/GameObject/PlayerInputController.cs" Line="172" Column="1" />
-      <File FileName="Assets/Scripts/GameObject/MainPlayerCamera.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Managers/GameObjectManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameObject/EntityController.cs" Line="127" Column="42" />
-      <File FileName="Assets/Scripts/GameObject/RideController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/UIRideItem.cs" Line="33" Column="24" />
-      <File FileName="Assets/Scripts/UI/UIRide.cs" Line="52" Column="1" />
-      <File FileName="Assets/Scripts/UI/UISystemConfig.cs" Line="64" Column="32" />
-      <File FileName="Assets/Scripts/Managers/SoundManager.cs" Line="100" Column="43" />
-      <File FileName="Assets/Scripts/Managers/NewClass.cs" Line="15" Column="2" />
-      <File FileName="Assets/Scripts/UI/UISetting.cs" Line="12" Column="13" />
-      <File FileName="Assets/Scripts/Managers/LoadingManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/UILogin.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/UICharacterSelect.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/UIMessageBox.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/UIWindow.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/UI/UIRegister.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Services/MapService.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Battle/Skill.cs" Line="45" Column="18" IsPinned="True" />
+      <File FileName="Assets/Scripts/UI/UISkill/UISkillSlot.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/Managers/BattleManager.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="Assets/Scripts/Services/NewClass.cs" Line="48" Column="42" />
+      <File FileName="Assets/Scripts/Managers/EntityManager.cs" Line="64" Column="10" />
+      <File FileName="Assets/Scripts/Entities/Creature.cs" Line="20" Column="1" />
+      <File FileName="Assets/Scripts/Entities/NewClass.cs" Line="13" Column="2" />
+      <File FileName="Assets/Scripts/Entities/Entity.cs" Line="19" Column="45" />
+      <File FileName="Assets/Scripts/Battle/SkillManager.cs" Line="54" Column="10" />
+      <File FileName="Assets/Scripts/Managers/GameObjectManager.cs" Line="103" Column="39" />
+      <File FileName="Assets/Scripts/GameObject/EntityController.cs" Line="169" Column="47" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
+          <Option id="ShowAllFiles" value="True" />
           <Node name="Client" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
+                <Node name="Battle" expanded="True">
+                  <Node name="Skill.cs" selected="True" />
+                </Node>
+                <Node name="Entities" expanded="True" />
+                <Node name="GameObject" expanded="True" />
                 <Node name="Managers" expanded="True" />
                 <Node name="Models" expanded="True" />
-                <Node name="Services" expanded="True">
-                  <Node name="MapService.cs" selected="True" />
+                <Node name="Services" expanded="True" />
+                <Node name="UI" expanded="True">
+                  <Node name="UISkill" expanded="True" />
                 </Node>
-                <Node name="UI" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -54,6 +51,6 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="356ac82a-012d-423e-b962-261324249449" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0c70e2bf-195a-43ba-b082-4dcc87fdae4f" />
   <MultiItemStartupConfigurations />
 </Properties>

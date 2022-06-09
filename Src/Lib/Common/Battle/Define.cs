@@ -19,6 +19,35 @@ namespace Common.Battle
         MDEF = 8,
         SPD = 9,
         CRI = 10,
+
         MAX
+    }
+
+    public enum SkillType
+    {
+        Normal = 0,
+        Skill = 1
+    }
+
+    public enum TargetType
+    {
+        None = 0,
+        Target = 1,
+        Self = 2,
+        Position
+    }
+
+    public enum BuffEffect
+    {
+        None = 0,
+        Stun = 1
+    }
+
+    public enum SkillResult
+    {
+        OK = 0,
+        InvalidTarget = 1,
+        OutOfMP,
+        Cooldown
     }
 }

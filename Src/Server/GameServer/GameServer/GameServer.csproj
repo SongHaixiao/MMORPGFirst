@@ -106,7 +106,7 @@
       <DependentUpon>Entities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Entities\Character.cs" />
-    <Compile Include="Entities\CharacterBase.cs" />
+    <Compile Include="Entities\Creature.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\Monster.cs" />
     <Compile Include="Models\Spawner.cs" />
@@ -167,6 +167,9 @@
     </Compile>
     <Compile Include="Utils\Time.cs" />
     <Compile Include="Managers\SessionManager.cs" />
+    <Compile Include="Battle\Skill.cs" />
+    <Compile Include="Battle\SkillManager.cs" />
+    <Compile Include="Services\BattleService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -226,6 +229,9 @@
     <Content Include="log4net.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Battle\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

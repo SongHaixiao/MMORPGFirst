@@ -78,6 +78,8 @@
     <Compile Include="Battle\Define.cs" />
     <Compile Include="Battle\AttributeData.cs" />
     <Compile Include="Battle\Attributes.cs" />
+    <Compile Include="Data\SkillDefine.cs" />
+    <Compile Include="Data\BuffDefine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

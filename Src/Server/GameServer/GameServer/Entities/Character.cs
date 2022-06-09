@@ -15,7 +15,7 @@ namespace GameServer.Entities
     /// <summary>
     /// Player Character Class
     /// </summary>
-    class Character : CharacterBase, IPostResponser
+    class Character : Creature, IPostResponser
     {
         public TCharacter Data;
 
@@ -33,29 +33,22 @@ namespace GameServer.Entities
         // public Chat Chat;
 
         public Character(CharacterType type, TCharacter cha) :
-            base(new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ), new Core.Vector3Int(100, 0, 0))
+            base(type, cha.TID, cha.Level, new Core.Vector3Int(cha.MapPosX, cha.MapPosY, cha.MapPosZ), new Core.Vector3Int(100, 0, 0))
         {
             // loading character information while loading game
 
             // initialization character
-            this.Data = cha;
             this.Id = cha.ID;
-            this.Info = new NCharacterInfo();
-            this.Info.Type = type;
-            this.Info.Id = cha.ID;
-            this.Info.EntityId = this.entityId;
             this.Info.Name = cha.Name;
-            this.Info.Level = 10;//cha.Level;
+            this.Info.Id = cha.ID;
             this.Info.Exp = cha.Exp;
-            this.Info.ConfigId = cha.TID;
             this.Info.Class = (CharacterClass)cha.Class;
             this.Info.mapId = cha.MapID;
             this.Info.Gold = cha.Gold;
             this.Info.Ride = 0;
-            this.Info.Entity = this.EntityData;
-            this.Define = DataManager.Instance.Characters[this.Info.ConfigId];
 
             // initialization item
+            this.Data = cha;
             this.ItemManger = new ItemManager(this);
             this.ItemManger.GetItemInfos(this.Info.Items);
 
@@ -106,6 +99,20 @@ namespace GameServer.Entities
             CheckLevelUp();
         }
 
+        public long Gold
+        {
+            get { return this.Data.Gold; }
+            set
+            {
+                if (this.Data.Gold == value)
+                    return;
+
+                this.StatusManger.AddGoldChange((int)(value - this.Data.Gold));
+                this.Data.Gold = value;
+                this.Info.Gold = value;
+            }
+        }
+
         public long Exp
         {
             get { return this.Data.Exp; }
@@ -114,6 +121,7 @@ namespace GameServer.Entities
                 if (this.Data.Exp == value)
                     return;
                 this.StatusManger.AddExpChange((int)(value - this.Data.Exp));
+                this.Data.Exp = value;
                 this.Data.Exp = value;
             }
         }
@@ -127,19 +135,7 @@ namespace GameServer.Entities
                     return;
                 this.StatusManger.AddLevelUp((int)(value - this.Data.Level));
                 this.Data.Level = value;
-            }
-        }
-
-        public long Gold
-        {
-            get { return this.Data.Gold; }
-            set
-            {
-                if (this.Data.Gold == value)
-                    return;
-
-                this.StatusManger.AddGoldChange((int)(value - this.Data.Gold));
-                this.Data.Gold = value;
+                this.Data.Level = value;
             }
         }
 

@@ -101,6 +101,8 @@ message NCharacterInfo {
 	repeated NFriendInfo friends = 17;
 	NGuildInfo guild = 18;
 	int32 ride = 19;
+
+	repeated NSkillInfo Skills = 20;
 }
 
 message NAttributeDynamic
@@ -113,6 +115,12 @@ message NItemInfo
 {
 	int32 id = 1;
 	int32 count = 2;
+}
+
+message NSkillInfo
+{
+    int32 id = 1;
+    int32 level = 2;
 }
 
 message NVector3
@@ -760,4 +768,34 @@ message ChatResponse
 	repeated ChatMessage privateMessages = 6;
 	repeated ChatMessage teamMessages	 = 7;
 	repeated ChatMessage guildMessages   = 8; 
+}
+
+// Battle
+
+enum SKILL_RESULT
+{
+    OK = 0;             // success
+    OUT_OF_MP = 1;      // MP is not enough
+    COOL_DOWN = 2;      // skill is cooling down
+    INVALID_TARGET = 3; // target is invalid
+}
+
+message NSkillCastInfo
+{
+    int32 skillId = 1;
+    int32 casterId = 2;
+    int32 targetId = 3;
+    NVector3 position = 4;
+}
+
+message SkillCastRequest
+{
+    NSkillCastInfo castInfo = 1;
+}
+
+message SkillCastResponse
+{
+    RESULT result = 1;
+    string errormsg = 2;
+    NSkillCastInfo castInfo = 3;
 }

@@ -1,1 +1,2 @@
+/Users/benjiaminsong/To Do/GitHub/MMORPGFirst/Src/Client/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
 /Users/benjiaminsong/To Do/GitHub/MMORPGFirst/Src/Client/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache

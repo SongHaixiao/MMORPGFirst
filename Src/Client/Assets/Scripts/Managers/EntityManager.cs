@@ -55,5 +55,12 @@ namespace Managers
                 notifiers.Remove(entity.Id);
             }
         }
+
+        public Entity GetEntity(int entityId)
+        {
+            entityId entity = null;
+            Entities.TryGetValue(entityId, out entity);
+            return entity;
+        }
     }
 }

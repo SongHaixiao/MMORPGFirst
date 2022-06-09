@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entities;
 using Managers;
+using Models;
 
-public class EntityController : MonoBehaviour, IEntityNotify
+public class EntityController : MonoBehaviour, IEntityNotify, IEntityController
 {
     /* Function:
      *  1.  接收服务器数据，通过接收到的数据来进行逻辑控制除了玩家本身角色实体外的其他角色实体；
@@ -151,5 +152,20 @@ public class EntityController : MonoBehaviour, IEntityNotify
     public void SetRidePosition(Vector3 position)
     {
         this.anim.transform.position = position + (this.anim.transform.position - this.rideBone.position);
+    }
+
+    public OnMouseDown()
+    {
+        BattleManager.Instance.CurrentTarget = this.entity as Creature;
+    }
+
+    public void PlayAnim(string name)
+    {
+        this.anim.SetTrigger(name);
+    }
+
+    public void SetStandby(bool standby)
+    {
+        this.anim.SetBool("Standby", standby);
     }
 }

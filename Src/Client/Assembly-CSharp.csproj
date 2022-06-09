@@ -60,7 +60,7 @@
     <Compile Include="Assets\FX\Scripts\uv_l.cs" />
     <Compile Include="Assets\Scripts\Assets\Resloader.cs" />
     <Compile Include="Assets\Scripts\Config\Config.cs" />
-    <Compile Include="Assets\Scripts\Entities\Character.cs" />
+    <Compile Include="Assets\Scripts\Entities\Creature.cs" />
     <Compile Include="Assets\Scripts\Entities\Entity.cs" />
     <Compile Include="Assets\Scripts\GameObject\EntityController.cs" />
     <Compile Include="Assets\Scripts\GameObject\GameObjectTool.cs" />
@@ -139,6 +139,18 @@
     <Compile Include="Assets\Scripts\Utilities\GameUtil.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoSingleton.cs" />
     <Compile Include="Assets\Scripts\Utilities\Singleton.cs" />
+    <Compile Include="Assets\Scripts\UI\UISkill\UISkill.cs" />
+    <Compile Include="Assets\Scripts\Managers\Inputmanager.cs" />
+    <Compile Include="Assets\Scripts\Entities\Character.cs" />
+    <Compile Include="Assets\Scripts\Entities\Monster.cs" />
+    <Compile Include="Assets\Scripts\Battle\Skill.cs" />
+    <Compile Include="Assets\Scripts\Battle\SkillManager.cs" />
+    <Compile Include="Assets\Scripts\UI\UISkill\UISkillItem.cs" />
+    <Compile Include="Assets\Scripts\UI\UISkill\UISkillSlot.cs" />
+    <Compile Include="Assets\Scripts\UI\UISkill\UISkillSlots.cs" />
+    <Compile Include="Assets\Scripts\Managers\BattleManager.cs" />
+    <Compile Include="Assets\Scripts\Services\BattleService.cs" />
+    <Compile Include="Assets\Scripts\Entities\NewClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\FX\Shader\ParticlesNiuQu01.shader" />

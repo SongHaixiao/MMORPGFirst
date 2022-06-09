@@ -36,6 +36,8 @@ namespace GameServer
             UserService.Instance.Init();
             ItemService.Instance.Init();
             QuestService.Instance.Init();
+            BattleService.Instance.Init();
+
             thread = new Thread(new ThreadStart(this.Update));
             return true;
         }

@@ -100,6 +100,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
             ec.entity = character;
             ec.isPlayer = character.IsCurrentPlayer;
             ec.Ride(character.Info.Ride);
+            character.Controller = ec;
         }
 
         // No.7 : 启用 PlayerInputController 控制器组件：
