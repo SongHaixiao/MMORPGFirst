@@ -57,7 +57,7 @@ public class PlayerInputController : MonoBehaviour
         if (character == null)
             return;
 
-        if (InputManager.Instance != null && InputManager.Instance.IsInputMode) return;
+        //if (InputManager.Instance != null && InputManager.Instance.IsInputMode) return;
 
         // get vertical varaible from untiy
         float v = Input.GetAxis("Vertical");

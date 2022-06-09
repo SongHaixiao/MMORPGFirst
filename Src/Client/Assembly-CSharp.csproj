@@ -59,6 +59,7 @@
     <Compile Include="Assets\FX\Scripts\DelayActiveChild.cs" />
     <Compile Include="Assets\FX\Scripts\uv_l.cs" />
     <Compile Include="Assets\Scripts\Assets\Resloader.cs" />
+    <Compile Include="Assets\Scripts\Config\Config.cs" />
     <Compile Include="Assets\Scripts\Entities\Character.cs" />
     <Compile Include="Assets\Scripts\Entities\Entity.cs" />
     <Compile Include="Assets\Scripts\GameObject\EntityController.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\Scripts\Managers\NPCManager.cs" />
     <Compile Include="Assets\Scripts\Managers\QuestManager.cs" />
     <Compile Include="Assets\Scripts\Managers\ShopManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\SoundDefine.cs" />
     <Compile Include="Assets\Scripts\Managers\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Managers\SpriteManger.cs" />
     <Compile Include="Assets\Scripts\Managers\TestManager.cs" />
@@ -137,7 +139,6 @@
     <Compile Include="Assets\Scripts\Utilities\GameUtil.cs" />
     <Compile Include="Assets\Scripts\Utilities\MonoSingleton.cs" />
     <Compile Include="Assets\Scripts\Utilities\Singleton.cs" />
-    <Compile Include="Assets\Scripts\Managers\SoundDefine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\FX\Shader\ParticlesNiuQu01.shader" />

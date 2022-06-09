@@ -32,16 +32,16 @@ public class UISystemConfig : UIWindow
 
     public void MusicToogle(bool on)
     {
-        musicOff.enabled = !on;
+        musicOff.enabled = on;
         Config.MusicOn = on;
         SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
     }
 
     public void SoundToogle(bool on)
     {
-        soundOff.enabled = !on;
+        soundOff.enabled = on;
         Config.SoundOn = on;
-        SoundManger.Instance.PlaySound(SoundDefine.SFX_UI_Click);
+        SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
     }
 
     public void MusicVolume(float vol)

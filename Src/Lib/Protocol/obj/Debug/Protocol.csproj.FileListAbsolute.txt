@@ -106,15 +106,6 @@ E:/Github/P14 Begin/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.csproj.CoreC
 E:/Github/P14 Begin/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.csproj.CopyComplete
 E:/Github/P14 Begin/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.dll
 E:/Github/P14 Begin/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.pdb
-E:/Github/P16/MMORPGFirst/Src/Lib/Protocol/bin/Debug/Protocol.dll
-E:/Github/P16/MMORPGFirst/Src/Lib/Protocol/bin/Debug/Protocol.pdb
-E:/Github/P16/MMORPGFirst/Src/Lib/Protocol/bin/Debug/protobuf-net.dll
-E:/Github/P16/MMORPGFirst/Src/Lib/Protocol/bin/Debug/protobuf-net.xml
-E:/Github/P16/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.csproj.AssemblyReference.cache
-E:/Github/P16/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.csproj.CoreCompileInputs.cache
-E:/Github/P16/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.csproj.CopyComplete
-E:/Github/P16/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.dll
-E:/Github/P16/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.pdb
 /Users/benjiaminsong/To Do/GitHub/MMORPGFirst/Src/Lib/Protocol/bin/Debug/Protocol.dll
 /Users/benjiaminsong/To Do/GitHub/MMORPGFirst/Src/Lib/Protocol/bin/Debug/Protocol.pdb
 /Users/benjiaminsong/To Do/GitHub/MMORPGFirst/Src/Lib/Protocol/bin/Debug/protobuf-net.dll
@@ -123,3 +114,12 @@ E:/Github/P16/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.pdb
 /Users/benjiaminsong/To Do/GitHub/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.csproj.CopyComplete
 /Users/benjiaminsong/To Do/GitHub/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.dll
 /Users/benjiaminsong/To Do/GitHub/MMORPGFirst/Src/Lib/Protocol/obj/Debug/Protocol.pdb
+E:\Github\P16\MMORPGFirst\Src\Lib\Protocol\bin\Debug\Protocol.dll
+E:\Github\P16\MMORPGFirst\Src\Lib\Protocol\bin\Debug\Protocol.pdb
+E:\Github\P16\MMORPGFirst\Src\Lib\Protocol\bin\Debug\protobuf-net.dll
+E:\Github\P16\MMORPGFirst\Src\Lib\Protocol\bin\Debug\protobuf-net.xml
+E:\Github\P16\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.AssemblyReference.cache
+E:\Github\P16\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CoreCompileInputs.cache
+E:\Github\P16\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.csproj.CopyComplete
+E:\Github\P16\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.dll
+E:\Github\P16\MMORPGFirst\Src\Lib\Protocol\obj\Debug\Protocol.pdb

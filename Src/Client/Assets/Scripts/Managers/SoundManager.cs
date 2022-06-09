@@ -48,8 +48,23 @@ public class SoundManager : MonoSingleton<SoundManager>
         }
     }
 
+    private int soundVolume;
+    public int SoundVolume
+    {
+        get { return this.soundVolume; }
+        set
+        {
+            if (this.soundVolume != value)
+            {
+                this.soundVolume = value;
+                if (SoundOn) this.SetVolume("SoundVolume", this.soundVolume);
+            }
+        }
+    }
+
     void Start()
     {
+        this.MusicVolume = Config.MusicVolume;
         this.SoundVolume = Config.SoundVolume;
         this.MusicOn = Config.MusicOn;
         this.SoundOn = Config.SoundOn;
@@ -67,7 +82,7 @@ public class SoundManager : MonoSingleton<SoundManager>
 
     private void SetVolume(string name, int value)
     {
-        float volume = value * 0.5f - 50f;
+        float volume = value * 0.5f;
         this.audioMixer.SetFloat(name, volume);
     }
 
@@ -97,7 +112,7 @@ public class SoundManager : MonoSingleton<SoundManager>
             Debug.LogWarningFormat("PlaySound : {0} not existed.", name);
             return;
         }
-        soundAudioSOurce.PlayOnShot(clip);
+        soundAudioSOurce.PlayOneShot(clip);
     }
 
     protected void PlayClipOnAudioSource(AudioSource source, AudioClip clip, bool isLoop)

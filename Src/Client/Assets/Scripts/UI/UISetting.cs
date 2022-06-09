@@ -1,4 +1,5 @@
 using Models;
+using Services;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,8 +9,8 @@ public class UISetting : UIWindow
     public void ExitToCharSelect()
     {
         SceneManager.Instance.LoadScene("CharacterScene");
-        SoundManger.Instance.PlayMusic(SoundDefine.Music_Select);
-        Services.UserServices.Instance.SendGameLeave();
+        SoundManager.Instance.PlayMusic(SoundDefine.Music_Select);
+        UserService.Instance.SendGameLeave();
     }
 
     public void SystemConfig()
@@ -20,6 +21,6 @@ public class UISetting : UIWindow
 
     public void ExitGame()
     {
-        Services.UserServices.Instance.SendGameLeave(true);
+        UserService.Instance.SendGameLeave(true);
     }
 }

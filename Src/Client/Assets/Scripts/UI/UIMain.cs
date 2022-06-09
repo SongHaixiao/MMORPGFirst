@@ -37,25 +37,25 @@ public class UIMain : MonoSingleton<UIMain>
     }
 
 
-    // click UITest Button method
-    // to call UITest prefab
-    public void OnClickUITest()
-    {
-        // get UITest prefab
-        UITest test = UIManager.Instance.Show<UITest>();
+    //// click UITest Button method
+    //// to call UITest prefab
+    //public void OnClickUITest()
+    //{
+    //    // get UITest prefab
+    //    UITest test = UIManager.Instance.Show<UITest>();
 
-        // set UITest prefab's title
-        test.SetTitle("This is a test UI ！");
+    //    // set UITest prefab's title
+    //    test.SetTitle("This is a test UI ！");
 
-        // add listener to close evetn for UI Test prefab
-        test.OnClose += Test_OnClose;
-    }
+    //    // add listener to close evetn for UI Test prefab
+    //    test.OnClose += Test_OnClose;
+    //}
 
-    // method for preocessing the result of UITest
-    private void Test_OnClose(UIWindow sender, UIWindow.WindowResult result)
-    {
-        MessageBox.Show("Click the dialog box : " + result, " Response Result ", MessageBoxType.Information);
-    }
+    //// method for preocessing the result of UITest
+    //private void Test_OnClose(UIWindow sender, UIWindow.WindowResult result)
+    //{
+    //    MessageBox.Show("Click the dialog box : " + result, " Response Result ", MessageBoxType.Information);
+    //}
 
     // click ui button show UIBag
     public void OnClickBag()
@@ -85,10 +85,10 @@ public class UIMain : MonoSingleton<UIMain>
 
     // }
 
-    public void OnClickRide()
-    {
-        UIManager.Instance.Show<UIRide>();
-    }
+    //public void OnClickRide()
+    //{
+    //    UIManager.Instance.Show<UIRide>();
+    //}
 
     public void OnClickSetting()
     {
