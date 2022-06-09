@@ -75,6 +75,9 @@
     <Compile Include="Utils\MathUtil.cs" />
     <Compile Include="Utils\TimeUtil.cs" />
     <Compile Include="GameDefine.cs" />
+    <Compile Include="Battle\Define.cs" />
+    <Compile Include="Battle\AttributeData.cs" />
+    <Compile Include="Battle\Attributes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
