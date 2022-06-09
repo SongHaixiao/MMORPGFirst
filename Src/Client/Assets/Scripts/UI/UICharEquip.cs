@@ -55,10 +55,9 @@ public class UICharEquip : UIWindow
         InitAllEquipItems();
         ClearEquipedList();
         InitEquipedItems();
+        this.money.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
 
         InitAttributes();
-        InitBottomPanel();
-
     }
 
     /// <summary>
@@ -154,14 +153,14 @@ public class UICharEquip : UIWindow
             return;
         }
 
-        this.hp.text = string.Format("{0} / {1}", attributes.MP, attributes.MaxHP);
-        this.mp.text = String.Format("{0} / {1}", attributes.MP, attributes.MaxMP);
+        this.hp.text = string.Format("{0} / {1}", attributes.HP, attributes.MaxHP);
+        this.mp.text = string.Format("{0} / {1}", attributes.MP, attributes.MaxMP);
         this.hpBar.maxValue = attributes.MaxHP;
         this.hpBar.value = attributes.HP;
         this.mpBar.maxValue = attributes.MaxMP;
         this.mpBar.value = attributes.MP;
 
-        for(int i = (int)AttributeType.STR; i < (int)AttributeType.MAX;i++)
+        for(int i = (int)AttributeType.STR; i < (int)AttributeType.MAX; i++)
         {
             if (i == (int)AttributeType.CRI)
                 this.attrs[i - 2].text = string.Format("{0:f2}%", attributes.Final.Data[i] * 100);
@@ -171,11 +170,5 @@ public class UICharEquip : UIWindow
 
 
 
-    }
-
-    // init money dat in bottom panel
-    void InitBottomPanel()
-    {
-        this.money.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
     }
 }

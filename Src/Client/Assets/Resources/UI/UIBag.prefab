@@ -3565,7 +3565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeImage: {fileID: 21300000, guid: 1882fcbc94595fc41925a794d296d952, type: 3}
   tabView: {fileID: 9025797067445129872}
-  tabIndex: 0
+  tabIndex: 1
   selected: 0
 --- !u!1 &9025797067015482718
 GameObject:
@@ -5189,6 +5189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e9524eee66a5d49b5d8cdc7a77e3ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Root: {fileID: 0}
   moeny: {fileID: 9025797067526837506}
   pages:
   - {fileID: 9025797067768818217}
