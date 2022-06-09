@@ -97,6 +97,7 @@
     <Content Include="bin\Debug\UnityEngine.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Battle\" />
     <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
