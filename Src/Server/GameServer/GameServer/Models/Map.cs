@@ -15,7 +15,7 @@ using GameServer.Services;
 
 namespace GameServer.Models
 {
-    class Map
+    public class Map
     {
         internal class MapCharacter
         {
@@ -42,6 +42,8 @@ namespace GameServer.Models
         // spawn manager
         SpawnManager SpawnManager = new SpawnManager();
 
+        public Battle.Battle Battle;
+
         // monster manager
         public MonsterManager MonsterManager = new MonsterManager();
 
@@ -50,11 +52,13 @@ namespace GameServer.Models
             this.Define = define;
             this.SpawnManager.Init(this);
             this.MonsterManager.Init(this);
+            this.Battle = new Battle.Battle(this);
         }
 
         internal void Update()
         {
             SpawnManager.Update();
+            this.Battle.Update();
         }
 
         /// <summary>
@@ -184,7 +188,12 @@ namespace GameServer.Models
         {
             foreach (var kv in this.MapCharacters)
             {
-                kv.Value.connection.Session.Response.skillCast = response.skillCast;
+                if(response.skillCast != null)
+                    kv.Value.connection.Session.Response.skillCast = response.skillCast;
+
+                if (response.skillHits != null)
+                    kv.Value.connection.Session.Response.skillHits = response.skillHits;
+
                 kv.Value.connection.SendResponse();
             }
         }

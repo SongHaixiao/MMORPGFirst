@@ -151,6 +151,7 @@
     <Compile Include="Assets\Scripts\Managers\BattleManager.cs" />
     <Compile Include="Assets\Scripts\Services\BattleService.cs" />
     <Compile Include="Assets\Scripts\Entities\NewClass.cs" />
+    <Compile Include="Assets\Scripts\UI\NewMonoBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\FX\Shader\ParticlesNiuQu01.shader" />

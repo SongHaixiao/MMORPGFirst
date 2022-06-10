@@ -10,7 +10,7 @@ using SkillBridge.Message;
 
 namespace GameServer.Managers
 {
-    class MonsterManager
+    public class MonsterManager
     {
         private Map Map; // monster belongs to map
 

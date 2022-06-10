@@ -1,35 +1,26 @@
 ﻿<Properties StartupConfiguration="{2C54695D-AC9F-455B-846D-0E865991F681}|Default">
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.GameServer PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GameServer/Entities/Creature.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameServer/Battle/Skill.cs">
     <Files>
-      <File FileName="GameServer/Entities/Monster.cs" Line="14" Column="10" IsPinned="True" />
-      <File FileName="GameServer/Entities/Character.cs" Line="126" Column="14" IsPinned="True" />
-      <File FileName="GameServer/Entities/Creature.cs" Line="41" Column="24" IsPinned="True" />
-      <File FileName="GameServer/Entities/Entity.cs" Line="11" Column="12" />
-      <File FileName="GameServer/Battle/SkillManager.cs" Line="57" Column="10" />
-      <File FileName="../../Lib/Common/Network/MessageDispatch.cs" Line="72" Column="117" />
-      <File FileName="../../Lib/Common/Battle/Define.cs" Line="53" Column="2" />
-      <File FileName="GameServer/Services/BattleService.cs" Line="11" Column="30" />
-      <File FileName="GameServer/Models/Map.cs" Line="185" Column="25" />
-      <File FileName="GameServer/Managers/DataManager.cs" Line="1" Column="1" />
-      <File FileName="../../Lib/Common/Network/MessageDistributer.cs" Line="1" Column="1" />
-      <File FileName="../../Lib/Common/Data/SkillDefine.cs" Line="12" Column="9" />
+      <File FileName="GameServer/Battle/Skill.cs" Line="33" Column="23" IsPinned="True" />
+      <File FileName="GameServer/Battle/BattleManager.cs" Line="33" Column="1" />
+      <File FileName="GameServer/Models/Map.cs" Line="195" Column="88" />
+      <File FileName="../../Lib/Common/Network/MessageDispatch.cs" Line="53" Column="7" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GameServer" expanded="True">
+            <Node name="Common" expanded="True">
+              <Node name="Network" expanded="True" />
+            </Node>
             <Node name="GameServer" expanded="True">
-              <Node name="Entities" expanded="True">
-                <Node name="Creature.cs" selected="True" />
+              <Node name="Battle" expanded="True">
+                <Node name="Skill.cs" selected="True" />
               </Node>
-              <Node name="Managers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Services" expanded="True" />
             </Node>
@@ -41,4 +32,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

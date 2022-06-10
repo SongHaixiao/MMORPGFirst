@@ -47,19 +47,15 @@ namespace Managers
         }
 
         // add character object into game
-        public void AddCharacter(SkillBridge.Message.NCharacterInfo cha)
+        public void AddCharacter(Character character)
         {
-            Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", cha.Id, cha.Name, cha.mapId, cha.Entity.String());
-            Character character = new Character(cha);
-            this.Characters[cha.EntityId] = character;
+            Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", character.Id, character.Name, character.Info.mapId, character.Entity.String());
+            this.Characters[character.entityId] = character;
             EntityManager.Instance.AddEntity(character);
             if (this.OnCharacterEnter != null)
             {
                 this.OnCharacterEnter(character);
             }
-
-            if (cha.EntityId == User.Instance.CurrentCharacterInfo.EntityId)
-                User.Instance.CurrentCharacter = character;
         }
 
 

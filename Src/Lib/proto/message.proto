@@ -290,6 +290,9 @@ message NetMessageResponse{
 	GuildAdminResponse guildAdmin = 29;
 
 	ChatResponse chat = 30;
+    
+    SkillCastResponse skillCast = 50;
+    SkillHitResponse skillHits = 51;
 
 	StatusNotify statusNotify = 100;
 }
@@ -778,6 +781,15 @@ enum SKILL_RESULT
     OUT_OF_MP = 1;      // MP is not enough
     COOL_DOWN = 2;      // skill is cooling down
     INVALID_TARGET = 3; // target is invalid
+    OUT_OF_RANGE = 4;   // skill out of range
+    CASTING = 5;        // skill is cooling down
+}
+
+enum SKILL_STATUS
+{
+    NONE = 0;
+    CASTING = 1;        // skill is casting
+    RUNNING = 2;        // skill is running
 }
 
 message NSkillCastInfo
@@ -786,6 +798,22 @@ message NSkillCastInfo
     int32 casterId = 2;
     int32 targetId = 3;
     NVector3 position = 4;
+}
+
+message NDamageInfo
+{
+    int32 entityId = 1;
+    int32 damage = 2;
+    bool crit = 3;
+    bool will_dead = 4;
+}
+
+message NSkillHitInfo
+{
+    int32 skillId = 1;
+    int32 casterId = 2;
+    int32 hitId = 3;
+    repeated NDamageInfo damages = 4;
 }
 
 message SkillCastRequest
@@ -798,4 +826,12 @@ message SkillCastResponse
     RESULT result = 1;
     string errormsg = 2;
     NSkillCastInfo castInfo = 3;
+    NDamageInfo damage = 4;
+}
+
+message SkillHitResponse
+{
+    RESULT result = 1;
+    string errormsg = 2;
+    repeated NSkillHitInfo hits = 3;
 }

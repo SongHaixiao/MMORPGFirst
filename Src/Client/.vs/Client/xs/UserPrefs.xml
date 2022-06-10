@@ -1,19 +1,11 @@
 ﻿<Properties StartupConfiguration="{12F44184-A422-5F27-22E6-507969043F15}|">
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="31ec2879-6660-453c-8942-6fb588854a35" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Battle/Skill.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameObject/PlayerInputController.cs">
     <Files>
-      <File FileName="Assets/Scripts/Battle/Skill.cs" Line="45" Column="18" IsPinned="True" />
-      <File FileName="Assets/Scripts/UI/UISkill/UISkillSlot.cs" Line="1" Column="1" IsPinned="True" />
-      <File FileName="Assets/Scripts/Managers/BattleManager.cs" Line="1" Column="1" IsPinned="True" />
-      <File FileName="Assets/Scripts/Services/NewClass.cs" Line="48" Column="42" />
-      <File FileName="Assets/Scripts/Managers/EntityManager.cs" Line="64" Column="10" />
-      <File FileName="Assets/Scripts/Entities/Creature.cs" Line="20" Column="1" />
-      <File FileName="Assets/Scripts/Entities/NewClass.cs" Line="13" Column="2" />
-      <File FileName="Assets/Scripts/Entities/Entity.cs" Line="19" Column="45" />
-      <File FileName="Assets/Scripts/Battle/SkillManager.cs" Line="54" Column="10" />
-      <File FileName="Assets/Scripts/Managers/GameObjectManager.cs" Line="103" Column="39" />
-      <File FileName="Assets/Scripts/GameObject/EntityController.cs" Line="169" Column="47" />
+      <File FileName="Assets/Scripts/GameObject/PlayerInputController.cs" Line="50" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,12 +14,11 @@
           <Node name="Client" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Battle" expanded="True">
-                  <Node name="Skill.cs" selected="True" />
-                </Node>
+                <Node name="Battle" expanded="True" />
                 <Node name="Entities" expanded="True" />
-                <Node name="GameObject" expanded="True" />
-                <Node name="Managers" expanded="True" />
+                <Node name="GameObject" expanded="True">
+                  <Node name="PlayerInputController.cs" selected="True" />
+                </Node>
                 <Node name="Models" expanded="True" />
                 <Node name="Services" expanded="True" />
                 <Node name="UI" expanded="True">
@@ -51,6 +42,4 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0c70e2bf-195a-43ba-b082-4dcc87fdae4f" />
-  <MultiItemStartupConfigurations />
 </Properties>

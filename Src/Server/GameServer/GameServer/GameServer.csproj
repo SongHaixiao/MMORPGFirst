@@ -170,6 +170,9 @@
     <Compile Include="Battle\Skill.cs" />
     <Compile Include="Battle\SkillManager.cs" />
     <Compile Include="Services\BattleService.cs" />
+    <Compile Include="Battle\Battle.cs" />
+    <Compile Include="Battle\BattleContext.cs" />
+    <Compile Include="Battle\BattleManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

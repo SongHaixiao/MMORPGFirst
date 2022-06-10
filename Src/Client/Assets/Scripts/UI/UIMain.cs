@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Models;
 using Services;
 using System;
+using Managers;
 
 public class UIMain : MonoSingleton<UIMain>
 {
@@ -14,11 +15,19 @@ public class UIMain : MonoSingleton<UIMain>
     public Text avatarName;
     public Text avatarLevle;
 
+    public UICreatureInfo targetUI;
+    public UISkillSlots skillSlots;
+
     // Start is called before the first frame update
     protected override void OnStart()
     {
         //No.2 start UpdateAvatar() method
         this.UpdateAvatar();
+        this.targetUI.gameObject.SetActive(false);
+        BattleManager.Instance.OnTargetChanged += OnTargetChanged;
+
+        User.Instance.OnCharacterInit += this.skillSlots.UpdateSkills;
+        this.skillSlots.UpdateSkills();
     }
 
 
@@ -104,4 +113,17 @@ public class UIMain : MonoSingleton<UIMain>
     // {
 
     // }
+
+    private void OnTargetChanged(Entities.Creature target)
+    {
+        if(target != null)
+        {
+            if (!targetUI.isActiveAndEnabled) targetUI.gameObject.SetActive(true);
+            targetUI.Target = target;
+        }
+        else
+        {
+            targetUI.gameObject.SetActive(false);
+        }
+    }
 }

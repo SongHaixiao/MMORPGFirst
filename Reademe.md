@@ -10,4 +10,8 @@
 
     - Step04 : Skill
     
+    - Step05 :
+    
+    - Step06 :
+    
 - Note ： Change the connection for Server and DB

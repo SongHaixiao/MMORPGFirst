@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Battle
 {
@@ -26,13 +27,25 @@ namespace Battle
                 Skill skill = new Skill(skillInfo, this.Owner);
                 this.AddSkill(skill);
             }
+
+        }
+
+        public void UpdateSkills()
+        {
+            foreach(var skillInfo in this.Owner.Info.Skills)
+            {
+                Skill skill = this.GetSkill(skillInfo.Id);
+                if (skill != null)
+                    skill.Info = skillInfo;
+                else
+                    this.AddSkill(skill);
+            }
         }
 
         public void AddSkill(Skill skill)
         {
             this.Skills.Add(skill);
         }
-
 
         public Skill GetSkill(int skillId)
         {

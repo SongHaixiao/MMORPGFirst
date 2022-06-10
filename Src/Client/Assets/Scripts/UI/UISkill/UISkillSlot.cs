@@ -27,6 +27,7 @@ public class UISkillSlot : MonoBehavior, IPointerClickHandler
     // Update is called once per frame
     void Update()
     {
+        if (this.skill == null) return;
         if (this.skill.CD > 0)
         {
             if (!overlay.enabled) overlay.enabled = true;
@@ -58,6 +59,10 @@ public class UISkillSlot : MonoBehavior, IPointerClickHandler
             case SkillResult.Cooldown:
                 MessageBox.Show("Skill : [ " + this.skill.Define.Name + " ] is cooling down !");
                 return;
+
+            case SkillResult.OutOfRange:
+                MessageBox.Show("Skill : [ " + this.skill.Define.Name + " ] is out of range !");
+                return;
         }
 
         BattleManager.Instance.CastSkill(this.skill);
@@ -66,6 +71,11 @@ public class UISkillSlot : MonoBehavior, IPointerClickHandler
     internal void SetSkill(Skill value)
     {
         this.skill = value;
-        if (this.icon != null) this.icon.overrideSprite = Resloader.Load<Sprite>(this.skill.Define.Icon);
+        if(this.icon != null)
+        {
+            this.icon.overrideSprite = Resloader.Load<Sprite>(this.skill.Define.Icon);
+            this.icon.SetAllDirty();
+            
+        }
     }
 }

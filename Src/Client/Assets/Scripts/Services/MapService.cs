@@ -46,10 +46,19 @@ namespace Services
                 if (User.Instance.CurrentCharacterInfo == null || (cha.Type == CharacterType.Player && User.Instance.CurrentCharacterInfo.Id == cha.Id))
                 {
                     User.Instance.CurrentCharacterInfo = cha;
+                    if (User.Instance.CurrentCharacter == null)
+                        User.Instance.CurrentCharacter = new Character(cha);
+
+                    else
+                        User.Instance.CurrentCharacter.UpdateInfo(cha);
+
+                    User.Instance.CharacterInited();
+                    CharacterManager.Instance.AddCharacter(User.Instance.CurrentCharacter);
+                    continue;
                 }
 
                 // not current character, add it int character manager
-                CharacterManager.Instance.AddCharacter(cha);
+                CharacterManager.Instance.AddCharacter(new Character(cha));
             }
 
             // if current map is not response map,

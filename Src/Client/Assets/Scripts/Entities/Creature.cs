@@ -58,6 +58,11 @@ namespace Entities
             }
         }
 
+        internal int Distance(Creature target)
+        {
+            return (int)Vector3Int.Distance(this.SetPosition, target.position);
+        }
+
         public bool IsCurrentPlayer
         {
             get
@@ -75,6 +80,14 @@ namespace Entities
             this.Attributes.Init(this.Define, this.Info.Level, this.GetEquips(), this.Info.attrDynamic);
 
             this.SkillMgr = new SkillManager(this);
+        }
+
+        public void UpdateInfo(NCharacterInfo info)
+        {
+            this.SetEntityData(info.Entity);
+            this.Info = info;
+            this.Attributes.Init(this.Define, this.Info.Level, this.GetEquips(), this.Info.attrDynamic);
+            this.SkillMgr.UpdateSkills();
         }
 
         public virtual List<EquipDefine> GetEquips()
@@ -112,11 +125,11 @@ namespace Entities
             this.SetPosition = position;
         }
 
-        public void CastSkill(int skillId, Creature target, NVector3 pos)
+        public void CastSkill(int skillId, Creature target, NVector3 pos, NDamageInfo damage)
         {
             this.SetStandby(true);
             var skill = this.SkillMgr.GetSkill(skillId);
-            skill.BeginCast();
+            skill.BeginCast(damage);
         }
 
         public void PlayAnim(string name)
@@ -135,6 +148,19 @@ namespace Entities
         {
             base.OnUpdate(delta);
             this.SkillMgr.OnUpdate(delta);
+        }
+
+        public void DoDamage(NDamageInfo damage)
+        {
+            Debug.LogFormat("DoDamage : {0}", damage);
+            this.Attributes.HP -= damage.Damage;
+            this.PlayAnim("Hurt");
+        }
+
+        internal void DoSkillHit(int skillId, int hitId, List<NDamageInfo> damages)
+        {
+            var skill = this.SkillMgr.GetSkill(skillId);
+            skill.DoHit(hitId, damages);
         }
     }
 }
