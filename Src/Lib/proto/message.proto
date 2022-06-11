@@ -246,6 +246,9 @@ message NetMessageRequest{
 	GuildListRequest guildList = 28;
 	GuildAdminRequest guildAdmin = 29;
 
+	SkillCastResponse skillCast = 50;
+    SkillHitResponse skillHits = 51;
+
 	ChatRequest chat = 30;
 }
 

@@ -1,6 +1,8 @@
-﻿using Common.Data;
+﻿using Common;
+using Common.Data;
 using Common.Utils;
 using GameServer.Battle;
+using GameServer.Core;
 using GameServer.Entities;
 using GameServer.Managers;
 using SkillBridge.Message;
@@ -92,14 +94,14 @@ namespace Battle
                 return SkillResult.CoolDown;
             }
 
-            return SkillResult.OK;
+            return SkillResult.Ok;
         }
 
         internal SkillResult Cast(BattleContext context)
         {
             SkillResult result = this.CanCast(context);
 
-            if(result == SkillResult.OK)
+            if(result == SkillResult.Ok)
             {
                 this.castingTime = 0;
                 this.skillTime = 0;
@@ -124,7 +126,7 @@ namespace Battle
                 }
             }
 
-            Log.InfoFormage("Skill [{0}].Cast Result : [{1}] Status : {2}", this.Define.Name, result, this.Status);
+            Log.InfoFormat("Skill [{0}].Cast Result : [{1}] Status : {2}", this.Define.Name, result, this.Status);
       
             return result;
         }
@@ -278,7 +280,7 @@ namespace Battle
                     }
                     else
                     {
-                        this.Status = SkillResult.None;
+                        this.Status = SkillStatus.None;
                         Log.InfoFormat("Skill[{0}].UpdateSkill Finish", this.Define.Name);
                     }
                 }

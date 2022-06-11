@@ -21,7 +21,7 @@ namespace GameServer.Battle
 
 		public SkillResult Result;
 
-		public BattleContex(Battle battle)
+		public BattleContext(Battle battle)
         {
 			this.Battle = battle;
         }

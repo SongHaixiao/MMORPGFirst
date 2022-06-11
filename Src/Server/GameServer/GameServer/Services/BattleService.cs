@@ -26,7 +26,7 @@ namespace GameServer.Services
 
         void OnSkillCast(NetConnection<NetSession> sender, SkillCastRequest request)
         {
-            Log.InfoFormat("OnSkillCast :: skill : {0}, caster : {1}, target : {2}, pos : {3}", request.castInfo.skillId, request.castInfo.casterId, request.castInfo.targetId, request.castInfo.position);
+            Log.InfoFormat("OnSkillCast :: skill : {0}, caster : {1}, target : {2}, pos : {3}", request.castInfo.skillId, request.castInfo.casterId, request.castInfo.targetId, request.castInfo.Position);
             BattleManager.Instance.ProcessBattleMessage(sender, request);
         }
     }

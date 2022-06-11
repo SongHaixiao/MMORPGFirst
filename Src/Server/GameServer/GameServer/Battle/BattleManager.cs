@@ -1,5 +1,6 @@
 ﻿using Common;
 using GameServer.Entities;
+using Network;
 using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
@@ -9,14 +10,14 @@ using System.Threading.Tasks;
 
 namespace GameServer.Managers
 {
-	public class BattleManager : Singleton<BattleManager>
+	class BattleManager : Singleton<BattleManager>
 	{
         static long bid = 0;
-
         public void Init()
         {
 
         }
+
 
         public void ProcessBattleMessage(NetConnection<NetSession> sender, SkillCastRequest request)
         {

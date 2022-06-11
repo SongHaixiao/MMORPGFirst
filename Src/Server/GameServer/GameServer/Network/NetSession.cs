@@ -18,17 +18,13 @@ namespace Network
         public NEntity Entity { get; set; }
         public IPostResponser PostResponser { get; set; }
 
-        // when network is disconnected, clear data in Session
-        // to avoid re-load previous character
-        internal void Disconnected()
+        public void Disconnected()
         {
             this.PostResponser = null;
-
-            // Character is not null after network is disconnected,
-            // clear Character data via UserService 
             if (this.Character != null)
                 UserService.Instance.CharacterLeave(this.Character);
         }
+
 
         NetMessage response;
 
@@ -40,12 +36,8 @@ namespace Network
                 {
                     response = new NetMessage();
                 }
-
                 if (response.Response == null)
-                {
                     response.Response = new NetMessageResponse();
-                }
-
                 return response.Response;
             }
         }
@@ -61,7 +53,6 @@ namespace Network
                 response = null;
                 return data;
             }
-
             return null;
         }
     }
