@@ -9,6 +9,7 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
     // open components
     public GameObject nameBarPrefab;
     public GameObject npcStatusPrefab;
+    public GameObject popupTextPrefab;
 
     // dicionary to manager world element ui
     private Dictionary<Transform, GameObject> elementNames = new Dictionary<Transform, GameObject>();
@@ -17,7 +18,8 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
     protected override void OnStart()
     {
         nameBarPrefab.SetActive(false);
-        npcStatusPrefab.SetActive(false);
+        //npcStatusPrefab.SetActive(false);
+        popupTextPrefab.SetActive(false);
     }
 
     // add UINameBar for character object when it is created
@@ -72,5 +74,13 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
             Destroy(this.elementStatus[owner]);
             this.elementStatus.Remove(owner);
         }
+    }
+
+    public void ShowPopupText(PopupType type, Vector3 position, float damage, bool isCrit)
+    {
+        GameObject goPopup = Instantiate(popupTextPrefab, position, Quaternion.identity, this.transfrom);
+        goPopup.name = "Popup";
+        goPopup.GetComponent<UIPopupText>().InitPopup(type, damage, isCrit);
+        goPopup.SetActive(true);
     }
 }

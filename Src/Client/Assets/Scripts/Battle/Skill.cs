@@ -14,16 +14,19 @@ namespace Battle
     {
         public NSkillInfo Info;
         public Creature Owner;
+        public Creature Target;
+        private Vector3Int TargetPosition;
         public SkillDefine Define;
-        public NDamageInfo Damage
 
-        private int Hit = 0;
+        public int Hit = 0;
         private float skillTime = 0;
         private float castTime = 0;
+        private SkillStatus Status;
 
         public bool IsCasting = false;
 
         Dictionary<int, List<NDamageInfo>> HitMap = new Dictionary<int, List<NDamageInfo>>();
+        List<Bullet> Bullets = new List<Bullet>();
 
         private float cd = 0;
         public float CD
@@ -71,14 +74,26 @@ namespace Battle
             return SkillResult.OK;
         }
 
-        public void BeginCast(NDamageInfo damage) 
+        public void BeginCast(Creature target, NVector3 pos) 
         {
             this.IsCasting = true;
             this.castTime = 0;
             this.skillTime = 0;
             this.cd = this.Define.CD;
-            this.Damage = damage;
+            this.Target = target;
+            this.TargetPosition = pos;
             this.Owner.PlayAnim(this.Define.SkillAnim);
+            this.Bullets.Clear();
+            this.HitMap.Clear();
+
+            if(this.Define.CastTarget == Common.Battle.TargetType.Position)
+            {
+                this.Owner.FaceTo(this.TargetPosition.ToVector3Int());
+            }
+            else if(this.Define.CastTarget == Common.Battle.TargetType.Target)
+            {
+                this.Owner.FaceTo(this.Target.position);
+            }
 
             if(this.Define.CastTime > 0)
             {
@@ -86,7 +101,27 @@ namespace Battle
             }
             else
             {
-                this.Status = SkillStatus.Running;
+                this.StartSkill();
+            }
+        }
+
+        private void StartSkill()
+        {
+            this.Status = SkillStatus.Running;
+            if(!string.IsNullOrEmpty(this.Define.AOEEffect))
+            {
+                if(this.Define.CastTarget == Common.Battle.TargetType.Position)
+                {
+                    this.Owner.PlayEffect(EffectType.Position, this.Define.AOEEffect, this.TargetPosition);
+                }
+                else if(this.Define.CastTarget == Common.Battle.TargetType.Target)
+                {
+                    this.Owner.PlayEffect(EffectType.Position, this.Define.AOEEffect, this.Target);
+                }
+                else if(this.Define.CastTarget == Common.Battle.TargetType.Self)
+                {
+                    this.Owner.PlayEffect(EffectType.Position, this.Define.AOEEffect, this.Owner);
+                }
             }
         }
 
@@ -114,7 +149,7 @@ namespace Battle
             else
             {
                 this.castTime = 0;
-                this.Status = SkillStatus.Running;
+                this.StartSkill();
                 Debug.LogFormat("Skill [{0}].UpdateCasting Finish", this.Define.Name);
             }
         }
@@ -140,30 +175,69 @@ namespace Battle
 
             else if(this.Define.HitTimes != null && this.Define.HitTimes.Count > 0)
             {
-                if(this.skillTime > this.Define.HitTimes[this.Hit])
+                if(this.Hit < this.Define.HitTimes.Count)
                 {
-                    this.DoHit();
+                    if(this.skillTime > this.Define.HitTimes[this.Hit])
+                    {
+                        this.DoHit();
+                    }
                 }
 
                 else
                 {
-                    this.Status = SkillStatus.None;
-                    this.IsCasting = false;
-                    Debug.LogFormat("Skill [{0}].UpdateSkill Finish", this.Define.Name);
+                    if(!this.Define.Bullet)
+                    {
+                        this.Status = SkillStatus.None;
+                        this.IsCasting = false;
+                        Debug.LogFormat("Skill [{0}].UpdateSkill Finish", this.Define.Name);
+                    }
                 }
             }
 
+            if(this.Define.Bullet)
+            {
+                bool finish = true;
+                foreach(Bullet bullet in this.Bullets)
+                {
+                    bullet.Update();
+                    if (!bullet.Stoped) finish = false;
+                }
+
+                if(finish && this.Hit >= this.Define.HitTimes.Count)
+                {
+                    this.Status = SkillStatus.None;
+                    this.IsCasting = false;
+                    Debug.LogFormat("Skill[{0}].UpdateSkill Finish", this.Define.Name);
+                }
+            }
+        }
+
+        private void DoHit()
+        {
+            if (this.Define.Bullet)
+            {
+                this.CastBullet();
+            }
+            else
+                this.DoHitDamages(this.Hit);
+            this.Hit++;
         }
         
-        private void DnHit()
+        public void DnHitDamages(int hit)
         {
             List<NDamageInfo> damages;
-            if(this.HitMap.TryGetValue(this.Hit, out damage))
+            if(this.HitMap.TryGetValue(hit, out damage))
             {
                 DoHitDamages(damages);
             }
+        }
 
-            this.Hit++;
+        private void CastBullet()
+        {
+            Bullet bullet = new Bullet(this);
+            Debug.LogFormat("Skill[{0}].CastBullet[{1}] Target : {2}", this.Define.);
+            this.Bullets.Add(bullet);
+            this.Owner.PlayEffect(EffectType.Bullet, this.Define.BulletResource, this.Target, bullet.duration);
         }
 
         private void UpdateCD(float delta)
@@ -179,9 +253,17 @@ namespace Battle
             }
         }
 
+        internal void DoHit(NSkillHitInfo hit)
+        {
+            if (hit.isBullet || !this.Define.Bullet)
+            {
+                this.DoHit(hit.hitId, hit.Damages);
+            }
+        }
+
         internal void DoHit(int hitId, List<NDamageInfo> damages)
         {
-            if (hitId <= this.Hit)
+            if (hitId > this.Hit)
                 this.HitMap[hitId] = damages;
             else
                 DoHitDamages(damages);
@@ -193,7 +275,11 @@ namespace Battle
             {
                 Creature target = EntityManager.Instance.GetEntity(dmg.entityId) as Creature;
                 if (target == null) continue;
-                target.DoDamage(dmg);
+                target.DoDamage(dmg, true);
+                if(this.Define.HitEffect != null)
+                {
+                    target.PlayEffect(EffectType.Hit, this.Define.HitEffect, target);
+                }
             }
         }
     }

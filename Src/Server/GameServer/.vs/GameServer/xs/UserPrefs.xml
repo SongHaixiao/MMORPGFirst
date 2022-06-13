@@ -1,28 +1,28 @@
 ﻿<Properties StartupConfiguration="{2C54695D-AC9F-455B-846D-0E865991F681}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.GameServer PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GameServer/Battle/Skill.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Lib/Common/Data/SkillDefine.cs">
     <Files>
-      <File FileName="GameServer/Battle/Skill.cs" Line="33" Column="23" IsPinned="True" />
-      <File FileName="GameServer/Battle/BattleManager.cs" Line="33" Column="1" />
-      <File FileName="GameServer/Models/Map.cs" Line="195" Column="88" />
-      <File FileName="../../Lib/Common/Network/MessageDispatch.cs" Line="53" Column="7" />
+      <File FileName="GameServer/Battle/Skill.cs" Line="243" Column="14" IsPinned="True" />
+      <File FileName="GameServer/Battle/Buff.cs" Line="59" Column="14" IsPinned="True" />
+      <File FileName="GameServer/Battle/BuffManager.cs" Line="37" Column="37" IsPinned="True" />
+      <File FileName="GameServer/Battle/EffectManager.cs" Line="42" Column="35" IsPinned="True" />
+      <File FileName="GameServer/Entities/Creature.cs" Line="27" Column="27" />
+      <File FileName="../../Lib/Common/Data/BuffDefine.cs" Line="21" Column="19" />
+      <File FileName="../../Lib/Common/Battle/Attributes.cs" Line="145" Column="15" />
+      <File FileName="../../Lib/Common/Network/MessageDispatch.cs" Line="43" Column="1" />
+      <File FileName="GameServer/Models/Map.cs" Line="200" Column="52" />
+      <File FileName="GameServer/Battle/BattleContext.cs" Line="19" Column="35" />
+      <File FileName="../../Lib/Common/MessageExtend.cs" Line="68" Column="59" />
+      <File FileName="../../Lib/Common/Data/CharacterDefine.cs" Line="17" Column="1" />
+      <File FileName="../../Lib/Common/Data/SkillDefine.cs" Line="32" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="GameServer" expanded="True">
             <Node name="Common" expanded="True">
-              <Node name="Network" expanded="True" />
-            </Node>
-            <Node name="GameServer" expanded="True">
-              <Node name="Battle" expanded="True">
-                <Node name="Skill.cs" selected="True" />
+              <Node name="Data" expanded="True">
+                <Node name="SkillDefine.cs" selected="True" />
               </Node>
-              <Node name="Models" expanded="True" />
-              <Node name="Services" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -32,7 +32,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.GameServer PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

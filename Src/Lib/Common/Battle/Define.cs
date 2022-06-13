@@ -19,7 +19,6 @@ namespace Common.Battle
         MDEF = 8,
         SPD = 9,
         CRI = 10,
-
         MAX
     }
 
@@ -27,6 +26,14 @@ namespace Common.Battle
     {
         Normal = 0,
         Skill = 1
+    }
+
+    public enum SkillResult
+    {
+        OK = 0,
+        InvalidTarget = 1,
+        OutOfMP,
+        Cooldown
     }
 
     public enum TargetType
@@ -40,14 +47,14 @@ namespace Common.Battle
     public enum BuffEffect
     {
         None = 0,
-        Stun = 1
+        Stun = 1,
+        Invincible = 2
     }
 
-    public enum SkillResult
+    public enum TriggerType
     {
-        OK = 0,
-        InvalidTarget = 1,
-        OutOfMP,
-        Cooldown
+        None = 0,
+        SkillCast = 1,
+        SkillHit = 2
     }
 }

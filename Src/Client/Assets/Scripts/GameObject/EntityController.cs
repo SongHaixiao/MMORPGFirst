@@ -58,6 +58,13 @@ public class EntityController : MonoBehaviour, IEntityNotify, IEntityController
         this.lastRotation = this.rotation;
     }
 
+    public void UpdateDirection()
+    {
+        this.direction = GameObjectTool.LogicToWorld(entity.direction);
+        this.GetTransform.forward = this.direction;
+        this.lastRotation = this.rotation;
+    }
+
     void OnDestroy()
     {
         if (entity != null)
@@ -172,4 +179,33 @@ public class EntityController : MonoBehaviour, IEntityNotify, IEntityController
     {
         this.anim.SetBool("Standby", standby);
     }
+
+    public void PlayEffect(EffectType type, string name, EntityController target, float duration)
+    {
+        Transform tarnsform = target.Controller.GetTransform();
+        this.EffectMgr.PlayEffect(type, name, transform, duration);
+        if(type == EffectType.Position || type == EffectType.Hit)
+        {
+            FXManager.Instance.PlayEffect(type, name, transform, target.GetHitOffset(), duration);
+        }
+        else
+        {
+            this.EffectMgr.PlayEffect(type, name, GetTransform, target.GetHitOffset(), duration);
+        }
+    }
+
+    public void PlayEffect(EffectType type, string name, NVector3 position, float duration)
+    {
+        if (type == EffectType.Position || type == EffectType.Hit)
+            FXManager.Instance.PlayEffect(type, name, null, GameObjectTool.LogicToWorld(position), duration);
+        else
+            this.EffectMgr.PlayEffect(type, name, null, GameObjectToll.LogicToWorld(position), duration);
+    }
+
+    public Transform GetTransform()
+    {
+        return this.transform;
+    }
+
 }
+

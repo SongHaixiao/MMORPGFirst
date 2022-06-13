@@ -13,11 +13,12 @@ namespace Common.Data
         public string Name { get; set; }
         public string Description { get; set; }
         public string Icon { get; set; }
-        //public TargetType Target { get; set; }
-        //public BuffEffect Effect { get; set; }
+        public TargetType Target { get; set; }
+        public BuffEffect Effect { get; set; }
+        public TriggerType Trigger { get; set; }
         public float CD { get; set; }
         public float Duration { get; set; }
-        public bool Interval { get; set; }
+        public int Interval { get; set; }
         public List<int> Buff { get; set; }
         public float AD { get; set; }
         public float AP { get; set; }

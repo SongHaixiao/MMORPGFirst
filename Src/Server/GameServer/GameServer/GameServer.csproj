@@ -173,6 +173,10 @@
     <Compile Include="Battle\Battle.cs" />
     <Compile Include="Battle\BattleContext.cs" />
     <Compile Include="Battle\BattleManager.cs" />
+    <Compile Include="Battle\Bullet.cs" />
+    <Compile Include="Battle\Buff.cs" />
+    <Compile Include="Battle\BuffManager.cs" />
+    <Compile Include="Battle\EffectManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

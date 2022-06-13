@@ -151,6 +151,20 @@
     <Compile Include="Assets\Scripts\Managers\BattleManager.cs" />
     <Compile Include="Assets\Scripts\Services\BattleService.cs" />
     <Compile Include="Assets\Scripts\Entities\NewClass.cs" />
+    <Compile Include="Assets\Scripts\UI\UIBuffItem.cs" />
+    <Compile Include="Assets\Scripts\Battle\Bullet.cs" />
+    <Compile Include="Assets\Scripts\GameObject\TargetSelector.cs" />
+    <Compile Include="Assets\Scripts\Battle\Buff.cs" />
+    <Compile Include="Assets\Scripts\Battle\BuffManager.cs" />
+    <Compile Include="Assets\Scripts\Battle\EffectManager.cs" />
+    <Compile Include="Assets\Scripts\UI\UIBuffIcons.cs" />
+    <Compile Include="Assets\Scripts\UI\UICreatureInfo.cs" />
+    <Compile Include="Assets\Scripts\GameObject\AnimationEventController.cs" />
+    <Compile Include="Assets\Scripts\Managers\EntityEffectManager.cs" />
+    <Compile Include="Assets\Scripts\GameObject\EffectController.cs" />
+    <Compile Include="Assets\Scripts\Entities\IEntityController.cs" />
+    <Compile Include="Assets\Scripts\Effect\EffectType.cs" />
+    <Compile Include="Assets\Scripts\Managers\FXManager.cs" />
     <Compile Include="Assets\Scripts\UI\NewMonoBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>

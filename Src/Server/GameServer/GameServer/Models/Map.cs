@@ -194,6 +194,9 @@ namespace GameServer.Models
                 if (response.skillHits != null)
                     kv.Value.connection.Session.Response.skillHits = response.skillHits;
 
+                if(response.buffRest != null)
+                    kv.Value.connection.Session.Response.buffRes = response.buffRes;
+
                 kv.Value.connection.SendResponse();
             }
         }

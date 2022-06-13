@@ -10,13 +10,14 @@ public class UINameBar : MonoBehaviour
     // open components
     public Text NameNameBar;
     public Character character;
+    public UIBuffIcons buffIcons;
 
 
     // Use this for initialization
     void Start () {
 		if(this.character!=null)
         {
-            
+            buffIcons.SetOwner(this.character);
         }
 	}
 	

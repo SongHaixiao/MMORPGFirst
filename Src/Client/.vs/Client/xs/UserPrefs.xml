@@ -1,11 +1,22 @@
 ﻿<Properties StartupConfiguration="{12F44184-A422-5F27-22E6-507969043F15}|">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="31ec2879-6660-453c-8942-6fb588854a35" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameObject/PlayerInputController.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="34014c74-3cba-4227-97d1-f7f182ce6cb4" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/UIPopupText.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameObject/PlayerInputController.cs" Line="50" Column="12" />
+      <File FileName="Assets/Scripts/GameObject/EffectController.cs" Line="63" Column="14" />
+      <File FileName="Assets/Scripts/GameObject/EntityController.cs" Line="65" Column="43" />
+      <File FileName="Assets/Scripts/Entities/Creature.cs" Line="170" Column="21" />
+      <File FileName="Assets/Scripts/Entities/IEntityController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Managers/NewMonoBehaviour.cs" Line="20" Column="10" />
+      <File FileName="Assets/Scripts/Battle/Skill.cs" Line="278" Column="42" />
+      <File FileName="Assets/Scripts/UI/NewMonoBehaviour.cs" Line="30" Column="122" />
+      <File FileName="Assets/Scripts/Managers/UIManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UI/UIWorldElementManager.cs" Line="84" Column="33" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,14 +26,13 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Battle" expanded="True" />
+                <Node name="Config" expanded="True" />
+                <Node name="Effect" expanded="True" />
                 <Node name="Entities" expanded="True" />
-                <Node name="GameObject" expanded="True">
-                  <Node name="PlayerInputController.cs" selected="True" />
-                </Node>
-                <Node name="Models" expanded="True" />
-                <Node name="Services" expanded="True" />
+                <Node name="GameObject" expanded="True" />
+                <Node name="Managers" expanded="True" />
                 <Node name="UI" expanded="True">
-                  <Node name="UISkill" expanded="True" />
+                  <Node name="UIPopupText.cs" selected="True" />
                 </Node>
               </Node>
             </Node>
@@ -39,7 +49,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
