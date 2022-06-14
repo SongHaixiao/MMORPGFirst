@@ -35,13 +35,16 @@ public class UICharEquip : UIWindow
     public Slider mpBar;
 
     public Text[] attrs;
+    public float[] cal_attr = new float[11];
 
 
     // Start is called before the first frame update
     void Start()
     {
         RefreshUI();
+        InitAttributes();
         EquipManager.Instance.OnEquipChanged += RefreshUI;
+        
     }
 
     private void OnDestroy()
@@ -56,8 +59,6 @@ public class UICharEquip : UIWindow
         ClearEquipedList();
         InitEquipedItems();
         this.money.text = User.Instance.CurrentCharacterInfo.Gold.ToString();
-
-        InitAttributes();
     }
 
     /// <summary>
@@ -122,11 +123,13 @@ public class UICharEquip : UIWindow
     public void DoEquip(Item item)
     {
         EquipManager.Instance.EquipItem(item);
+        this.AddAttributes(item);
     }
 
     public void UnEquip(Item item)
     {
         EquipManager.Instance.UnEquipItem(item);
+        this.RemoveAttributes(item);
     }
 
     // init character attributes
@@ -136,7 +139,7 @@ public class UICharEquip : UIWindow
 
         if (character == null)
         {
-            Debug.LogError("Loading character attributes error ! Character is not existed ! ");
+            Debug.LogError("InitAttributes : Loading character attributes error ! Character is not existed ! ");
             return;
         }
 
@@ -149,7 +152,7 @@ public class UICharEquip : UIWindow
 
         if (attributes == null)
         {
-            Debug.LogError("Loading character attributes error ! Attributes is not existed ! ");
+            Debug.LogError("InitAttributes : Loading character attributes error ! Attributes is not existed ! ");
             return;
         }
 
@@ -168,7 +171,124 @@ public class UICharEquip : UIWindow
                 this.attrs[i - 2].text = ((int)attributes.Final.Data[i]).ToString();
         }
 
-
-
+        this.cal_attr = attributes.Final.Data;
     }
+
+    private void AddAttributes(Item item)
+    {
+        var cha_attr = User.Instance.CurrentCharacter.Attributes;
+
+        if (cha_attr == null)
+        {
+            Debug.LogError("AddAttributes : Loading character attributes error ! Character Attributes is not existed ! ");
+            return;
+        }
+
+        var equip_attr = item.EquipInfo;
+
+        if (equip_attr == null)
+        {
+            Debug.LogError("AddAttributes : Loading equip attributes error ! Equip Attributes is not existed ! ");
+            return;
+        }
+
+
+        this.cal_attr[0] += equip_attr.MaxMP;
+
+        this.cal_attr[1] += equip_attr.MaxMP;
+
+        this.hp.text = string.Format("{0} / {1}", cha_attr.HP, cha_attr.MaxHP);
+        this.mp.text = string.Format("{0} / {1}", cha_attr.MP, cha_attr.MaxMP);
+        this.hpBar.maxValue = cha_attr.MaxHP;
+        this.hpBar.value = cha_attr.HP;
+        this.mpBar.maxValue = cha_attr.MaxMP;
+        this.mpBar.value = cha_attr.MP;
+
+
+        this.cal_attr[2] += equip_attr.STR;
+
+        this.cal_attr[3] += equip_attr.INT;
+
+        this.cal_attr[4] += equip_attr.DEX;
+
+        this.cal_attr[5] += equip_attr.AD;
+
+        this.cal_attr[6] += equip_attr.AP;
+
+        this.cal_attr[7] += equip_attr.DEF;
+
+        this.cal_attr[8] += equip_attr.MDEF;
+
+        this.cal_attr[9] += equip_attr.SPD;
+
+        this.cal_attr[10] += equip_attr.CRI;
+
+        for (int i = (int)AttributeType.STR; i < (int)AttributeType.MAX; i++)
+        {
+            if (i == (int)AttributeType.CRI)
+                this.attrs[i - 2].text = string.Format("{0:f2}%", cal_attr[i - 2]);
+            else
+                this.attrs[i - 2].text = ((int)cal_attr[i - 2]).ToString();
+        }
+    }
+
+    private void RemoveAttributes(Item item)
+    {
+        var cha_attr = User.Instance.CurrentCharacter.Attributes;
+
+        if (cha_attr == null)
+        {
+            Debug.LogError("RemoveAttributes : Loading character attributes error ! Character Attributes is not existed ! ");
+            return;
+        }
+
+        var equip_attr = item.EquipInfo;
+
+        if (equip_attr == null)
+        {
+            Debug.LogError("RemoveAttributes : Loading equip attributes error ! Equip Attributes is not existed ! ");
+            return;
+        }
+
+
+
+        this.cal_attr[0] -=  equip_attr.MaxMP;
+
+        this.cal_attr[1] -= equip_attr.MaxMP;
+
+        this.hp.text = string.Format("{0} / {1}", cha_attr.HP, cha_attr.MaxHP);
+        this.mp.text = string.Format("{0} / {1}", cha_attr.MP, cha_attr.MaxMP);
+        this.hpBar.maxValue = cha_attr.MaxHP;
+        this.hpBar.value = cha_attr.HP;
+        this.mpBar.maxValue = cha_attr.MaxMP;
+        this.mpBar.value = cha_attr.MP;
+
+
+        this.cal_attr[2] -= equip_attr.STR;
+
+        this.cal_attr[3] -= equip_attr.INT;
+
+        this.cal_attr[4] -= equip_attr.DEX;
+
+        this.cal_attr[5] -= equip_attr.AD;
+
+        this.cal_attr[6] -= equip_attr.AP;
+
+        this.cal_attr[7] -= equip_attr.DEF;
+
+        this.cal_attr[8] -= equip_attr.MDEF;
+
+        this.cal_attr[9] -= equip_attr.SPD;
+
+        this.cal_attr[10] -= equip_attr.CRI;
+
+        for (int i = (int)AttributeType.STR; i < (int)AttributeType.MAX; i++)
+        {
+            if (i == (int)AttributeType.CRI)
+                this.attrs[i - 2].text = string.Format("{0:f2}%", this.cal_attr[i - 2]);
+            else
+                this.attrs[i - 2].text = ((int)this.cal_attr[i - 2]).ToString();
+        }
+    }
+
 }

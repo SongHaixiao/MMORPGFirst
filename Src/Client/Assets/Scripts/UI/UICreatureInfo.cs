@@ -8,9 +8,10 @@ public class UICreatureInfo : MonoBehaviour
 {
     public Text Name;
     public Slider HPBar;
-    public Slide MPBar;
+    public Slider MPBar;
     public Text HPText;
     public Text MPText;
+    public Image AvatarImage;
 
     public UIBuffIcons buffIcons;
 
@@ -38,11 +39,13 @@ public class UICreatureInfo : MonoBehaviour
 
         this.HPBar.maxValue = target.Attributes.MaxHP;
         this.HPBar.value = target.Attributes.HP;
-        this.HPText.text = string.Format("{0}/{1}", target.Attributes.HP, target.Attributes.MaxHP);
+        this.HPText.text = string.Format("{0} / {1}", target.Attributes.HP, target.Attributes.MaxHP);
 
         this.MPBar.maxValue = target.Attributes.MaxMP;
         this.MPBar.value = target.Attributes.MP;
-        this.MPText.text = string.Format("{0}/{1}", target.Attributes.MP, target.Attributes.MaxMP);
+        this.MPText.text = string.Format("{0} / {1}", target.Attributes.MP, target.Attributes.MaxMP);
+
+        this.AvatarImage.overrideSprite = Resloader.Load<Sprite>(this.Target.Define.Icon);
     }
 
     void Update()

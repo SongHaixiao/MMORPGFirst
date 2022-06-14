@@ -1,12 +1,14 @@
 ﻿using Common.Data;
 using Entities;
-using SkillBridge.Message;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
 using Common.Battle;
+using Managers;
+using SkillBridge.Message;
+using SkillResult = SkillBridge.Message.SkillResult;
 
 namespace Battle
 {
@@ -15,7 +17,7 @@ namespace Battle
         public NSkillInfo Info;
         public Creature Owner;
         public Creature Target;
-        private Vector3Int TargetPosition;
+        private NVector3 TargetPosition;
         public SkillDefine Define;
 
         public int Hit = 0;
@@ -38,12 +40,17 @@ namespace Battle
         {
             this.Info = info;
             this.Owner = owner;
-            this.Define = DataManager.Instance.Skills[(int)this.Owner.Define.Class][this.Info.Id];
+            this.Define = DataManager.Instance.Skills[this.Owner.Define.TID][this.Info.Id];
             this.cd = 0;
         }
 
         public SkillResult CanCast(Creature target)
         {
+            if(this.Status != SkillStatus.None)
+            {
+                return SkillResult.Casting;
+            }
+
             if (this.Define.CastTarget == Common.Battle.TargetType.Target)
             {
                 if (target == null || target == this.Owner)
@@ -52,18 +59,18 @@ namespace Battle
                 int distance = this.Owner.Distance(target);
                 if (distance > this.Define.CastRange)
                 {
-                    return SkillResult.OutOfRange;
+                    return SkillResult.OutOfMp;
                 }
             }
 
-            if (this.Define.CastTarget == Common.Battle.TargetType.Position && BattleManager.Instance.Position == null)
+            if (this.Define.CastTarget == Common.Battle.TargetType.Position && BattleManager.Instance.CurrentPosition == null)
             {
                 return SkillResult.InvalidTarget;
             }
 
             if (this.Owner.Attributes.MP < this.Define.MPCost)
             {
-                return SkillResult.OutOfMP;
+                return SkillResult.OutOfMp;
             }
 
             if (this.cd > 0)
@@ -71,7 +78,7 @@ namespace Battle
                 return SkillResult.CoolDown;
             }
 
-            return SkillResult.OK;
+            return SkillResult.Ok;
         }
 
         public void BeginCast(Creature target, NVector3 pos) 
@@ -92,7 +99,7 @@ namespace Battle
             }
             else if(this.Define.CastTarget == Common.Battle.TargetType.Target)
             {
-                this.Owner.FaceTo(this.Target.position);
+                this.Owner.FaceTo(this.Target.Position);
             }
 
             if(this.Define.CastTime > 0)
@@ -219,23 +226,23 @@ namespace Battle
                 this.CastBullet();
             }
             else
-                this.DoHitDamages(this.Hit);
+                this.DnHitDamages(this.Hit);
             this.Hit++;
         }
         
         public void DnHitDamages(int hit)
         {
-            List<NDamageInfo> damages;
+            List<NDamageInfo> damage;
             if(this.HitMap.TryGetValue(hit, out damage))
             {
-                DoHitDamages(damages);
+                DoHitDamages(damage);
             }
         }
 
         private void CastBullet()
         {
             Bullet bullet = new Bullet(this);
-            Debug.LogFormat("Skill[{0}].CastBullet[{1}] Target : {2}", this.Define.);
+            Debug.LogFormat("Skill[{0}].CastBullet[{1}] Target : {2}", this.Define.ID, this.Define.Bullet, this.Define.CastTarget.ToString());
             this.Bullets.Add(bullet);
             this.Owner.PlayEffect(EffectType.Bullet, this.Define.BulletResource, this.Target, bullet.duration);
         }

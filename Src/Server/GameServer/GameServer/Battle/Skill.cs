@@ -51,7 +51,7 @@ namespace Battle
         {
             this.Info = info;
             this.Owner = owner;
-            this.Define = DataManager.Instance.Skills[(int)this.Owner.Define.Class][this.Info.Id];
+            this.Define = DataManager.Instance.Skills[this.Owner.Define.TID][this.Info.Id];
         }
 
         public SkillResult CanCast(BattleContext context)
@@ -247,7 +247,7 @@ namespace Battle
 
             NDamageInfo damage = this.CalcSkillDamage(Context.Caster, target);
             Log.InfoFormat("Skill [{0}].HitTarget [{1}] Damage : {2} Crit : {3}", this.Define.Name, target.Name, damage.Damage, damage.Crit);
-            target.DoDamage(damage);
+            target.DoDamage(damage, Context.Caster);
             hit.Damages.Add(damage);
 
             this.AddBuff(TriggerType.SkillHit, target);

@@ -26,7 +26,7 @@ public class EffectController : MonoBehaviour
     IEnumerator Run()
     {
         yield return new WaitForSeconds(this.lifeTime);
-        this.gameObjectSetActive(false);
+        this.gameObject.SetActive(false);
     }
 
     internal void Init(EffectType type, Transform source, Transform target, Vector3 offset, float duration)
@@ -55,7 +55,7 @@ public class EffectController : MonoBehaviour
     {
         if(type == EffectType.Bullet)
         {
-            this.time += time.deltaTime;
+            this.time += Time.deltaTime;
 
             if(this.target != null)
             {
@@ -76,7 +76,7 @@ public class EffectController : MonoBehaviour
                 return;
             }
 
-            this.transform.position = Vector3.Lerp(this.transform.position, this.targetPos, time.deltaTime / (this.lifeTime - this.time));
+            this.transform.position = Vector3.Lerp(this.transform.position, this.targetPos, Time.deltaTime / (this.lifeTime - this.time));
         }
     }
 }

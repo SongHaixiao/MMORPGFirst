@@ -88,8 +88,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\AIAgent.cs" />
+    <Compile Include="AI\AIBase.cs" />
+    <Compile Include="AI\AIBoss.cs" />
+    <Compile Include="AI\AIMonsterPassive.cs" />
     <Compile Include="CommandHelper.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="Core\Vector3.cs" />
     <Compile Include="Entities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -237,8 +242,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Battle\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

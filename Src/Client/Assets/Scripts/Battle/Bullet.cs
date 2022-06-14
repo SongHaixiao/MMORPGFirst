@@ -32,9 +32,14 @@ namespace Battle
             this.flyTime += Time.deltaTime;
             if(this.flyTime > duration)
             {
-                this.skill.DoHitDamages(this.hit);
-                this.Stoped = true;
+                this.skill.DnHitDamages(this.hit);
+                this.Stop();
             }
+        }
+
+        void Stop()
+        {
+            this.Stoped = true;
         }
     }
 }

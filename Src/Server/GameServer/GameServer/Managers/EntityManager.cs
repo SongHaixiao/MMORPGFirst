@@ -18,6 +18,7 @@ namespace GameServer.Managers
         public void AddEntity(int mapId, Entity entity)
         {
             // 加入管理器生成唯一 id
+           
             entity.EntityData.Id = ++this.idx;
 
             List<Entity> entities = null;
@@ -27,6 +28,7 @@ namespace GameServer.Managers
                 MapEntities[mapId] = entities;
             }
             entities.Add(entity);
+            this.AllEntities.Add(entity.entityId, entity);
         }
 
         public void RemoveEntity(int mapId, Entity entity)

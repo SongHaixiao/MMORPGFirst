@@ -6,6 +6,7 @@ using Models;
 using Services;
 using System;
 using Managers;
+using Entities;
 
 public class UIMain : MonoSingleton<UIMain>
 {
@@ -14,6 +15,11 @@ public class UIMain : MonoSingleton<UIMain>
     //No1. Open Compoents
     public Text avatarName;
     public Text avatarLevle;
+    public Slider avatarHPBar;
+    public Slider avatarMPBar;
+    public Text avatarHPValue;
+    public Text avatarMPValue;
+    public Image avatarImage;
 
     public UICreatureInfo targetUI;
     public UISkillSlots skillSlots;
@@ -34,9 +40,21 @@ public class UIMain : MonoSingleton<UIMain>
     // NO.3 update avatar ui
     void UpdateAvatar()
     {
+        Character cha = User.Instance.CurrentCharacter;
+
         // this ui is User inforamtion
-        this.avatarName.text = string.Format("{0} [ID : {1} ]", User.Instance.CurrentCharacterInfo.Name, User.Instance.CurrentCharacterInfo.Id);
-        this.avatarLevle.text = User.Instance.CurrentCharacterInfo.Level.ToString();
+        this.avatarName.text = string.Format("{0} [ID : {1} ]", cha.Info.Name, cha.Define.TID);
+        this.avatarLevle.text = cha.Info.Level.ToString();
+
+        this.avatarHPBar.maxValue = cha.Attributes.MaxHP;
+        this.avatarHPBar.value = cha.Attributes.HP ;
+        this.avatarHPValue.text = string.Format("{0} / {1}", cha.Attributes.HP, cha.Attributes.MaxHP);
+
+        this.avatarMPBar.maxValue = cha.Attributes.MaxMP;
+        this.avatarMPBar.value = cha.Attributes.MP;
+        this.avatarMPValue.text = string.Format("{0} / {1}", cha.Attributes.MP, cha.Attributes.MaxMP);
+
+        this.avatarImage.overrideSprite = Resloader.Load<Sprite>(cha.Define.Icon);
     }
 
     // Update is called once per frame

@@ -8,12 +8,12 @@ using UnityEngine;
 
 public class AnimationEventController : MonoBehaviour
 {
-	public EntityEffectManager EffectMgr;
+    public EntityEffectManager EffectMgr;
 
-	void PlayEffect(string name)
+    void PlayEffect(string name)
     {
 		Debug.LogFormat("AnimationEventController : PlayEffect : {0} : {1}", this.name, name);
-		EffectMgr.PlayEffect(name);
+        EffectMgr.PlayEffect(name);
     }
 
 	void PlaySound(string name)

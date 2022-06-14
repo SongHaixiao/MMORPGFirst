@@ -18,6 +18,7 @@ namespace GameServer.Battle
 
 		Dictionary<int, Creature> AllUnits = new Dictionary<int, Creature>();
 		Queue<NSkillCastInfo> Actions = new Queue<NSkillCastInfo>();
+		List<NSkillCastInfo> CastSkills = new List<NSkillCastInfo>();
 		List<NSkillHitInfo> Hits = new List<NSkillHitInfo>();
 		List<NBuffInfo> BuffActions = new List<NBuffInfo>();
 		List<Creature> DeahPool = new List<Creature>();
@@ -41,6 +42,7 @@ namespace GameServer.Battle
 
 		internal void Update()
         {
+			this.CastSkills.Clear();
 			this.Hits.Clear();
 			this.BuffActions.Clear();
 			if(this.Actions.Count > 0)
@@ -72,30 +74,30 @@ namespace GameServer.Battle
 			context.Target = EntityManager.Instance.GetCreature(cast.targetId);
 			context.CastSkill = cast;
 
-			if (context.Caster != null)
-				this.JoinBattle(context.Caster);
+            if (context.Caster != null)
+                this.JoinBattle(context.Caster);
 
 			if (context.Target != null)
 				this.JoinBattle(context.Target);
 
 			context.Caster.CastSkill(context, cast.skillId);
-
-			NetMessageResponse message = new NetMessageResponse();
-			message.skillCast = new SkillCastResponse();
-			message.skillCast.castInfo = context.CastSkill;
-			message.skillCast.Result = context.Result == SkillResult.Ok ? Result.Success : Result.Failed;
-			message.skillCast.Errormsg = context.Result.ToString();
-
-			this.Map.BroadcastBattleResponse(message);
         }
 
 		private void BroadcastHitsMessage()
 		{
-			if (this.Hits.Count == 0 && this.BuffActions.Count == 0) return;
+			if (this.Hits.Count == 0 && this.BuffActions.Count == 0 && this.CastSkills.Count == 0) return;
 
 			NetMessageResponse message = new NetMessageResponse();
 
-			if(this.Hits.Count > 0)
+			if (this.CastSkills.Count > 0)
+			{
+				message.skillCast = new SkillCastResponse();
+				message.skillCast.castInfoes.AddRange(this.CastSkills);
+				message.skillCast.Result = Result.Success;
+				message.skillCast.Errormsg = "";
+			}
+
+			if (this.Hits.Count > 0)
             {
 				message.skillHits = new SkillHitResponse();
 				message.skillHits.Hits.AddRange(this.Hits);
@@ -148,6 +150,11 @@ namespace GameServer.Battle
 		internal List<Creature> FindUnitsInMapRange(Vector3Int pos, int range)
         {
 			return EntityManager.Instance.GetMapEntitiesInRange<Creature>(this.Map.ID, pos, range);
+        }
+
+		public void AddCastSkillInfo(NSkillCastInfo cast)
+        {
+			this.CastSkills.Add(cast);
         }
 
         public void AddHitInfo(NSkillHitInfo hit)

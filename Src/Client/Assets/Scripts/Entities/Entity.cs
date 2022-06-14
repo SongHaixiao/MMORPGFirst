@@ -12,9 +12,9 @@ namespace Entities
         public int entityId;
 
 
-        public Vector3Int position;
-        public Vector3Int direction;
-        public int speed;
+        public Vector3Int Position;
+        public Vector3Int Direction;
+        public int Speed;
 
         public IEntityController Controller;
 
@@ -40,28 +40,28 @@ namespace Entities
 
         public virtual void OnUpdate(float delta)
         {
-            if (this.speed != 0)
+            if (this.Speed != 0)
             {
-                Vector3 dir = this.direction;
-                this.position += Vector3Int.RoundToInt(dir * speed * delta / 100f);
+                Vector3 dir = this.Direction;
+                this.Position += Vector3Int.RoundToInt(dir * Speed * delta / 100f);
             }
-            entityData.Position.FromVector3Int(this.position);
-            entityData.Direction.FromVector3Int(this.direction);
-            entityData.Speed = this.speed;
+            entityData.Position.FromVector3Int(this.Position);
+            entityData.Direction.FromVector3Int(this.Direction);
+            entityData.Speed = this.Speed;
         }
 
         public void SetEntityData(NEntity entity)
         {
-            this.position = this.position.FromNVector3(entity.Position);
-            this.direction = this.direction.FromNVector3(entity.Direction);
-            this.speed = entity.Speed;
+            this.Position = this.Position.FromNVector3(entity.Position);
+            this.Direction = this.Direction.FromNVector3(entity.Direction);
+            this.Speed = entity.Speed;
         }
 
-        private void UpdateEntityData()
+        public void UpdateEntityData()
         {
-            entityData.Position.FromVector3Int(this.position);
-            entityData.Direction.FromVector3Int(this.direction);
-            entityData.Speed = this.speed;
+            entityData.Position.FromVector3Int(this.Position);
+            entityData.Direction.FromVector3Int(this.Direction);
+            entityData.Speed = this.Speed;
         }
     }
 }

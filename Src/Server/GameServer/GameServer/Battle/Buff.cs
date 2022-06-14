@@ -13,7 +13,7 @@ namespace GameServer.Battle
         private Creature Owner;
 		private BuffDefine Define;
 		private BattleContext Context;
-		private float time;
+		private float time = 0;
         private int hit;
 
         public Buff(int buffID, Creature owner, BuffDefine define,BattleContext context)
@@ -40,7 +40,7 @@ namespace GameServer.Battle
                 buffId = this.BuffId,
                 buffType = this.Define.ID,
                 casterId = this.Context.Caster.entityId,
-                ownedId = this.Owner.entityId,
+                ownerId = this.Owner.entityId,
                 Action = BuffAction.Add
             };
 
@@ -63,7 +63,7 @@ namespace GameServer.Battle
                 buffId = this.BuffId,
                 buffType = this.Define.ID,
                 casterId = this.Context.Caster.entityId,
-                ownedId = this.Owner.entityId,
+                ownerId = this.Owner.entityId,
                 Action = BuffAction.Remove
             };
 
@@ -133,15 +133,15 @@ namespace GameServer.Battle
 
             NDamageInfo damage = this.CalcBuffDamage(Context.Caster);
             Log.InfoFormat("Buff[{0}].DoBuffDamage [{1}] Damage : {2} Crit : {3}", this.Define.Name, this.Owner.Name, damage.Damage, damage.Crit);
-            this.Owner.DoDamage(damage);
+            this.Owner.DoDamage(damage, Context.Caster);
 
             NBuffInfo buff = new NBuffInfo()
             {
                 buffId = this.BuffId,
                 buffType = this.Define.ID,
                 casterId = this.Context.Caster.entityId,
-                ownedId = this.Owner.entityId,
-                Action = BuffAction.Hit
+                ownerId = this.Owner.entityId,
+                Action = BuffAction.Hit,
                 Damage = damage
             };
 

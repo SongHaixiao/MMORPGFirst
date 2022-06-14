@@ -177,6 +177,7 @@ namespace GameServer.Models
         internal void MonsterEnter(Monster monster)
         {
             Log.InfoFormat("MonsterEnter : Map : {0} monsterId : {1}", this.Define.ID, monster.Id);
+            monster.OnEnterMap(this);
             foreach(var kv in this.MapCharacters)
             {
                 this.AddCharacterEnterMap(kv.Value.connection, monster.Info);
@@ -194,7 +195,7 @@ namespace GameServer.Models
                 if (response.skillHits != null)
                     kv.Value.connection.Session.Response.skillHits = response.skillHits;
 
-                if(response.buffRest != null)
+                if(response.buffRes != null)
                     kv.Value.connection.Session.Response.buffRes = response.buffRes;
 
                 kv.Value.connection.SendResponse();

@@ -8,8 +8,11 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Common.Battle;
 using Managers;
+using Models;
+using SkillBridge.Message;
+using SkillResult = SkillBridge.Message.SkillResult;
 
-public class UISkillSlot : MonoBehavior, IPointerClickHandler
+public class UISkillSlot : MonoBehaviour, IPointerClickHandler
 {
     public Image icon;
     public Image overlay;
@@ -49,13 +52,11 @@ public class UISkillSlot : MonoBehavior, IPointerClickHandler
         this.CastSkill();
     }
 
-
-
     public void OnPointerClick(PointerEventData eventData)
     {
         if(this.skill.Define.CastTarget == Common.Battle.TargetType.Position)
         {
-            TargetSelector.ShowSelector(User.Instance.CurrentCharacter.position, this.skill.Define.CastRange, this.skill.Define.AOERange);
+            TargetSelector.ShowSelector(User.Instance.CurrentCharacter.Position, this.skill.Define.CastRange, this.skill.Define.AOERange, OnPositionSelected);
             return;
         }
 
@@ -71,11 +72,11 @@ public class UISkillSlot : MonoBehavior, IPointerClickHandler
                 MessageBox.Show("Skill : [ " + this.skill.Define.Name + " ] invalid target !");
                 return;
 
-            case SkillResult.OutOfMP:
+            case SkillResult.OutOfMp:
                 MessageBox.Show("Skill : [ " + this.skill.Define.Name + " ] MP is not enough !");
                 return;
 
-            case SkillResult.Cooldown:
+            case SkillResult.CoolDown:
                 MessageBox.Show("Skill : [ " + this.skill.Define.Name + " ] is cooling down !");
                 return;
 

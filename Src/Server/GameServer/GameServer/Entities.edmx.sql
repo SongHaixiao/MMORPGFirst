@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/09/2022 17:25:30
+-- Date Created: 06/14/2022 19:40:34
 -- Generated from EDMX file: E:\Github\P16\MMORPGFirst\Src\Server\GameServer\GameServer\Entities.edmx
 -- --------------------------------------------------
 

@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Battle;
+using Entities;
 
 public class UIBuffIcons : MonoBehaviour
 {

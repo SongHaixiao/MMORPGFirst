@@ -43,7 +43,7 @@ namespace Entities
         }
 
         public Skill CastringSkill = null;
-
+     
         public string Name
         {
             get
@@ -65,7 +65,7 @@ namespace Entities
 
         internal int Distance(Creature target)
         {
-            return (int)Vector3Int.Distance(this.SetPosition, target.position);
+            return (int)Vector3Int.Distance(this.Position, target.Position);
         }
 
         public bool IsCurrentPlayer
@@ -105,7 +105,7 @@ namespace Entities
 
         internal void FaceTo(Vector3Int position)
         {
-            this.SetDirection(GameObjectToll.WorldToLogic(GameObjectTool.LogicToWorld(position - this.position).normalized));
+            this.SetDirection(GameObjectTool.WorldToLogic(GameObjectTool.LogicToWorld(position - this.Position).normalized));
             this.UpdateEntityData();
             if (this.Controller != null)
                 this.Controller.UpdateDirection();
@@ -114,31 +114,31 @@ namespace Entities
         public void MoveForward()
         {
             Debug.LogFormat("Move Forward");
-            this.speed = this.Define.Speed;
+            this.Speed = this.Define.Speed;
         }
 
         public void MoveBack()
         {
             Debug.LogFormat("Move Back");
-            this.speed = -this.Define.Speed;
+            this.Speed = -this.Define.Speed;
         }
 
         public void Stop()
         {
             Debug.LogFormat("Stop");
-            this.speed = 0;
+            this.Speed = 0;
         }
 
         public void SetDirection(Vector3Int direction)
         {
             Debug.LogFormat("SetDirection : {0}", direction);
-            this.direction = direction;
+            this.Direction = direction;
         }
 
         public void SetPosition(Vector3Int position)
         {
             Debug.LogFormat("SetPosition : {0}", position);
-            this.SetPosition = position;
+            this.Position = position;
         }
 
         public void CastSkill(int skillId, Creature target, NVector3 pos)
@@ -154,7 +154,7 @@ namespace Entities
                 this.Controller.PlayAnim(name);
         }
 
-        public void SetStandby(bool stanby)
+        public void SetStandby(bool standby)
         {
             if (this.Controller != null)
                 this.Controller.SetStandby(standby);
@@ -172,10 +172,10 @@ namespace Entities
             Debug.LogFormat("DoDamage : {0} DMG : {1} CRIT : {2}", this.Name, damage.Damage, damage.Crit); ;
             this.Attributes.HP -= damage.Damage;
             if(playHurt) this.PlayAnim("Hurt");
-            if(this.Controller != null)
-            {
+            //if(this.Controller != null)
+            //{
                 UIWorldElementManager.Instance.ShowPopupText(PopupType.Damage, this.Controller.GetTransform().position + this.GetPopupOffset(), -damage.Damage, damage.Crit);
-            }
+            //}
         }
 
         internal void DoSkillHit(NSkillHitInfo hit)
@@ -192,7 +192,7 @@ namespace Entities
                 case BuffAction.Add:
                     this.AddBuff(buff.buffId, buff.buffType, buff.casterId);
                     break;
-                case DoBuffAction().Remove:
+                case BuffAction.Remove:
                     this.RemoveBuff(buff.buffId);
                     break;
                 case BuffAction.Hit:
@@ -231,7 +231,7 @@ namespace Entities
             this.EffectMgr.RemoveEffect(effect);
         }
 
-        public void PlayEffect(EffectType type, Creature target, float duration = 0)
+        public void PlayEffect(EffectType type, string name, Creature target, float duration = 0)
         {
             if (string.IsNullOrEmpty(name)) return;
             if (this.Controller != null)

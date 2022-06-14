@@ -18,7 +18,7 @@ public class TargetSelector : MonoSingleton<TargetSelector>
 
     protected override void OnStart()
     {
-        projector = this.GetComponentInChildren<projector>();
+        projector = this.GetComponentInChildren<Projector>();
         projector.gameObject.SetActive(actived);
     }
 
@@ -36,7 +36,7 @@ public class TargetSelector : MonoSingleton<TargetSelector>
         if (!actived) return;
         if (projector == null) return;
 
-        Ray ray = Camera.main.ScreenPointToRay(Inpu.mousePosition);
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitInfo;
         if(Physics.Raycast(ray, out hitInfo, 100f, LayerMask.GetMask("Terrain")))
         {

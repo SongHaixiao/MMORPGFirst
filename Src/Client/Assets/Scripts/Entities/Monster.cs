@@ -10,7 +10,7 @@ namespace Entities
     {
         public Monster(NCharacterInfo info) : base(info)
         {
-            this.Attributes.Init(this.Define, this.Info.Level, null, this.Info.attrDynamic);
+            //this.Attributes.Init(this.Define, this.Info.Level, null, this.Info.attrDynamic);
         }
     }
 }

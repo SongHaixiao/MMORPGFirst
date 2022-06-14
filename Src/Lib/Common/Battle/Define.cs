@@ -24,16 +24,11 @@ namespace Common.Battle
 
     public enum SkillType
     {
+        All = -1,
         Normal = 0,
-        Skill = 1
-    }
+        Skill = 2,
+        Passive = 4,
 
-    public enum SkillResult
-    {
-        OK = 0,
-        InvalidTarget = 1,
-        OutOfMP,
-        Cooldown
     }
 
     public enum TargetType
@@ -56,5 +51,12 @@ namespace Common.Battle
         None = 0,
         SkillCast = 1,
         SkillHit = 2
+    }
+
+    public enum BattleState
+    {
+        None,
+        Idle,
+        InBattle,
     }
 }

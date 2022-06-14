@@ -33,6 +33,7 @@ public class EntityController : MonoBehaviour, IEntityNotify, IEntityController
     public RideController rideController;
     public int currentRide = 0;
     public Transform rideBone;
+    private EntityEffectManager EffectMgr;
 
     // Use this for initialization
     void Start()
@@ -49,8 +50,8 @@ public class EntityController : MonoBehaviour, IEntityNotify, IEntityController
 
     void UpdateTransform()
     {
-        this.position = GameObjectTool.LogicToWorld(entity.position);
-        this.direction = GameObjectTool.LogicToWorld(entity.direction);
+        this.position = GameObjectTool.LogicToWorld(entity.Position);
+        this.direction = GameObjectTool.LogicToWorld(entity.Direction);
 
         this.rb.MovePosition(this.position);
         this.transform.forward = this.direction;
@@ -60,15 +61,15 @@ public class EntityController : MonoBehaviour, IEntityNotify, IEntityController
 
     public void UpdateDirection()
     {
-        this.direction = GameObjectTool.LogicToWorld(entity.direction);
-        this.GetTransform.forward = this.direction;
+        this.direction = GameObjectTool.LogicToWorld(entity.Direction);
+        this.transform.forward = this.direction;
         this.lastRotation = this.rotation;
     }
 
     void OnDestroy()
     {
         if (entity != null)
-            Debug.LogFormat("{0} OnDestroy :ID:{1} POS:{2} DIR:{3} SPD:{4} ", this.name, entity.entityId, entity.position, entity.direction, entity.speed);
+            Debug.LogFormat("{0} OnDestroy :ID:{1} POS:{2} DIR:{3} SPD:{4} ", this.name, entity.entityId, entity.Position, entity.Direction, entity.Speed);
 
         // 因为所有游戏对象实体的操作都在 EntityConroller.cs 中进行，
         // 所以在实体控制器中的 OnDestroy（）中将 UINameBar 一起随之角色实体删除
@@ -101,7 +102,7 @@ public class EntityController : MonoBehaviour, IEntityNotify, IEntityController
 
     public void OnEntityChanged(Entity entity)
     {
-        Debug.LogFormat("OnEntityChanged : ID : {0} POS:{1} DIR : {2} SPD ： {3}", entity.entityId, entity.position, entity.direction, entity.speed);
+        Debug.LogFormat("OnEntityChanged : ID : {0} POS:{1} DIR : {2} SPD ： {3}", entity.entityId, entity.Position, entity.Direction, entity.Speed);
     }
 
     public void OnEntityEvent(EntityEvent entityEvent, int param)
@@ -164,6 +165,7 @@ public class EntityController : MonoBehaviour, IEntityNotify, IEntityController
     void OnMouseDown()
     {
         Creature target = this.entity as Creature;
+
         if (target.IsCurrentPlayer)
             return;
 
@@ -180,17 +182,16 @@ public class EntityController : MonoBehaviour, IEntityNotify, IEntityController
         this.anim.SetBool("Standby", standby);
     }
 
-    public void PlayEffect(EffectType type, string name, EntityController target, float duration)
+    public void PlayEffect(EffectType type, string name, Creature target, float duration)
     {
         Transform tarnsform = target.Controller.GetTransform();
-        this.EffectMgr.PlayEffect(type, name, transform, duration);
-        if(type == EffectType.Position || type == EffectType.Hit)
+        if (type == EffectType.Position || type == EffectType.Hit)
         {
             FXManager.Instance.PlayEffect(type, name, transform, target.GetHitOffset(), duration);
         }
         else
         {
-            this.EffectMgr.PlayEffect(type, name, GetTransform, target.GetHitOffset(), duration);
+            this.EffectMgr.PlayEffect(type, name, GetTransform(), target.GetHitOffset(), duration);
         }
     }
 
@@ -199,7 +200,7 @@ public class EntityController : MonoBehaviour, IEntityNotify, IEntityController
         if (type == EffectType.Position || type == EffectType.Hit)
             FXManager.Instance.PlayEffect(type, name, null, GameObjectTool.LogicToWorld(position), duration);
         else
-            this.EffectMgr.PlayEffect(type, name, null, GameObjectToll.LogicToWorld(position), duration);
+            this.EffectMgr.PlayEffect(type, name, null, GameObjectTool.LogicToWorld(position), duration);
     }
 
     public Transform GetTransform()

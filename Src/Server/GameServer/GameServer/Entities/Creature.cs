@@ -29,6 +29,9 @@ namespace GameServer.Entities
         public BuffManager BuffMgr;
         public EffectManager EffectMgr;
 
+        public BattleState BattleState;
+        public CharacterState State;
+
         public Creature(CharacterType type, int configId, int level, Vector3Int pos, Vector3Int dir) :
            base(pos, dir)
         {
@@ -59,8 +62,9 @@ namespace GameServer.Entities
             return (int)Vector3Int.Distance(this.Position, position);
         }
 
-        internal void DoDamage(NDamageInfo damage)
+        internal void DoDamage(NDamageInfo damage, Creature source)
         {
+            this.BattleState = BattleState.InBattle;
             this.Attributes.HP -= damage.Damage;
 
             if (this.Attributes.HP < 0)
@@ -68,7 +72,10 @@ namespace GameServer.Entities
                 this.IsDeath = true;
                 damage.WillDead = true;
             }
+
+            this.OnDamage(damage, source);
         }
+
 
         void InitSkills()
         {
@@ -91,6 +98,33 @@ namespace GameServer.Entities
         {
             Skill skill = this.SkillMgr.GetSkill(skillId);
             context.Result = skill.Cast(context);
+            if(context.Result == SkillResult.Ok)
+            {
+                this.BattleState = BattleState.InBattle;
+            }
+
+            if(context.CastSkill == null)
+            {
+                if(context.Result == SkillResult.Ok)
+                {
+                    context.CastSkill = new NSkillCastInfo()
+                    {
+                        casterId = this.entityId,
+                        targetId = context.Target.entityId,
+                        skillId = skill.Define.ID,
+                        Position = new NVector3(),
+                        Result = context.Result
+                    };
+
+                    context.Battle.AddCastSkillInfo(context.CastSkill);
+                }
+            }
+
+            else
+            {
+                context.CastSkill.Result = context.Result;
+                context.Battle.AddCastSkillInfo(context.CastSkill);
+            }
         }
 
         public override  void Update()
@@ -103,5 +137,11 @@ namespace GameServer.Entities
         {
             this.BuffMgr.AddBuff(context, buffDefine);
         }
+
+        protected virtual void OnDamage(NDamageInfo damage, Creature source)
+        {
+           
+        }
+
     }
 }

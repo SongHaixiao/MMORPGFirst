@@ -27,7 +27,6 @@ namespace Battle
                 Skill skill = new Skill(skillInfo, this.Owner);
                 this.AddSkill(skill);
             }
-
         }
 
         public void UpdateSkills()

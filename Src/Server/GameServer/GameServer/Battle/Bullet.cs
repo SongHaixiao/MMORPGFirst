@@ -62,7 +62,7 @@ namespace GameServer.Battle
         private void UpdatePos()
         {
             //int distance = skill.Owner.Distance(target);
-            //if(distance > 50)
+            //if (distance > 50)
             //{
             //    UpdatePos += speed * Time.deltaTime;
             //}

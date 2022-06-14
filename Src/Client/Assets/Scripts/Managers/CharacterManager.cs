@@ -49,7 +49,7 @@ namespace Managers
         // add character object into game
         public void AddCharacter(Character character)
         {
-            Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", character.Id, character.Name, character.Info.mapId, character.Entity.String());
+            Debug.LogFormat("AddCharacter:{0}:{1} Map:{2} Entity:{3}", character.Id, character.Name, character.Info.mapId, character.Info.Entity.String());
             this.Characters[character.entityId] = character;
             EntityManager.Instance.AddEntity(character);
             if (this.OnCharacterEnter != null)

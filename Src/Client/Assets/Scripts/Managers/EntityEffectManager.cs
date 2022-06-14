@@ -42,30 +42,33 @@ public class EntityEffectManager : MonoBehaviour
         }
     }
 
-	internal void PlayEffect(EffectType type, string name, Transform target, Vector3 pos, float duration)
+    public void PlayEffect(EffectType type, string name, Transform target, Vector3 pos, float duration)
     {
-		if (type == EffectType.Bullet)
-		{
-			EffectController effect = InstantiateEffect(name);
-			effect.Init(type, this.transform, target, pos, duration);
-			effect.gameObject.SetActive(true);
-		}
-		else
-			PlayEffect(name);
+        if (type == EffectType.Bullet)
+        {
+            EffectController effect = InstantiateEffect(name);
+            effect.Init(type, this.transform, target, pos, duration);
+            effect.gameObject.SetActive(true);
+        }
+        else
+            PlayEffect(name);
     }
 
-	EffectController InstantiateEffect(stirng name)
+
+    EffectController InstantiateEffect(string name)
     {
-		GameObject prefab;
-		if(this.Effects.TryGetValue(name, out prefab))
+        GameObject prefab;
+        if (this.Effects.TryGetValue(name, out prefab))
         {
-			GameObject go = Instantiate(prefab, GameObjectManager.Instance.transform, true);
-			go.transform.position = prefab.transform.position;
-			go.transform.rotation = prefab.transform.rotation;
-			return go.GetComponent<EffectController>();
+            GameObject go = Instantiate(prefab, GameObjectManager.Instance.transform, true);
+            go.transform.position = prefab.transform.position;
+            go.transform.rotation = prefab.transform.rotation;
+            return go.GetComponent<EffectController>();
         }
 
-		return null;
+        return null;
     }
+
+
 }
 

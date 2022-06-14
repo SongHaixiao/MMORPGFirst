@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputManager : MonoSingleton<InputManager>
 {
-    public bool IsInput Mode = false;
+    public bool IsInputMode = false;
 
     void Start()
     {

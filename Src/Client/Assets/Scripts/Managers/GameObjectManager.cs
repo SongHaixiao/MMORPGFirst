@@ -90,8 +90,8 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
     private void InitGameObject(GameObject go, Character character)
     {
         // No.5 : 设置位置：将 character 实体的逻辑坐标转化为游戏对象 go 的世界坐标，然后将游戏对 go 存到对应 ID 的游戏实体中；
-        go.transform.position = GameObjectTool.LogicToWorld(character.position);
-        go.transform.forward = GameObjectTool.LogicToWorld(character.direction);
+        go.transform.position = GameObjectTool.LogicToWorld(character.Position);
+        go.transform.forward = GameObjectTool.LogicToWorld(character.Direction);
 
         // No.6 : 启用 EntityController 控制器组件 ：将角色对象 分别赋值给 entity
         EntityController ec = go.GetComponent<EntityController>();
@@ -129,7 +129,7 @@ public class GameObjectManager : MonoSingleton<GameObjectManager>
     {
         var rideDefine = DataManager.Instance.Rides[rideId];
         Object obj = Resloader.Load<Object>(rideDefine.Resource);
-        if(obj == null)
+        if (obj == null)
         {
             Debug.LogErrorFormat("Ride [{0}] Resource[{1}] not existed.", rideDefine.ID, rideDefine.Resource);
             return null;

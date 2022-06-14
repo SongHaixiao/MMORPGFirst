@@ -12,5 +12,46 @@ namespace Common.Utils
         {
             return (int)Math.Round((double)f);
         }
-    }
+
+		public static float Clamp01(float value)
+		{
+			if (value < 0f)
+			{
+				return 0f;
+			}
+			if (value > 1f)
+			{
+				return 1f;
+			}
+			return value;
+		}
+
+		// UnityEngine.Mathf
+		public static int Clamp(int value, int min, int max)
+		{
+			if (value < min)
+			{
+				value = min;
+			}
+			else if (value > max)
+			{
+				value = max;
+			}
+			return value;
+		}
+
+		// UnityEngine.Mathf
+		public static float Clamp(float value, float min, float max)
+		{
+			if (value < min)
+			{
+				value = min;
+			}
+			else if (value > max)
+			{
+				value = max;
+			}
+			return value;
+		}
+	}
 }

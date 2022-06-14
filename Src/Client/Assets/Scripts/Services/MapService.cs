@@ -6,6 +6,7 @@ using Common.Data;
 using SkillBridge.Message;
 using Models;
 using Managers;
+using Entities;
 
 namespace Services
 {

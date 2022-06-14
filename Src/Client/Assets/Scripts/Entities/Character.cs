@@ -20,7 +20,7 @@ namespace Entities
 
         public override List<EquipDefine> GetEquips()
         {
-            return EquipManager.Instance.GetEquipedDefines();
+            return EquipManager.Instance.GetEquipDefines();
         }
     }
 }

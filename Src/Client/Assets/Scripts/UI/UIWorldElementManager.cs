@@ -78,7 +78,7 @@ public class UIWorldElementManager : MonoSingleton<UIWorldElementManager>
 
     public void ShowPopupText(PopupType type, Vector3 position, float damage, bool isCrit)
     {
-        GameObject goPopup = Instantiate(popupTextPrefab, position, Quaternion.identity, this.transfrom);
+        GameObject goPopup = Instantiate(popupTextPrefab, position, Quaternion.identity, this.transform);
         goPopup.name = "Popup";
         goPopup.GetComponent<UIPopupText>().InitPopup(type, damage, isCrit);
         goPopup.SetActive(true);

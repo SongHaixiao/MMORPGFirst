@@ -1,12 +1,12 @@
-﻿using Models;
+﻿using Battle;
+using Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UUnityEngine;
-
-public class UISkillSlots : MonoBehavior
+using UnityEngine;
+public class UISkillSlots : MonoBehaviour
 {
-    public UISkillSlots[] slots;
+    public UISkillSlot[] slots;
 
     // Use this for initialization
     void Start()

@@ -32,7 +32,7 @@ public class UISkillItem : ListView.ListViewItem
 
     }
 
-    public void SetItem(SkillDefine item, UISkill owner, bool equiped)
+    public void SetItem(Skill item, UISkill owner, bool equiped)
     {
         this.item = item;
         if (this.title != null) this.title.text = this.item.Define.Name;

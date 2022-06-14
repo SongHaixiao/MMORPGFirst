@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Common;
 using Common.Battle;
-using GameServer.Entities;
+using Entities;
+using UnityEngine;
 
 namespace Battle
 {
@@ -32,7 +33,7 @@ namespace Battle
 
         internal void AddEffect(BuffEffect effect)
         {
-            DeLug.LogFormat("[{0}].AddEffect {1}", this.Owner.Name, effect);
+            Debug.LogFormat("[{0}].AddEffect {1}", this.Owner.Name, effect);
             if (!this.Effects.ContainsKey(effect))
                 this.Effects[effect] = 1;
             else
@@ -42,7 +43,7 @@ namespace Battle
 
         internal void RemoveEffect(BuffEffect effect)
         {
-            DeLug.LogFormat("[{0}].AddEffect {1}", this.Owner.Name, effect);
+            Debug.LogFormat("[{0}].AddEffect {1}", this.Owner.Name, effect);
             if (this.Effects[effect] > 0)
             {
                 this.Effects[effect]--;

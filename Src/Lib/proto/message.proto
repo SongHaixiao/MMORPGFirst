@@ -246,11 +246,11 @@ message NetMessageRequest{
 	GuildListRequest guildList = 28;
 	GuildAdminRequest guildAdmin = 29;
 
-	SkillCastResponse skillCast = 50;
-    SkillHitResponse skillHits = 51;
-    BuffResponse buffRes = 52;
-
 	ChatRequest chat = 30;
+
+	SkillCastRequest skillCast = 50;
+    // SkillHitRequest skillHits = 51;
+    // BuffResponse buffRes = 52;
 }
 
 message NetMessageResponse{
@@ -297,6 +297,7 @@ message NetMessageResponse{
     
     SkillCastResponse skillCast = 50;
     SkillHitResponse skillHits = 51;
+	BuffResponse buffRes = 52;
 
 	StatusNotify statusNotify = 100;
 }
@@ -802,6 +803,7 @@ message NSkillCastInfo
     int32 casterId = 2;
     int32 targetId = 3;
     NVector3 position = 4;
+	SKILL_RESULT result = 5;
 }
 
 message NDamageInfo
@@ -830,7 +832,7 @@ message SkillCastResponse
 {
     RESULT result = 1;
     string errormsg = 2;
-    NSkillCastInfo castInfo = 3;
+    repeated NSkillCastInfo castInfo = 3;
 }
 
 message SkillHitResponse

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Common.Data;
 using Entities;
 
 namespace Battle
@@ -16,7 +17,7 @@ namespace Battle
             this.Owner = owner;
         }
 
-        internal void AddBuff(int buffId, int buffType, int casterId)
+        internal Buff AddBuff(int buffId, int buffType, int casterId)
         {
             BuffDefine define;
             if(DataManager.Instance.Buffs.TryGetValue(buffType, out define))
@@ -29,7 +30,7 @@ namespace Battle
             return null;
         }
 
-        internal void RemoveBuff(int buffId)
+        internal Buff RemoveBuff(int buffId)
         {
             Buff buff;
             if(this.Buffs.TryGetValue(buffId, out buff))

@@ -12,6 +12,7 @@ namespace Common.Data
         public string Name { get; set; }
         public CharacterClass Class { get; set; }
         public string Resource { get; set; }
+        public string Icon { get; set; }
         public string Description { get; set; }
         public float Height { get; set; }
 
@@ -31,5 +32,6 @@ namespace Common.Data
         public float MDEF { get; set; }
         public float SPD { get; set; }
         public float CRI { get; set; }
+        public string AI { get; set; }
     }
 }

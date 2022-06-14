@@ -23,7 +23,7 @@ namespace GameServer.Battle
 
         internal void AddBuff(BattleContext context, BuffDefine define)
         {
-            Buff buff = new Buff(this.BuffID, this.Owner, define);
+            Buff buff = new Buff(this.BuffID, this.Owner, define, context);
             this.Buffs.Add(buff);
 
         }

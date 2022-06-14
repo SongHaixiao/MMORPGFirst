@@ -77,7 +77,7 @@ public class PlayerInputController : MonoBehaviour
             }
 
             // set speed to character object
-            this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
+            this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.Direction) * (this.character.Speed + 9.81f) / 100f;
         }
 
         // move backwards
@@ -89,7 +89,7 @@ public class PlayerInputController : MonoBehaviour
                 this.character.MoveBack();
                 this.SendEntityEvent(EntityEvent.MoveBack);
             }
-            this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.direction) * (this.character.speed + 9.81f) / 100f;
+            this.rb.velocity = this.rb.velocity.y * Vector3.up + GameObjectTool.LogicToWorld(character.Direction) * (this.character.Speed + 9.81f) / 100f;
         }
 
         // stop moving
@@ -118,7 +118,7 @@ public class PlayerInputController : MonoBehaviour
             this.transform.Rotate(0, h * rotateSpeed, 0);
 
             // change character direction from logical coordinate to world coordinate
-            Vector3 dir = GameObjectTool.LogicToWorld(character.direction);
+            Vector3 dir = GameObjectTool.LogicToWorld(character.Direction);
 
             // Wheel Algorithm ( Importance )
             Quaternion rot = new Quaternion();
@@ -150,7 +150,7 @@ public class PlayerInputController : MonoBehaviour
         this.lastPos = this.rb.transform.position;
 
         // sycnchronizate the object's position
-        if ((GameObjectTool.WorldToLogic(this.rb.transform.position) - this.character.position).magnitude > 50)
+        if ((GameObjectTool.WorldToLogic(this.rb.transform.position) - this.character.Position).magnitude > 50)
         {
             this.character.SetPosition(GameObjectTool.WorldToLogic(this.rb.transform.position));
             this.SendEntityEvent(EntityEvent.None);

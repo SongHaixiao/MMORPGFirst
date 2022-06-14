@@ -58,8 +58,8 @@ namespace Managers
 
         public Entity GetEntity(int entityId)
         {
-            entityId entity = null;
-            Entities.TryGetValue(entityId, out entity);
+            Entity entity = null;
+            entities.TryGetValue(entityId, out entity);
             return entity;
         }
     }

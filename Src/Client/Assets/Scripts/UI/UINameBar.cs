@@ -11,6 +11,8 @@ public class UINameBar : MonoBehaviour
     public Text NameNameBar;
     public Character character;
     public UIBuffIcons buffIcons;
+    public Image AvatarIamge;
+    public float Height;
 
 
     // Use this for initialization
@@ -36,12 +38,15 @@ public class UINameBar : MonoBehaviour
         {
             // get character Name + Level   
             string name = this.character.Name + " Lv." + this.character.Info.Level;
+            this.Height = this.character.Define.Height;
 
             // load character name to avatar name
             if(name != this.NameNameBar.text)
             {
                 this.NameNameBar.text = name;
             }
+
+            this.AvatarIamge.overrideSprite = Resloader.Load<Sprite>(this.character.Define.Icon);
         }
     }
 }
