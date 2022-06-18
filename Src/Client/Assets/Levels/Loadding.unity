@@ -3158,7 +3158,7 @@ MonoBehaviour:
   global: 1
   audioMixer: {fileID: 24100000, guid: e265e7e6c5ecedb4f8ac20a6aa4ff148, type: 2}
   musicAudioSource: {fileID: 1246594789}
-  soundAudioSOurce: {fileID: 1246594789}
+  soundAudioSOurce: {fileID: 1246594788}
 --- !u!4 &1246594787
 Transform:
   m_ObjectHideFlags: 0

@@ -30,28 +30,32 @@ public class UISystemConfig : UIWindow
         base.OnYesClick();
     }
 
-    public void MusicToogle(bool on)
+    public void MusicToogle()
     {
-        musicOff.enabled = on;
+        bool on = this.toggleMusic.isOn;
+        this.musicOff.enabled = !on;
         Config.MusicOn = on;
         SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
     }
 
-    public void SoundToogle(bool on)
+    public void SoundToogle()
     {
-        soundOff.enabled = on;
+        bool on = this.toggleSound.isOn;
+        this.soundOff.enabled = !on;
         Config.SoundOn = on;
         SoundManager.Instance.PlaySound(SoundDefine.SFX_UI_Click);
     }
 
-    public void MusicVolume(float vol)
+    public void MusicVolume()
     {
+        float vol = this.sliderMusic.value;
         Config.MusicVolume = (int)vol;
         PlaySound();
     }
 
-    public void SoundVolume(float vol)
+    public void SoundVolume()
     {
+        float vol = this.sliderSound.value;
         Config.SoundVolume = (int)vol;
         PlaySound();
     }

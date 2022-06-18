@@ -43,7 +43,7 @@ public class SoundManager : MonoSingleton<SoundManager>
             if (this.musicVolume != value)
             {
                 this.musicVolume = value;
-                if (musicOn) this.SetVolume("MusicVolume", this.musicVolume);
+                if (this.musicOn) this.SetVolume("MusicVolume", this.musicVolume);
             }
         }
     }
@@ -57,7 +57,7 @@ public class SoundManager : MonoSingleton<SoundManager>
             if (this.soundVolume != value)
             {
                 this.soundVolume = value;
-                if (SoundOn) this.SetVolume("SoundVolume", this.soundVolume);
+                if (this.soundOn) this.SetVolume("SoundVolume", this.soundVolume);
             }
         }
     }
@@ -82,7 +82,13 @@ public class SoundManager : MonoSingleton<SoundManager>
 
     private void SetVolume(string name, int value)
     {
-        float volume = value * 0.5f;
+        float volume = value;
+
+        if(value == 0)
+            volume = value - 80;
+        else
+           volume = value;
+
         this.audioMixer.SetFloat(name, volume);
     }
 

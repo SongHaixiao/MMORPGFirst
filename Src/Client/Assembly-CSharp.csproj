@@ -103,7 +103,7 @@
     <Compile Include="Assets\Scripts\Managers\EquipManager.cs" />
     <Compile Include="Assets\Scripts\Managers\FXManager.cs" />
     <Compile Include="Assets\Scripts\Managers\GameObjectManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\InputManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\Inputmanager.cs" />
     <Compile Include="Assets\Scripts\Managers\ItemManger.cs" />
     <Compile Include="Assets\Scripts\Managers\LoadingManager.cs" />
     <Compile Include="Assets\Scripts\Managers\MinimapManager.cs" />
