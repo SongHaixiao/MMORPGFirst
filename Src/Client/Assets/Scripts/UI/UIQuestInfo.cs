@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Common.Data;
+using Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,8 +15,6 @@ public class UIQuestInfo : MonoBehaviour
     public Text[] targets;
     public Text description;
     public Text overview;
-
-    public UIIconItem rewardItems;
 
     public Text rewardMoney;
     public Text rewardExp;

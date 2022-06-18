@@ -86,4 +86,12 @@ public class UIQuestDialog : UIWindow
             }
         }
     }
+
+    public void AcceptReward()
+    {
+        string rewardMoney = questInfo.rewardMoney.ToString();
+        int money = Convert.ToInt32(rewardMoney);
+        User.Instance.AddGold(money);
+    }
 }
+

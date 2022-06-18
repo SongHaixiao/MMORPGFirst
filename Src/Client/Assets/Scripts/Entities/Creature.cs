@@ -172,10 +172,10 @@ namespace Entities
             Debug.LogFormat("DoDamage : {0} DMG : {1} CRIT : {2}", this.Name, damage.Damage, damage.Crit); ;
             this.Attributes.HP -= damage.Damage;
             if(playHurt) this.PlayAnim("Hurt");
-            //if(this.Controller != null)
-            //{
+            if (this.Controller != null)
+            {
                 UIWorldElementManager.Instance.ShowPopupText(PopupType.Damage, this.Controller.GetTransform().position + this.GetPopupOffset(), -damage.Damage, damage.Crit);
-            //}
+            }
         }
 
         internal void DoSkillHit(NSkillHitInfo hit)

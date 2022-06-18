@@ -70957,6 +70957,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1415483400}
     m_Modifications:
+    - target: {fileID: 6243433663681785553, guid: 7b1c1dca24b21bc44ad35a44e0aa2967,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243433663681785553, guid: 7b1c1dca24b21bc44ad35a44e0aa2967,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243433664330117042, guid: 7b1c1dca24b21bc44ad35a44e0aa2967,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243433664330117042, guid: 7b1c1dca24b21bc44ad35a44e0aa2967,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6243433664921279197, guid: 7b1c1dca24b21bc44ad35a44e0aa2967,
         type: 3}
       propertyPath: m_Pivot.x
@@ -71066,6 +71086,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UITargetInfo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243433664921279198, guid: 7b1c1dca24b21bc44ad35a44e0aa2967,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b1c1dca24b21bc44ad35a44e0aa2967, type: 3}
@@ -71314,6 +71339,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UIPopupText
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920416314563794043, guid: c51b1f0188310c14b9ee9cc550e8d3ba,
+        type: 3}
+      propertyPath: floatTime
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c51b1f0188310c14b9ee9cc550e8d3ba, type: 3}

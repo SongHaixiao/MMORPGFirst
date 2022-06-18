@@ -1,0 +1,363 @@
+
+2022-06-18 09:03:37,800 [1] [INFO ] [GameServer] :Game Server Init
+2022-06-18 09:03:42,179 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-06-18 09:03:47,428 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-06-18 09:03:47,462 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-06-18 09:03:47,473 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-06-18 09:03:47,474 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-06-18 09:03:47,479 [1] [WARN ] [GameServer] :Starting Listener...
+2022-06-18 09:03:47,537 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:03:47,592 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:03:47,598 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:03:47,600 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:03:47,628 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:03:47,628 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:03:51,359 [4] [WARN ] [GameServer] :Client[127.0.0.1:58488]] Connected
+2022-06-18 09:03:51,471 [4] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-06-18 09:03:51,767 [9] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-06-18 09:03:54,025 [14] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:03:55,525 [15] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:03:55,568 [1] [WARN ] [GameServer] :NetService Started
+2022-06-18 09:03:56,105 [4] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:03:56,109 [7] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-06-18 09:03:56,318 [7] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:03:56,330 [7] [INFO ] [GameServer] :CharacterEnter: Map : 1 characterId : 1
+2022-06-18 09:03:56,331 [7] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:04:05,712 [6] [INFO ] [GameServer] :Map : [2], Spawn : [ ID : 2, Monster : [1005], Level : [1], Point : [2]
+2022-06-18 09:04:05,716 [6] [INFO ] [GameServer] :MonsterEnter : Map : 2 monsterId : 2
+2022-06-18 09:04:16,252 [5] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:04:16,254 [7] [INFO ] [GameServer] :UserGameLeaveRequest : characterID : 1 : A Map : 1
+2022-06-18 09:04:16,255 [7] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:04:16,256 [7] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:04:16,257 [7] [INFO ] [GameServer] :SendCharacterLeaveMap To 1 : A : Map : 1 Character : 1 : A
+2022-06-18 09:04:16,258 [7] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:04:16,260 [7] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:04:16,293 [5] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:04:16,294 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:04:16,295 [5] [WARN ] [GameServer] :Client[] Disconnected
+2022-06-18 09:04:50,819 [1] [INFO ] [GameServer] :Game Server Init
+2022-06-18 09:04:51,017 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-06-18 09:04:51,358 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-06-18 09:04:51,363 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-06-18 09:04:51,363 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-06-18 09:04:51,363 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-06-18 09:04:51,366 [1] [WARN ] [GameServer] :Starting Listener...
+2022-06-18 09:04:51,423 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:04:51,424 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:04:51,424 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:04:51,424 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:04:51,424 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:04:51,425 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:04:54,874 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:04:55,878 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:04:55,983 [1] [WARN ] [GameServer] :NetService Started
+2022-06-18 09:04:58,122 [3] [WARN ] [GameServer] :Client[127.0.0.1:56794]] Connected
+2022-06-18 09:04:58,235 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-06-18 09:04:58,389 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-06-18 09:05:00,701 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:05:00,704 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-06-18 09:05:00,819 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:05:00,830 [5] [INFO ] [GameServer] :CharacterEnter: Map : 1 characterId : 1
+2022-06-18 09:05:00,830 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:05:06,166 [4] [INFO ] [GameServer] :Map : [2], Spawn : [ ID : 2, Monster : [1005], Level : [1], Point : [2]
+2022-06-18 09:05:06,169 [4] [INFO ] [GameServer] :MonsterEnter : Map : 2 monsterId : 2
+2022-06-18 09:05:14,447 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:05:14,448 [5] [INFO ] [GameServer] :UserGameLeaveRequest : characterID : 1 : A Map : 1
+2022-06-18 09:05:14,449 [5] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:05:14,450 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:05:14,451 [5] [INFO ] [GameServer] :SendCharacterLeaveMap To 1 : A : Map : 1 Character : 1 : A
+2022-06-18 09:05:14,451 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:05:14,453 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:05:14,501 [14] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:05:14,502 [14] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:05:14,503 [14] [WARN ] [GameServer] :Client[] Disconnected
+2022-06-18 09:06:02,345 [14] [WARN ] [GameServer] :Client[127.0.0.1:56878]] Connected
+2022-06-18 09:06:02,447 [14] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-06-18 09:06:02,448 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-06-18 09:06:04,042 [16] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:06:04,043 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-06-18 09:06:04,044 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:04,045 [5] [INFO ] [GameServer] :CharacterEnter: Map : 1 characterId : 1
+2022-06-18 09:06:04,046 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:15,481 [16] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:06:15,484 [6] [INFO ] [GameServer] :UserGameLeaveRequest : characterID : 1 : A Map : 1
+2022-06-18 09:06:15,486 [6] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:06:15,490 [6] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:06:15,492 [6] [INFO ] [GameServer] :SendCharacterLeaveMap To 1 : A : Map : 1 Character : 1 : A
+2022-06-18 09:06:15,495 [6] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:15,496 [6] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:17,089 [16] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:06:17,089 [7] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-06-18 09:06:17,090 [7] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:17,091 [7] [INFO ] [GameServer] :CharacterEnter: Map : 1 characterId : 1
+2022-06-18 09:06:17,092 [7] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:17,987 [16] [WARN ] [GameServer] :Client[] DataReceived Len:31
+2022-06-18 09:06:17,994 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:4 Evt:None Entity:(4:pos:(5000,4000,768),dir:(100,0,0),spd:0
+2022-06-18 09:06:18,011 [16] [WARN ] [GameServer] :Client[] DataReceived Len:31
+2022-06-18 09:06:18,012 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:4 Evt:None Entity:(4:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-06-18 09:06:23,538 [16] [WARN ] [GameServer] :Client[] DataReceived Len:13
+2022-06-18 09:06:23,543 [5] [INFO ] [GameServer] :OnItemEquip : Character : [1], Slot : [0], Item : [1001], Equiped : [True]
+2022-06-18 09:06:23,547 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:56,381 [13] [WARN ] [GameServer] :Client[] DataReceived Len:17
+2022-06-18 09:06:56,386 [5] [INFO ] [GameServer] :OnSkillCast :: skill : 103, caster : 4, target : 0, pos : SkillBridge.Message.NVector3
+2022-06-18 09:06:56,388 [5] [INFO ] [GameServer] :BattleManager.ProcessBattleMessage : skill : 103 caster : 4 target : 0 pos : (0,0,0)
+2022-06-18 09:06:56,446 [4] [INFO ] [GameServer] :Skill [Skill2].Cast Result : [Ok] Status : Running
+2022-06-18 09:06:56,449 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[0]
+2022-06-18 09:06:56,450 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[0] IsBullet : False
+2022-06-18 09:06:56,454 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:56,567 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[1]
+2022-06-18 09:06:56,570 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[1] IsBullet : False
+2022-06-18 09:06:56,570 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:56,676 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[2]
+2022-06-18 09:06:56,677 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[2] IsBullet : False
+2022-06-18 09:06:56,677 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:56,787 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[3]
+2022-06-18 09:06:56,788 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[3] IsBullet : False
+2022-06-18 09:06:56,789 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:56,895 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[4]
+2022-06-18 09:06:56,896 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[4] IsBullet : False
+2022-06-18 09:06:56,897 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:57,005 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[5]
+2022-06-18 09:06:57,006 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[5] IsBullet : False
+2022-06-18 09:06:57,008 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:57,114 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[6]
+2022-06-18 09:06:57,115 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[6] IsBullet : False
+2022-06-18 09:06:57,116 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:57,225 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[7]
+2022-06-18 09:06:57,226 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[7] IsBullet : False
+2022-06-18 09:06:57,227 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:57,336 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[8]
+2022-06-18 09:06:57,337 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[8] IsBullet : False
+2022-06-18 09:06:57,339 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:57,441 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[9]
+2022-06-18 09:06:57,443 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[9] IsBullet : False
+2022-06-18 09:06:57,444 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:57,551 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[10]
+2022-06-18 09:06:57,552 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[10] IsBullet : False
+2022-06-18 09:06:57,553 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:57,660 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[11]
+2022-06-18 09:06:57,661 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[11] IsBullet : False
+2022-06-18 09:06:57,662 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:57,771 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[12]
+2022-06-18 09:06:57,772 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[12] IsBullet : False
+2022-06-18 09:06:57,773 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:57,878 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[13]
+2022-06-18 09:06:57,879 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[13] IsBullet : False
+2022-06-18 09:06:57,880 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:57,988 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[14]
+2022-06-18 09:06:57,989 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[14] IsBullet : False
+2022-06-18 09:06:57,990 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:58,096 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[15]
+2022-06-18 09:06:58,097 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[15] IsBullet : False
+2022-06-18 09:06:58,098 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:58,206 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[16]
+2022-06-18 09:06:58,207 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[16] IsBullet : False
+2022-06-18 09:06:58,208 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:58,315 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[17]
+2022-06-18 09:06:58,316 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[17] IsBullet : False
+2022-06-18 09:06:58,317 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:58,425 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[18]
+2022-06-18 09:06:58,426 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[18] IsBullet : False
+2022-06-18 09:06:58,427 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:58,535 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[19]
+2022-06-18 09:06:58,536 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[19] IsBullet : False
+2022-06-18 09:06:58,537 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:58,642 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[20]
+2022-06-18 09:06:58,643 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[20] IsBullet : False
+2022-06-18 09:06:58,644 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:58,752 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[21]
+2022-06-18 09:06:58,753 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[21] IsBullet : False
+2022-06-18 09:06:58,754 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:58,859 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[22]
+2022-06-18 09:06:58,860 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[22] IsBullet : False
+2022-06-18 09:06:58,861 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:58,965 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[23]
+2022-06-18 09:06:58,966 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[23] IsBullet : False
+2022-06-18 09:06:58,967 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:59,074 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[24]
+2022-06-18 09:06:59,075 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[24] IsBullet : False
+2022-06-18 09:06:59,076 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:59,182 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[25]
+2022-06-18 09:06:59,183 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[25] IsBullet : False
+2022-06-18 09:06:59,184 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:59,294 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[26]
+2022-06-18 09:06:59,296 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[26] IsBullet : False
+2022-06-18 09:06:59,297 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:59,407 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[27]
+2022-06-18 09:06:59,408 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[27] IsBullet : False
+2022-06-18 09:06:59,409 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:59,515 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[28]
+2022-06-18 09:06:59,518 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[28] IsBullet : False
+2022-06-18 09:06:59,519 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:59,628 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[29]
+2022-06-18 09:06:59,629 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[29] IsBullet : False
+2022-06-18 09:06:59,630 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:59,735 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[30]
+2022-06-18 09:06:59,736 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[30] IsBullet : False
+2022-06-18 09:06:59,737 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:06:59,843 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[31]
+2022-06-18 09:06:59,845 [4] [INFO ] [GameServer] :Skill[Skill2].DoHit[31] IsBullet : False
+2022-06-18 09:06:59,846 [4] [INFO ] [GameServer] :Skill[Skill2].UpdateSkill Finish
+2022-06-18 09:06:59,846 [4] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:07:16,409 [17] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:07:16,410 [5] [INFO ] [GameServer] :UserGameLeaveRequest : characterID : 1 : A Map : 1
+2022-06-18 09:07:16,411 [5] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:07:16,412 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:07:16,413 [5] [INFO ] [GameServer] :SendCharacterLeaveMap To 1 : A : Map : 1 Character : 1 : A
+2022-06-18 09:07:16,414 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:07:16,415 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:07:16,441 [17] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:07:16,441 [17] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:07:16,442 [17] [WARN ] [GameServer] :Client[] Disconnected
+2022-06-18 09:20:00,471 [1] [INFO ] [GameServer] :Game Server Init
+2022-06-18 09:20:00,697 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-06-18 09:20:01,122 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-06-18 09:20:01,127 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-06-18 09:20:01,127 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-06-18 09:20:01,128 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-06-18 09:20:01,130 [1] [WARN ] [GameServer] :Starting Listener...
+2022-06-18 09:20:01,204 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:20:01,204 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:20:01,205 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:20:01,206 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:20:01,207 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:20:01,211 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:20:05,637 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:20:06,149 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:20:06,179 [1] [WARN ] [GameServer] :NetService Started
+2022-06-18 09:20:16,314 [4] [INFO ] [GameServer] :Map : [2], Spawn : [ ID : 2, Monster : [1005], Level : [1], Point : [2]
+2022-06-18 09:20:16,328 [4] [INFO ] [GameServer] :MonsterEnter : Map : 2 monsterId : 1
+2022-06-18 09:20:25,966 [3] [WARN ] [GameServer] :Client[127.0.0.1:57352]] Connected
+2022-06-18 09:20:26,065 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-06-18 09:20:26,216 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-06-18 09:20:28,365 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:20:28,367 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-06-18 09:20:28,457 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:20:28,468 [5] [INFO ] [GameServer] :CharacterEnter: Map : 1 characterId : 1
+2022-06-18 09:20:28,469 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:20:40,060 [14] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:20:40,061 [14] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:20:40,062 [14] [INFO ] [GameServer] :SendCharacterLeaveMap To 1 : A : Map : 1 Character : 1 : A
+2022-06-18 09:20:40,063 [14] [WARN ] [GameServer] :Client[] Disconnected
+2022-06-18 09:22:07,081 [14] [WARN ] [GameServer] :Client[127.0.0.1:57374]] Connected
+2022-06-18 09:22:07,175 [14] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-06-18 09:22:07,176 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-06-18 09:22:08,647 [13] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:22:08,648 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-06-18 09:22:08,649 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:22:08,650 [5] [INFO ] [GameServer] :CharacterEnter: Map : 1 characterId : 1
+2022-06-18 09:22:08,651 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:22:17,561 [13] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:22:17,561 [13] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:22:17,562 [13] [INFO ] [GameServer] :SendCharacterLeaveMap To 1 : A : Map : 1 Character : 1 : A
+2022-06-18 09:22:17,563 [13] [WARN ] [GameServer] :Client[] Disconnected
+2022-06-18 09:23:59,524 [13] [WARN ] [GameServer] :Client[127.0.0.1:57416]] Connected
+2022-06-18 09:23:59,605 [13] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-06-18 09:23:59,606 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-06-18 09:24:01,378 [18] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:24:01,378 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-06-18 09:24:01,379 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:24:01,380 [5] [INFO ] [GameServer] :CharacterEnter: Map : 1 characterId : 1
+2022-06-18 09:24:01,380 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:24:11,623 [18] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:24:11,624 [18] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:24:11,625 [18] [INFO ] [GameServer] :SendCharacterLeaveMap To 1 : A : Map : 1 Character : 1 : A
+2022-06-18 09:24:11,625 [18] [WARN ] [GameServer] :Client[] Disconnected
+2022-06-18 09:25:36,799 [1] [INFO ] [GameServer] :Game Server Init
+2022-06-18 09:25:36,979 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-06-18 09:25:37,239 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-06-18 09:25:37,242 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-06-18 09:25:37,242 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-06-18 09:25:37,242 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-06-18 09:25:37,245 [1] [WARN ] [GameServer] :Starting Listener...
+2022-06-18 09:25:37,310 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:25:37,310 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:25:37,311 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:25:37,314 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:25:37,315 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:25:37,315 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:25:39,254 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:25:40,254 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:25:40,360 [1] [WARN ] [GameServer] :NetService Started
+2022-06-18 09:25:50,579 [4] [INFO ] [GameServer] :Map : [2], Spawn : [ ID : 2, Monster : [1005], Level : [1], Point : [2]
+2022-06-18 09:25:50,600 [4] [INFO ] [GameServer] :MonsterEnter : Map : 2 monsterId : 1
+2022-06-18 09:25:56,326 [3] [WARN ] [GameServer] :Client[127.0.0.1:57441]] Connected
+2022-06-18 09:25:56,416 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-06-18 09:25:56,583 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-06-18 09:25:58,543 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:25:58,546 [5] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-06-18 09:25:58,675 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:25:58,686 [5] [INFO ] [GameServer] :CharacterEnter: Map : 1 characterId : 1
+2022-06-18 09:25:58,687 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:26:06,136 [14] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:26:06,138 [14] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:26:06,138 [14] [INFO ] [GameServer] :SendCharacterLeaveMap To 1 : A : Map : 1 Character : 1 : A
+2022-06-18 09:26:06,139 [14] [WARN ] [GameServer] :Client[] Disconnected
+2022-06-18 09:27:52,520 [1] [INFO ] [GameServer] :Game Server Init
+2022-06-18 09:27:52,714 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-06-18 09:27:53,060 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-06-18 09:27:53,082 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-06-18 09:27:53,086 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-06-18 09:27:53,086 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-06-18 09:27:53,089 [1] [WARN ] [GameServer] :Starting Listener...
+2022-06-18 09:27:53,230 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:27:53,245 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:27:53,275 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:27:53,275 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:27:53,282 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:27:53,284 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:27:56,121 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:27:57,114 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:27:57,190 [1] [WARN ] [GameServer] :NetService Started
+2022-06-18 09:27:58,355 [3] [WARN ] [GameServer] :Client[127.0.0.1:57472]] Connected
+2022-06-18 09:27:58,451 [3] [WARN ] [GameServer] :Client[] DataReceived Len:22
+2022-06-18 09:27:58,607 [5] [INFO ] [GameServer] :UserLoginRequest: User:user001  Pass:111
+2022-06-18 09:28:00,601 [14] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:28:00,607 [6] [INFO ] [GameServer] :UserGameEnterRequest: characterID:1:A Map:1
+2022-06-18 09:28:00,736 [6] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:28:00,746 [6] [INFO ] [GameServer] :CharacterEnter: Map : 1 characterId : 1
+2022-06-18 09:28:00,747 [6] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:28:07,421 [4] [INFO ] [GameServer] :Map : [2], Spawn : [ ID : 2, Monster : [1005], Level : [1], Point : [2]
+2022-06-18 09:28:07,423 [4] [INFO ] [GameServer] :MonsterEnter : Map : 2 monsterId : 2
+2022-06-18 09:28:17,150 [14] [WARN ] [GameServer] :Client[] DataReceived Len:36
+2022-06-18 09:28:17,156 [5] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:MoveFwd Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:300
+2022-06-18 09:28:17,548 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-06-18 09:28:17,549 [6] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5120,4000,820),dir:(98,-19,0),spd:300
+2022-06-18 09:28:17,649 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-06-18 09:28:17,650 [7] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5150,3994,820),dir:(93,-36,0),spd:300
+2022-06-18 09:28:17,732 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-06-18 09:28:17,733 [8] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5175,3984,820),dir:(85,-52,0),spd:300
+2022-06-18 09:28:17,830 [14] [WARN ] [GameServer] :Client[] DataReceived Len:45
+2022-06-18 09:28:17,831 [9] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5199,3966,820),dir:(74,-67,0),spd:300
+2022-06-18 09:28:17,864 [14] [WARN ] [GameServer] :Client[] DataReceived Len:44
+2022-06-18 09:28:17,865 [10] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:Idle Entity:(1:pos:(5207,3960,820),dir:(74,-67,0),spd:0
+2022-06-18 09:28:18,031 [14] [WARN ] [GameServer] :Client[] DataReceived Len:42
+2022-06-18 09:28:18,032 [11] [INFO ] [GameServer] :OnMapEntitySync: characterID:1:A Entity.Id:1 Evt:None Entity:(1:pos:(5207,3960,820),dir:(61,-79,0),spd:0
+2022-06-18 09:28:23,139 [16] [WARN ] [GameServer] :Client[] DataReceived Len:8
+2022-06-18 09:28:23,141 [5] [INFO ] [GameServer] :UserGameLeaveRequest : characterID : 1 : A Map : 1
+2022-06-18 09:28:23,142 [5] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:28:23,143 [5] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:28:23,144 [5] [INFO ] [GameServer] :SendCharacterLeaveMap To 1 : A : Map : 1 Character : 1 : A
+2022-06-18 09:28:23,145 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:28:23,147 [5] [INFO ] [GameServer] :PostProcess > Character : characterID : 1 : A
+2022-06-18 09:28:23,178 [16] [INFO ] [GameServer] :CharacterLeave : characterID : 1 : A
+2022-06-18 09:28:23,179 [16] [INFO ] [GameServer] :CharacterEnter: Map:1 characterId:1
+2022-06-18 09:28:23,180 [16] [WARN ] [GameServer] :Client[] Disconnected
+2022-06-18 09:33:58,007 [1] [INFO ] [GameServer] :Game Server Init
+2022-06-18 09:33:58,124 [1] [INFO ] [GameServer] :DataManager > DataManager()
+2022-06-18 09:33:58,391 [1] [INFO ] [GameServer] :MapManager.Init > Map:1:MainCity
+2022-06-18 09:33:58,394 [1] [INFO ] [GameServer] :MapManager.Init > Map:2:MonsterMap01
+2022-06-18 09:33:58,394 [1] [INFO ] [GameServer] :MapManager.Init > Map:3:MonsterMap02
+2022-06-18 09:33:58,394 [1] [INFO ] [GameServer] :MapManager.Init > Map:4:Mission01
+2022-06-18 09:33:58,396 [1] [WARN ] [GameServer] :Starting Listener...
+2022-06-18 09:33:58,407 [6] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:33:58,408 [5] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:33:58,412 [7] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:33:58,413 [8] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:33:58,416 [10] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:33:58,417 [9] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:33:59,919 [11] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:34:00,910 [12] [WARN ] [GameServer] :MessageDistribute thread start
+2022-06-18 09:34:01,016 [1] [WARN ] [GameServer] :NetService Started
+2022-06-18 09:34:11,217 [4] [INFO ] [GameServer] :Map : [2], Spawn : [ ID : 2, Monster : [1005], Level : [1], Point : [2]
+2022-06-18 09:34:11,230 [4] [INFO ] [GameServer] :MonsterEnter : Map : 2 monsterId : 1

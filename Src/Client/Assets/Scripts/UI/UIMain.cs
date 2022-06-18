@@ -21,7 +21,7 @@ public class UIMain : MonoSingleton<UIMain>
     public Text avatarMPValue;
     public Image avatarImage;
 
-    public UICreatureInfo targetUI;
+    public UITargetInfo targetUI;
     public UISkillSlots skillSlots;
 
     // Start is called before the first frame update

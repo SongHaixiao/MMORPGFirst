@@ -8,9 +8,8 @@ public class UIWorldElement : MonoBehaviour
 {
     // open compoent and attribution for unity
     public Transform owner;
-    public UINameBar uiNameBar;
 
-    public float height = 1.8f; // set height attribution
+    public float height = 2.0f; // set height attribution
 
 	// Use this for initialization
 	void Start () {
@@ -23,8 +22,6 @@ public class UIWorldElement : MonoBehaviour
         // character owner object is available
         if (owner != null)
         {
-            this.height = uiNameBar.Height;
-
             // update its height
             this.transform.position = owner.position + Vector3.up * this.height;
         }

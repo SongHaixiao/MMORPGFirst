@@ -35,9 +35,10 @@ namespace GameServer.Entities
 
         public override void Update()
         {
+            
+            this.AI.Update();
             base.Update();
             this.UpdateMovement();
-            this.AI.Update();
         }
 
         public Skill FindSkill(BattleContext context, SkillType type)
@@ -63,10 +64,10 @@ namespace GameServer.Entities
 
         protected override void OnDamage(NDamageInfo damage, Creature source)
         {
-            //if (this.AI == null)
-            //{
-                //this.AI.OnDamage(damage, source);
-            //}
+            if (this.AI == null)
+            {
+                this.AI.OnDamage(damage, source);
+            }
         }
 
         internal void MoveTo(Vector3Int position)
@@ -97,20 +98,22 @@ namespace GameServer.Entities
 
         private void UpdateMovement()
         {
-            if(State == CharacterState.Move)
+            if (State == CharacterState.Move)
             {
-                if(this.Distance(this.moveTarget) < 50)
+                if (this.Distance(this.moveTarget) < 50)
                 {
                     this.StopMove();
                 }
 
-                if(this.Speed > 0)
+                if (this.Speed > 0)
                 {
                     Vector3Int dir = this.Direction;
                     this.movePosition += dir; /** Speed * Time.deltaTime / 100f;*/
                     this.Position = this.movePosition;
                 }
             }
+
+            
         }
 
 

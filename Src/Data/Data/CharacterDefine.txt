@@ -197,7 +197,7 @@
     "InitLevel": 1,
     "Height": 1.8,
     "Speed": 300,
-    "MaxHP": 1000.0,
+    "MaxHP": 500.0,
     "MaxMP": 1000.0,
     "GrowthSTR": 3.0,
     "GrowthINT": 2.0,

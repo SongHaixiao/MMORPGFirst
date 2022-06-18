@@ -72,11 +72,11 @@
     <Compile Include="Assets\Scripts\Battle\BuffManager.cs" />
     <Compile Include="Assets\Scripts\Battle\Bullet.cs" />
     <Compile Include="Assets\Scripts\Battle\EffectManager.cs" />
+    <Compile Include="Assets\Scripts\Battle\EffectType.cs" />
     <Compile Include="Assets\Scripts\Battle\PopupType.cs" />
     <Compile Include="Assets\Scripts\Battle\Skill.cs" />
     <Compile Include="Assets\Scripts\Battle\SkillManager.cs" />
     <Compile Include="Assets\Scripts\Config\Config.cs" />
-    <Compile Include="Assets\Scripts\Effect\EffectType.cs" />
     <Compile Include="Assets\Scripts\Entities\Character.cs" />
     <Compile Include="Assets\Scripts\Entities\Creature.cs" />
     <Compile Include="Assets\Scripts\Entities\Entity.cs" />
@@ -141,7 +141,6 @@
     <Compile Include="Assets\Scripts\UI\UICharInfo.cs" />
     <Compile Include="Assets\Scripts\UI\UICharacterSelect.cs" />
     <Compile Include="Assets\Scripts\UI\UICharacterView.cs" />
-    <Compile Include="Assets\Scripts\UI\UICreatureInfo.cs" />
     <Compile Include="Assets\Scripts\UI\UIEquipItem.cs" />
     <Compile Include="Assets\Scripts\UI\UIIconItem.cs" />
     <Compile Include="Assets\Scripts\UI\UIInputBox.cs" />
@@ -167,6 +166,7 @@
     <Compile Include="Assets\Scripts\UI\UISkill\UISkillSlot.cs" />
     <Compile Include="Assets\Scripts\UI\UISkill\UISkillSlots.cs" />
     <Compile Include="Assets\Scripts\UI\UISystemConfig.cs" />
+    <Compile Include="Assets\Scripts\UI\UITargetInfo.cs" />
     <Compile Include="Assets\Scripts\UI\UITest.cs" />
     <Compile Include="Assets\Scripts\UI\UIWindow.cs" />
     <Compile Include="Assets\Scripts\UI\UIWorldElement.cs" />
