@@ -295,7 +295,7 @@
     "10011": {
       "ID": 10011,
       "Name": "Attack",
-      "Description": "恶鬼横向挥动手中的斧子进行攻击",
+      "Description": "Normal Attack",
       "Type": "Normal",
       "UnlockLevel": 1,
       "CastTarget": "Target",
@@ -328,7 +328,7 @@
     "10021": {
       "ID": 10021,
       "Name": "Attack",
-      "Description": "石头人向敌人挥动右拳进行攻击然后马上用继续挥动左掌进行攻击",
+      "Description": "Normal Attack",
       "Type": "Normal",
       "UnlockLevel": 1,
       "CastTarget": "Target",
@@ -344,7 +344,7 @@
     "10022": {
       "ID": 10022,
       "Name": "Skill",
-      "Description": "石头人高举双手锤向地面，对周围8码内敌人造成一次AOE伤害",
+      "Description": "Skill Attack",
       "Type": "Skill",
       "UnlockLevel": 1,
       "CastTarget": "None",
@@ -360,7 +360,7 @@
     "10023": {
       "ID": 10023,
       "Name": "Attack",
-      "Description": "石头人挥动右手重重砸下目标使目标受到巨额伤害",
+      "Description": "Normal Attack",
       "Type": "Skill",
       "UnlockLevel": 1,
       "CastTarget": "Target",
@@ -377,7 +377,7 @@
     "10031": {
       "ID": 10031,
       "Name": "Skill",
-      "Description": "小恶魔挥动手中的三头叉对敌人进行攻击",
+      "Description": "Skill Attack",
       "Type": "Normal",
       "UnlockLevel": 1,
       "CastTarget": "Target",
@@ -392,7 +392,7 @@
     "10032": {
       "ID": 10032,
       "Name": "Attack",
-      "Description": "小恶魔旋转一圈以获得巨大的冲力并向前刺出三头叉对敌人进行攻击",
+      "Description": "Normal Attack",
       "Type": "Skill",
       "UnlockLevel": 1,
       "CastTarget": "Target",
@@ -409,7 +409,7 @@
     "10041": {
       "ID": 10041,
       "Name": "Skill",
-      "Description": "骷髅兵挥动手中的短剑对敌人进行攻击",
+      "Description": "Skill Attack",
       "Type": "Normal",
       "UnlockLevel": 1,
       "CastTarget": "Target",
@@ -424,7 +424,7 @@
     "10042": {
       "ID": 10042,
       "Name": "Attack",
-      "Description": "骷髅兵高高举起手中的短剑，对敌人进行蓄力一击",
+      "Description": "Normal Attack",
       "Type": "Skill",
       "UnlockLevel": 1,
       "CastTarget": "Target",
@@ -441,7 +441,7 @@
     "10051": {
       "ID": 10051,
       "Name": "Skill1",
-      "Description": "死神挥动右爪，向敌人发起攻击",
+      "Description": "Skill Attack",
       "Type": "Normal",
       "UnlockLevel": 1,
       "CastTarget": "Target",
@@ -458,7 +458,7 @@
     "10052": {
       "ID": 10052,
       "Name": "Skill2",
-      "Description": "死神发出恐怖的尖叫，对周围8码内敌人造成一次AOE伤害",
+      "Description": "Skill1 Attack",
       "Type": "Skill",
       "UnlockLevel": 1,
       "CastTarget": "None",
@@ -475,7 +475,7 @@
     "10053": {
       "ID": 10053,
       "Name": "Skill3",
-      "Description": "死神突然消失，随机选中一个敌人并出现在它身后发起致命一击",
+      "Description": "Skill2 Attack",
       "Type": "Skill",
       "UnlockLevel": 1,
       "CastTarget": "Target",
@@ -491,7 +491,7 @@
     "10054": {
       "ID": 10054,
       "Name": "Skill3",
-      "Description": "死神右爪聚集大量死气，形成死亡飞弹，并将飞弹砸向敌人进行攻击",
+      "Description": "Skill3 Attack",
       "Type": "Skill",
       "UnlockLevel": 1,
       "CastTarget": "Target",

@@ -1,251 +1,1026 @@
-2022-05-17 07:25:35,293 [ 1] INFO  Unity: LoadingManager start
-2022-05-17 07:25:38,311 [ 1] INFO  Unity: DataManager > DataManager()
-2022-05-17 07:25:43,208 [ 1] INFO  Unity: UserLoginRequest : user : user001 psw : 111
-2022-05-17 07:25:43,209 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-05-17 07:25:43,210 [ 1] INFO  Unity: DoConnect
-2022-05-17 07:25:43,211 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-05-17 07:25:43,214 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2022-06-20 07:30:01,902 [ 1] INFO  Unity: LoadingManager start
+2022-06-20 07:30:02,980 [ 1] INFO  Unity: DataManager > DataManager()
+2022-06-20 07:30:08,562 [ 1] INFO  Unity: UserLoginRequest : user : user001 psw : 111
+2022-06-20 07:30:08,563 [ 1] INFO  Unity: ConnectToServer() Start 
+2022-06-20 07:30:08,565 [ 1] INFO  Unity: DoConnect
+2022-06-20 07:30:08,566 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2022-06-20 07:30:08,570 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2022-05-17 07:25:45,262 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+2022-06-20 07:30:08,582 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2022-06-20 07:30:09,280 [ 1] INFO  Unity: OnLogin:Failed [User is not exited!]
+2022-06-20 07:30:15,646 [ 1] INFO  Unity: UserRegisterRequest::user :user001 psw:111
+2022-06-20 07:30:15,713 [ 1] INFO  Unity: OnUserRegister:Success [None]
+2022-06-20 07:30:17,350 [ 1] INFO  Unity: UserLoginRequest : user : user001 psw : 111
+2022-06-20 07:30:17,397 [ 1] INFO  Unity: OnLogin:Success [None]
+2022-06-20 07:30:17,398 [ 1] INFO  Unity: LoadLevel: CharacterScene
+2022-06-20 07:30:17,399 [ 1] WARN  Unity: PlaySound : bgm-select not existed.
 
-2022-05-17 07:25:45,270 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it.
+2022-06-20 07:30:17,470 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-20 07:30:19,998 [ 1] INFO  Unity: SendCharacterCreate : charName : A class : Warrior
+2022-06-20 07:30:20,090 [ 1] INFO  Unity: OnUserCreateCharacter:Success [None]
+2022-06-20 07:30:20,676 [ 1] INFO  Unity: Select Char:[1]A[Warrior]
+2022-06-20 07:30:21,340 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2022-06-20 07:30:21,370 [ 1] INFO  Unity: OnGameEnter : Success [None]
+2022-06-20 07:30:21,372 [ 1] INFO  Unity: ItemManger : Init [Item Id : [1] Count : 20]
+2022-06-20 07:30:21,372 [ 1] INFO  Unity: ItemManger : Init [Item Id : [2] Count : 20]
+2022-06-20 07:30:21,372 [ 1] INFO  Unity: ItemManger : Init [Item Id : [1001] Count : 1]
+2022-06-20 07:30:21,385 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2022-06-20 07:30:21,391 [ 1] INFO  Unity: AddCharacter:1:A Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2022-06-20 07:30:21,394 [ 1] INFO  Unity: LoadLevel: MainCity
+2022-06-20 07:30:22,305 [ 1] WARN  Unity: MainPlayerCamera[24772] Awake
 
-  at System.Net.Sockets.SocketAsyncResult.CheckIfThrowDelayedException () [0x00014] in <ef151b6abb5d474cb2c1cb8906a8b5a4>:0 
-  at System.Net.Sockets.Socket.EndConnect (System.IAsyncResult asyncResult) [0x0002c] in <ef151b6abb5d474cb2c1cb8906a8b5a4>:0 
-  at Network.NetClient.DoConnect () [0x00097] in <d24a51f8d3844806a44ce0173a1d998a>:0  
+2022-06-20 07:30:22,306 [ 1] WARN  Unity: UIWorldElementManager[24780] Awake
 
-2022-05-17 07:25:45,271 [ 1] INFO  Unity: DoConnect
-2022-05-17 07:25:45,271 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-05-17 07:25:45,271 [ 1] INFO  Unity: Connect[1] to server 127.0.0.1:8000
+2022-06-20 07:30:22,306 [ 1] WARN  Unity: UIMain[24812] Awake
 
-2022-05-17 07:25:47,315 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+2022-06-20 07:30:22,308 [ 1] WARN  Unity: GameObjectManager[24858] Awake
 
-2022-05-17 07:25:47,316 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it.
+2022-06-20 07:30:22,321 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-20 07:30:22,324 [ 1] WARN  Unity: UIMiniMap Start 24734
 
-  at System.Net.Sockets.SocketAsyncResult.CheckIfThrowDelayedException () [0x00014] in <ef151b6abb5d474cb2c1cb8906a8b5a4>:0 
-  at System.Net.Sockets.Socket.EndConnect (System.IAsyncResult asyncResult) [0x0002c] in <ef151b6abb5d474cb2c1cb8906a8b5a4>:0 
-  at Network.NetClient.DoConnect () [0x00097] in <d24a51f8d3844806a44ce0173a1d998a>:0  
+2022-06-20 07:30:23,193 [ 1] INFO  Unity: Move Forward
+2022-06-20 07:30:23,194 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5000,4000,820) DIR : (100,0,0) SPD : 300
+2022-06-20 07:30:23,828 [ 1] INFO  Unity: Stop
+2022-06-20 07:30:23,828 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5190,4000,820) DIR : (100,0,0) SPD : 0
+2022-06-20 07:30:23,828 [ 1] INFO  Unity: SetDirection : (98, -18, 0)
+2022-06-20 07:30:23,829 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5190,4000,820) DIR : (98,-18,0) SPD : 0
+2022-06-20 07:30:23,926 [ 1] INFO  Unity: SetDirection : (94, -35, 0)
+2022-06-20 07:30:23,926 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5190,4000,820) DIR : (94,-35,0) SPD : 0
+2022-06-20 07:30:24,010 [ 1] INFO  Unity: SetDirection : (86, -51, 0)
+2022-06-20 07:30:24,010 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5190,4000,820) DIR : (86,-51,0) SPD : 0
+2022-06-20 07:30:24,026 [ 1] INFO  Unity: Move Forward
+2022-06-20 07:30:24,027 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5190,4000,820) DIR : (86,-51,0) SPD : 300
+2022-06-20 07:30:24,110 [ 1] INFO  Unity: SetDirection : (74, -68, 0)
+2022-06-20 07:30:24,110 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5210,3985,820) DIR : (74,-68,0) SPD : 300
+2022-06-20 07:30:24,211 [ 1] INFO  Unity: SetDirection : (61, -80, 0)
+2022-06-20 07:30:24,211 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5234,3967,820) DIR : (61,-80,0) SPD : 300
+2022-06-20 07:30:24,293 [ 1] INFO  Unity: Stop
+2022-06-20 07:30:24,294 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5249,3947,820) DIR : (61,-80,0) SPD : 0
+2022-06-20 07:30:24,676 [ 1] WARN  Unity: PlaySound : SoundDefine.SFX_UI_Win_Open not existed.
 
-2022-05-17 07:25:47,332 [ 1] INFO  Unity: DoConnect
-2022-05-17 07:25:47,332 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-05-17 07:25:47,332 [ 1] INFO  Unity: Connect[2] to server 127.0.0.1:8000
+2022-06-20 07:30:27,050 [ 1] INFO  Unity: Move Forward
+2022-06-20 07:30:27,050 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5249,3947,820) DIR : (61,-80,0) SPD : 300
+2022-06-20 07:30:27,151 [ 1] INFO  Unity: SetDirection : (45, -89, 0)
+2022-06-20 07:30:27,151 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5267,3923,820) DIR : (45,-89,0) SPD : 300
+2022-06-20 07:30:27,335 [ 1] INFO  Unity: SetDirection : (27, -96, 0)
+2022-06-20 07:30:27,335 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5289,3879,820) DIR : (27,-96,0) SPD : 300
+2022-06-20 07:30:29,120 [ 1] INFO  Unity: SetDirection : (9, -100, 0)
+2022-06-20 07:30:29,120 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5396,3344,820) DIR : (9,-100,0) SPD : 300
+2022-06-20 07:30:29,239 [ 1] INFO  Unity: SetPosition : (5445, 3321, 820)
+2022-06-20 07:30:29,239 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5445,3321,820) DIR : (9,-100,0) SPD : 300
+2022-06-20 07:30:29,723 [ 1] INFO  Unity: SetDirection : (27, -96, 0)
+2022-06-20 07:30:29,723 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5445,3176,820) DIR : (27,-96,0) SPD : 300
+2022-06-20 07:30:30,523 [ 1] INFO  Unity: SetDirection : (45, -89, 0)
+2022-06-20 07:30:30,523 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5493,2936,820) DIR : (45,-89,0) SPD : 300
+2022-06-20 07:30:30,657 [ 1] INFO  Unity: SetDirection : (60, -80, 0)
+2022-06-20 07:30:30,657 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5509,2904,820) DIR : (60,-80,0) SPD : 300
+2022-06-20 07:30:31,141 [ 1] INFO  Unity: SetDirection : (74, -67, 0)
+2022-06-20 07:30:31,141 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5596,2788,820) DIR : (74,-67,0) SPD : 300
+2022-06-20 07:30:31,258 [ 1] INFO  Unity: SetDirection : (86, -51, 0)
+2022-06-20 07:30:31,259 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5624,2767,820) DIR : (86,-51,0) SPD : 300
+2022-06-20 07:30:31,359 [ 1] INFO  Unity: SetDirection : (95, -33, 0)
+2022-06-20 07:30:31,359 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5648,2749,820) DIR : (95,-33,0) SPD : 300
+2022-06-20 07:30:31,475 [ 1] INFO  Unity: SetDirection : (99, -14, 0)
+2022-06-20 07:30:31,475 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5683,2735,820) DIR : (99,-14,0) SPD : 300
+2022-06-20 07:30:33,462 [ 1] INFO  Unity: SetPosition : (6301, 2660, 827)
+2022-06-20 07:30:33,462 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (6301,2660,827) DIR : (99,-14,0) SPD : 300
+2022-06-20 07:30:35,983 [ 1] INFO  Unity: Stop
+2022-06-20 07:30:35,983 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (7056,2509,827) DIR : (99,-14,0) SPD : 0
+2022-06-20 07:30:36,417 [ 1] INFO  Unity: Move Forward
+2022-06-20 07:30:36,418 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (7056,2509,827) DIR : (99,-14,0) SPD : 300
+2022-06-20 07:30:36,686 [ 1] INFO  Unity: SetPosition : (7129, 2543, 820)
+2022-06-20 07:30:36,686 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (7129,2543,820) DIR : (99,-14,0) SPD : 300
+2022-06-20 07:30:36,804 [ 1] INFO  Unity: Teleporter is triggered!
+2022-06-20 07:30:36,805 [ 1] INFO  Unity: TeleporterObject : Character [A] Enter Teleporter [1:MainCity->Map01In]
+2022-06-20 07:30:36,805 [ 1] INFO  Unity: MapTeleportRequest : teleporterID : 1
+2022-06-20 07:30:36,819 [ 1] INFO  Unity: OnMapCharacterLeave : CharID : 2
+2022-06-20 07:30:36,820 [ 1] INFO  Unity: RemoveCharacter:2
+2022-06-20 07:30:36,822 [ 1] INFO  Unity: Character_1_A OnDestroy :ID:2 POS:(7164, 2536, 820) DIR:(99, -14, 0) SPD:300 
+2022-06-20 07:30:36,824 [ 1] INFO  Unity: OnMapCharacterEnter:Map:2 Count:2
+2022-06-20 07:30:36,825 [ 1] INFO  Unity: AddCharacter:1:A Map:2 Entity:(2:pos:(3252,3968,12),dir:(100,0,-5),spd:300
+2022-06-20 07:30:36,830 [ 1] INFO  Unity: AddCharacter:0:Grim Reaper Map:2 Entity:(1:pos:(5540,1682,4),dir:(20,98,0),spd:0
+2022-06-20 07:30:36,832 [ 1] WARN  Unity: The referenced script on this Behaviour (Game Object 'Particle System') is missing!
 
-2022-05-17 07:25:49,363 [ 1] WARN  Unity: CloseConnection(), errorCode: 1005
+2022-06-20 07:30:36,841 [ 1] INFO  Unity: LoadLevel: Map01
+2022-06-20 07:30:37,373 [ 1] INFO  Unity: SetPosition : (3252, 3968, -9)
+2022-06-20 07:30:37,373 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (3252,3968,-9) DIR : (100,0,-5) SPD : 300
+2022-06-20 07:30:37,403 [ 1] INFO  Unity: LevelLoadCompleted:1
+2022-06-20 07:30:37,565 [ 1] INFO  Unity: SetPosition : (3254, 3967, 35)
+2022-06-20 07:30:37,565 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (3254,3967,35) DIR : (100,0,-5) SPD : 300
+2022-06-20 07:30:37,709 [ 1] INFO  Unity: Move Forward
+2022-06-20 07:30:37,709 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (3299,3967,35) DIR : (100,0,-5) SPD : 300
+2022-06-20 07:30:38,209 [ 1] INFO  Unity: SetDirection : (98, -19, -5)
+2022-06-20 07:30:38,210 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (3449,3967,35) DIR : (98,-19,-5) SPD : 300
+2022-06-20 07:30:38,310 [ 1] INFO  Unity: SetDirection : (93, -36, -5)
+2022-06-20 07:30:38,310 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (3479,3961,35) DIR : (93,-36,-5) SPD : 300
+2022-06-20 07:30:38,409 [ 1] INFO  Unity: SetDirection : (84, -53, -5)
+2022-06-20 07:30:38,409 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (3509,3949,35) DIR : (84,-53,-5) SPD : 300
+2022-06-20 07:30:38,576 [ 1] INFO  Unity: SetDirection : (74, -68, -5)
+2022-06-20 07:30:38,576 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (3549,3919,35) DIR : (74,-68,-5) SPD : 300
+2022-06-20 07:30:38,644 [ 1] INFO  Unity: SetPosition : (3517, 3912, 20)
+2022-06-20 07:30:38,644 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (3517,3912,20) DIR : (74,-68,-5) SPD : 300
+2022-06-20 07:30:40,313 [ 1] INFO  Unity: SetPosition : (3876, 3582, 20)
+2022-06-20 07:30:40,313 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (3876,3582,20) DIR : (74,-68,-5) SPD : 300
+2022-06-20 07:30:41,318 [ 1] INFO  Unity: BattleManager.SetTarget : [1 : Grim Reaper]
+2022-06-20 07:30:41,985 [ 1] INFO  Unity: SetPosition : (4235, 3252, 20)
+2022-06-20 07:30:41,985 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (4235,3252,20) DIR : (74,-68,-5) SPD : 300
+2022-06-20 07:30:43,653 [ 1] INFO  Unity: SetPosition : (4594, 2923, 23)
+2022-06-20 07:30:43,653 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (4594,2923,23) DIR : (74,-68,-5) SPD : 300
+2022-06-20 07:30:45,240 [ 1] INFO  Unity: SetPosition : (4931, 2615, 38)
+2022-06-20 07:30:45,241 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (4931,2615,38) DIR : (74,-68,-5) SPD : 300
+2022-06-20 07:30:47,027 [ 1] INFO  Unity: SetPosition : (5316, 2275, 57)
+2022-06-20 07:30:47,027 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5316,2275,57) DIR : (74,-68,-5) SPD : 300
+2022-06-20 07:30:47,127 [ 1] INFO  Unity: SetDirection : (61, -79, -5)
+2022-06-20 07:30:47,127 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5340,2257,57) DIR : (61,-79,-5) SPD : 300
+2022-06-20 07:30:47,626 [ 1] INFO  Unity: SetDirection : (46, -89, -5)
+2022-06-20 07:30:47,627 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5430,2137,57) DIR : (46,-89,-5) SPD : 300
+2022-06-20 07:30:48,445 [ 1] INFO  Unity: SetDirection : (29, -96, -4)
+2022-06-20 07:30:48,445 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5528,1941,57) DIR : (29,-96,-4) SPD : 300
+2022-06-20 07:30:48,629 [ 1] INFO  Unity: SetDirection : (11, -99, -4)
+2022-06-20 07:30:48,630 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5539,1886,57) DIR : (11,-99,-4) SPD : 300
+2022-06-20 07:30:48,880 [ 1] INFO  Unity: SetDirection : (-7, -100, -4)
+2022-06-20 07:30:48,880 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5554,1811,57) DIR : (-7,-100,-4) SPD : 300
+2022-06-20 07:30:48,996 [ 1] INFO  Unity: SetDirection : (-26, -97, -4)
+2022-06-20 07:30:48,997 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5554,1776,57) DIR : (-26,-97,-4) SPD : 300
+2022-06-20 07:30:49,021 [ 1] INFO  Unity: SendSkillCast :: skill : 103 caster : 2 target : 1  pos : SkillBridge.Message.NVector3
+2022-06-20 07:30:49,166 [ 1] INFO  Unity: OnSkillCast :: skill : 103, caster : 2, target : 1, pos : (0,0,0), result : Success
+2022-06-20 07:30:49,167 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:49,167 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 0 IsBullet : False
+2022-06-20 07:30:49,168 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:49,180 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:49,265 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:49,265 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 1 IsBullet : False
+2022-06-20 07:30:49,265 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 19 CRIT : False
+2022-06-20 07:30:49,268 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:49,280 [ 1] INFO  Unity: Stop
+2022-06-20 07:30:49,280 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5537,1691,57) DIR : (-26,-97,-4) SPD : 0
+2022-06-20 07:30:49,376 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:49,377 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 2 IsBullet : False
+2022-06-20 07:30:49,377 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 8 CRIT : False
+2022-06-20 07:30:49,378 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:49,484 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:49,484 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 3 IsBullet : False
+2022-06-20 07:30:49,485 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:49,486 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:49,593 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:49,593 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 4 IsBullet : False
+2022-06-20 07:30:49,593 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:49,594 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:49,656 [ 1] INFO  Unity: AnimationEventController : PlayEffect : Warrior : EFX_Warrior_SkillB_prefab
+2022-06-20 07:30:49,656 [ 1] INFO  Unity: PlayEffect :  : EFX_Warrior_SkillB_prefab
+2022-06-20 07:30:49,700 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:49,700 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 5 IsBullet : False
+2022-06-20 07:30:49,700 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:49,701 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:49,815 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:49,815 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 6 IsBullet : False
+2022-06-20 07:30:49,815 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:49,819 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:49,936 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:49,936 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 7 IsBullet : False
+2022-06-20 07:30:49,936 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:49,937 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:50,057 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:50,057 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 8 IsBullet : False
+2022-06-20 07:30:50,058 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:50,059 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:50,165 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:50,165 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 9 IsBullet : False
+2022-06-20 07:30:50,166 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:50,167 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:50,275 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:50,276 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 10 IsBullet : False
+2022-06-20 07:30:50,276 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:50,277 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:50,396 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:50,396 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 11 IsBullet : False
+2022-06-20 07:30:50,396 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:50,399 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:50,503 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:50,503 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 12 IsBullet : False
+2022-06-20 07:30:50,503 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:50,505 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:50,610 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:50,610 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 13 IsBullet : False
+2022-06-20 07:30:50,610 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:50,611 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:50,722 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:50,722 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 14 IsBullet : False
+2022-06-20 07:30:50,722 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:50,724 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:50,829 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:50,829 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 15 IsBullet : False
+2022-06-20 07:30:50,829 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:50,830 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:50,938 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:50,938 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 16 IsBullet : False
+2022-06-20 07:30:50,939 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:50,940 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:51,047 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:51,047 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 17 IsBullet : False
+2022-06-20 07:30:51,047 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:51,048 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:51,153 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:51,153 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 18 IsBullet : False
+2022-06-20 07:30:51,153 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:51,154 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:51,263 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:51,263 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 19 IsBullet : False
+2022-06-20 07:30:51,263 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:51,264 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:51,377 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:51,377 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 20 IsBullet : False
+2022-06-20 07:30:51,377 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:51,378 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:51,497 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:51,498 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 21 IsBullet : False
+2022-06-20 07:30:51,498 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:51,499 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:51,610 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:51,610 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 22 IsBullet : False
+2022-06-20 07:30:51,610 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:51,611 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:51,725 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:51,726 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 23 IsBullet : False
+2022-06-20 07:30:51,726 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:51,727 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:51,837 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:51,837 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 24 IsBullet : False
+2022-06-20 07:30:51,837 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:51,838 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:51,960 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:51,960 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 25 IsBullet : False
+2022-06-20 07:30:51,960 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:51,962 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:52,081 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:52,081 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 26 IsBullet : False
+2022-06-20 07:30:52,081 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,082 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:52,195 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:52,196 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 27 IsBullet : False
+2022-06-20 07:30:52,196 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,197 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:52,317 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:52,318 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 28 IsBullet : False
+2022-06-20 07:30:52,318 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,319 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:52,423 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:52,423 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 29 IsBullet : False
+2022-06-20 07:30:52,423 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,424 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:52,546 [ 1] INFO  Unity: OnSkillHit : count : 1
+2022-06-20 07:30:52,546 [ 1] INFO  Unity: DoSkillHit : Caster : 2 Skill : 103 Hit : 30 IsBullet : False
+2022-06-20 07:30:52,546 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,547 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+{1}</format><args>{NullReferenceException: Object reference not set to an instance of an object, EntityController.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.PlayAnim (System.String name) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoDamage (SkillBridge.Message.NDamageInfo damage, System.Boolean playHurt) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHitDamages (System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (System.Int32 hitId, System.Collections.Generic.List`1[T] damages) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Battle.Skill.DoHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Entities.Creature.DoSkillHit (SkillBridge.Message.NSkillHitInfo hit) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Services.BattleService.OnSkillHit (System.Object sender, SkillBridge.Message.SkillHitResponse message) (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.MessageDistributer`1[T].RaiseEvent[Tm] (T sender, Tm msg) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDispatch`1[T].Dispatch (T sender, SkillBridge.Message.NetMessageResponse message) (at <e1507db7e2374435a673639beda3642e>:0)
+Network.MessageDistributer`1[T].Distribute () (at <e1507db7e2374435a673639beda3642e>:0)
+Network.NetClient.ProceeMessage () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+Network.NetClient.Update () (at <8b79beeb17c24128925dfced1379b1fe>:0)
+}</args></log4net.Error>
+2022-06-20 07:30:52,654 [ 1] INFO  Unity: Skill [Skill2].UpdateSkill Finish
+2022-06-20 07:30:52,666 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:52,666 [ 1] INFO  Unity:    Buff : 6 : 3 [Hit]
+2022-06-20 07:30:52,666 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,676 [ 1] INFO  Unity:    Buff : 15 : 3 [Hit]
+2022-06-20 07:30:52,676 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,677 [ 1] INFO  Unity:    Buff : 24 : 3 [Hit]
+2022-06-20 07:30:52,677 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,774 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:52,774 [ 1] INFO  Unity:    Buff : 7 : 3 [Hit]
+2022-06-20 07:30:52,774 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,775 [ 1] INFO  Unity:    Buff : 16 : 3 [Hit]
+2022-06-20 07:30:52,775 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,775 [ 1] INFO  Unity:    Buff : 25 : 3 [Hit]
+2022-06-20 07:30:52,775 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,882 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:52,883 [ 1] INFO  Unity:    Buff : 8 : 3 [Hit]
+2022-06-20 07:30:52,883 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,883 [ 1] INFO  Unity:    Buff : 17 : 3 [Hit]
+2022-06-20 07:30:52,883 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,883 [ 1] INFO  Unity:    Buff : 26 : 3 [Hit]
+2022-06-20 07:30:52,883 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,991 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:52,991 [ 1] INFO  Unity:    Buff : 9 : 3 [Hit]
+2022-06-20 07:30:52,991 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,992 [ 1] INFO  Unity:    Buff : 18 : 3 [Hit]
+2022-06-20 07:30:52,992 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:52,992 [ 1] INFO  Unity:    Buff : 27 : 3 [Hit]
+2022-06-20 07:30:52,992 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,103 [ 1] INFO  Unity: OnBuff : count : 4
+2022-06-20 07:30:53,103 [ 1] INFO  Unity:    Buff : 1 : 3 [Hit]
+2022-06-20 07:30:53,103 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,103 [ 1] INFO  Unity:    Buff : 10 : 3 [Hit]
+2022-06-20 07:30:53,103 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,103 [ 1] INFO  Unity:    Buff : 19 : 3 [Hit]
+2022-06-20 07:30:53,103 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,104 [ 1] INFO  Unity:    Buff : 28 : 3 [Hit]
+2022-06-20 07:30:53,104 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,210 [ 1] INFO  Unity: OnBuff : count : 4
+2022-06-20 07:30:53,210 [ 1] INFO  Unity:    Buff : 2 : 3 [Hit]
+2022-06-20 07:30:53,210 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,210 [ 1] INFO  Unity:    Buff : 11 : 3 [Hit]
+2022-06-20 07:30:53,210 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,210 [ 1] INFO  Unity:    Buff : 20 : 3 [Hit]
+2022-06-20 07:30:53,211 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,211 [ 1] INFO  Unity:    Buff : 29 : 3 [Hit]
+2022-06-20 07:30:53,211 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,324 [ 1] INFO  Unity: OnBuff : count : 4
+2022-06-20 07:30:53,324 [ 1] INFO  Unity:    Buff : 3 : 3 [Hit]
+2022-06-20 07:30:53,324 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,324 [ 1] INFO  Unity:    Buff : 12 : 3 [Hit]
+2022-06-20 07:30:53,325 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,325 [ 1] INFO  Unity:    Buff : 21 : 3 [Hit]
+2022-06-20 07:30:53,325 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,325 [ 1] INFO  Unity:    Buff : 30 : 3 [Hit]
+2022-06-20 07:30:53,325 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,431 [ 1] INFO  Unity: OnBuff : count : 4
+2022-06-20 07:30:53,431 [ 1] INFO  Unity:    Buff : 4 : 3 [Hit]
+2022-06-20 07:30:53,431 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,431 [ 1] INFO  Unity:    Buff : 13 : 3 [Hit]
+2022-06-20 07:30:53,431 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,432 [ 1] INFO  Unity:    Buff : 22 : 3 [Hit]
+2022-06-20 07:30:53,432 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,432 [ 1] INFO  Unity:    Buff : 31 : 3 [Hit]
+2022-06-20 07:30:53,432 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,538 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:53,538 [ 1] INFO  Unity:    Buff : 5 : 3 [Hit]
+2022-06-20 07:30:53,538 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,538 [ 1] INFO  Unity:    Buff : 14 : 3 [Hit]
+2022-06-20 07:30:53,538 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,539 [ 1] INFO  Unity:    Buff : 23 : 3 [Hit]
+2022-06-20 07:30:53,539 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,648 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:53,648 [ 1] INFO  Unity:    Buff : 6 : 3 [Hit]
+2022-06-20 07:30:53,648 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,648 [ 1] INFO  Unity:    Buff : 15 : 3 [Hit]
+2022-06-20 07:30:53,648 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,648 [ 1] INFO  Unity:    Buff : 24 : 3 [Hit]
+2022-06-20 07:30:53,648 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,754 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:53,754 [ 1] INFO  Unity:    Buff : 7 : 3 [Hit]
+2022-06-20 07:30:53,754 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,755 [ 1] INFO  Unity:    Buff : 16 : 3 [Hit]
+2022-06-20 07:30:53,755 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,755 [ 1] INFO  Unity:    Buff : 25 : 3 [Hit]
+2022-06-20 07:30:53,755 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,865 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:53,865 [ 1] INFO  Unity:    Buff : 8 : 3 [Hit]
+2022-06-20 07:30:53,865 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,865 [ 1] INFO  Unity:    Buff : 17 : 3 [Hit]
+2022-06-20 07:30:53,865 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,865 [ 1] INFO  Unity:    Buff : 26 : 3 [Hit]
+2022-06-20 07:30:53,866 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,973 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:53,973 [ 1] INFO  Unity:    Buff : 9 : 3 [Hit]
+2022-06-20 07:30:53,973 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,974 [ 1] INFO  Unity:    Buff : 18 : 3 [Hit]
+2022-06-20 07:30:53,974 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:53,974 [ 1] INFO  Unity:    Buff : 27 : 3 [Hit]
+2022-06-20 07:30:53,974 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,082 [ 1] INFO  Unity: OnBuff : count : 5
+2022-06-20 07:30:54,082 [ 1] INFO  Unity:    Buff : 1 : 3 [Hit]
+2022-06-20 07:30:54,082 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,082 [ 1] INFO  Unity:    Buff : 1 : 3 [Remove]
+2022-06-20 07:30:54,083 [ 1] INFO  Unity:    Buff : 10 : 3 [Hit]
+2022-06-20 07:30:54,083 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,083 [ 1] INFO  Unity:    Buff : 19 : 3 [Hit]
+2022-06-20 07:30:54,083 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,083 [ 1] INFO  Unity:    Buff : 28 : 3 [Hit]
+2022-06-20 07:30:54,083 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,191 [ 1] INFO  Unity: OnBuff : count : 5
+2022-06-20 07:30:54,191 [ 1] INFO  Unity:    Buff : 2 : 3 [Hit]
+2022-06-20 07:30:54,191 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,192 [ 1] INFO  Unity:    Buff : 2 : 3 [Remove]
+2022-06-20 07:30:54,192 [ 1] INFO  Unity:    Buff : 11 : 3 [Hit]
+2022-06-20 07:30:54,192 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,192 [ 1] INFO  Unity:    Buff : 20 : 3 [Hit]
+2022-06-20 07:30:54,192 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,192 [ 1] INFO  Unity:    Buff : 29 : 3 [Hit]
+2022-06-20 07:30:54,193 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,301 [ 1] INFO  Unity: OnBuff : count : 4
+2022-06-20 07:30:54,301 [ 1] INFO  Unity:    Buff : 3 : 3 [Hit]
+2022-06-20 07:30:54,301 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,301 [ 1] INFO  Unity:    Buff : 3 : 3 [Remove]
+2022-06-20 07:30:54,301 [ 1] INFO  Unity:    Buff : 12 : 3 [Hit]
+2022-06-20 07:30:54,302 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,302 [ 1] INFO  Unity:    Buff : 21 : 3 [Hit]
+2022-06-20 07:30:54,302 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,411 [ 1] INFO  Unity: OnBuff : count : 5
+2022-06-20 07:30:54,411 [ 1] INFO  Unity:    Buff : 4 : 3 [Hit]
+2022-06-20 07:30:54,411 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,411 [ 1] INFO  Unity:    Buff : 4 : 3 [Remove]
+2022-06-20 07:30:54,411 [ 1] INFO  Unity:    Buff : 13 : 3 [Hit]
+2022-06-20 07:30:54,411 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,411 [ 1] INFO  Unity:    Buff : 22 : 3 [Hit]
+2022-06-20 07:30:54,411 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,412 [ 1] INFO  Unity:    Buff : 30 : 3 [Hit]
+2022-06-20 07:30:54,412 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,517 [ 1] INFO  Unity: OnBuff : count : 5
+2022-06-20 07:30:54,518 [ 1] INFO  Unity:    Buff : 5 : 3 [Hit]
+2022-06-20 07:30:54,518 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,518 [ 1] INFO  Unity:    Buff : 5 : 3 [Remove]
+2022-06-20 07:30:54,518 [ 1] INFO  Unity:    Buff : 14 : 3 [Hit]
+2022-06-20 07:30:54,518 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,518 [ 1] INFO  Unity:    Buff : 23 : 3 [Hit]
+2022-06-20 07:30:54,518 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,519 [ 1] INFO  Unity:    Buff : 31 : 3 [Hit]
+2022-06-20 07:30:54,519 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,620 [ 1] INFO  Unity: OnBuff : count : 4
+2022-06-20 07:30:54,621 [ 1] INFO  Unity:    Buff : 6 : 3 [Hit]
+2022-06-20 07:30:54,621 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,621 [ 1] INFO  Unity:    Buff : 6 : 3 [Remove]
+2022-06-20 07:30:54,621 [ 1] INFO  Unity:    Buff : 15 : 3 [Hit]
+2022-06-20 07:30:54,621 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,622 [ 1] INFO  Unity:    Buff : 24 : 3 [Hit]
+2022-06-20 07:30:54,622 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,730 [ 1] INFO  Unity: OnBuff : count : 4
+2022-06-20 07:30:54,730 [ 1] INFO  Unity:    Buff : 7 : 3 [Hit]
+2022-06-20 07:30:54,731 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,731 [ 1] INFO  Unity:    Buff : 7 : 3 [Remove]
+2022-06-20 07:30:54,731 [ 1] INFO  Unity:    Buff : 16 : 3 [Hit]
+2022-06-20 07:30:54,731 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,731 [ 1] INFO  Unity:    Buff : 25 : 3 [Hit]
+2022-06-20 07:30:54,731 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,840 [ 1] INFO  Unity: OnBuff : count : 4
+2022-06-20 07:30:54,840 [ 1] INFO  Unity:    Buff : 8 : 3 [Hit]
+2022-06-20 07:30:54,840 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,841 [ 1] INFO  Unity:    Buff : 8 : 3 [Remove]
+2022-06-20 07:30:54,841 [ 1] INFO  Unity:    Buff : 17 : 3 [Hit]
+2022-06-20 07:30:54,841 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,841 [ 1] INFO  Unity:    Buff : 26 : 3 [Hit]
+2022-06-20 07:30:54,841 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,954 [ 1] INFO  Unity: OnBuff : count : 4
+2022-06-20 07:30:54,954 [ 1] INFO  Unity:    Buff : 9 : 3 [Hit]
+2022-06-20 07:30:54,954 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,954 [ 1] INFO  Unity:    Buff : 9 : 3 [Remove]
+2022-06-20 07:30:54,955 [ 1] INFO  Unity:    Buff : 18 : 3 [Hit]
+2022-06-20 07:30:54,955 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:54,955 [ 1] INFO  Unity:    Buff : 27 : 3 [Hit]
+2022-06-20 07:30:54,955 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,057 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:55,057 [ 1] INFO  Unity:    Buff : 10 : 3 [Hit]
+2022-06-20 07:30:55,057 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,057 [ 1] INFO  Unity:    Buff : 10 : 3 [Remove]
+2022-06-20 07:30:55,058 [ 1] INFO  Unity:    Buff : 19 : 3 [Hit]
+2022-06-20 07:30:55,058 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,169 [ 1] INFO  Unity: OnBuff : count : 2
+2022-06-20 07:30:55,169 [ 1] INFO  Unity:    Buff : 20 : 3 [Hit]
+2022-06-20 07:30:55,170 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,170 [ 1] INFO  Unity:    Buff : 28 : 3 [Hit]
+2022-06-20 07:30:55,170 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,276 [ 1] INFO  Unity: OnBuff : count : 6
+2022-06-20 07:30:55,276 [ 1] INFO  Unity:    Buff : 11 : 3 [Hit]
+2022-06-20 07:30:55,276 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,276 [ 1] INFO  Unity:    Buff : 11 : 3 [Remove]
+2022-06-20 07:30:55,277 [ 1] INFO  Unity:    Buff : 12 : 3 [Hit]
+2022-06-20 07:30:55,277 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,277 [ 1] INFO  Unity:    Buff : 12 : 3 [Remove]
+2022-06-20 07:30:55,277 [ 1] INFO  Unity:    Buff : 21 : 3 [Hit]
+2022-06-20 07:30:55,277 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,277 [ 1] INFO  Unity:    Buff : 29 : 3 [Hit]
+2022-06-20 07:30:55,277 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,390 [ 1] INFO  Unity: OnBuff : count : 4
+2022-06-20 07:30:55,390 [ 1] INFO  Unity:    Buff : 13 : 3 [Hit]
+2022-06-20 07:30:55,390 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,391 [ 1] INFO  Unity:    Buff : 13 : 3 [Remove]
+2022-06-20 07:30:55,391 [ 1] INFO  Unity:    Buff : 22 : 3 [Hit]
+2022-06-20 07:30:55,391 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,391 [ 1] INFO  Unity:    Buff : 30 : 3 [Hit]
+2022-06-20 07:30:55,391 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,508 [ 1] INFO  Unity: OnBuff : count : 2
+2022-06-20 07:30:55,508 [ 1] INFO  Unity:    Buff : 23 : 3 [Hit]
+2022-06-20 07:30:55,509 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,509 [ 1] INFO  Unity:    Buff : 31 : 3 [Hit]
+2022-06-20 07:30:55,509 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,618 [ 1] INFO  Unity: OnBuff : count : 5
+2022-06-20 07:30:55,618 [ 1] INFO  Unity:    Buff : 14 : 3 [Hit]
+2022-06-20 07:30:55,618 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,618 [ 1] INFO  Unity:    Buff : 14 : 3 [Remove]
+2022-06-20 07:30:55,618 [ 1] INFO  Unity:    Buff : 15 : 3 [Hit]
+2022-06-20 07:30:55,619 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,619 [ 1] INFO  Unity:    Buff : 15 : 3 [Remove]
+2022-06-20 07:30:55,619 [ 1] INFO  Unity:    Buff : 24 : 3 [Hit]
+2022-06-20 07:30:55,619 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,723 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:55,723 [ 1] INFO  Unity:    Buff : 16 : 3 [Hit]
+2022-06-20 07:30:55,724 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,724 [ 1] INFO  Unity:    Buff : 16 : 3 [Remove]
+2022-06-20 07:30:55,724 [ 1] INFO  Unity:    Buff : 25 : 3 [Hit]
+2022-06-20 07:30:55,724 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,830 [ 1] INFO  Unity: OnBuff : count : 2
+2022-06-20 07:30:55,830 [ 1] INFO  Unity:    Buff : 17 : 3 [Hit]
+2022-06-20 07:30:55,830 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,831 [ 1] INFO  Unity:    Buff : 17 : 3 [Remove]
+2022-06-20 07:30:55,935 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:55,936 [ 1] INFO  Unity:    Buff : 18 : 3 [Hit]
+2022-06-20 07:30:55,936 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:55,936 [ 1] INFO  Unity:    Buff : 18 : 3 [Remove]
+2022-06-20 07:30:55,936 [ 1] INFO  Unity:    Buff : 26 : 3 [Hit]
+2022-06-20 07:30:55,936 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,045 [ 1] INFO  Unity: OnBuff : count : 1
+2022-06-20 07:30:56,045 [ 1] INFO  Unity:    Buff : 27 : 3 [Hit]
+2022-06-20 07:30:56,045 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,152 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:56,152 [ 1] INFO  Unity:    Buff : 19 : 3 [Hit]
+2022-06-20 07:30:56,153 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,153 [ 1] INFO  Unity:    Buff : 19 : 3 [Remove]
+2022-06-20 07:30:56,153 [ 1] INFO  Unity:    Buff : 28 : 3 [Hit]
+2022-06-20 07:30:56,153 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,268 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:56,268 [ 1] INFO  Unity:    Buff : 20 : 3 [Hit]
+2022-06-20 07:30:56,268 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,269 [ 1] INFO  Unity:    Buff : 20 : 3 [Remove]
+2022-06-20 07:30:56,269 [ 1] INFO  Unity:    Buff : 29 : 3 [Hit]
+2022-06-20 07:30:56,269 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,382 [ 1] INFO  Unity: OnBuff : count : 5
+2022-06-20 07:30:56,382 [ 1] INFO  Unity:    Buff : 21 : 3 [Hit]
+2022-06-20 07:30:56,383 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,383 [ 1] INFO  Unity:    Buff : 21 : 3 [Remove]
+2022-06-20 07:30:56,383 [ 1] INFO  Unity:    Buff : 22 : 3 [Hit]
+2022-06-20 07:30:56,383 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,383 [ 1] INFO  Unity:    Buff : 22 : 3 [Remove]
+2022-06-20 07:30:56,383 [ 1] INFO  Unity:    Buff : 30 : 3 [Hit]
+2022-06-20 07:30:56,383 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,492 [ 1] INFO  Unity: OnBuff : count : 3
+2022-06-20 07:30:56,492 [ 1] INFO  Unity:    Buff : 23 : 3 [Hit]
+2022-06-20 07:30:56,493 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,493 [ 1] INFO  Unity:    Buff : 23 : 3 [Remove]
+2022-06-20 07:30:56,493 [ 1] INFO  Unity:    Buff : 31 : 3 [Hit]
+2022-06-20 07:30:56,493 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,701 [ 1] INFO  Unity: OnBuff : count : 2
+2022-06-20 07:30:56,701 [ 1] INFO  Unity:    Buff : 24 : 3 [Hit]
+2022-06-20 07:30:56,701 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,701 [ 1] INFO  Unity:    Buff : 24 : 3 [Remove]
+2022-06-20 07:30:56,812 [ 1] INFO  Unity: OnBuff : count : 2
+2022-06-20 07:30:56,812 [ 1] INFO  Unity:    Buff : 25 : 3 [Hit]
+2022-06-20 07:30:56,812 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,813 [ 1] INFO  Unity:    Buff : 25 : 3 [Remove]
+2022-06-20 07:30:56,920 [ 1] INFO  Unity: OnBuff : count : 2
+2022-06-20 07:30:56,920 [ 1] INFO  Unity:    Buff : 26 : 3 [Hit]
+2022-06-20 07:30:56,920 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:56,920 [ 1] INFO  Unity:    Buff : 26 : 3 [Remove]
+2022-06-20 07:30:57,030 [ 1] INFO  Unity: OnBuff : count : 2
+2022-06-20 07:30:57,030 [ 1] INFO  Unity:    Buff : 27 : 3 [Hit]
+2022-06-20 07:30:57,030 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:57,030 [ 1] INFO  Unity:    Buff : 27 : 3 [Remove]
+2022-06-20 07:30:57,137 [ 1] INFO  Unity: OnBuff : count : 2
+2022-06-20 07:30:57,137 [ 1] INFO  Unity:    Buff : 28 : 3 [Hit]
+2022-06-20 07:30:57,137 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:57,138 [ 1] INFO  Unity:    Buff : 28 : 3 [Remove]
+2022-06-20 07:30:57,248 [ 1] INFO  Unity: OnBuff : count : 2
+2022-06-20 07:30:57,249 [ 1] INFO  Unity:    Buff : 29 : 3 [Hit]
+2022-06-20 07:30:57,249 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:57,249 [ 1] INFO  Unity:    Buff : 29 : 3 [Remove]
+2022-06-20 07:30:57,358 [ 1] INFO  Unity: OnBuff : count : 2
+2022-06-20 07:30:57,358 [ 1] INFO  Unity:    Buff : 30 : 3 [Hit]
+2022-06-20 07:30:57,358 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:57,358 [ 1] INFO  Unity:    Buff : 30 : 3 [Remove]
+2022-06-20 07:30:57,465 [ 1] INFO  Unity: OnBuff : count : 2
+2022-06-20 07:30:57,465 [ 1] INFO  Unity:    Buff : 31 : 3 [Hit]
+2022-06-20 07:30:57,465 [ 1] INFO  Unity: DoDamage : Grim Reaper DMG : 1 CRIT : False
+2022-06-20 07:30:57,465 [ 1] INFO  Unity:    Buff : 31 : 3 [Remove]
+2022-06-20 07:30:58,232 [ 1] INFO  Unity: Move Back
+2022-06-20 07:30:58,232 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5537,1691,57) DIR : (-26,-97,-4) SPD : -300
+2022-06-20 07:30:58,622 [ 1] WARN  Unity: PlaySound : SoundDefine.SFX_UI_Win_Open not existed.
 
-2022-05-17 07:25:49,363 [ 1] ERROR Unity: DoConnect SocketException:[10061,ConnectionRefused,10061]System.Net.Sockets.SocketException (0x80004005): No connection could be made because the target machine actively refused it.
+2022-06-20 07:30:58,717 [ 1] INFO  Unity: Stop
+2022-06-20 07:30:58,717 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 2 Pos : (5566,1836,57) DIR : (-26,-97,-4) SPD : 0
+2022-06-20 07:30:59,581 [ 1] INFO  Unity: UserGameLeaveRequest
+2022-06-20 07:30:59,591 [ 1] INFO  Unity: OnMapCharacterLeave : CharID : 2
+2022-06-20 07:30:59,592 [ 1] INFO  Unity: RemoveCharacter:2
+2022-06-20 07:30:59,592 [ 1] INFO  Unity: RemoveCharacter:1
+2022-06-20 07:30:59,592 [ 1] INFO  Unity: Character_1_A OnDestroy :ID:2 POS:(5566, 1836, 57) DIR:(-26, -97, -4) SPD:0 
+2022-06-20 07:30:59,592 [ 1] INFO  Unity: Character_0_Grim Reaper OnDestroy :ID:1 POS:(5540, 1682, 4) DIR:(20, 98, 0) SPD:0 
+2022-06-20 07:30:59,595 [ 1] INFO  Unity: OnGameLeave:Success [None]
+2022-06-20 07:30:59,621 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2022-06-20 07:30:59,622 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 
-  at System.Net.Sockets.SocketAsyncResult.CheckIfThrowDelayedException () [0x00014] in <ef151b6abb5d474cb2c1cb8906a8b5a4>:0 
-  at System.Net.Sockets.Socket.EndConnect (System.IAsyncResult asyncResult) [0x0002c] in <ef151b6abb5d474cb2c1cb8906a8b5a4>:0 
-  at Network.NetClient.DoConnect () [0x00097] in <d24a51f8d3844806a44ce0173a1d998a>:0  
-
-2022-05-17 07:25:49,364 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :1 reason:Cannot connect to server
-2022-05-17 07:26:13,118 [ 1] INFO  Unity: UserLoginRequest : user : user001 psw : 111
-2022-05-17 07:26:13,118 [ 1] INFO  Unity: ConnectToServer() Start 
-2022-05-17 07:26:13,118 [ 1] INFO  Unity: DoConnect
-2022-05-17 07:26:13,118 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2022-05-17 07:26:13,118 [ 1] INFO  Unity: Connect[3] to server 127.0.0.1:8000
-
-2022-05-17 07:26:13,119 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2022-05-17 07:26:13,852 [ 1] INFO  Unity: OnLogin:Success [None]
-2022-05-17 07:26:13,853 [ 1] INFO  Unity: LoadLevel: CharacterScene
-2022-05-17 07:26:13,913 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-05-17 07:26:13,933 [ 1] INFO  Unity: SetPosition:(37984, 9735, -5120)
-2022-05-17 07:26:13,933 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 0 Pos : (0,0,0) DIR : (0,100,0) SPD : 0
-2022-05-17 07:26:14,758 [ 1] INFO  Unity: Select Char:[3]B[Wizard]
-2022-05-17 07:26:14,759 [ 1] INFO  Unity: SetPosition:(37984, 9735, -5120)
-2022-05-17 07:26:14,759 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 0 Pos : (0,0,0) DIR : (0,100,0) SPD : 0
-2022-05-17 07:26:15,134 [ 1] INFO  Unity: Select Char:[1]A[Warrior]
-2022-05-17 07:26:16,110 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2022-05-17 07:26:16,143 [ 1] INFO  Unity: OnGameEnter : Success [None]
-2022-05-17 07:26:16,158 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2022-05-17 07:26:16,158 [ 1] INFO  Unity: AddCharacter:1:A Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-05-17 07:26:16,160 [ 1] INFO  Unity: LoadLevel: MainCity
-2022-05-17 07:26:16,431 [ 1] INFO  Unity: LevelLoadCompleted:1
-2022-05-17 07:26:16,924 [ 1] INFO  Unity: MoveForward
-2022-05-17 07:26:16,924 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5000,4000,820) DIR : (100,0,0) SPD : 0
-2022-05-17 07:26:17,290 [ 1] INFO  Unity: SetDirection:(98, 20, 0)
-2022-05-17 07:26:17,290 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5110,4000,820) DIR : (100,0,0) SPD : 300
-2022-05-17 07:26:17,391 [ 1] INFO  Unity: SetDirection:(92, 38, 0)
-2022-05-17 07:26:17,391 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5140,4006,820) DIR : (98,20,0) SPD : 300
-2022-05-17 07:26:17,491 [ 1] INFO  Unity: SetDirection:(83, 56, 0)
-2022-05-17 07:26:17,491 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5170,4018,820) DIR : (92,38,0) SPD : 300
-2022-05-17 07:26:17,574 [ 1] INFO  Unity: SetDirection:(72, 70, 0)
-2022-05-17 07:26:17,574 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5190,4033,820) DIR : (83,56,0) SPD : 300
-2022-05-17 07:26:17,674 [ 1] INFO  Unity: SetDirection:(56, 83, 0)
-2022-05-17 07:26:17,674 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5214,4057,820) DIR : (72,70,0) SPD : 300
-2022-05-17 07:26:17,825 [ 1] INFO  Unity: SetDirection:(39, 92, 0)
-2022-05-17 07:26:17,825 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5241,4093,820) DIR : (56,83,0) SPD : 300
-2022-05-17 07:26:17,958 [ 1] INFO  Unity: Stop
-2022-05-17 07:26:17,959 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5257,4133,820) DIR : (39,92,0) SPD : 300
-2022-05-17 07:26:55,716 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2022-05-17 07:26:55,716 [ 1] INFO  Unity: AddCharacter:6:3 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2022-05-17 07:27:00,326 [ 1] INFO  Unity: MoveForward
-2022-05-17 07:27:00,327 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5257,4133,820) DIR : (39,92,0) SPD : 0
-2022-05-17 07:27:00,743 [ 1] INFO  Unity: SetDirection:(22, 98, 0)
-2022-05-17 07:27:00,743 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5307,4258,820) DIR : (39,92,0) SPD : 300
-2022-05-17 07:27:00,862 [ 1] INFO  Unity: SetDirection:(2, 100, 0)
-2022-05-17 07:27:00,862 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5314,4293,820) DIR : (22,98,0) SPD : 300
-2022-05-17 07:27:00,945 [ 1] INFO  Unity: SetDirection:(-15, 99, 0)
-2022-05-17 07:27:00,945 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5314,4318,820) DIR : (2,100,0) SPD : 300
-2022-05-17 07:27:01,030 [ 1] INFO  Unity: SetDirection:(-32, 95, 0)
-2022-05-17 07:27:01,030 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5309,4343,820) DIR : (-15,99,0) SPD : 300
-2022-05-17 07:27:01,113 [ 1] INFO  Unity: SetDirection:(-48, 88, 0)
-2022-05-17 07:27:01,113 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5299,4368,820) DIR : (-32,95,0) SPD : 300
-2022-05-17 07:27:01,197 [ 1] INFO  Unity: SetDirection:(-63, 78, 0)
-2022-05-17 07:27:01,197 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5289,4388,820) DIR : (-48,88,0) SPD : 300
-2022-05-17 07:27:01,296 [ 1] INFO  Unity: SetDirection:(-78, 63, 0)
-2022-05-17 07:27:01,297 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5271,4412,820) DIR : (-63,78,0) SPD : 300
-2022-05-17 07:27:01,397 [ 1] INFO  Unity: SetDirection:(-89, 46, 0)
-2022-05-17 07:27:01,397 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5247,4430,820) DIR : (-78,63,0) SPD : 300
-2022-05-17 07:27:01,478 [ 1] INFO  Unity: SetDirection:(-96, 29, 0)
-2022-05-17 07:27:01,478 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5227,4440,820) DIR : (-89,46,0) SPD : 300
-2022-05-17 07:27:01,580 [ 1] INFO  Unity: SetDirection:(-100, 9, 0)
-2022-05-17 07:27:01,580 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5197,4446,820) DIR : (-96,29,0) SPD : 300
-2022-05-17 07:27:01,663 [ 1] INFO  Unity: SetDirection:(-100, -9, 0)
-2022-05-17 07:27:01,664 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5172,4446,820) DIR : (-100,9,0) SPD : 300
-2022-05-17 07:27:01,764 [ 1] INFO  Unity: SetDirection:(-96, -29, 0)
-2022-05-17 07:27:01,764 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5142,4446,820) DIR : (-100,-9,0) SPD : 300
-2022-05-17 07:27:01,848 [ 1] INFO  Unity: SetDirection:(-89, -45, 0)
-2022-05-17 07:27:01,848 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5117,4441,820) DIR : (-96,-29,0) SPD : 300
-2022-05-17 07:27:01,930 [ 1] INFO  Unity: SetDirection:(-80, -60, 0)
-2022-05-17 07:27:01,931 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5097,4431,820) DIR : (-89,-45,0) SPD : 300
-2022-05-17 07:27:02,031 [ 1] INFO  Unity: SetDirection:(-67, -74, 0)
-2022-05-17 07:27:02,031 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5073,4413,820) DIR : (-80,-60,0) SPD : 300
-2022-05-17 07:27:02,214 [ 1] INFO  Unity: SetDirection:(-53, -85, 0)
-2022-05-17 07:27:02,214 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5040,4369,820) DIR : (-67,-74,0) SPD : 300
-2022-05-17 07:27:02,248 [ 1] INFO  Unity: Stop
-2022-05-17 07:27:02,248 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5034,4361,820) DIR : (-53,-85,0) SPD : 300
-2022-05-17 07:27:02,398 [ 1] INFO  Unity: MoveBack
-2022-05-17 07:27:02,398 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5034,4361,820) DIR : (-53,-85,0) SPD : 0
-2022-05-17 07:27:02,647 [ 1] INFO  Unity: Stop
-2022-05-17 07:27:02,647 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5079,4421,820) DIR : (-53,-85,0) SPD : -300
-2022-05-17 07:27:03,583 [ 1] INFO  Unity: SetDirection:(-35, -94, 0)
-2022-05-17 07:27:03,584 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5079,4421,820) DIR : (-53,-85,0) SPD : 0
-2022-05-17 07:27:03,682 [ 1] INFO  Unity: SetDirection:(-17, -98, 0)
-2022-05-17 07:27:03,683 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5079,4421,820) DIR : (-35,-94,0) SPD : 0
-2022-05-17 07:27:03,783 [ 1] INFO  Unity: SetDirection:(3, -100, 0)
-2022-05-17 07:27:03,783 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5079,4421,820) DIR : (-17,-98,0) SPD : 0
-2022-05-17 07:27:03,901 [ 1] INFO  Unity: SetDirection:(22, -98, 0)
-2022-05-17 07:27:03,901 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5079,4421,820) DIR : (3,-100,0) SPD : 0
-2022-05-17 07:27:52,833 [ 1] INFO  Unity: MoveForward
-2022-05-17 07:27:52,833 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5079,4421,820) DIR : (22,-98,0) SPD : 0
-2022-05-17 07:27:53,519 [ 1] INFO  Unity: SetDirection:(40, -91, 0)
-2022-05-17 07:27:53,519 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5120,4216,820) DIR : (22,-98,0) SPD : 300
-2022-05-17 07:27:53,532 [ 1] INFO  Unity: Stop
-2022-05-17 07:27:53,532 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5122,4211,820) DIR : (40,-91,0) SPD : 300
-2022-05-17 07:27:53,667 [ 1] INFO  Unity: SetDirection:(56, -83, 0)
-2022-05-17 07:27:53,667 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5122,4211,820) DIR : (40,-91,0) SPD : 0
-2022-05-17 07:27:54,902 [ 1] INFO  Unity: MoveForward
-2022-05-17 07:27:54,902 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5122,4211,820) DIR : (56,-83,0) SPD : 0
-2022-05-17 07:27:55,638 [ 1] INFO  Unity: Stop
-2022-05-17 07:27:55,638 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (56,-83,0) SPD : 300
-2022-05-17 07:27:56,072 [ 1] INFO  Unity: SetDirection:(40, -92, 0)
-2022-05-17 07:27:56,072 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (56,-83,0) SPD : 0
-2022-05-17 07:27:56,172 [ 1] INFO  Unity: SetDirection:(21, -98, 0)
-2022-05-17 07:27:56,173 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (40,-92,0) SPD : 0
-2022-05-17 07:27:56,272 [ 1] INFO  Unity: SetDirection:(3, -100, 0)
-2022-05-17 07:27:56,272 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (21,-98,0) SPD : 0
-2022-05-17 07:28:03,201 [ 1] INFO  Unity: SetDirection:(23, -97, 0)
-2022-05-17 07:28:03,201 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (3,-100,0) SPD : 0
-2022-05-17 07:28:03,285 [ 1] INFO  Unity: SetDirection:(40, -92, 0)
-2022-05-17 07:28:03,285 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (23,-97,0) SPD : 0
-2022-05-17 07:28:03,385 [ 1] INFO  Unity: SetDirection:(58, -81, 0)
-2022-05-17 07:28:03,385 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (40,-92,0) SPD : 0
-2022-05-17 07:28:03,487 [ 1] INFO  Unity: SetDirection:(74, -68, 0)
-2022-05-17 07:28:03,487 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (58,-81,0) SPD : 0
-2022-05-17 07:28:03,569 [ 1] INFO  Unity: SetDirection:(84, -54, 0)
-2022-05-17 07:28:03,569 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (74,-68,0) SPD : 0
-2022-05-17 07:28:03,654 [ 1] INFO  Unity: SetDirection:(92, -38, 0)
-2022-05-17 07:28:03,654 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (84,-54,0) SPD : 0
-2022-05-17 07:28:03,753 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
-2022-05-17 07:28:03,753 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (92,-38,0) SPD : 0
-2022-05-17 07:28:03,852 [ 1] INFO  Unity: SetDirection:(100, 3, 0)
-2022-05-17 07:28:03,853 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (98,-18,0) SPD : 0
-2022-05-17 07:28:03,955 [ 1] INFO  Unity: SetDirection:(97, 23, 0)
-2022-05-17 07:28:03,955 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (100,3,0) SPD : 0
-2022-05-17 07:28:04,037 [ 1] INFO  Unity: SetDirection:(92, 40, 0)
-2022-05-17 07:28:04,037 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (97,23,0) SPD : 0
-2022-05-17 07:28:04,137 [ 1] INFO  Unity: SetDirection:(81, 58, 0)
-2022-05-17 07:28:04,137 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (92,40,0) SPD : 0
-2022-05-17 07:28:04,237 [ 1] INFO  Unity: SetDirection:(68, 74, 0)
-2022-05-17 07:28:04,237 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (81,58,0) SPD : 0
-2022-05-17 07:28:04,322 [ 1] INFO  Unity: SetDirection:(54, 84, 0)
-2022-05-17 07:28:04,322 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (68,74,0) SPD : 0
-2022-05-17 07:28:04,404 [ 1] INFO  Unity: SetDirection:(38, 92, 0)
-2022-05-17 07:28:04,404 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (54,84,0) SPD : 0
-2022-05-17 07:28:04,505 [ 1] INFO  Unity: SetDirection:(18, 98, 0)
-2022-05-17 07:28:04,506 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (38,92,0) SPD : 0
-2022-05-17 07:28:04,604 [ 1] INFO  Unity: SetDirection:(-2, 100, 0)
-2022-05-17 07:28:04,604 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (18,98,0) SPD : 0
-2022-05-17 07:28:04,738 [ 1] INFO  Unity: SetDirection:(-21, 98, 0)
-2022-05-17 07:28:04,739 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (-2,100,0) SPD : 0
-2022-05-17 07:28:05,205 [ 1] INFO  Unity: MoveBack
-2022-05-17 07:28:05,205 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5260,4027,820) DIR : (-21,98,0) SPD : 0
-2022-05-17 07:28:07,112 [ 1] INFO  Unity: Stop
-2022-05-17 07:28:07,113 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5374,3457,820) DIR : (-21,98,0) SPD : -300
-2022-05-17 07:28:25,047 [ 1] INFO  Unity: MoveForward
-2022-05-17 07:28:25,047 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5374,3457,820) DIR : (-21,98,0) SPD : 0
-2022-05-17 07:28:25,397 [ 1] INFO  Unity: Stop
-2022-05-17 07:28:25,397 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5353,3562,820) DIR : (-21,98,0) SPD : 300
-2022-05-17 07:28:25,733 [ 1] INFO  Unity: MoveBack
-2022-05-17 07:28:25,733 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5353,3562,820) DIR : (-21,98,0) SPD : 0
-2022-05-17 07:28:26,433 [ 1] INFO  Unity: SetPosition:(5375, 3398, 813)
-2022-05-17 07:28:26,433 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5395,3352,820) DIR : (-21,98,0) SPD : -300
-2022-05-17 07:28:27,534 [ 1] INFO  Unity: Stop
-2022-05-17 07:28:27,534 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5441,3068,813) DIR : (-21,98,0) SPD : -300
-2022-05-17 07:28:56,843 [ 1] INFO  Unity: MoveForward
-2022-05-17 07:28:56,843 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5441,3068,813) DIR : (-21,98,0) SPD : 0
-2022-05-17 07:28:59,499 [ 1] INFO  Unity: SetDirection:(-1, 100, 0)
-2022-05-17 07:28:59,499 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5282,3863,813) DIR : (-21,98,0) SPD : 300
-2022-05-17 07:28:59,598 [ 1] INFO  Unity: SetDirection:(19, 98, 0)
-2022-05-17 07:28:59,598 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5282,3893,813) DIR : (-1,100,0) SPD : 300
-2022-05-17 07:28:59,716 [ 1] INFO  Unity: SetDirection:(36, 93, 0)
-2022-05-17 07:28:59,716 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5289,3928,813) DIR : (19,98,0) SPD : 300
-2022-05-17 07:29:00,100 [ 1] INFO  Unity: SetDirection:(17, 99, 0)
-2022-05-17 07:29:00,100 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5335,4043,813) DIR : (36,93,0) SPD : 300
-2022-05-17 07:29:00,201 [ 1] INFO  Unity: SetDirection:(-4, 100, 0)
-2022-05-17 07:29:00,201 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5341,4073,813) DIR : (17,99,0) SPD : 300
-2022-05-17 07:29:00,299 [ 1] INFO  Unity: SetDirection:(-25, 97, 0)
-2022-05-17 07:29:00,299 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5341,4103,813) DIR : (-4,100,0) SPD : 300
-2022-05-17 07:29:00,401 [ 1] INFO  Unity: SetDirection:(-44, 90, 0)
-2022-05-17 07:29:00,401 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5335,4133,813) DIR : (-25,97,0) SPD : 300
-2022-05-17 07:29:00,484 [ 1] INFO  Unity: SetDirection:(-59, 81, 0)
-2022-05-17 07:29:00,485 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5325,4158,813) DIR : (-44,90,0) SPD : 300
-2022-05-17 07:29:00,567 [ 1] INFO  Unity: SetDirection:(-72, 69, 0)
-2022-05-17 07:29:00,567 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5310,4178,813) DIR : (-59,81,0) SPD : 300
-2022-05-17 07:29:00,668 [ 1] INFO  Unity: SetDirection:(-83, 55, 0)
-2022-05-17 07:29:00,668 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5286,4196,813) DIR : (-72,69,0) SPD : 300
-2022-05-17 07:29:00,685 [ 1] INFO  Unity: Stop
-2022-05-17 07:29:00,685 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5282,4199,813) DIR : (-83,55,0) SPD : 300
-2022-05-17 07:29:09,968 [ 1] INFO  Unity: MoveForward
-2022-05-17 07:29:09,968 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5282,4199,813) DIR : (-83,55,0) SPD : 0
-2022-05-17 07:29:10,253 [ 1] INFO  Unity: SetDirection:(-92, 39, 0)
-2022-05-17 07:29:10,253 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5214,4250,813) DIR : (-83,55,0) SPD : 300
-2022-05-17 07:29:10,353 [ 1] INFO  Unity: SetDirection:(-98, 22, 0)
-2022-05-17 07:29:10,353 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5184,4262,813) DIR : (-92,39,0) SPD : 300
-2022-05-17 07:29:10,437 [ 1] INFO  Unity: SetDirection:(-100, 5, 0)
-2022-05-17 07:29:10,437 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5159,4267,813) DIR : (-98,22,0) SPD : 300
-2022-05-17 07:29:10,520 [ 1] INFO  Unity: SetDirection:(-99, -13, 0)
-2022-05-17 07:29:10,521 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5134,4267,813) DIR : (-100,5,0) SPD : 300
-2022-05-17 07:29:10,538 [ 1] INFO  Unity: Stop
-2022-05-17 07:29:10,539 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5129,4266,813) DIR : (-99,-13,0) SPD : 300
-2022-05-17 07:29:10,621 [ 1] INFO  Unity: SetDirection:(-94, -33, 0)
-2022-05-17 07:29:10,621 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5129,4266,813) DIR : (-99,-13,0) SPD : 0
-2022-05-17 07:29:10,706 [ 1] INFO  Unity: SetDirection:(-87, -49, 0)
-2022-05-17 07:29:10,706 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5129,4266,813) DIR : (-94,-33,0) SPD : 0
-2022-05-17 07:29:10,786 [ 1] INFO  Unity: SetDirection:(-77, -63, 0)
-2022-05-17 07:29:10,786 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5129,4266,813) DIR : (-87,-49,0) SPD : 0
-2022-05-17 07:29:10,905 [ 1] INFO  Unity: SetDirection:(-64, -77, 0)
-2022-05-17 07:29:10,905 [ 1] INFO  Unity: MapEntityUpdateRequest : ID : 1 Pos : (5129,4266,813) DIR : (-77,-63,0) SPD : 0
-2022-05-17 07:29:33,720 [ 1] INFO  Unity: ProcessReceive exception:System.Net.Sockets.SocketException (0x80004005): An existing connection was forcibly closed by the remote host.
-
-  at System.Net.Sockets.Socket.Receive (System.Byte[] buffer, System.Int32 offset, System.Int32 size, System.Net.Sockets.SocketFlags socketFlags) [0x00016] in <ef151b6abb5d474cb2c1cb8906a8b5a4>:0 
-  at Network.NetClient.ProcessRecv () [0x0006e] in <d24a51f8d3844806a44ce0173a1d998a>:0 
-
-2022-05-17 07:29:33,720 [ 1] WARN  Unity: CloseConnection(), errorCode: 1001
-
-2022-05-17 07:29:35,662 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2022-05-17 07:29:35,662 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
-
-2022-05-17 07:29:35,663 [ 1] INFO  Unity: Character_1_A OnDestroy :ID:1 POS:(5129, 4266, 813) DIR:(-64, -77, 0) SPD:0 
-2022-05-17 07:29:35,664 [ 1] INFO  Unity: Character_6_3 OnDestroy :ID:2 POS:(5000, 4000, 820) DIR:(100, 0, 0) SPD:0 

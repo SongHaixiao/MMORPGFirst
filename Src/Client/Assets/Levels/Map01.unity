@@ -21527,5 +21527,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeleporterMap01
       objectReference: {fileID: 0}
+    - target: {fileID: 87248884129166584, guid: 7e9c034c4e7d296499cf4aa3ae2993fe,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 87248884129166591, guid: 7e9c034c4e7d296499cf4aa3ae2993fe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.46
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e9c034c4e7d296499cf4aa3ae2993fe, type: 3}

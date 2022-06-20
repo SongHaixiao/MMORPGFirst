@@ -30,7 +30,6 @@ ScriptsOnlyBuild:
     - UICharInfo
     - UICharacterSelect
     - UICharacterView
-    - UICreatureInfo
     - UIEquipItem
     - UIIconItem
     - UILogin
@@ -53,14 +52,13 @@ ScriptsOnlyBuild:
     - UISkillSlot
     - UISkillSlots
     - UISystemConfig
+    - UITargetInfo
     - UITest
     - UIWorldElement
     - UIWorldElementManager
     - uv_l
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -100,8 +98,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Levels/CharacterScene.unity:
     - Class: 1
@@ -408,9 +404,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15962}
     - Class: 114
-      Script: {instanceID: 34448}
+      Script: {instanceID: 34442}
     - Class: 114
-      Script: {instanceID: 35648}
+      Script: {instanceID: 35642}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 119
@@ -768,7 +764,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 15788}
     - Class: 114
-      Script: {instanceID: 51000}
+      Script: {instanceID: 50994}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -976,12 +972,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UICharEquip
-  - hash:
-      serializedVersion: 2
-      Hash: f83c20a9360f13970c6e6ad6eb98843b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InputManager
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -1299,7 +1289,7 @@ ScriptsOnlyBuild:
       Hash: 0e5ea7fbb3aab4dd93871a909feb5461
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: UICreatureInfo
+    className: UITargetInfo
   - hash:
       serializedVersion: 2
       Hash: cc91b7585a9de6e8a6433f23fdf83ad5
@@ -1536,7 +1526,7 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
-      Hash: c08ae25890eb51e618eb1d2eaabcf369
+      Hash: 469b8e984fa4f2cce8bebfa3f1ada217
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIMain
@@ -1785,7 +1775,8 @@ ScriptsOnlyBuild:
   - Assets/Levels/Loadding.unity
   - Assets/Levels/CharacterScene.unity
   - Assets/Levels/MainCity.unity
-  - Assets/Levels/Map01.unity
   - Assets/Levels/Map02.unity
+  - Assets/Levels/Map01.unity
   - Assets/Levels/Map03.unity
-  playerPath: E:/Github/1/ExtremeWorld.exe
+  playerPath: "F:/( \uB178\uB825 \uBBFF\uC74C ) _ \uCD5C\uC885\uACB0\uACFC\uBB3C/\uC2E4\uD589
+    \uD30C\uC77C/ExtremeWorld.exe"

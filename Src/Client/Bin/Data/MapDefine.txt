@@ -6,7 +6,8 @@
     "SubType": "Normal",
     "PKMode": false,
     "Resource": "MainCity",
-    "Minimap": "buluzheng"
+    "Minimap": "buluzheng",
+    "Music": "bgm-town"
   },
   "2": {
     "ID": 2,
@@ -15,7 +16,8 @@
     "SubType": "Normal",
     "PKMode": false,
     "Resource": "Map01",
-    "Minimap": "luorisenl"
+    "Minimap": "luorisenl",
+    "Music": "bgm-map01"
   },
   "3": {
     "ID": 3,
@@ -24,7 +26,8 @@
     "SubType": "Normal",
     "PKMode": false,
     "Resource": "Map02",
-    "Minimap": "luorisenl"
+    "Minimap": "luorisenl",
+    "Music": "bgm-map02"
   },
   "4": {
     "ID": 4,
@@ -33,6 +36,7 @@
     "SubType": "Normal",
     "PKMode": false,
     "Resource": "Map03",
-    "Minimap": "luoriyuhui"
+    "Minimap": "luoriyuhui",
+    "Music": "bgm-map02"
   }
 }

@@ -2,53 +2,121 @@
   "1": {
     "ID": 1,
     "Name": "MainCity->Map01In",
-    "LinkTo": 6,
     "MapID": 1,
-    "Description": "Main City Left Out"
+    "LinkTo": 6,
+    "Descript": null,
+    "Position": {
+      "X": 7290,
+      "Y": 2590,
+      "Z": 1146
+    },
+    "Direction": {
+      "X": 0,
+      "Y": 100,
+      "Z": 0
+    }
   },
   "2": {
     "ID": 2,
     "Name": "MainCity->Map03In",
-    "LinkTo": 8,
     "MapID": 1,
-    "Description": "MainCity Right Out"
+    "LinkTo": 8,
+    "Descript": null,
+    "Position": {
+      "X": 730,
+      "Y": 2590,
+      "Z": 1146
+    },
+    "Direction": {
+      "X": 0,
+      "Y": 100,
+      "Z": 0
+    }
   },
   "3": {
     "ID": 3,
     "Name": "MainCityInFromMap01",
     "MapID": 1,
-    "Description": "Main City Left In"
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": 6515,
+      "Y": 2591,
+      "Z": 804
+    },
+    "Direction": {
+      "X": -100,
+      "Y": -4,
+      "Z": 0
+    }
   },
   "4": {
     "ID": 4,
     "Name": "MainCityInFromMap03",
     "MapID": 1,
-    "Description": "Main City Right In"
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": 1558,
+      "Y": 2543,
+      "Z": 817
+    },
+    "Direction": {
+      "X": 100,
+      "Y": 0,
+      "Z": -5
+    }
   },
   "5": {
     "ID": 5,
     "Name": "Map01->MainCity",
-    "LinkTo": 3,
     "MapID": 2,
-    "Description": "Map01 Out"
+    "LinkTo": 3,
+    "Descript": null,
+    "Position": {
+      "X": 2333,
+      "Y": 3952,
+      "Z": 371
+    },
+    "Direction": {
+      "X": 0,
+      "Y": 100,
+      "Z": 0
+    }
   },
   "6": {
     "ID": 6,
     "Name": "Map01InFromMainCity",
     "MapID": 2,
-    "Description": "Map01 In"
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": {
+      "X": 3252,
+      "Y": 3968,
+      "Z": 12
+    },
+    "Direction": {
+      "X": 100,
+      "Y": 0,
+      "Z": -5
+    }
   },
   "7": {
     "ID": 7,
     "Name": "Map03->MainCityIn",
-    "LinkTo": 4,
     "MapID": 4,
-    "Description": "Map03 Out"
+    "LinkTo": 4,
+    "Descript": null,
+    "Position": null,
+    "Direction": null
   },
   "8": {
     "ID": 8,
     "Name": "Map03InFromMainCity",
     "MapID": 4,
-    "Description": "Map03 In"
+    "LinkTo": 0,
+    "Descript": null,
+    "Position": null,
+    "Direction": null
   }
 }

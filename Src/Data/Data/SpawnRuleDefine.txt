@@ -13,7 +13,7 @@
       "MapID": "2",
       "SpawnMonID": 1005,
       "SpawnLevel": 1,
-      "SpawnPeriod": 10,
+      "SpawnPeriod": 2000,
       "SpawnPoint": 2
     },
     "3": {
